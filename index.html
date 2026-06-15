@@ -547,6 +547,157 @@
     .warum-item h3 { font-size: 1.05rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.4rem; }
     .warum-item p { font-size: 0.92rem; color: #6B7280; line-height: 1.65; }
 
+    /* ── TEAM ────────────────────────────────────────────── */
+    .team-wrap {
+      background: #F9FAFB;
+      padding: 7rem 5%;
+      border-top: 1px solid #E5E7EB;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .team-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .team-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #E3F1E9;
+      color: #134D32;
+      padding: 0.3rem 0.85rem;
+      border-radius: 99px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.02em;
+    }
+    .team-text h2 {
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      font-weight: 900;
+      color: #0D0D0D;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    .team-text h2 em { font-style: normal; color: #1B6B45; }
+    .team-text p {
+      font-size: 1rem;
+      color: #4B5563;
+      line-height: 1.75;
+      margin-bottom: 2.2rem;
+    }
+    .team-stats {
+      display: flex;
+      gap: 2.5rem;
+    }
+    .team-stat-num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #1B6B45;
+      line-height: 1;
+      display: block;
+    }
+    .team-stat-label {
+      font-size: 0.88rem;
+      color: #6B7280;
+      margin-top: 0.25rem;
+      display: block;
+    }
+    .team-photo-wrap {
+      position: relative;
+    }
+    .team-photo-frame {
+      aspect-ratio: 4 / 3;
+      position: relative;
+    }
+    .team-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      animation: kenBurns 12s ease-in-out infinite alternate;
+      transform-origin: center center;
+    }
+    @keyframes kenBurns {
+      0%   { transform: scale(1.0) translate(0%, 0%); }
+      100% { transform: scale(1.06) translate(-2%, -1.5%); }
+    }
+    .team-float-bottom {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: #fff;
+      border: 1px solid #E5E7EB;
+      border-radius: 14px;
+      padding: 1rem 1.4rem;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      animation: floatEl 3.2s ease-in-out infinite;
+    }
+    .team-float-top {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      background: #1B6B45;
+      color: #fff;
+      border-radius: 14px;
+      padding: 0.85rem 1.2rem;
+      font-weight: 700;
+      font-size: 0.88rem;
+      line-height: 1.3;
+      box-shadow: 0 8px 28px rgba(27,107,69,0.30);
+      animation: floatEl 3.8s ease-in-out infinite;
+      animation-delay: 0.6s;
+      text-align: center;
+    }
+    @keyframes floatEl {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-9px); }
+    }
+    .float-icon {
+      width: 36px; height: 36px;
+      background: #E3F1E9;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .float-label { font-size: 0.82rem; color: #6B7280; }
+    .float-value { font-size: 1rem; font-weight: 700; color: #0D0D0D; }
+
+    /* Scroll-reveal für Team-Section */
+    .team-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .team-reveal.t-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .team-reveal-right {
+      opacity: 0;
+      transform: translateX(32px);
+      transition: opacity 0.75s ease 0.15s, transform 0.75s ease 0.15s;
+    }
+    .team-reveal-right.t-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @media (max-width: 768px) {
+      .team-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .team-photo-frame { aspect-ratio: 3 / 2; }
+      .team-float-bottom { left: 12px; bottom: -14px; }
+      .team-float-top { right: 12px; top: -14px; }
+    }
+
     /* ── CTA (DARK — einzige dunkle Sektion) ────────────── */
     .cta-wrap {
       background: #0D0D0D;
@@ -991,6 +1142,42 @@
     </div>
   </div>
 
+  <!-- ── TEAM ──────────────────────────────────────────── -->
+  <div class="team-wrap" id="team">
+    <div class="team-inner">
+
+      <!-- Text -->
+      <div class="team-text team-reveal">
+        <div class="team-badge">👋 Das Team hinter XPONext</div>
+        <h2>Persönlich. Direkt.<br><em>Ergebnisorientiert.</em></h2>
+        <p>Wir sind Simon & Tim — kein großes Agentur-Konstrukt, sondern zwei Ansprechpartner, die euer Geschäft kennen und konkrete Ergebnisse liefern. Ihr erreicht uns direkt — ohne Warteschleifen, ohne Callcenter.</p>
+      </div>
+
+      <!-- Foto mit Animationen -->
+      <div class="team-photo-wrap team-reveal-right">
+        <!-- Schwebender Badge oben rechts -->
+        <div class="team-float-top">
+          ✓ Kein Callcenter<br>Direkter Kontakt
+        </div>
+
+        <div class="team-photo-frame">
+          <!-- Ersetze src mit eurem Team-Foto, z.B. assets/team.jpg -->
+          <img src="assets/team.png" alt="Simon und Tim von XPONext" class="team-photo">
+        </div>
+
+        <!-- Schwebender Badge unten links -->
+        <div class="team-float-bottom">
+          <div class="float-icon">⭐</div>
+          <div>
+            <div class="float-value">5,0 / 5 Sterne</div>
+            <div class="float-label">Kundenbewertungen</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!-- ── FAQ ─────────────────────────────────────────────── -->
   <div class="faq-wrap" id="faq">
     <div class="faq-inner">
@@ -1083,6 +1270,21 @@
       <button type="submit" class="btn-primary">Kostenloses Erstgespräch anfragen →</button>
     </form>
   </div>
+
+  <script>
+    (function() {
+      var revealEls = document.querySelectorAll('.team-reveal, .team-reveal-right');
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('t-visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      revealEls.forEach(function(el) { obs.observe(el); });
+    })();
+  </script>
 
   <script>
     function closeFaqItem(item) {
