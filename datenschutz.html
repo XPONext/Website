@@ -24,8 +24,9 @@
       padding: 1.1rem 5%;
       border-bottom: 1px solid #E5E7EB;
     }
-    .nav-logo { font-size: 1.2rem; font-weight: 800; color: #0D0D0D; letter-spacing: -0.01em; text-decoration: none; }
-    .nav-logo span { color: #1B6B45; }
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; font-size: 1.2rem; font-weight: 800; color: #0D0D0D; letter-spacing: -0.01em; text-decoration: none; }
+    .nav-logo .nav-wm { color: #0D0D0D; font-weight: 800; }
+    .nav-logo .nav-wm em { color: #1B6B45; font-weight: 400; font-style: normal; }
     .back-link { font-size: 0.9rem; font-weight: 500; color: #4B5563; text-decoration: none; }
     .back-link:hover { color: #0D0D0D; }
     main { max-width: 760px; margin: 0 auto; padding: 4rem 5% 6rem; }
@@ -52,7 +53,7 @@
 </head>
 <body>
   <nav>
-    <a href="index.html" class="nav-logo">XPO<span>Next</span></a>
+    <a href="index.html" class="nav-logo"><svg width="30" height="30" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg><span class="nav-wm">XPO<em>Next</em></span></a>
     <a href="index.html" class="back-link">← Zurück zur Startseite</a>
   </nav>
   <main>
