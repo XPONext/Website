@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XPONext — Logo Final</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('assets/fonts/inter-variable.woff2') format('woff2');
+      font-weight: 100 900;
+      font-style: normal;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #0D0D0D; color: #fff; padding: 4rem 5%; }
+
+    .label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #4B5563;
+      margin-bottom: 2rem;
+    }
+
+    /* ── Hero: Icon groß ── */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 5rem;
+    }
+    .icon-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .icon-label { font-size: 0.7rem; color: #4B5563; letter-spacing: 0.06em; }
+
+    /* ── Größen-Reihe ── */
+    .sizes-row {
+      display: flex;
+      align-items: flex-end;
+      gap: 2rem;
+      background: #161616;
+      border: 1px solid #2E2E2E;
+      border-radius: 14px;
+      padding: 2rem 2.5rem;
+      margin-bottom: 5rem;
+    }
+    .size-item { display: flex; flex-direction: column; align-items: center; gap: 0.6rem; }
+    .size-label { font-size: 0.65rem; color: #4B5563; }
+
+    /* ── Wordmark-Varianten ── */
+    .wordmarks {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      background: #161616;
+      border: 1px solid #2E2E2E;
+      border-radius: 14px;
+      padding: 3rem 2.5rem;
+      margin-bottom: 5rem;
+    }
+    .wordmark-row {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .wm-label { font-size: 0.7rem; color: #4B5563; width: 100px; flex-shrink: 0; }
+
+    /* ── Nav-Mockup ── */
+    .mock-nav-wrap {
+      background: #161616;
+      border: 1px solid #2E2E2E;
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 5rem;
+    }
+    .mock-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #2E2E2E;
+    }
+    .mock-links { display: flex; gap: 1.5rem; align-items: center; }
+    .mock-link { width: 44px; height: 6px; background: #2E2E2E; border-radius: 3px; }
+    .mock-cta { width: 90px; height: 28px; background: #1B6B45; border-radius: 6px; }
+    .mock-body { padding: 3rem 1.5rem; }
+    .mock-h { height: 14px; background: #2E2E2E; border-radius: 4px; width: 45%; margin-bottom: 1rem; }
+    .mock-p { height: 8px; background: #1A1A1A; border-radius: 4px; margin-bottom: 0.6rem; }
+  </style>
+</head>
+<body>
+
+<p class="label">XPONext — Logo · Dark Variant</p>
+
+<!-- ── Icon groß ── -->
+<div class="hero">
+  <div class="icon-hero">
+    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="120" height="120" rx="28" fill="#1B6B45"/>
+      <!-- Stilisiertes N: zwei Stämme + beide Diagonalen -->
+      <line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <!-- N-Diagonale (oben-links → unten-rechts) -->
+      <line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <!-- Aufsteigende Linie (unten-links → oben-rechts) — das "Stilisierte" -->
+      <line x1="32" y1="88" x2="88" y2="32" stroke="rgba(255,255,255,0.30)" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+    <div class="icon-label">120 × 120</div>
+  </div>
+</div>
+
+<!-- ── Größen ── -->
+<p class="label">Icon in verschiedenen Größen</p>
+<div class="sizes-row">
+  <div class="size-item">
+    <svg width="80" height="80" viewBox="0 0 120 120" fill="none">
+      <rect width="120" height="120" rx="28" fill="#1B6B45"/>
+      <line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="32" y1="88" x2="88" y2="32" stroke="rgba(255,255,255,0.30)" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+    <div class="size-label">80px</div>
+  </div>
+  <div class="size-item">
+    <svg width="56" height="56" viewBox="0 0 120 120" fill="none">
+      <rect width="120" height="120" rx="28" fill="#1B6B45"/>
+      <line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="32" y1="88" x2="88" y2="32" stroke="rgba(255,255,255,0.30)" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+    <div class="size-label">56px</div>
+  </div>
+  <div class="size-item">
+    <svg width="40" height="40" viewBox="0 0 120 120" fill="none">
+      <rect width="120" height="120" rx="28" fill="#1B6B45"/>
+      <line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/>
+      <line x1="32" y1="88" x2="88" y2="32" stroke="rgba(255,255,255,0.30)" stroke-width="7" stroke-linecap="round"/>
+    </svg>
+    <div class="size-label">40px</div>
+  </div>
+  <div class="size-item">
+    <svg width="28" height="28" viewBox="0 0 120 120" fill="none">
+      <rect width="120" height="120" rx="28" fill="#1B6B45"/>
+      <line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+      <line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+      <line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+      <line x1="32" y1="88" x2="88" y2="32" stroke="rgba(255,255,255,0.30)" stroke-width="8" stroke-linecap="round"/>
+    </svg>
+    <div class="size-label">28px</div>
+  </div>
+  <div class="size-item">
+    <svg width="20" height="20" viewBox="0 0 120 120" fill="none">
+      <rect width="120" height="120" rx="28" fill="#1B6B45"/>
+      <line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="9" stroke-linecap="round"/>
+      <line x1="32" y1="88" x2="88" y2="32" stroke="rgba(255,255,255,0.28)" stroke-width="9" stroke-linecap="round"/>
+    </svg>
+    <div class="size-label">20px</div>
+  </div>
+  <div class="size-item">
+    <svg width="16" height="16" viewBox="0 0 120 120" fill="none">
+      <rect width="120" height="120" rx="28" fill="#1B6B45"/>
+      <line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+      <line x1="32" y1="88" x2="88" y2="32" stroke="rgba(255,255,255,0.25)" stroke-width="10" stroke-linecap="round"/>
+    </svg>
+    <div class="size-label">16px</div>
+  </div>
+</div>
+
+<!-- ── Wordmarks ── -->
+<p class="label">Wordmark-Kombinationen</p>
+<div class="wordmarks">
+
+  <div class="wordmark-row">
+    <div class="wm-label">Standard</div>
+    <svg width="240" height="40" viewBox="0 0 240 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="40" height="40" rx="10" fill="#1B6B45"/>
+      <line x1="11" y1="30" x2="11" y2="10" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <line x1="29" y1="10" x2="29" y2="30" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <line x1="11" y1="10" x2="29" y2="30" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <line x1="11" y1="30" x2="29" y2="10" stroke="rgba(255,255,255,0.30)" stroke-width="3" stroke-linecap="round"/>
+      <text x="52" y="28" font-family="Inter, sans-serif" font-weight="800" font-size="22" fill="#fff" letter-spacing="-0.5">XPO<tspan fill="#4CAF7E" font-weight="400">Next</tspan></text>
+    </svg>
+  </div>
+
+  <div class="wordmark-row">
+    <div class="wm-label">Kompakt</div>
+    <svg width="200" height="32" viewBox="0 0 200 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="32" height="32" rx="8" fill="#1B6B45"/>
+      <line x1="9" y1="24" x2="9" y2="8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="23" y1="8" x2="23" y2="24" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="9" y1="8" x2="23" y2="24" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="9" y1="24" x2="23" y2="8" stroke="rgba(255,255,255,0.30)" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="42" y="23" font-family="Inter, sans-serif" font-weight="800" font-size="18" fill="#fff" letter-spacing="-0.5">XPO<tspan fill="#4CAF7E" font-weight="400">Next</tspan></text>
+    </svg>
+  </div>
+
+  <div class="wordmark-row">
+    <div class="wm-label">Nur Text</div>
+    <svg width="180" height="32" viewBox="0 0 180 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <text x="0" y="24" font-family="Inter, sans-serif" font-weight="800" font-size="24" fill="#fff" letter-spacing="-0.5">XPO<tspan fill="#4CAF7E" font-weight="400">Next</tspan></text>
+    </svg>
+  </div>
+
+</div>
+
+<!-- ── Nav Mockup dunkel ── -->
+<p class="label">Kontext: Navigation</p>
+<div class="mock-nav-wrap">
+  <div class="mock-nav">
+    <svg width="160" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="32" height="32" rx="8" fill="#1B6B45"/>
+      <line x1="9" y1="24" x2="9" y2="8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="23" y1="8" x2="23" y2="24" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="9" y1="8" x2="23" y2="24" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+      <line x1="9" y1="24" x2="23" y2="8" stroke="rgba(255,255,255,0.30)" stroke-width="2.5" stroke-linecap="round"/>
+      <text x="42" y="23" font-family="Inter, sans-serif" font-weight="800" font-size="18" fill="#fff" letter-spacing="-0.5">XPO<tspan fill="#4CAF7E" font-weight="400">Next</tspan></text>
+    </svg>
+    <div class="mock-links">
+      <div class="mock-link"></div>
+      <div class="mock-link"></div>
+      <div class="mock-link"></div>
+      <div class="mock-cta"></div>
+    </div>
+  </div>
+  <div class="mock-body">
+    <div class="mock-h" style="width:50%"></div>
+    <div class="mock-p" style="width:80%"></div>
+    <div class="mock-p" style="width:65%"></div>
+  </div>
+</div>
+
+</body>
+</html>
