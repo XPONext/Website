@@ -773,6 +773,71 @@
       footer { flex-direction: column; text-align: center; }
       .footer-col { align-items: center; }
       .problem-grid { grid-template-columns: 1fr; }
+      .ps-scores { grid-template-columns: repeat(2, 1fr); }
+      .ps-form { flex-direction: column; }
+      .ps-vitals { flex-wrap: wrap; gap: 1rem; }
+    }
+
+    /* ── PageSpeed Check ─────────────────────────────── */
+    .pagespeed-wrap { padding: 5rem 5%; background: #F9FAFB; }
+    .pagespeed-inner { max-width: 900px; margin: 0 auto; }
+    .ps-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #E8F0EB; color: #1B6B45;
+      padding: 0.35rem 0.9rem; border-radius: 99px;
+      font-size: 0.85rem; font-weight: 600; margin-bottom: 1.2rem;
+    }
+    .ps-toggle { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1.5rem; }
+    .ps-toggle-btn {
+      padding: 0.5rem 1.4rem; border-radius: 99px; border: 1.5px solid #E5E7EB;
+      background: #fff; color: #4B5563; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .ps-toggle-btn.active { background: #1B6B45; color: #fff; border-color: #1B6B45; }
+    .ps-form { display: flex; gap: 1rem; }
+    .ps-input {
+      flex: 1; padding: 0.85rem 1.1rem; border: 1.5px solid #E5E7EB;
+      border-radius: 8px; font-size: 1rem; font-family: inherit; color: #0D0D0D;
+      outline: none; transition: border-color 0.2s;
+    }
+    .ps-input:focus { border-color: #1B6B45; }
+    .ps-scores {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem; margin-bottom: 2rem;
+    }
+    .ps-score-card {
+      background: #fff; border: 1px solid #E5E7EB; border-radius: 12px;
+      padding: 1.5rem 1rem; text-align: center;
+    }
+    .ps-circle-num { font-size: 2.2rem; font-weight: 900; line-height: 1; margin-bottom: 0.3rem; }
+    .ps-circle-label { font-size: 0.8rem; color: #6B7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+    .ps-vitals {
+      display: flex; gap: 2rem; justify-content: center;
+      padding: 1.5rem; background: #fff; border: 1px solid #E5E7EB;
+      border-radius: 12px; margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
+    .ps-vital { text-align: center; }
+    .ps-vital-val { font-size: 1.4rem; font-weight: 800; color: #0D0D0D; }
+    .ps-vital-label { font-size: 0.78rem; color: #9CA3AF; font-weight: 600; margin-top: 0.2rem; }
+    .ps-cta-banner {
+      padding: 1.25rem 1.5rem; border-radius: 12px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .ps-cta-banner p { margin: 0; font-weight: 600; font-size: 0.95rem; }
+    .ps-cta-banner a {
+      padding: 0.6rem 1.3rem; border-radius: 8px; text-decoration: none;
+      font-weight: 700; font-size: 0.9rem; white-space: nowrap;
+    }
+    .ps-spinner {
+      width: 40px; height: 40px; border: 3px solid #E5E7EB;
+      border-top-color: #1B6B45; border-radius: 50%;
+      animation: ps-spin 0.8s linear infinite; margin: 0 auto;
+    }
+    @keyframes ps-spin { to { transform: rotate(360deg); } }
+    .ps-error-box {
+      margin-top: 1.5rem; padding: 1rem 1.25rem; background: #FEF2F2;
+      border: 1px solid #FECACA; border-radius: 8px; color: #B91C1C; font-size: 0.9rem;
     }
   </style>
   <script type="application/ld+json">
@@ -1143,29 +1208,28 @@
   </div>
 
   <!-- ── TEAM ──────────────────────────────────────────── -->
+  <!-- ── TEAM (vorübergehend auskommentiert) ───────────────────
   <div class="team-wrap" id="team">
     <div class="team-inner">
 
-      <!-- Text -->
       <div class="team-text team-reveal">
         <div class="team-badge">👋 Das Team hinter XPONext</div>
         <h2>Persönlich. Direkt.<br><em>Ergebnisorientiert.</em></h2>
         <p>Wir sind Simon & Tim — kein großes Agentur-Konstrukt, sondern zwei Ansprechpartner, die euer Geschäft kennen und konkrete Ergebnisse liefern. Ihr erreicht uns direkt — ohne Warteschleifen, ohne Callcenter.</p>
       </div>
 
-      <!-- Foto mit Animationen -->
       <div class="team-photo-wrap team-reveal-right">
-        <!-- Schwebender Badge oben rechts -->
         <div class="team-float-top">
           ✓ Kein Callcenter<br>Direkter Kontakt
         </div>
 
-        <div class="team-photo-frame">
-          <!-- Ersetze src mit eurem Team-Foto, z.B. assets/team.jpg -->
-          <img src="assets/team.png" alt="Simon und Tim von XPONext" class="team-photo">
+        <div class="team-photo-frame" style="background:#F3F4F6;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span style="font-size:0.85rem;color:#9CA3AF;font-family:Inter,sans-serif;">Foto folgt in Kürze</span>
         </div>
 
-        <!-- Schwebender Badge unten links -->
         <div class="team-float-bottom">
           <div class="float-icon">⭐</div>
           <div>
@@ -1177,6 +1241,7 @@
 
     </div>
   </div>
+  ── TEAM ENDE ──────────────────────────────────────────────── -->
 
   <!-- ── FAQ ─────────────────────────────────────────────── -->
   <div class="faq-wrap" id="faq">
@@ -1254,6 +1319,40 @@
         <div class="faq-answer">
           <p>XPONext richtet sich an lokale Betriebe, die von Kunden aus ihrer Region gefunden werden wollen, von Handwerk und KFZ über Bau bis hin zu lokalen Dienstleistern. Deine konkrete Branche ist für uns zweitrangig, entscheidend ist, dass du ein Geschäft mit lokalem Einzugsgebiet betreibst und online sichtbarer werden möchtest.</p>
         </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PAGESPEED CHECK ─────────────────────────────────── -->
+  <div class="pagespeed-wrap" id="website-check">
+    <div class="pagespeed-inner">
+      <div class="section-header">
+        <div class="ps-badge">🔍 Kostenloser Website-Check</div>
+        <h2>Wie performant ist <em>deine Website?</em></h2>
+        <p>Gib deine URL ein — wir prüfen sie in Sekunden mit Google PageSpeed.</p>
+      </div>
+
+      <div class="ps-toggle">
+        <button class="ps-toggle-btn active" data-strategy="mobile">📱 Mobile</button>
+        <button class="ps-toggle-btn" data-strategy="desktop">🖥 Desktop</button>
+      </div>
+
+      <form class="ps-form" id="ps-form">
+        <input type="text" id="ps-url" class="ps-input" placeholder="z.B. example.de oder www.example.de" required>
+        <button type="submit" class="btn-primary">Analysieren →</button>
+      </form>
+
+      <div id="ps-loading" style="display:none; text-align:center; padding:2.5rem 0;">
+        <div class="ps-spinner"></div>
+        <p style="color:#6B7280; margin-top:1rem; font-size:0.95rem;">Analyse läuft, bitte kurz warten…</p>
+      </div>
+
+      <div id="ps-error"></div>
+
+      <div id="ps-result" style="display:none; margin-top:2.5rem;">
+        <div class="ps-scores" id="ps-scores"></div>
+        <div class="ps-vitals" id="ps-vitals"></div>
+        <div id="ps-cta-banner" class="ps-cta-banner"></div>
       </div>
     </div>
   </div>
@@ -1360,6 +1459,148 @@
       <a href="datenschutz.html">Datenschutz</a>
     </div>
   </footer>
+
+  <script>
+  (function() {
+    var strategy = 'mobile';
+
+    // Toggle Mobile / Desktop
+    document.querySelectorAll('.ps-toggle-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        strategy = this.dataset.strategy;
+        document.querySelectorAll('.ps-toggle-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+
+    // Form submit
+    document.getElementById('ps-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var url = document.getElementById('ps-url').value.trim();
+      if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+      runCheck(url);
+    });
+
+    function show(id) { document.getElementById(id).style.display = ''; }
+    function hide(id) { document.getElementById(id).style.display = 'none'; }
+
+    function runCheck(url) {
+      hide('ps-result');
+      hide('ps-error');
+      show('ps-loading');
+
+      var apiUrl = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed'
+        + '?url=' + encodeURIComponent(url)
+        + '&strategy=' + strategy
+        + '&category=performance&category=seo&category=accessibility&category=best-practices'
+        + '&key=AIzaSyDfBOYEsg3mmuVXws2PCW2DqoWlDQ_dnLY';
+
+      fetch(apiUrl)
+        .then(function(r) {
+          if (r.status === 429) throw new Error('rate-limit');
+          if (!r.ok) return r.json().then(function(d) {
+            throw new Error(d.error && d.error.message ? d.error.message : 'HTTP ' + r.status);
+          });
+          return r.json();
+        })
+        .then(function(data) {
+          hide('ps-loading');
+          renderResult(data);
+        })
+        .catch(function(err) {
+          hide('ps-loading');
+          var msg;
+          if (err && err.message === 'rate-limit') {
+            msg = 'Zu viele Anfragen — bitte kurz warten und erneut versuchen.';
+          } else if (err && err.message) {
+            msg = 'Fehler: ' + err.message;
+          } else {
+            msg = 'Die URL konnte nicht analysiert werden. Bitte prüfe die Adresse und versuche es erneut.';
+          }
+          var el = document.getElementById('ps-error');
+          el.innerHTML = '<div class="ps-error-box">' + msg + '</div>';
+          show('ps-error');
+        });
+    }
+
+    function scoreColor(score) {
+      if (score >= 90) return '#1B6B45';
+      if (score >= 50) return '#DD6B20';
+      return '#E53E3E';
+    }
+
+    function renderResult(data) {
+      var lr = data.lighthouseResult;
+      if (!lr || !lr.categories) {
+        var el = document.getElementById('ps-error');
+        var detail = data.error ? data.error.message : 'Unbekannter Fehler';
+        el.innerHTML = '<div class="ps-error-box">Fehler: ' + detail + '</div>';
+        show('ps-error');
+        return;
+      }
+      var cats = lr.categories;
+      var audits = lr.audits;
+
+      // Score-Kreise
+      var scoreItems = [
+        { key: 'performance',    label: 'Performance' },
+        { key: 'seo',            label: 'SEO' },
+        { key: 'accessibility',  label: 'Zugängl.' },
+        { key: 'best-practices', label: 'Best Pract.' }
+      ];
+      var scoresHtml = '';
+      scoreItems.forEach(function(item) {
+        var score = cats[item.key] ? Math.round(cats[item.key].score * 100) : '–';
+        var color = typeof score === 'number' ? scoreColor(score) : '#9CA3AF';
+        scoresHtml += '<div class="ps-score-card">'
+          + '<div class="ps-circle-num" style="color:' + color + ';">' + score + '</div>'
+          + '<div class="ps-circle-label">' + item.label + '</div>'
+          + '</div>';
+      });
+      document.getElementById('ps-scores').innerHTML = scoresHtml;
+
+      // Core Web Vitals
+      var vitalsHtml = '';
+      if (audits) {
+        var vitals = [
+          { id: 'largest-contentful-paint', label: 'LCP' },
+          { id: 'first-contentful-paint',   label: 'FCP' },
+          { id: 'cumulative-layout-shift',  label: 'CLS' }
+        ];
+        vitals.forEach(function(v) {
+          var val = audits[v.id] ? audits[v.id].displayValue : '–';
+          vitalsHtml += '<div class="ps-vital">'
+            + '<div class="ps-vital-val">' + val + '</div>'
+            + '<div class="ps-vital-label">' + v.label + '</div>'
+            + '</div>';
+        });
+      }
+      document.getElementById('ps-vitals').innerHTML = vitalsHtml;
+
+      // CTA-Banner
+      var perfScore = cats.performance ? Math.round(cats.performance.score * 100) : null;
+      var banner = document.getElementById('ps-cta-banner');
+      if (perfScore !== null && perfScore < 70) {
+        banner.style.background = '#FEF3E2';
+        banner.style.border = '1px solid #FCD34D';
+        banner.innerHTML = '<p style="color:#92400E;">⚠️ Deine Website hat Optimierungspotenzial — das kostet dich täglich Kunden.</p>'
+          + '<a href="#kontakt" style="background:#1B6B45;color:#fff;">Jetzt optimieren lassen →</a>';
+      } else if (perfScore !== null && perfScore >= 90) {
+        banner.style.background = '#F0FBF4';
+        banner.style.border = '1px solid #6EE7A0';
+        banner.innerHTML = '<p style="color:#166534;">✅ Gute Performance! Noch weiter optimieren?</p>'
+          + '<a href="#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
+      } else {
+        banner.style.background = '#F9FAFB';
+        banner.style.border = '1px solid #E5E7EB';
+        banner.innerHTML = '<p style="color:#4B5563;">Wir helfen dir, noch mehr aus deiner Website rauszuholen.</p>'
+          + '<a href="#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
+      }
+
+      show('ps-result');
+    }
+  })();
+  </script>
 
 </body>
 </html>
