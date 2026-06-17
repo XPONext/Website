@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XPONext — Logo Vorschlag 4 (verfeinert)</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('assets/fonts/inter-variable.woff2') format('woff2');
+      font-weight: 100 900;
+      font-style: normal;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #F5F5F5; color: #0D0D0D; padding: 3rem 5%; }
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #9CA3AF;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      margin-top: 3.5rem;
+    }
+    .section-label:first-child { margin-top: 0; }
+
+    /* ── Hauptvarianten ── */
+    .variants-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .variant-card {
+      background: #fff;
+      border: 1px solid #E5E7EB;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .variant-stage {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3.5rem 2rem;
+    }
+    .variant-stage.light  { background: #fff; }
+    .variant-stage.dark   { background: #0D0D0D; }
+    .variant-stage.green  { background: #1B6B45; }
+    .variant-meta {
+      padding: 1rem 1.2rem;
+      border-top: 1px solid #F3F4F6;
+    }
+    .variant-name { font-size: 0.82rem; font-weight: 700; color: #0D0D0D; }
+    .variant-desc { font-size: 0.75rem; color: #9CA3AF; margin-top: 0.2rem; }
+
+    /* ── Icon solo ── */
+    .icons-row {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .icon-card {
+      background: #fff;
+      border: 1px solid #E5E7EB;
+      border-radius: 14px;
+      padding: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .icon-meta { font-size: 0.78rem; color: #9CA3AF; margin-top: 0.5rem; text-align: center; }
+
+    /* ── Kontext-Mockups ── */
+    .mockup-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .mockup-card {
+      background: #fff;
+      border: 1px solid #E5E7EB;
+      border-radius: 14px;
+      overflow: hidden;
+    }
+    .mockup-card-label {
+      padding: 0.8rem 1.2rem;
+      border-bottom: 1px solid #F3F4F6;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #9CA3AF;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    /* Nav mock */
+    .mock-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .mock-nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .mock-link {
+      width: 40px; height: 8px;
+      background: #E5E7EB;
+      border-radius: 4px;
+    }
+    .mock-btn {
+      width: 80px; height: 28px;
+      background: #1B6B45;
+      border-radius: 6px;
+    }
+    /* Business card mock */
+    .mock-bcard {
+      background: #0D0D0D;
+      margin: 1.5rem;
+      border-radius: 10px;
+      padding: 2rem 1.8rem;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .mock-bcard-name { font-size: 0.8rem; color: rgba(255,255,255,0.4); margin-top: 1rem; }
+    .mock-bcard-contact { font-size: 0.72rem; color: rgba(255,255,255,0.25); margin-top: 0.2rem; }
+    /* Favicon mockup */
+    .mock-favicons {
+      padding: 1.5rem;
+      display: flex;
+      gap: 1rem;
+      align-items: flex-end;
+    }
+    .mock-favicon-wrap { text-align: center; }
+    .mock-favicon-label { font-size: 0.65rem; color: #9CA3AF; margin-top: 0.4rem; }
+  </style>
+</head>
+<body>
+
+<p class="section-label">Variante A — Kreis mit N-Monogramm</p>
+<div class="variants-grid">
+  <div class="variant-card">
+    <div class="variant-stage light">
+      <!-- Refined version: clean N in circle -->
+      <svg width="200" height="44" viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="20" fill="#1B6B45"/>
+        <path d="M13 32 L13 12 L25 32 L25 12" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="50" y="31" font-family="Inter, sans-serif" font-weight="800" font-size="26" fill="#0D0D0D" letter-spacing="-0.5">XPO<tspan fill="#1B6B45" font-weight="400">Next</tspan></text>
+      </svg>
+    </div>
+    <div class="variant-meta">
+      <div class="variant-name">Hell</div>
+      <div class="variant-desc">Primärvariante auf weißem Untergrund</div>
+    </div>
+  </div>
+  <div class="variant-card">
+    <div class="variant-stage dark">
+      <svg width="200" height="44" viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="20" fill="#1B6B45"/>
+        <path d="M13 32 L13 12 L25 32 L25 12" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="50" y="31" font-family="Inter, sans-serif" font-weight="800" font-size="26" fill="#fff" letter-spacing="-0.5">XPO<tspan fill="#4CAF7E" font-weight="400">Next</tspan></text>
+      </svg>
+    </div>
+    <div class="variant-meta">
+      <div class="variant-name">Dunkel</div>
+      <div class="variant-desc">Auf dunklem Hintergrund</div>
+    </div>
+  </div>
+  <div class="variant-card">
+    <div class="variant-stage green">
+      <svg width="200" height="44" viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="22" r="20" fill="rgba(255,255,255,0.15)"/>
+        <path d="M13 32 L13 12 L25 32 L25 12" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="50" y="31" font-family="Inter, sans-serif" font-weight="800" font-size="26" fill="#fff" letter-spacing="-0.5">XPONext</text>
+      </svg>
+    </div>
+    <div class="variant-meta">
+      <div class="variant-name">Grün</div>
+      <div class="variant-desc">Auf grünem Hintergrund</div>
+    </div>
+  </div>
+</div>
+
+<p class="section-label">Variante B — Abgerundetes Quadrat (moderner, app-ähnlicher Look)</p>
+<div class="variants-grid">
+  <div class="variant-card">
+    <div class="variant-stage light">
+      <svg width="200" height="44" viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="40" height="40" rx="11" fill="#1B6B45"/>
+        <path d="M13 32 L13 12 L29 32 L29 12" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="52" y="31" font-family="Inter, sans-serif" font-weight="800" font-size="26" fill="#0D0D0D" letter-spacing="-0.5">XPO<tspan fill="#1B6B45" font-weight="400">Next</tspan></text>
+      </svg>
+    </div>
+    <div class="variant-meta">
+      <div class="variant-name">Hell</div>
+      <div class="variant-desc">App-Icon-Form — skaliert gut auf kleinen Formaten</div>
+    </div>
+  </div>
+  <div class="variant-card">
+    <div class="variant-stage dark">
+      <svg width="200" height="44" viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="40" height="40" rx="11" fill="#1B6B45"/>
+        <path d="M13 32 L13 12 L29 32 L29 12" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="52" y="31" font-family="Inter, sans-serif" font-weight="800" font-size="26" fill="#fff" letter-spacing="-0.5">XPO<tspan fill="#4CAF7E" font-weight="400">Next</tspan></text>
+      </svg>
+    </div>
+    <div class="variant-meta">
+      <div class="variant-name">Dunkel</div>
+      <div class="variant-desc">Auf dunklem Hintergrund</div>
+    </div>
+  </div>
+  <div class="variant-card">
+    <div class="variant-stage green">
+      <svg width="200" height="44" viewBox="0 0 200 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="40" height="40" rx="11" fill="rgba(255,255,255,0.15)"/>
+        <path d="M13 32 L13 12 L29 32 L29 12" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="52" y="31" font-family="Inter, sans-serif" font-weight="800" font-size="26" fill="#fff" letter-spacing="-0.5">XPONext</text>
+      </svg>
+    </div>
+    <div class="variant-meta">
+      <div class="variant-name">Grün</div>
+      <div class="variant-desc">Auf grünem Hintergrund</div>
+    </div>
+  </div>
+</div>
+
+<p class="section-label">Icon solo — Favicon / App-Icon</p>
+<div class="icons-row">
+  <div class="icon-card">
+    <!-- 64px -->
+    <div>
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="#1B6B45"/>
+        <path d="M17 48 L17 16 L39 48 L39 16" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <div class="mock-favicon-label">64 × 64</div>
+    </div>
+    <div>
+      <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="#1B6B45"/>
+        <path d="M17 48 L17 16 L39 48 L39 16" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <div class="mock-favicon-label">48 × 48</div>
+    </div>
+    <div>
+      <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="#1B6B45"/>
+        <path d="M17 48 L17 16 L39 48 L39 16" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <div class="mock-favicon-label">32 × 32</div>
+    </div>
+    <div>
+      <svg width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="#1B6B45"/>
+        <path d="M17 48 L17 16 L39 48 L39 16" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <div class="mock-favicon-label">20 × 20</div>
+    </div>
+    <div>
+      <svg width="16" height="16" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="16" fill="#1B6B45"/>
+        <path d="M17 48 L17 16 L39 48 L39 16" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      </svg>
+      <div class="mock-favicon-label">16 × 16</div>
+    </div>
+  </div>
+</div>
+
+<p class="section-label">Kontext-Mockups</p>
+<div class="mockup-grid">
+
+  <!-- Nav mock -->
+  <div class="mockup-card">
+    <div class="mockup-card-label">Navigation / Website-Header</div>
+    <div class="mock-nav">
+      <svg width="140" height="30" viewBox="0 0 140 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="28" height="28" rx="7" fill="#1B6B45"/>
+        <path d="M8 22 L8 7 L18 22 L18 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="36" y="21" font-family="Inter, sans-serif" font-weight="800" font-size="18" fill="#0D0D0D" letter-spacing="-0.3">XPO<tspan fill="#1B6B45" font-weight="400">Next</tspan></text>
+      </svg>
+      <div class="mock-nav-links">
+        <div class="mock-link"></div>
+        <div class="mock-link"></div>
+        <div class="mock-link"></div>
+        <div class="mock-btn"></div>
+      </div>
+    </div>
+    <div style="padding: 2rem 1.5rem; background: #F9FAFB;">
+      <div style="height: 12px; background: #E5E7EB; border-radius: 4px; width: 60%; margin-bottom: 0.7rem;"></div>
+      <div style="height: 8px; background: #E5E7EB; border-radius: 4px; width: 80%;"></div>
+    </div>
+  </div>
+
+  <!-- Business card mock -->
+  <div class="mockup-card">
+    <div class="mockup-card-label">Visitenkarte</div>
+    <div class="mock-bcard">
+      <svg width="140" height="30" viewBox="0 0 140 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="0" y="0" width="28" height="28" rx="7" fill="#1B6B45"/>
+        <path d="M8 22 L8 7 L18 22 L18 7" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        <text x="36" y="21" font-family="Inter, sans-serif" font-weight="800" font-size="18" fill="#fff" letter-spacing="-0.3">XPO<tspan fill="#4CAF7E" font-weight="400">Next</tspan></text>
+      </svg>
+      <div>
+        <div class="mock-bcard-name">Tim Bünger · Gründer</div>
+        <div class="mock-bcard-contact">info@xponext.de · www.xponext.de</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

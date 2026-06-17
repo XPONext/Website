@@ -24,18 +24,19 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 1.1rem 5%;
-      background: #fff;
+      padding: 0.7rem 2.5%;
+      background: #0D0D0D;
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 1px solid #E5E7EB;
+      border-bottom: 1px solid #1A1A1A;
     }
-    .nav-logo { font-size: 1.2rem; font-weight: 800; color: #0D0D0D; letter-spacing: -0.01em; }
-    .nav-logo span { color: #1B6B45; }
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; font-size: 1.15rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; }
+    .nav-logo .nav-wm { color: #fff; font-weight: 800; }
+    .nav-logo .nav-wm em { color: #4CAF7E; font-weight: 400; font-style: normal; }
     .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a { color: #4B5563; font-size: 0.9rem; font-weight: 500; }
-    .nav-links a:hover { color: #0D0D0D; opacity: 1; }
+    .nav-links a { color: #9CA3AF; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: #fff; opacity: 1; }
     .nav-cta {
       background: #1B6B45;
       color: #fff !important;
@@ -714,7 +715,7 @@
 
   <!-- ── NAVIGATION ──────────────────────────────────────── -->
   <nav>
-    <div class="nav-logo">XPO<span>Next</span></div>
+    <div class="nav-logo"><svg width="30" height="30" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg><span class="nav-wm">XPO<em>Next</em></span></div>
     <div class="nav-links">
       <a href="#leistungen">Leistungen</a>
       <a href="#vorteile">Vorteile</a>
