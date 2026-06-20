@@ -4,16 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XPONext — Online-Marketing für lokale Betriebe</title>
-  <meta name="description" content="XPONext hilft lokalen Betrieben, online sichtbar zu werden: professionelle Website, Google Ads, lokales SEO, Bewertungsmanagement und AI-optimierte Inhalte – alles aus einer Hand.">
+  <meta name="description" content="XPONext aus Bonn hilft lokalen Betrieben, online sichtbar zu werden: professionelle Website, Google Ads, lokales SEO, Bewertungsmanagement und AI-optimierte Inhalte – alles aus einer Hand.">
   <meta name="robots" content="index, follow">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <meta property="og:title" content="XPONext — Online-Marketing für lokale Betriebe">
-  <meta property="og:description" content="XPONext hilft lokalen Betrieben, online sichtbar zu werden: professionelle Website, Google Ads, lokales SEO, Bewertungsmanagement und AI-optimierte Inhalte – alles aus einer Hand.">
+  <meta property="og:description" content="XPONext aus Bonn hilft lokalen Betrieben, online sichtbar zu werden: professionelle Website, Google Ads, lokales SEO, Bewertungsmanagement und AI-optimierte Inhalte – alles aus einer Hand.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.xponext.de">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="XPONext — Online-Marketing für lokale Betriebe">
-  <meta name="twitter:description" content="XPONext hilft lokalen Betrieben, online sichtbar zu werden: professionelle Website, Google Ads, lokales SEO, Bewertungsmanagement und AI-optimierte Inhalte – alles aus einer Hand.">
+  <meta name="twitter:description" content="XPONext aus Bonn hilft lokalen Betrieben, online sichtbar zu werden: professionelle Website, Google Ads, lokales SEO, Bewertungsmanagement und AI-optimierte Inhalte – alles aus einer Hand.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "XPO Next GbR",
+    "alternateName": "XPONext",
+    "description": "XPONext hilft lokalen Betrieben, online sichtbar zu werden: professionelle Website, Google Ads, lokales SEO, Bewertungsmanagement und AI-optimierte Inhalte – alles aus einer Hand.",
+    "url": "https://www.xponext.de",
+    "telephone": "+4915731930007",
+    "email": "info@xponext.de",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Adrianstraße 88",
+      "addressLocality": "Bonn",
+      "postalCode": "53227",
+      "addressCountry": "DE"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Deutschland"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Online-Marketing-Leistungen",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Professionelle Website" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Google Ads" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Ads & GEO" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bewertungsmanagement" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lokales SEO" } }
+      ]
+    },
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Tim Bünger",
+        "jobTitle": "Co-Founder",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Betriebswirtschaftslehre" },
+        "sameAs": "https://www.linkedin.com/in/tim-b%C3%BCnger-924b49309/"
+      },
+      {
+        "@type": "Person",
+        "name": "Simon Meding",
+        "jobTitle": "Co-Founder",
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Wirtschaftsinformatik" },
+        "sameAs": "https://www.linkedin.com/in/simon-meding-279196234/"
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/tim-b%C3%BCnger-924b49309/",
+      "https://www.linkedin.com/in/simon-meding-279196234/"
+    ]
+  }
+  </script>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <style>
@@ -555,6 +609,40 @@
     .warum-item h3 { font-size: 1.05rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.4rem; }
     .warum-item p { font-size: 0.92rem; color: #6B7280; line-height: 1.65; }
 
+    /* ── TEAM ────────────────────────────────────────────── */
+    .team-wrap {
+      background: #fff;
+      padding: 6rem 5%;
+      border-top: 1px solid #E5E7EB;
+    }
+    .team-inner { max-width: 860px; margin: 0 auto; }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+    .team-card {
+      border: 1px solid #E5E7EB;
+      border-radius: 14px;
+      padding: 2rem;
+    }
+    .team-avatar {
+      width: 80px; height: 80px;
+      border-radius: 12px;
+      object-fit: cover;
+      object-position: center top;
+      margin-bottom: 1rem;
+    }
+    .team-name { font-size: 1.05rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.2rem; }
+    .team-role { font-size: 0.82rem; font-weight: 600; color: #1B6B45; margin-bottom: 0.8rem; }
+    .team-bio { font-size: 0.9rem; color: #6B7280; line-height: 1.65; margin-bottom: 1rem; }
+    .team-linkedin {
+      display: inline-flex; align-items: center; gap: 0.35rem;
+      font-size: 0.82rem; font-weight: 600; color: #0A66C2;
+    }
+    .team-linkedin:hover { text-decoration: underline; }
+
     /* ── CTA (DARK) ──────────────────────────────────────── */
     .cta-wrap {
       background: #0D0D0D;
@@ -1062,10 +1150,36 @@
     </div>
   </div>
 
+  <!-- ── TEAM ────────────────────────────────────────────── -->
+  <div class="team-wrap">
+    <div class="team-inner">
+      <div class="section-header">
+        <h2>Die Leute <em>hinter XPONext.</em></h2>
+        <p>Keine riesige Agentur. Direkte Partnerschaft – du weißt immer, mit wem du sprichst.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="assets/team/tim.jpg" alt="Tim Bünger, Co-Founder XPONext" class="team-avatar">
+          <div class="team-name">Tim Bünger</div>
+          <div class="team-role">Co-Founder</div>
+          <p class="team-bio">Tim hat Betriebswirtschaftslehre studiert und kümmert sich bei XPONext um Strategie, Kundenkommunikation und Google Ads. Sein Fokus: Kampagnen, die wirklich konvertieren.</p>
+          <a href="https://www.linkedin.com/in/tim-b%C3%BCnger-924b49309/" target="_blank" rel="noopener" class="team-linkedin">LinkedIn →</a>
+        </div>
+        <div class="team-card">
+          <img src="assets/team/simon.jpg" alt="Simon Meding, Co-Founder XPONext" class="team-avatar">
+          <div class="team-name">Simon Meding</div>
+          <div class="team-role">Co-Founder</div>
+          <p class="team-bio">Simon hat Wirtschaftsinformatik studiert und verantwortet bei XPONext die technische Umsetzung: Website-Entwicklung, SEO-Struktur und die Optimierung für KI-Suche und GEO.</p>
+          <a href="https://www.linkedin.com/in/simon-meding-279196234/" target="_blank" rel="noopener" class="team-linkedin">LinkedIn →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ── CTA ─────────────────────────────────────────────── -->
   <div class="cta-wrap" id="kontakt">
     <h2>Bereit für mehr Sichtbarkeit <em>in deiner Region?</em></h2>
-    <p>Kostenloses Erstgespräch. Kein Risiko, keine versteckten Kosten.</p>
+    <p>Kostenloses Erstgespräch aus Bonn. Kein Risiko, keine versteckten Kosten.</p>
     <form class="contact-form" id="contact-form">
       <input type="text" name="name" placeholder="Dein Name" required>
       <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
