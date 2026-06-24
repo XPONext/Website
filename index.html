@@ -80,7 +80,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #0D0D0D; -webkit-font-smoothing: antialiased; }
-    a { text-decoration: none; transition: opacity 0.15s, background 0.15s; }
+    a { text-decoration: none; transition: opacity 0.15s, background 0.15s, border-color 0.15s, color 0.15s; }
     section { width: 100%; }
 
     /* ── NAVIGATION ──────────────────────────────────────── */
@@ -165,6 +165,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 0 14px rgba(63, 81, 55, 0.35);
     }
     .btn-primary:hover { background: #134D32; opacity: 1; }
     .btn-ghost {
@@ -178,6 +179,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
     }
     .btn-ghost:hover { border-color: #1B6B45; color: #1B6B45; opacity: 1; }
 
@@ -246,6 +248,7 @@
     /* ── SOCIAL PROOF BAR ────────────────────────────────── */
     .proof-bar {
       background: #F9FAFB;
+      border-top: 1px solid #E5E7EB;
       border-bottom: 1px solid #E5E7EB;
       padding: 1.3rem 5%;
       text-align: center;
@@ -643,7 +646,158 @@
     }
     .team-linkedin:hover { text-decoration: underline; }
 
-    /* ── CTA (DARK) ──────────────────────────────────────── */
+    /* ── TEAM ────────────────────────────────────────────── */
+    .team-wrap {
+      background: #F9FAFB;
+      padding: 7rem 5%;
+      border-top: 1px solid #E5E7EB;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    .team-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .team-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #E3F1E9;
+      color: #134D32;
+      padding: 0.3rem 0.85rem;
+      border-radius: 99px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 1.4rem;
+      letter-spacing: 0.02em;
+    }
+    .team-text h2 {
+      font-size: clamp(1.9rem, 3vw, 2.6rem);
+      font-weight: 900;
+      color: #0D0D0D;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    .team-text h2 em { font-style: normal; color: #1B6B45; }
+    .team-text p {
+      font-size: 1rem;
+      color: #4B5563;
+      line-height: 1.75;
+      margin-bottom: 2.2rem;
+    }
+    .team-stats {
+      display: flex;
+      gap: 2.5rem;
+    }
+    .team-stat-num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: #1B6B45;
+      line-height: 1;
+      display: block;
+    }
+    .team-stat-label {
+      font-size: 0.88rem;
+      color: #6B7280;
+      margin-top: 0.25rem;
+      display: block;
+    }
+    .team-photo-wrap {
+      position: relative;
+    }
+    .team-photo-frame {
+      aspect-ratio: 4 / 3;
+      position: relative;
+    }
+    .team-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      animation: kenBurns 12s ease-in-out infinite alternate;
+      transform-origin: center center;
+    }
+    @keyframes kenBurns {
+      0%   { transform: scale(1.0) translate(0%, 0%); }
+      100% { transform: scale(1.06) translate(-2%, -1.5%); }
+    }
+    .team-float-bottom {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: #fff;
+      border: 1px solid #E5E7EB;
+      border-radius: 14px;
+      padding: 1rem 1.4rem;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.10);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      animation: floatEl 3.2s ease-in-out infinite;
+    }
+    .team-float-top {
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      background: #1B6B45;
+      color: #fff;
+      border-radius: 14px;
+      padding: 0.85rem 1.2rem;
+      font-weight: 700;
+      font-size: 0.88rem;
+      line-height: 1.3;
+      box-shadow: 0 8px 28px rgba(27,107,69,0.30);
+      animation: floatEl 3.8s ease-in-out infinite;
+      animation-delay: 0.6s;
+      text-align: center;
+    }
+    @keyframes floatEl {
+      0%, 100% { transform: translateY(0px); }
+      50%       { transform: translateY(-9px); }
+    }
+    .float-icon {
+      width: 36px; height: 36px;
+      background: #E3F1E9;
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .float-label { font-size: 0.82rem; color: #6B7280; }
+    .float-value { font-size: 1rem; font-weight: 700; color: #0D0D0D; }
+
+    /* Scroll-reveal für Team-Section */
+    .team-reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .team-reveal.t-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .team-reveal-right {
+      opacity: 0;
+      transform: translateX(32px);
+      transition: opacity 0.75s ease 0.15s, transform 0.75s ease 0.15s;
+    }
+    .team-reveal-right.t-visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    @media (max-width: 768px) {
+      .team-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .team-photo-frame { aspect-ratio: 3 / 2; }
+      .team-float-bottom { left: 12px; bottom: -14px; }
+      .team-float-top { right: 12px; top: -14px; }
+    }
+
+    /* ── CTA (DARK — einzige dunkle Sektion) ────────────── */
     .cta-wrap {
       background: #0D0D0D;
       padding: 6rem 5%;
@@ -718,6 +872,71 @@
       footer { flex-direction: column; text-align: center; }
       .footer-col { align-items: center; }
       .problem-grid { grid-template-columns: 1fr; }
+      .ps-scores { grid-template-columns: repeat(2, 1fr); }
+      .ps-form { flex-direction: column; }
+      .ps-vitals { flex-wrap: wrap; gap: 1rem; }
+    }
+
+    /* ── PageSpeed Check ─────────────────────────────── */
+    .pagespeed-wrap { padding: 5rem 5%; background: #F9FAFB; }
+    .pagespeed-inner { max-width: 900px; margin: 0 auto; }
+    .ps-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #E8F0EB; color: #1B6B45;
+      padding: 0.35rem 0.9rem; border-radius: 99px;
+      font-size: 0.85rem; font-weight: 600; margin-bottom: 1.2rem;
+    }
+    .ps-toggle { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1.5rem; }
+    .ps-toggle-btn {
+      padding: 0.5rem 1.4rem; border-radius: 99px; border: 1.5px solid #E5E7EB;
+      background: #fff; color: #4B5563; font-size: 0.9rem; font-weight: 600;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .ps-toggle-btn.active { background: #1B6B45; color: #fff; border-color: #1B6B45; }
+    .ps-form { display: flex; gap: 1rem; }
+    .ps-input {
+      flex: 1; padding: 0.85rem 1.1rem; border: 1.5px solid #E5E7EB;
+      border-radius: 8px; font-size: 1rem; font-family: inherit; color: #0D0D0D;
+      outline: none; transition: border-color 0.2s;
+    }
+    .ps-input:focus { border-color: #1B6B45; }
+    .ps-scores {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem; margin-bottom: 2rem;
+    }
+    .ps-score-card {
+      background: #fff; border: 1px solid #E5E7EB; border-radius: 12px;
+      padding: 1.5rem 1rem; text-align: center;
+    }
+    .ps-circle-num { font-size: 2.2rem; font-weight: 900; line-height: 1; margin-bottom: 0.3rem; }
+    .ps-circle-label { font-size: 0.8rem; color: #6B7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+    .ps-vitals {
+      display: flex; gap: 2rem; justify-content: center;
+      padding: 1.5rem; background: #fff; border: 1px solid #E5E7EB;
+      border-radius: 12px; margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
+    .ps-vital { text-align: center; }
+    .ps-vital-val { font-size: 1.4rem; font-weight: 800; color: #0D0D0D; }
+    .ps-vital-label { font-size: 0.78rem; color: #9CA3AF; font-weight: 600; margin-top: 0.2rem; }
+    .ps-cta-banner {
+      padding: 1.25rem 1.5rem; border-radius: 12px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .ps-cta-banner p { margin: 0; font-weight: 600; font-size: 0.95rem; }
+    .ps-cta-banner a {
+      padding: 0.6rem 1.3rem; border-radius: 8px; text-decoration: none;
+      font-weight: 700; font-size: 0.9rem; white-space: nowrap;
+    }
+    .ps-spinner {
+      width: 40px; height: 40px; border: 3px solid #E5E7EB;
+      border-top-color: #1B6B45; border-radius: 50%;
+      animation: ps-spin 0.8s linear infinite; margin: 0 auto;
+    }
+    @keyframes ps-spin { to { transform: rotate(360deg); } }
+    .ps-error-box {
+      margin-top: 1.5rem; padding: 1rem 1.25rem; background: #FEF2F2;
+      border: 1px solid #FECACA; border-radius: 8px; color: #B91C1C; font-size: 0.9rem;
     }
   </style>
   <script type="application/ld+json">
@@ -832,7 +1051,7 @@
         <p class="hero-sub">Wir sorgen dafür, dass dein Betrieb bei Google und KI-Plattformen ganz oben steht und dort bleibt. Webseite, Bewertungen, Ads: alles aus einer Hand.</p>
         <div class="hero-btns">
           <a href="#kontakt" class="btn-primary">Kostenloses Erstgespräch →</a>
-          <a href="#leistungen" class="btn-ghost">Unsere Leistungen ansehen</a>
+          <a href="#leistungen" class="btn-secondary">Unsere Leistungen ansehen</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -844,12 +1063,12 @@
             <span class="dash-rank rank-1">#1</span>
           </div>
           <div class="dash-row" style="opacity:0.5;">
-            <div class="dash-dot" style="background:#374151;"></div>
+            <div class="dash-dot" style="background:#D1D5DB;"></div>
             <span class="dash-row-text">Konkurrent A</span>
             <span class="dash-rank rank-other">#2</span>
           </div>
-          <div class="dash-row" style="opacity:0.3;">
-            <div class="dash-dot" style="background:#374151;"></div>
+          <div class="dash-row" style="opacity:0.35;">
+            <div class="dash-dot" style="background:#D1D5DB;"></div>
             <span class="dash-row-text">Konkurrent B</span>
             <span class="dash-rank rank-other">#3</span>
           </div>
@@ -1070,6 +1289,42 @@
     </div>
   </div>
 
+  <!-- ── TEAM ──────────────────────────────────────────── -->
+  <!-- ── TEAM (vorübergehend auskommentiert) ───────────────────
+  <div class="team-wrap" id="team">
+    <div class="team-inner">
+
+      <div class="team-text team-reveal">
+        <div class="team-badge">👋 Das Team hinter XPONext</div>
+        <h2>Persönlich. Direkt.<br><em>Ergebnisorientiert.</em></h2>
+        <p>Wir sind Simon & Tim — kein großes Agentur-Konstrukt, sondern zwei Ansprechpartner, die euer Geschäft kennen und konkrete Ergebnisse liefern. Ihr erreicht uns direkt — ohne Warteschleifen, ohne Callcenter.</p>
+      </div>
+
+      <div class="team-photo-wrap team-reveal-right">
+        <div class="team-float-top">
+          ✓ Kein Callcenter<br>Direkter Kontakt
+        </div>
+
+        <div class="team-photo-frame" style="background:#F3F4F6;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0.75rem;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/>
+          </svg>
+          <span style="font-size:0.85rem;color:#9CA3AF;font-family:Inter,sans-serif;">Foto folgt in Kürze</span>
+        </div>
+
+        <div class="team-float-bottom">
+          <div class="float-icon">⭐</div>
+          <div>
+            <div class="float-value">5,0 / 5 Sterne</div>
+            <div class="float-label">Kundenbewertungen</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  ── TEAM ENDE ──────────────────────────────────────────────── -->
+
   <!-- ── FAQ ─────────────────────────────────────────────── -->
   <div class="faq-wrap" id="faq">
     <div class="faq-inner">
@@ -1150,32 +1405,6 @@
     </div>
   </div>
 
-  <!-- ── TEAM ────────────────────────────────────────────── -->
-  <div class="team-wrap">
-    <div class="team-inner">
-      <div class="section-header">
-        <h2>Die Leute <em>hinter XPONext.</em></h2>
-        <p>Keine riesige Agentur. Direkte Partnerschaft – du weißt immer, mit wem du sprichst.</p>
-      </div>
-      <div class="team-grid">
-        <div class="team-card">
-          <img src="assets/team/tim.jpg" alt="Tim Bünger, Co-Founder XPONext" class="team-avatar">
-          <div class="team-name">Tim Bünger</div>
-          <div class="team-role">Co-Founder</div>
-          <p class="team-bio">Tim hat Betriebswirtschaftslehre studiert und kümmert sich bei XPONext um Strategie, Kundenkommunikation und Google Ads. Sein Fokus: Kampagnen, die wirklich konvertieren.</p>
-          <a href="https://www.linkedin.com/in/tim-b%C3%BCnger-924b49309/" target="_blank" rel="noopener" class="team-linkedin">LinkedIn →</a>
-        </div>
-        <div class="team-card">
-          <img src="assets/team/simon.jpg" alt="Simon Meding, Co-Founder XPONext" class="team-avatar">
-          <div class="team-name">Simon Meding</div>
-          <div class="team-role">Co-Founder</div>
-          <p class="team-bio">Simon hat Wirtschaftsinformatik studiert und verantwortet bei XPONext die technische Umsetzung: Website-Entwicklung, SEO-Struktur und die Optimierung für KI-Suche und GEO.</p>
-          <a href="https://www.linkedin.com/in/simon-meding-279196234/" target="_blank" rel="noopener" class="team-linkedin">LinkedIn →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- ── CTA ─────────────────────────────────────────────── -->
   <div class="cta-wrap" id="kontakt">
     <h2>Bereit für mehr Sichtbarkeit <em>in deiner Region?</em></h2>
@@ -1188,6 +1417,21 @@
       <button type="submit" class="btn-primary">Kostenloses Erstgespräch anfragen →</button>
     </form>
   </div>
+
+  <script>
+    (function() {
+      var revealEls = document.querySelectorAll('.team-reveal, .team-reveal-right');
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('t-visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      revealEls.forEach(function(el) { obs.observe(el); });
+    })();
+  </script>
 
   <script>
     function closeFaqItem(item) {
@@ -1263,6 +1507,148 @@
       <a href="datenschutz.html">Datenschutz</a>
     </div>
   </footer>
+
+  <script>
+  (function() {
+    var strategy = 'mobile';
+
+    // Toggle Mobile / Desktop
+    document.querySelectorAll('.ps-toggle-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        strategy = this.dataset.strategy;
+        document.querySelectorAll('.ps-toggle-btn').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+      });
+    });
+
+    // Form submit
+    document.getElementById('ps-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var url = document.getElementById('ps-url').value.trim();
+      if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+      runCheck(url);
+    });
+
+    function show(id) { document.getElementById(id).style.display = ''; }
+    function hide(id) { document.getElementById(id).style.display = 'none'; }
+
+    function runCheck(url) {
+      hide('ps-result');
+      hide('ps-error');
+      show('ps-loading');
+
+      var apiUrl = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed'
+        + '?url=' + encodeURIComponent(url)
+        + '&strategy=' + strategy
+        + '&category=performance&category=seo&category=accessibility&category=best-practices'
+        + '&key=AIzaSyDfBOYEsg3mmuVXws2PCW2DqoWlDQ_dnLY';
+
+      fetch(apiUrl)
+        .then(function(r) {
+          if (r.status === 429) throw new Error('rate-limit');
+          if (!r.ok) return r.json().then(function(d) {
+            throw new Error(d.error && d.error.message ? d.error.message : 'HTTP ' + r.status);
+          });
+          return r.json();
+        })
+        .then(function(data) {
+          hide('ps-loading');
+          renderResult(data);
+        })
+        .catch(function(err) {
+          hide('ps-loading');
+          var msg;
+          if (err && err.message === 'rate-limit') {
+            msg = 'Zu viele Anfragen — bitte kurz warten und erneut versuchen.';
+          } else if (err && err.message) {
+            msg = 'Fehler: ' + err.message;
+          } else {
+            msg = 'Die URL konnte nicht analysiert werden. Bitte prüfe die Adresse und versuche es erneut.';
+          }
+          var el = document.getElementById('ps-error');
+          el.innerHTML = '<div class="ps-error-box">' + msg + '</div>';
+          show('ps-error');
+        });
+    }
+
+    function scoreColor(score) {
+      if (score >= 90) return '#1B6B45';
+      if (score >= 50) return '#DD6B20';
+      return '#E53E3E';
+    }
+
+    function renderResult(data) {
+      var lr = data.lighthouseResult;
+      if (!lr || !lr.categories) {
+        var el = document.getElementById('ps-error');
+        var detail = data.error ? data.error.message : 'Unbekannter Fehler';
+        el.innerHTML = '<div class="ps-error-box">Fehler: ' + detail + '</div>';
+        show('ps-error');
+        return;
+      }
+      var cats = lr.categories;
+      var audits = lr.audits;
+
+      // Score-Kreise
+      var scoreItems = [
+        { key: 'performance',    label: 'Performance' },
+        { key: 'seo',            label: 'SEO' },
+        { key: 'accessibility',  label: 'Zugängl.' },
+        { key: 'best-practices', label: 'Best Pract.' }
+      ];
+      var scoresHtml = '';
+      scoreItems.forEach(function(item) {
+        var score = cats[item.key] ? Math.round(cats[item.key].score * 100) : '–';
+        var color = typeof score === 'number' ? scoreColor(score) : '#9CA3AF';
+        scoresHtml += '<div class="ps-score-card">'
+          + '<div class="ps-circle-num" style="color:' + color + ';">' + score + '</div>'
+          + '<div class="ps-circle-label">' + item.label + '</div>'
+          + '</div>';
+      });
+      document.getElementById('ps-scores').innerHTML = scoresHtml;
+
+      // Core Web Vitals
+      var vitalsHtml = '';
+      if (audits) {
+        var vitals = [
+          { id: 'largest-contentful-paint', label: 'LCP' },
+          { id: 'first-contentful-paint',   label: 'FCP' },
+          { id: 'cumulative-layout-shift',  label: 'CLS' }
+        ];
+        vitals.forEach(function(v) {
+          var val = audits[v.id] ? audits[v.id].displayValue : '–';
+          vitalsHtml += '<div class="ps-vital">'
+            + '<div class="ps-vital-val">' + val + '</div>'
+            + '<div class="ps-vital-label">' + v.label + '</div>'
+            + '</div>';
+        });
+      }
+      document.getElementById('ps-vitals').innerHTML = vitalsHtml;
+
+      // CTA-Banner
+      var perfScore = cats.performance ? Math.round(cats.performance.score * 100) : null;
+      var banner = document.getElementById('ps-cta-banner');
+      if (perfScore !== null && perfScore < 70) {
+        banner.style.background = '#FEF3E2';
+        banner.style.border = '1px solid #FCD34D';
+        banner.innerHTML = '<p style="color:#92400E;">⚠️ Deine Website hat Optimierungspotenzial — das kostet dich täglich Kunden.</p>'
+          + '<a href="#kontakt" style="background:#1B6B45;color:#fff;">Jetzt optimieren lassen →</a>';
+      } else if (perfScore !== null && perfScore >= 90) {
+        banner.style.background = '#F0FBF4';
+        banner.style.border = '1px solid #6EE7A0';
+        banner.innerHTML = '<p style="color:#166534;">✅ Gute Performance! Noch weiter optimieren?</p>'
+          + '<a href="#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
+      } else {
+        banner.style.background = '#F9FAFB';
+        banner.style.border = '1px solid #E5E7EB';
+        banner.innerHTML = '<p style="color:#4B5563;">Wir helfen dir, noch mehr aus deiner Website rauszuholen.</p>'
+          + '<a href="#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
+      }
+
+      show('ps-result');
+    }
+  })();
+  </script>
 
 </body>
 </html>
