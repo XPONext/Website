@@ -489,8 +489,14 @@
       letter-spacing: -0.02em;
     }
     .stat-lbl { font-size: 0.88rem; color: #6B7280; margin-top: 0.45rem; font-weight: 500; }
-    .promise-icon { font-size: 1.9rem; margin-bottom: 0.7rem; }
-    .promise-icon img { width: 2.6rem; height: 2.6rem; display: block; margin: 0 auto; }
+    .promise-icon {
+      height: 2.6rem;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .promise-icon img { height: 2.6rem; width: auto; display: block; }
     .promise-item h3 { font-size: 1rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.35rem; }
     .promise-item p { font-size: 0.85rem; color: #6B7280; line-height: 1.6; }
 
@@ -1132,19 +1138,24 @@
       </div>
       <div class="stats-grid">
         <div class="promise-item">
-          <div class="promise-icon"><img src="assets/google-ads-badge.png" alt="Google Ads zertifiziert Badge"></div>
+          <div class="promise-icon">
+            <img src="assets/google-ads-badge.png" alt="Google Ads zertifiziert Badge">
+          </div>
           <h3>Google Ads zertifiziert</h3>
           <p>Geprüfte Expertise von Google für Kampagnen, die von Anfang an richtig aufgesetzt sind.</p>
         </div>
         <div class="promise-item">
+          <div class="promise-icon" aria-hidden="true"></div>
           <h3>Direkter Kontakt</h3>
           <p>Garantierte Antwort innerhalb von 16 Stunden. Du sprichst direkt mit den Leuten, mit denen du zusammenarbeitest.</p>
         </div>
         <div class="promise-item">
+          <div class="promise-icon" aria-hidden="true"></div>
           <h3>Schnelle Umsetzung</h3>
           <p>Von der ersten Beratung bis zur ersten Lösung vergehen in der Regel nicht mehr als 7 Tage.</p>
         </div>
         <div class="promise-item">
+          <div class="promise-icon" aria-hidden="true"></div>
           <h3>Volle Transparenz</h3>
           <p>Du weißt jederzeit, was passiert und warum: regelmäßige Updates und KPI-Auswertungen statt Blackbox.</p>
         </div>
