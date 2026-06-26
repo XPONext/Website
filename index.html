@@ -727,72 +727,8 @@
       footer { flex-direction: column; text-align: center; }
       .footer-col { align-items: center; }
       .problem-grid { grid-template-columns: 1fr; }
-      .ps-scores { grid-template-columns: repeat(2, 1fr); }
-      .ps-form { flex-direction: column; }
-      .ps-vitals { flex-wrap: wrap; gap: 1rem; }
-    }
+}
 
-    /* ── PageSpeed Check ─────────────────────────────── */
-    .pagespeed-wrap { padding: 5rem 5%; background: #F9FAFB; }
-    .pagespeed-inner { max-width: 900px; margin: 0 auto; }
-    .ps-badge {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: #E8F0EB; color: #1B6B45;
-      padding: 0.35rem 0.9rem; border-radius: 99px;
-      font-size: 0.85rem; font-weight: 600; margin-bottom: 1.2rem;
-    }
-    .ps-toggle { display: flex; gap: 0.5rem; justify-content: center; margin-bottom: 1.5rem; }
-    .ps-toggle-btn {
-      padding: 0.5rem 1.4rem; border-radius: 99px; border: 1.5px solid #E5E7EB;
-      background: #fff; color: #4B5563; font-size: 0.9rem; font-weight: 600;
-      cursor: pointer; transition: all 0.2s;
-    }
-    .ps-toggle-btn.active { background: #1B6B45; color: #fff; border-color: #1B6B45; }
-    .ps-form { display: flex; gap: 1rem; }
-    .ps-input {
-      flex: 1; padding: 0.85rem 1.1rem; border: 1.5px solid #E5E7EB;
-      border-radius: 8px; font-size: 1rem; font-family: inherit; color: #0D0D0D;
-      outline: none; transition: border-color 0.2s;
-    }
-    .ps-input:focus { border-color: #1B6B45; }
-    .ps-scores {
-      display: grid; grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem; margin-bottom: 2rem;
-    }
-    .ps-score-card {
-      background: #fff; border: 1px solid #E5E7EB; border-radius: 12px;
-      padding: 1.5rem 1rem; text-align: center;
-    }
-    .ps-circle-num { font-size: 2.2rem; font-weight: 900; line-height: 1; margin-bottom: 0.3rem; }
-    .ps-circle-label { font-size: 0.8rem; color: #6B7280; font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
-    .ps-vitals {
-      display: flex; gap: 2rem; justify-content: center;
-      padding: 1.5rem; background: #fff; border: 1px solid #E5E7EB;
-      border-radius: 12px; margin-bottom: 1.5rem; flex-wrap: wrap;
-    }
-    .ps-vital { text-align: center; }
-    .ps-vital-val { font-size: 1.4rem; font-weight: 800; color: #0D0D0D; }
-    .ps-vital-label { font-size: 0.78rem; color: #9CA3AF; font-weight: 600; margin-top: 0.2rem; }
-    .ps-cta-banner {
-      padding: 1.25rem 1.5rem; border-radius: 12px;
-      display: flex; align-items: center; justify-content: space-between;
-      gap: 1rem; flex-wrap: wrap;
-    }
-    .ps-cta-banner p { margin: 0; font-weight: 600; font-size: 0.95rem; }
-    .ps-cta-banner a {
-      padding: 0.6rem 1.3rem; border-radius: 8px; text-decoration: none;
-      font-weight: 700; font-size: 0.9rem; white-space: nowrap;
-    }
-    .ps-spinner {
-      width: 40px; height: 40px; border: 3px solid #E5E7EB;
-      border-top-color: #1B6B45; border-radius: 50%;
-      animation: ps-spin 0.8s linear infinite; margin: 0 auto;
-    }
-    @keyframes ps-spin { to { transform: rotate(360deg); } }
-    .ps-error-box {
-      margin-top: 1.5rem; padding: 1rem 1.25rem; background: #FEF2F2;
-      border: 1px solid #FECACA; border-radius: 8px; color: #B91C1C; font-size: 0.9rem;
-    }
   </style>
   <script type="application/ld+json">
   {
@@ -893,6 +829,7 @@
       <a href="#vorteile">Vorteile</a>
       <a href="#faq">FAQ</a>
       <a href="#ueber-uns">Über uns</a>
+      <a href="website-check.html">Website-Check</a>
       <a href="#kontakt" class="nav-cta">Termin buchen</a>
     </div>
   </nav>
@@ -906,7 +843,7 @@
         <p class="hero-sub">Wir sorgen dafür, dass dein Betrieb bei Google und KI-Plattformen ganz oben steht und dort bleibt. Webseite, Bewertungen, Ads: alles aus einer Hand.</p>
         <div class="hero-btns">
           <a href="#kontakt" class="btn-primary">Kostenloses Erstgespräch →</a>
-          <a href="#leistungen" class="btn-secondary">Unsere Leistungen ansehen</a>
+          <a href="#leistungen" class="btn-ghost">Unsere Leistungen ansehen</a>
         </div>
       </div>
       <div class="hero-visual">
@@ -1063,6 +1000,16 @@
           <div class="card-head"><h3>Lokales SEO</h3></div>
           <p>Lokales SEO sorgt dafür, dass du von Menschen in deiner Region gefunden wirst, genau dann, wenn sie nach einem Anbieter wie dir suchen. Durch die Optimierung deines Google Business Profils, lokaler Suchbegriffe und einheitlicher Unternehmensangaben im Netz erscheinst du ganz oben in der Karte und in den lokalen Suchergebnissen.</p>
         </div>
+      </div>
+
+      <!-- Website-Check Teaser -->
+      <div style="margin-top:2.5rem; background:#0D0D0D; border-radius:16px; padding:2rem 2.5rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;">
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:6px;background:#1B6B45;color:#fff;padding:0.3rem 0.8rem;border-radius:99px;font-size:0.8rem;font-weight:600;margin-bottom:0.75rem;">🔍 Kostenloses Tool</div>
+          <h3 style="font-size:1.25rem;font-weight:800;color:#fff;margin:0 0 0.4rem;line-height:1.2;">Wie gut ist deine aktuelle Website?</h3>
+          <p style="color:#9CA3AF;font-size:0.95rem;margin:0;">Performance, SEO, Zugänglichkeit — kostenlos geprüft in Sekunden.</p>
+        </div>
+        <a href="website-check.html" style="background:#1B6B45;color:#fff;padding:0.85rem 1.7rem;border-radius:8px;font-weight:700;font-size:0.95rem;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0;">Website jetzt prüfen →</a>
       </div>
     </div>
   </div>
@@ -1394,147 +1341,6 @@
     </div>
   </footer>
 
-  <script>
-  (function() {
-    var strategy = 'mobile';
-
-    // Toggle Mobile / Desktop
-    document.querySelectorAll('.ps-toggle-btn').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        strategy = this.dataset.strategy;
-        document.querySelectorAll('.ps-toggle-btn').forEach(function(b) { b.classList.remove('active'); });
-        this.classList.add('active');
-      });
-    });
-
-    // Form submit
-    document.getElementById('ps-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      var url = document.getElementById('ps-url').value.trim();
-      if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
-      runCheck(url);
-    });
-
-    function show(id) { document.getElementById(id).style.display = ''; }
-    function hide(id) { document.getElementById(id).style.display = 'none'; }
-
-    function runCheck(url) {
-      hide('ps-result');
-      hide('ps-error');
-      show('ps-loading');
-
-      var apiUrl = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed'
-        + '?url=' + encodeURIComponent(url)
-        + '&strategy=' + strategy
-        + '&category=performance&category=seo&category=accessibility&category=best-practices'
-        + '&key=AIzaSyDfBOYEsg3mmuVXws2PCW2DqoWlDQ_dnLY';
-
-      fetch(apiUrl)
-        .then(function(r) {
-          if (r.status === 429) throw new Error('rate-limit');
-          if (!r.ok) return r.json().then(function(d) {
-            throw new Error(d.error && d.error.message ? d.error.message : 'HTTP ' + r.status);
-          });
-          return r.json();
-        })
-        .then(function(data) {
-          hide('ps-loading');
-          renderResult(data);
-        })
-        .catch(function(err) {
-          hide('ps-loading');
-          var msg;
-          if (err && err.message === 'rate-limit') {
-            msg = 'Zu viele Anfragen — bitte kurz warten und erneut versuchen.';
-          } else if (err && err.message) {
-            msg = 'Fehler: ' + err.message;
-          } else {
-            msg = 'Die URL konnte nicht analysiert werden. Bitte prüfe die Adresse und versuche es erneut.';
-          }
-          var el = document.getElementById('ps-error');
-          el.innerHTML = '<div class="ps-error-box">' + msg + '</div>';
-          show('ps-error');
-        });
-    }
-
-    function scoreColor(score) {
-      if (score >= 90) return '#1B6B45';
-      if (score >= 50) return '#DD6B20';
-      return '#E53E3E';
-    }
-
-    function renderResult(data) {
-      var lr = data.lighthouseResult;
-      if (!lr || !lr.categories) {
-        var el = document.getElementById('ps-error');
-        var detail = data.error ? data.error.message : 'Unbekannter Fehler';
-        el.innerHTML = '<div class="ps-error-box">Fehler: ' + detail + '</div>';
-        show('ps-error');
-        return;
-      }
-      var cats = lr.categories;
-      var audits = lr.audits;
-
-      // Score-Kreise
-      var scoreItems = [
-        { key: 'performance',    label: 'Performance' },
-        { key: 'seo',            label: 'SEO' },
-        { key: 'accessibility',  label: 'Zugängl.' },
-        { key: 'best-practices', label: 'Best Pract.' }
-      ];
-      var scoresHtml = '';
-      scoreItems.forEach(function(item) {
-        var score = cats[item.key] ? Math.round(cats[item.key].score * 100) : '–';
-        var color = typeof score === 'number' ? scoreColor(score) : '#9CA3AF';
-        scoresHtml += '<div class="ps-score-card">'
-          + '<div class="ps-circle-num" style="color:' + color + ';">' + score + '</div>'
-          + '<div class="ps-circle-label">' + item.label + '</div>'
-          + '</div>';
-      });
-      document.getElementById('ps-scores').innerHTML = scoresHtml;
-
-      // Core Web Vitals
-      var vitalsHtml = '';
-      if (audits) {
-        var vitals = [
-          { id: 'largest-contentful-paint', label: 'LCP' },
-          { id: 'first-contentful-paint',   label: 'FCP' },
-          { id: 'cumulative-layout-shift',  label: 'CLS' }
-        ];
-        vitals.forEach(function(v) {
-          var val = audits[v.id] ? audits[v.id].displayValue : '–';
-          vitalsHtml += '<div class="ps-vital">'
-            + '<div class="ps-vital-val">' + val + '</div>'
-            + '<div class="ps-vital-label">' + v.label + '</div>'
-            + '</div>';
-        });
-      }
-      document.getElementById('ps-vitals').innerHTML = vitalsHtml;
-
-      // CTA-Banner
-      var perfScore = cats.performance ? Math.round(cats.performance.score * 100) : null;
-      var banner = document.getElementById('ps-cta-banner');
-      if (perfScore !== null && perfScore < 70) {
-        banner.style.background = '#FEF3E2';
-        banner.style.border = '1px solid #FCD34D';
-        banner.innerHTML = '<p style="color:#92400E;">⚠️ Deine Website hat Optimierungspotenzial — das kostet dich täglich Kunden.</p>'
-          + '<a href="#kontakt" style="background:#1B6B45;color:#fff;">Jetzt optimieren lassen →</a>';
-      } else if (perfScore !== null && perfScore >= 90) {
-        banner.style.background = '#F0FBF4';
-        banner.style.border = '1px solid #6EE7A0';
-        banner.innerHTML = '<p style="color:#166534;">✅ Gute Performance! Noch weiter optimieren?</p>'
-          + '<a href="#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
-      } else {
-        banner.style.background = '#F9FAFB';
-        banner.style.border = '1px solid #E5E7EB';
-        banner.innerHTML = '<p style="color:#4B5563;">Wir helfen dir, noch mehr aus deiner Website rauszuholen.</p>'
-          + '<a href="#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
-      }
-
-      show('ps-result');
-    }
-  })();
-  </script>
 
 </body>
 </html>
