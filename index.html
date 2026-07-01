@@ -86,7 +86,7 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #0D0D0D; -webkit-font-smoothing: antialiased; }
-    a { text-decoration: none; transition: opacity 0.15s, background 0.15s; }
+    a { text-decoration: none; transition: opacity 0.15s, background 0.15s, border-color 0.15s, color 0.15s; }
     section { width: 100%; }
 
     /* ── NAVIGATION ──────────────────────────────────────── */
@@ -171,6 +171,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 0 14px rgba(63, 81, 55, 0.35);
     }
     .btn-primary:hover { background: #134D32; opacity: 1; }
     .btn-ghost {
@@ -184,6 +185,7 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.06);
     }
     .btn-ghost:hover { border-color: #1B6B45; color: #1B6B45; opacity: 1; }
 
@@ -252,6 +254,7 @@
     /* ── SOCIAL PROOF BAR ────────────────────────────────── */
     .proof-bar {
       background: #F9FAFB;
+      border-top: 1px solid #E5E7EB;
       border-bottom: 1px solid #E5E7EB;
       padding: 1.3rem 5%;
       text-align: center;
@@ -546,8 +549,14 @@
       letter-spacing: -0.02em;
     }
     .stat-lbl { font-size: 0.88rem; color: #6B7280; margin-top: 0.45rem; font-weight: 500; }
-    .promise-icon { font-size: 1.9rem; margin-bottom: 0.7rem; }
-    .promise-icon img { width: 2.6rem; height: 2.6rem; display: block; margin: 0 auto; }
+    .promise-icon {
+      height: 2.6rem;
+      margin-bottom: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .promise-icon img { height: 2.6rem; width: auto; display: block; }
     .promise-item h3 { font-size: 1rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.35rem; }
     .promise-item p { font-size: 0.85rem; color: #6B7280; line-height: 1.6; }
 
@@ -649,7 +658,7 @@
     }
     .team-linkedin:hover { text-decoration: underline; }
 
-    /* ── CTA (DARK) ──────────────────────────────────────── */
+    /* ── CTA (DARK — einzige dunkle Sektion) ────────────── */
     .cta-wrap {
       background: #0D0D0D;
       padding: 6rem 5%;
@@ -724,7 +733,8 @@
       footer { flex-direction: column; text-align: center; }
       .footer-col { align-items: center; }
       .problem-grid { grid-template-columns: 1fr; }
-    }
+}
+
   </style>
   <script type="application/ld+json">
   {
@@ -825,6 +835,7 @@
       <a href="#vorteile">Vorteile</a>
       <a href="#faq">FAQ</a>
       <a href="#ueber-uns">Über uns</a>
+      <a href="website-check.html">Website-Check</a>
       <a href="#kontakt" class="nav-cta">Termin buchen</a>
     </div>
   </nav>
@@ -850,12 +861,12 @@
             <span class="dash-rank rank-1">#1</span>
           </div>
           <div class="dash-row" style="opacity:0.5;">
-            <div class="dash-dot" style="background:#374151;"></div>
+            <div class="dash-dot" style="background:#D1D5DB;"></div>
             <span class="dash-row-text">Konkurrent A</span>
             <span class="dash-rank rank-other">#2</span>
           </div>
-          <div class="dash-row" style="opacity:0.3;">
-            <div class="dash-dot" style="background:#374151;"></div>
+          <div class="dash-row" style="opacity:0.35;">
+            <div class="dash-dot" style="background:#D1D5DB;"></div>
             <span class="dash-row-text">Konkurrent B</span>
             <span class="dash-rank rank-other">#3</span>
           </div>
@@ -996,6 +1007,16 @@
           <p>Lokales SEO sorgt dafür, dass du von Menschen in deiner Region gefunden wirst, genau dann, wenn sie nach einem Anbieter wie dir suchen. Durch die Optimierung deines Google Business Profils, lokaler Suchbegriffe und einheitlicher Unternehmensangaben im Netz erscheinst du ganz oben in der Karte und in den lokalen Suchergebnissen.</p>
         </div>
       </div>
+
+      <!-- Website-Check Teaser -->
+      <div style="margin-top:2.5rem; background:#0D0D0D; border-radius:16px; padding:2rem 2.5rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;">
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:6px;background:#1B6B45;color:#fff;padding:0.3rem 0.8rem;border-radius:99px;font-size:0.8rem;font-weight:600;margin-bottom:0.75rem;">🔍 Kostenloses Tool</div>
+          <h3 style="font-size:1.25rem;font-weight:800;color:#fff;margin:0 0 0.4rem;line-height:1.2;">Wie gut ist deine aktuelle Website?</h3>
+          <p style="color:#9CA3AF;font-size:0.95rem;margin:0;">Performance, SEO, Zugänglichkeit — kostenlos geprüft in Sekunden.</p>
+        </div>
+        <a href="website-check.html" style="background:#1B6B45;color:#fff;padding:0.85rem 1.7rem;border-radius:8px;font-weight:700;font-size:0.95rem;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0;">Website jetzt prüfen →</a>
+      </div>
     </div>
   </div>
 
@@ -1012,14 +1033,17 @@
           <p>Geprüfte Expertise von Google für Kampagnen, die von Anfang an richtig aufgesetzt sind.</p>
         </div>
         <div class="promise-item">
+          <div class="promise-icon" aria-hidden="true"></div>
           <h3>Direkter Kontakt</h3>
           <p>Garantierte Antwort innerhalb von 16 Stunden. Du sprichst direkt mit den Leuten, mit denen du zusammenarbeitest.</p>
         </div>
         <div class="promise-item">
+          <div class="promise-icon" aria-hidden="true"></div>
           <h3>Schnelle Umsetzung</h3>
           <p>Von der ersten Beratung bis zur ersten Lösung vergehen in der Regel nicht mehr als 7 Tage.</p>
         </div>
         <div class="promise-item">
+          <div class="promise-icon" aria-hidden="true"></div>
           <h3>Volle Transparenz</h3>
           <p>Du weißt jederzeit, was passiert und warum: regelmäßige Updates und KPI-Auswertungen statt Blackbox.</p>
         </div>
@@ -1196,6 +1220,21 @@
   </div>
 
   <script>
+    (function() {
+      var revealEls = document.querySelectorAll('.team-reveal, .team-reveal-right');
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('t-visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.18 });
+      revealEls.forEach(function(el) { obs.observe(el); });
+    })();
+  </script>
+
+  <script>
     function closeFaqItem(item) {
       item.classList.remove('open');
       item.querySelector('.faq-answer').style.maxHeight = null;
@@ -1269,6 +1308,7 @@
       <a href="datenschutz.html">Datenschutz</a>
     </div>
   </footer>
+
 
 </body>
 </html>
