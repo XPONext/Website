@@ -592,9 +592,18 @@
       border-top: 1px solid #E5E7EB;
     }
     .testimonial-inner {
-      max-width: 800px;
+      max-width: 1100px;
       margin: 0 auto;
       text-align: center;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .testimonial-grid { grid-template-columns: 1fr; }
     }
     .testimonial-wrap .section-header h2 { color: #0D0D0D; }
     .testimonial-wrap .section-header p { color: #6B7280; }
@@ -603,7 +612,7 @@
       border: 1px solid #E5E7EB;
       border-radius: 16px;
       padding: 2.5rem;
-      margin-top: 3rem;
+      text-align: left;
     }
     .testimonial-stars { color: #F59E0B; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 1.2rem; }
     .testimonial-quote {
@@ -1138,14 +1147,25 @@
         <h2>Was unsere <em>Kunden sagen.</em></h2>
         <p>Echte Ergebnisse von Architekturbüros wie deinem.</p>
       </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">
-          "Ich bin super zufrieden mit der Zusammenarbeit. Alles, was wir besprochen haben, wurde schnell und zuverlässig umgesetzt. Man merkt einfach, dass das Team von XPONext wirklich weiß, was es tut."
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">
+            "Ich bin super zufrieden mit der Zusammenarbeit. Alles, was wir besprochen haben, wurde schnell und zuverlässig umgesetzt. Man merkt einfach, dass das Team von XPONext wirklich weiß, was es tut."
+          </div>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-name">Martin B.</div>
+          <div class="testimonial-role">Architekt, Bad Honnef</div>
         </div>
-        <div class="testimonial-divider"></div>
-        <div class="testimonial-name">Martin B.</div>
-        <div class="testimonial-role">Architekt, Bad Honnef</div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">
+            "Ich wusste lange nicht, wie ich mit meiner Internetpräsenz online sichtbarer werden kann. XPONext hat sich bei mir gemeldet und sich das Problem angehört. Die ersten Schritte waren nach wenigen Tagen umgesetzt – mittlerweile werde ich auf der ersten Seite gefunden und die Resonanz ist wirklich gut. Schnelle, kompetente Beratung."
+          </div>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-name">Volker G.</div>
+          <div class="testimonial-role">Werbeagentur, Pfullendorf</div>
+        </div>
       </div>
     </div>
   </div>
