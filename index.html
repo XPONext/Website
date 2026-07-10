@@ -592,9 +592,18 @@
       border-top: 1px solid #E5E7EB;
     }
     .testimonial-inner {
-      max-width: 800px;
+      max-width: 1100px;
       margin: 0 auto;
       text-align: center;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 768px) {
+      .testimonial-grid { grid-template-columns: 1fr; }
     }
     .testimonial-wrap .section-header h2 { color: #0D0D0D; }
     .testimonial-wrap .section-header p { color: #6B7280; }
@@ -603,7 +612,7 @@
       border: 1px solid #E5E7EB;
       border-radius: 16px;
       padding: 2.5rem;
-      margin-top: 3rem;
+      text-align: left;
     }
     .testimonial-stars { color: #F59E0B; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 1.2rem; }
     .testimonial-quote {
@@ -746,9 +755,12 @@
     .footer-logo span { color: #1B6B45; }
     .footer-copy { color: #9CA3AF; font-size: 0.82rem; margin-top: 0.7rem; }
     .footer-col { display: flex; flex-direction: column; gap: 0.6rem; min-width: 130px; }
+    .footer-col.footer-about { max-width: 260px; }
+    .footer-about p { color: #6B7280; font-size: 0.88rem; line-height: 1.6; margin-top: 0.8rem; }
     .footer-col-title { font-size: 0.75rem; font-weight: 700; color: #9CA3AF; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.2rem; }
     .footer-col a { color: #6B7280; font-size: 0.88rem; }
     .footer-col a:hover { color: #0D0D0D; opacity: 1; }
+    .footer-col address { color: #6B7280; font-size: 0.88rem; font-style: normal; line-height: 1.6; }
 
     /* ── RESPONSIVE ──────────────────────────────────────── */
     @media (max-width: 768px) {
@@ -1138,14 +1150,25 @@
         <h2>Was unsere <em>Kunden sagen.</em></h2>
         <p>Echte Ergebnisse von Architekturbüros wie deinem.</p>
       </div>
-      <div class="testimonial-card">
-        <div class="testimonial-stars">★★★★★</div>
-        <div class="testimonial-quote">
-          "Ich bin super zufrieden mit der Zusammenarbeit. Alles, was wir besprochen haben, wurde schnell und zuverlässig umgesetzt. Man merkt einfach, dass das Team von XPONext wirklich weiß, was es tut."
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">
+            "Ich bin super zufrieden mit der Zusammenarbeit. Alles, was wir besprochen haben, wurde schnell und zuverlässig umgesetzt. Man merkt einfach, dass das Team von XPONext wirklich weiß, was es tut."
+          </div>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-name">Martin B.</div>
+          <div class="testimonial-role">Architekt, Bad Honnef</div>
         </div>
-        <div class="testimonial-divider"></div>
-        <div class="testimonial-name">Martin B.</div>
-        <div class="testimonial-role">Architekt, Bad Honnef</div>
+        <div class="testimonial-card">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">
+            "Ich wusste lange nicht, wie ich mit meiner Internetpräsenz online sichtbarer werden kann. XPONext hat sich bei mir gemeldet und sich das Problem angehört. Die ersten Schritte waren nach wenigen Tagen umgesetzt – mittlerweile werde ich auf der ersten Seite gefunden und die Resonanz ist wirklich gut. Schnelle, kompetente Beratung."
+          </div>
+          <div class="testimonial-divider"></div>
+          <div class="testimonial-name">Volker G.</div>
+          <div class="testimonial-role">Werbeagentur, Pfullendorf</div>
+        </div>
       </div>
     </div>
   </div>
@@ -1377,23 +1400,33 @@
 
   <!-- ── FOOTER ──────────────────────────────────────────── -->
   <footer>
-    <div class="footer-col">
+    <div class="footer-col footer-about">
       <div class="footer-logo">XPO<span>Next</span></div>
+      <p>Mehr Sichtbarkeit und effizientere Prozesse für Ihr Unternehmen – Website, Google Ads, SEO/GEO und Automatisierung aus einer Hand.</p>
       <p class="footer-copy">© 2026 XPONext GbR</p>
     </div>
     <div class="footer-col">
-      <div class="footer-col-title">Seiten</div>
+      <div class="footer-col-title">Nützliches</div>
       <a href="#leistungen">Leistungen</a>
       <a href="#effizienz">Effizienz</a>
       <a href="#vorteile">Vorteile</a>
       <a href="#faq">FAQ</a>
       <a href="#ueber-uns">Über uns</a>
-      <a href="#kontakt">Kontakt</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Rechtliches</div>
       <a href="impressum.html">Impressum</a>
       <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Kontakt</div>
+      <address>
+        XPO Next GbR<br>
+        Adrianstraße 88<br>
+        53227 Bonn
+      </address>
+      <a href="mailto:info@xponext.de">info@xponext.de</a>
     </div>
   </footer>
 
