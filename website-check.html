@@ -145,6 +145,20 @@
       .footer-col { align-items: center; }
     }
   </style>
+  <link rel="stylesheet" href="/css/cookie-banner.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0KYC5QEKH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-S0KYC5QEKH', { 'anonymize_ip': true });
+  </script>
 </head>
 <body>
 
@@ -354,6 +368,43 @@
     }
   })();
   </script>
+
+  <!-- Cookie-Banner (DSGVO) -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen" aria-hidden="true">
+    <div class="cookie-banner__card">
+      <div class="cookie-banner__head">
+        <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
+        <div>
+          <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit deiner Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+        </div>
+      </div>
+      <div class="cookie-banner__options" id="cookieOptions" hidden>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Notwendig</div>
+            <div class="cookie-option__desc">Speichert deine Cookie-Einstellungen im Browser. Kein Tracking.</div>
+          </div>
+          <span class="cookie-option__always">Immer aktiv</span>
+        </label>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Statistik</div>
+            <div class="cookie-option__desc">Anonyme Nutzungsanalyse via Google Analytics 4 und Microsoft Clarity.</div>
+          </div>
+          <input type="checkbox" id="consentStatistics" class="cookie-switch">
+          <span class="cookie-switch__slider" aria-hidden="true"></span>
+        </label>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--ghost" id="cookieEssentials" type="button">Nur notwendige</button>
+        <button class="cookie-btn cookie-btn--ghost" id="cookieSettingsToggle" type="button">Einstellungen</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieAcceptAll" type="button">Alle akzeptieren</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieSaveCustom" type="button" hidden>Auswahl speichern</button>
+      </div>
+    </div>
+  </div>
+  <script src="/js/cookie-banner.js"></script>
 
 </body>
 </html>

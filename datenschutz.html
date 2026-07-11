@@ -53,6 +53,20 @@
     .note-box ul { color: #6B7280; font-size: 0.9rem; }
     .note-box .note-label { display: block; font-weight: 700; color: #4B5563; margin-bottom: 0.4rem; }
   </style>
+  <link rel="stylesheet" href="/css/cookie-banner.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0KYC5QEKH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-S0KYC5QEKH', { 'anonymize_ip': true });
+  </script>
 </head>
 <body>
   <nav>
@@ -99,16 +113,13 @@
     <p>Rechtsgrundlage für die vorübergehende Speicherung der Daten und der Logfiles ist Art. 6 Abs. 1 lit. f DSGVO. Die vorübergehende Speicherung der IP-Adresse durch das System ist notwendig, um eine Auslieferung der Website an den Rechner des Nutzers zu ermöglichen. Die Speicherung in Logfiles erfolgt, um die Funktionsfähigkeit der Website sicherzustellen sowie zur Optimierung der Website und zur Sicherstellung der Sicherheit unserer informationstechnischen Systeme. Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind; dies ist im Falle der Erfassung der Daten zur Bereitstellung der Website regelmäßig der Fall, wenn die jeweilige Sitzung beendet ist. Die genaue Speicherdauer der Logfiles richtet sich nach den Aufbewahrungsfristen unseres Hosting-Anbieters GitHub.</p>
 
     <h2>4. Cookies und Einwilligungsmanagement</h2>
-    <div class="note-box">
-      <span class="note-label">Hinweis: derzeit noch nicht im Einsatz</span>
-      <p>Sobald auf der Website Cookies, ein Cookie-Consent-Banner oder vergleichbare Tracking-Technologien eingesetzt werden, ist hier ein eigener Abschnitt zu ergänzen, der mindestens enthält:</p>
-      <ul>
-        <li>Welche Arten von Cookies eingesetzt werden (technisch notwendig / funktional / analytisch / Marketing)</li>
-        <li>Zweck, Anbieter und Speicherdauer jedes einzelnen Cookies bzw. jeder Kategorie</li>
-        <li>Hinweis auf die vorherige Einwilligung des Nutzers (Opt-in über Consent-Banner) als Rechtsgrundlage gemäß Art. 6 Abs. 1 lit. a DSGVO bzw. § 25 TTDSG/DDG</li>
-        <li>Möglichkeit zum Widerruf der Einwilligung sowie Hinweise zu Browser-Einstellungen zur Cookie-Verwaltung</li>
-      </ul>
-    </div>
+    <p>Auf dieser Website setzen wir ein eigenes Cookie-Consent-Banner ein, das Ihre Einwilligung verwaltet. Beim ersten Aufruf erscheint ein Banner, über das Sie Ihre Einstellungen vornehmen können. Ihre Entscheidung wird für 365 Tage im <code>localStorage</code> Ihres Browsers gespeichert (Schlüssel: <code>xpo-consent</code>). Es handelt sich dabei nicht um ein klassisches Cookie im Sinne einer HTTP-Cookie-Datei, sondern um eine lokale Speicherung auf Ihrem Endgerät, die keine Daten an unseren Server oder Dritte überträgt.</p>
+    <p>Wir unterscheiden folgende Kategorien:</p>
+    <ul>
+      <li><strong>Notwendig (immer aktiv):</strong> Speicherung Ihrer Einwilligungsentscheidung im localStorage des Browsers. Rechtsgrundlage: berechtigtes Interesse gemäß Art. 6 Abs. 1 lit. f DSGVO i. V. m. § 25 Abs. 2 TDDDG, da diese Speicherung technisch erforderlich ist, um Ihre Entscheidung nachzuhalten.</li>
+      <li><strong>Statistik (nur mit Einwilligung):</strong> Google Analytics 4 zur anonymisierten Nutzungsanalyse. Rechtsgrundlage: Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG. GA4 wird ausschließlich nach aktiver Zustimmung geladen; ohne Einwilligung findet keine Datenübertragung an Google statt.</li>
+    </ul>
+    <p>Ihre Einwilligung können Sie jederzeit mit Wirkung für die Zukunft widerrufen, indem Sie über den Link „Cookie-Einstellungen" im Footer der Website Ihre Präferenzen anpassen.</p>
 
     <h2>5. Kontaktaufnahme</h2>
 
@@ -137,20 +148,24 @@
       </ul>
     </div>
 
-    <h2>7. Tracking-, Analyse- und Marketing-Tools</h2>
-    <div class="note-box">
-      <span class="note-label">Hinweis: derzeit noch nicht im Einsatz</span>
-      <p>Da XPO Next im Online-Marketing tätig ist, kommen auf der eigenen Website mit hoher Wahrscheinlichkeit künftig Tools wie Google Analytics, Google Ads (Conversion-Tracking), Google Tag Manager, Meta-/Facebook-Pixel oder LinkedIn Insight Tag zum Einsatz. Für jedes eingesetzte Tool ist ein eigener Unterabschnitt mit folgenden Angaben erforderlich:</p>
-      <ul>
-        <li>Name und Anbieter des Dienstes (inkl. Anschrift, ggf. Sitz außerhalb der EU)</li>
-        <li>Zweck der Datenverarbeitung (z. B. Reichweitenmessung, Optimierung von Werbekampagnen)</li>
-        <li>Welche Daten konkret erhoben und übertragen werden</li>
-        <li>Rechtsgrundlage – bei nicht zwingend erforderlichen Tools regelmäßig die Einwilligung über das Cookie-Consent-Tool (Art. 6 Abs. 1 lit. a DSGVO)</li>
-        <li>Speicherdauer</li>
-        <li>Widerspruchs- bzw. Opt-out-Möglichkeiten (z. B. Browser-Add-ons, Einstellungen im Consent-Banner)</li>
-        <li>Hinweis auf eine etwaige Datenübermittlung in die USA bzw. Drittländer und die hierfür bestehende Rechtsgrundlage (z. B. EU-US Data Privacy Framework, Standardvertragsklauseln)</li>
-      </ul>
-    </div>
+    <h2>7. Tracking- und Analyse-Tools</h2>
+    <h3>7.1 Google Analytics 4</h3>
+    <p>Auf dieser Website wird – ausschließlich nach Ihrer ausdrücklichen Einwilligung – Google Analytics 4 (GA4) eingesetzt. Anbieter ist Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland.</p>
+    <p>GA4 ermöglicht es uns, die Nutzung unserer Website anonymisiert zu analysieren (z. B. aufgerufene Seiten, Verweildauer, Herkunft der Besucher). Wir verwenden die IP-Anonymisierung (<code>anonymize_ip: true</code>), sodass Ihre IP-Adresse vor der Übermittlung an Google gekürzt wird.</p>
+    <p>Wir nutzen den <strong>Google Consent Mode v2</strong>: Solange keine Einwilligung vorliegt, ist der Consent-Status auf „denied" gesetzt und GA4 überträgt keine personenbezogenen Daten. Erst nach Ihrer aktiven Zustimmung über unser Cookie-Banner aktualisiert sich der Status auf „granted" und die Datenerhebung beginnt.</p>
+    <p><strong>Rechtsgrundlage:</strong> Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG. Die Einwilligung ist freiwillig und kann jederzeit über den Link „Cookie-Einstellungen" im Footer ohne Angabe von Gründen widerrufen werden, ohne dass die Rechtmäßigkeit der bis zum Widerruf erfolgten Verarbeitung berührt wird.</p>
+    <p><strong>Speicherdauer:</strong> Die von GA4 gesetzten Cookies (insbesondere <code>_ga</code>, <code>_ga_*</code>) werden bis zu 2 Jahre im Browser gespeichert. Die Rohdaten werden in Google Analytics nach 14 Monaten automatisch gelöscht.</p>
+    <p><strong>Datenübermittlung in die USA:</strong> Google verarbeitet die erhobenen Daten auch in den USA. Die Übermittlung erfolgt auf Grundlage der EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO sowie des EU-US Data Privacy Framework, dem Google LLC beigetreten ist.</p>
+    <p><strong>Opt-out:</strong> Sie können die Erfassung durch Google Analytics jederzeit deaktivieren, indem Sie Ihre Einwilligung im Cookie-Banner widerrufen oder das <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out-Browser-Add-on</a> installieren.</p>
+    <p>Weitere Informationen zur Datenverarbeitung durch Google finden Sie unter: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></p>
+
+    <h3>7.2 Microsoft Clarity</h3>
+    <p>Auf dieser Website wird – ausschließlich nach Ihrer ausdrücklichen Einwilligung – Microsoft Clarity eingesetzt. Anbieter ist Microsoft Ireland Operations Limited, One Microsoft Place, South County Business Park, Leopardstown, Dublin 18, Irland.</p>
+    <p>Microsoft Clarity ermöglicht es uns, das Nutzungsverhalten auf unserer Website zu analysieren. Es werden anonymisierte Sitzungsaufzeichnungen (Session Recordings) sowie Heatmaps erstellt, die zeigen, wo Besucher klicken und scrollen. Einzelne Personen sind dabei nicht identifizierbar.</p>
+    <p><strong>Rechtsgrundlage:</strong> Ihre Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO i. V. m. § 25 Abs. 1 TDDDG. Die Einwilligung ist freiwillig und kann jederzeit über den Link „Cookie-Einstellungen" im Footer widerrufen werden.</p>
+    <p><strong>Speicherdauer:</strong> Microsoft Clarity speichert Sitzungsdaten für 13 Monate.</p>
+    <p><strong>Datenübermittlung in die USA:</strong> Microsoft verarbeitet Daten auch in den USA. Die Übermittlung erfolgt auf Grundlage der EU-Standardvertragsklauseln gemäß Art. 46 Abs. 2 lit. c DSGVO sowie des EU-US Data Privacy Framework, dem Microsoft beigetreten ist.</p>
+    <p>Weitere Informationen zur Datenverarbeitung durch Microsoft finden Sie unter: <a href="https://privacy.microsoft.com/de-de/privacystatement" target="_blank" rel="noopener">privacy.microsoft.com/de-de/privacystatement</a></p>
 
     <h2>8. Social-Media-Plugins und -Verlinkungen</h2>
     <div class="note-box">
@@ -198,5 +213,43 @@
     <p>Diese Datenschutzerklärung ist aktuell gültig. Durch die Weiterentwicklung unserer Website und Angebote oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung anzupassen. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf dieser Website von Ihnen abgerufen werden.</p>
     <p>Stand: Juni 2026</p>
   </main>
+
+  <!-- Cookie-Banner (DSGVO) -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen" aria-hidden="true">
+    <div class="cookie-banner__card">
+      <div class="cookie-banner__head">
+        <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
+        <div>
+          <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit deiner Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+        </div>
+      </div>
+      <div class="cookie-banner__options" id="cookieOptions" hidden>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Notwendig</div>
+            <div class="cookie-option__desc">Speichert deine Cookie-Einstellungen im Browser. Kein Tracking.</div>
+          </div>
+          <span class="cookie-option__always">Immer aktiv</span>
+        </label>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Statistik</div>
+            <div class="cookie-option__desc">Anonyme Nutzungsanalyse via Google Analytics 4 und Microsoft Clarity.</div>
+          </div>
+          <input type="checkbox" id="consentStatistics" class="cookie-switch">
+          <span class="cookie-switch__slider" aria-hidden="true"></span>
+        </label>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--ghost" id="cookieEssentials" type="button">Nur notwendige</button>
+        <button class="cookie-btn cookie-btn--ghost" id="cookieSettingsToggle" type="button">Einstellungen</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieAcceptAll" type="button">Alle akzeptieren</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieSaveCustom" type="button" hidden>Auswahl speichern</button>
+      </div>
+    </div>
+  </div>
+  <script src="/js/cookie-banner.js"></script>
+
 </body>
 </html>
