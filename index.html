@@ -633,65 +633,6 @@
     .testimonial-role { font-size: 0.85rem; color: #6B7280; margin-top: 0.2rem; }
 
     /* ── WARUM XPONEXT (LIGHT) ───────────────────────────── */
-    .warum-wrap {
-      background: #fff;
-      padding: 3rem 5% 6rem;
-    }
-    .warum-inner { max-width: 1200px; margin: 0 auto; }
-    .warum-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-      margin-top: 3.5rem;
-    }
-    .warum-item { display: flex; gap: 1.2rem; align-items: flex-start; }
-    .warum-icon {
-      width: 48px; height: 48px;
-      flex-shrink: 0;
-      background: #E3F1E9;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-    }
-    .warum-item h3 { font-size: 1.05rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.4rem; }
-    .warum-item p { font-size: 0.92rem; color: #6B7280; line-height: 1.65; }
-
-    /* ── TEAM ────────────────────────────────────────────── */
-    .team-wrap {
-      background: #fff;
-      padding: 6rem 5%;
-      border-top: 1px solid #E5E7EB;
-    }
-    .team-inner { max-width: 860px; margin: 0 auto; }
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-      gap: 1.5rem;
-      margin-top: 3.5rem;
-    }
-    .team-card {
-      border: 1px solid #E5E7EB;
-      border-radius: 14px;
-      padding: 2rem;
-    }
-    .team-avatar {
-      width: 80px; height: 80px;
-      border-radius: 12px;
-      object-fit: cover;
-      object-position: center top;
-      margin-bottom: 1rem;
-    }
-    .team-name { font-size: 1.05rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.2rem; }
-    .team-role { font-size: 0.82rem; font-weight: 600; color: #1B6B45; margin-bottom: 0.8rem; }
-    .team-bio { font-size: 0.9rem; color: #6B7280; line-height: 1.65; margin-bottom: 1rem; }
-    .team-linkedin {
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      font-size: 0.82rem; font-weight: 600; color: #0A66C2;
-    }
-    .team-linkedin:hover { text-decoration: underline; }
-
     /* ── CTA (DARK – einzige dunkle Sektion) ────────────── */
     .cta-wrap {
       background: #0D0D0D;
@@ -890,11 +831,11 @@
   <nav>
     <div class="nav-logo"><svg width="30" height="30" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg><span class="nav-wm">XPO<em>Next</em></span></div>
     <div class="nav-links">
-      <a href="#leistungen">Leistungen</a>
-      <a href="#effizienz">Effizienz</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="effizienz.html">Effizienz</a>
       <a href="#vorteile">Vorteile</a>
       <a href="#faq">FAQ</a>
-      <a href="#ueber-uns">Über uns</a>
+      <a href="ueber-uns.html">Über uns</a>
       <a href="website-check.html">Website-Check</a>
       <a href="#kontakt" class="nav-cta">Termin buchen</a>
     </div>
@@ -909,7 +850,12 @@
         <p class="hero-sub">Wir bringen dein Architekturbüro nach oben bei Google und KI-Suchmaschinen – und eliminieren die Zeitfresser in deinem Büroalltag. Webseite, SEO, GEO, Ads und effiziente Prozesse mit KI: alles aus einer Hand.</p>
         <div class="hero-btns">
           <a href="#kontakt" class="btn-primary">Kostenloses Erstgespräch →</a>
-          <a href="#leistungen" class="btn-ghost">Unsere Leistungen ansehen</a>
+          <a href="leistungen.html" class="btn-ghost">Unsere Leistungen ansehen</a>
+        </div>
+        <div style="display:flex;gap:1.2rem;flex-wrap:wrap;margin-top:1.8rem;">
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;color:#6B7280;font-weight:500;"><span style="color:#1B6B45;font-weight:700;">✓</span> Antwort innerhalb 24h</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;color:#6B7280;font-weight:500;"><span style="color:#1B6B45;font-weight:700;">✓</span> Google Ads zertifiziert</span>
+          <span style="display:inline-flex;align-items:center;gap:6px;font-size:0.82rem;color:#6B7280;font-weight:500;"><span style="color:#1B6B45;font-weight:700;">✓</span> Kostenlos & unverbindlich</span>
         </div>
       </div>
       <div class="hero-visual">
@@ -958,8 +904,7 @@
 
   <!-- ── SOCIAL PROOF BAR ────────────────────────────────── -->
   <div class="proof-bar">
-    <div class="proof-bar-label">Spezialisiert auf Architekturbüros</div>
-    <p class="proof-bar-text">Wir sind spezialisiert auf Architekturbüros – unsere Leistungen und Methoden funktionieren jedoch für Unternehmen jeder Branche.</p>
+    <div class="proof-bar-label">Online-Marketing spezialisiert auf Architekturbüros — aus Bonn, für ganz Deutschland.</div>
   </div>
 
   <!-- ── FAQ TICKER ──────────────────────────────────────── -->
@@ -997,17 +942,17 @@
         <div class="problem-card">
           <h3>Keine Erstgespräch-Anfragen über Google</h3>
           <p>Wenn ein Bauherr oder Projektentwickler in deiner Region nach einem Architekturbüro sucht, findet er die Konkurrenz und nicht dich. Über 90 % der Nutzer klicken nie auf die zweite Suchergebnisseite. Jeden Tag gehen dir so potenzielle Aufträge verloren, ohne dass du es merkst.</p>
-          <a href="#leistungen" class="problem-link">→ Lösung: Lokales SEO &amp; Google Ads</a>
+          <a href="leistungen.html" class="problem-link">→ Lösung: Lokales SEO &amp; Google Ads</a>
         </div>
         <div class="problem-card">
           <h3>Zu wenig Bewertungen</h3>
           <p>Bauherren entscheiden in Sekunden, meist anhand der Sternebewertung und der Anzahl der Rezensionen. Schon der Sprung von 3 auf 4 Sterne kann die Anfragerate spürbar erhöhen. Wenige oder veraltete Bewertungen wirken wie ein Warnsignal, egal wie gut eure Arbeit tatsächlich ist.</p>
-          <a href="#leistungen" class="problem-link">→ Lösung: Bewertungsmanagement</a>
+          <a href="leistungen.html#bewertungsmanagement" class="problem-link">→ Lösung: Bewertungsmanagement</a>
         </div>
         <div class="problem-card">
           <h3>Zeitfresser bremsen das Büro aus</h3>
           <p>Angebotserstellung, Projektdokumentation, interne Abstimmung – viele Architekturbüros verlieren Stunden pro Woche an Aufgaben, die sich mit den richtigen Tools automatisieren oder stark vereinfachen lassen. Diese Zeit fehlt dann für das, was wirklich zählt: die Planung.</p>
-          <a href="#effizienz" class="problem-link">→ Lösung: Zeitfresser-Workshop</a>
+          <a href="effizienz.html" class="problem-link">→ Lösung: Zeitfresser-Workshop</a>
         </div>
       </div>
     </div>
@@ -1018,8 +963,7 @@
     <div class="shift-inner">
       <div class="shift-badge">Die Suche verändert sich gerade</div>
       <h2>Deine Website hat eine neue Zielgruppe. <em>Und sie ist nicht menschlich.</em></h2>
-      <p>Eine Website ist heute nicht mehr nur ein Produkt für deine Wunschkunden. Sie wird zur Schnittstelle für Systeme, die nie ein Mensch zu Gesicht bekommt: <strong>KI-Crawler, Sprachmodelle wie ChatGPT und autonome Agents lesen deine Seite inzwischen öfter als deine Wunschkunden</strong>, und sie entscheiden mit, ob, wie und mit welchen Informationen dein Unternehmen in ihren Antworten überhaupt auftaucht.</p>
-      <p>Was das für Aufbau, Struktur und Inhalte einer Website bedeutet, unterschätzen die meisten Betriebe noch komplett. Genau hier setzen wir an: Wir bauen deine Website so, dass sie Menschen überzeugt <strong>und</strong> von der KI-Suche der Zukunft gelesen, verstanden und empfohlen wird.</p>
+      <p>KI-Crawler, Sprachmodelle und autonome Agents lesen deine Seite heute genauso wie potenzielle Kunden – und entscheiden mit, ob dein Büro empfohlen wird. Wir bauen deine Online-Präsenz so, dass sie beides überzeugt.</p>
       <div class="shift-grid">
         <div class="shift-item">
           <h3>AI-Crawler</h3>
@@ -1037,91 +981,77 @@
     </div>
   </div>
 
-  <!-- ── LEISTUNGEN ──────────────────────────────────────── -->
+  <!-- ── LEISTUNGEN & EFFIZIENZ ───────────────────────────── -->
   <div class="leistungen-wrap" id="leistungen">
     <div class="leistungen-inner">
       <div class="section-header">
-        <h2>Alles, was dein Architekturbüro <em>online braucht.</em></h2>
-        <p>Fünf Online-Marketing-Leistungen. Ein Ansprechpartner. Messbare Ergebnisse.</p>
+        <h2>Unsere <em>Leistungen.</em></h2>
       </div>
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-head"><h3>Professionelle Webseite</h3></div>
-          <p>Deine Website ist dein digitales Schaufenster, und oft der erste Eindruck, den potenzielle Kunden von dir bekommen. Eine professionelle Website überzeugt durch klares Design, schnelle Ladezeiten und eine intuitive Nutzerführung. Sie vermittelt Vertrauen, spiegelt deine Marke wider und verwandelt Besucher in Kunden.</p>
-        </div>
-        <div class="card">
-          <div class="card-head"><h3>Google Ads &amp; AI Ads</h3></div>
-          <p>Google Ads und KI-gestützte Anzeigen sorgen dafür, dass du genau dann sichtbar bist, wenn Menschen aktiv nach deiner Leistung suchen. Du schaltest gezielte Anzeigen, künstliche Intelligenz optimiert dabei automatisch Gebote, Zielgruppen und Anzeigentexte, für mehr Reichweite bei weniger Streuverlust. Du zahlst nur, wenn jemand klickt, das Budget bleibt planbar und jede Kampagne ist messbar.</p>
-        </div>
-        <div class="card">
-          <div class="card-head">
-            <h3>GEO</h3>
-            <span class="badge-neu">Neu</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
+
+        <!-- Links: Online-Präsenz -->
+        <div style="background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:2rem;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9CA3AF;margin-bottom:0.6rem;">Online-Präsenz</div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.5rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.85rem;background:#F9FAFB;border-radius:10px;">
+              <span style="font-size:1.1rem;">🌐</span>
+              <span style="font-size:0.92rem;font-weight:600;color:#0D0D0D;">Professionelle Webseite</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.85rem;background:#F9FAFB;border-radius:10px;">
+              <span style="font-size:1.1rem;">📢</span>
+              <span style="font-size:0.92rem;font-weight:600;color:#0D0D0D;">Google Ads &amp; AI Ads</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.85rem;background:#F9FAFB;border-radius:10px;">
+              <span style="font-size:1.1rem;">🤖</span>
+              <span style="font-size:0.92rem;font-weight:600;color:#0D0D0D;">GEO</span>
+              <span style="margin-left:auto;background:#E8F0EB;color:#1B6B45;padding:0.1rem 0.5rem;border-radius:99px;font-size:0.72rem;font-weight:700;">Neu</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.85rem;background:#F9FAFB;border-radius:10px;">
+              <span style="font-size:1.1rem;">⭐</span>
+              <span style="font-size:0.92rem;font-weight:600;color:#0D0D0D;">Bewertungsmanagement</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.85rem;background:#F9FAFB;border-radius:10px;">
+              <span style="font-size:1.1rem;">📍</span>
+              <span style="font-size:0.92rem;font-weight:600;color:#0D0D0D;">Lokales SEO</span>
+            </div>
           </div>
-          <p>GEO (Generative Engine Optimization) ist der organische Gegenpart zu Ads: ganz ohne Klickgebühr sorgt es dafür, dass dein Unternehmen in den Antworten von KI-Systemen wie ChatGPT, Perplexity oder den Google AI Overviews genannt und empfohlen wird. Da kaum ein lokaler Betrieb das aktuell macht, ist das Feld noch wenig umkämpft, ein klarer Vorteil für alle, die früh dabei sind.</p>
+          <a href="leistungen.html" class="btn-ghost" style="width:100%;justify-content:center;">Alle Leistungen ansehen →</a>
         </div>
-        <div class="card">
-          <div class="card-head"><h3>Bewertungsmanagement</h3></div>
-          <p>Online-Bewertungen sind das digitale Empfehlungsschreiben deines Unternehmens. Aktives Bewertungsmanagement bedeutet, positive Rezensionen gezielt zu fördern und auf Feedback professionell zu reagieren. Das stärkt das Vertrauen neuer Kunden, verbessert dein Google-Ranking und zeigt, dass dir die Meinung deiner Kundschaft wichtig ist.</p>
+
+        <!-- Rechts: Zeitfresser-Workshop -->
+        <div id="effizienz" style="background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:2rem;">
+          <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#9CA3AF;margin-bottom:0.6rem;">Prozessoptimierung</div>
+          <div style="display:flex;flex-direction:column;gap:0.75rem;margin-bottom:1.5rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.85rem;background:#F9FAFB;border-radius:10px;">
+              <span style="width:24px;height:24px;background:#1B6B45;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0;">1</span>
+              <span style="font-size:0.92rem;font-weight:600;color:#0D0D0D;">Analyse-Workshop</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.85rem;background:#F9FAFB;border-radius:10px;">
+              <span style="width:24px;height:24px;background:#1B6B45;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0;">2</span>
+              <span style="font-size:0.92rem;font-weight:600;color:#0D0D0D;">Tool-Auswahl &amp; Setup</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.85rem;background:#F9FAFB;border-radius:10px;">
+              <span style="width:24px;height:24px;background:#1B6B45;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0;">3</span>
+              <span style="font-size:0.92rem;font-weight:600;color:#0D0D0D;">Schulung &amp; Einweisung</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:0.75rem;padding:0.65rem 0.85rem;background:#F9FAFB;border-radius:10px;">
+              <span style="width:24px;height:24px;background:#1B6B45;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.75rem;font-weight:700;flex-shrink:0;">4</span>
+              <span style="font-size:0.92rem;font-weight:600;color:#0D0D0D;">Ongoing Support</span>
+            </div>
+          </div>
+          <a href="effizienz.html" class="btn-ghost" style="width:100%;justify-content:center;">Zum Workshop →</a>
         </div>
-        <div class="card">
-          <div class="card-head"><h3>Lokales SEO</h3></div>
-          <p>Lokales SEO sorgt dafür, dass du von Menschen in deiner Region gefunden wirst, genau dann, wenn sie nach einem Anbieter wie dir suchen. Durch die Optimierung deines Google Business Profils, lokaler Suchbegriffe und einheitlicher Unternehmensangaben im Netz erscheinst du ganz oben in der Karte und in den lokalen Suchergebnissen.</p>
-        </div>
+
       </div>
 
       <!-- Website-Check Teaser -->
-      <div style="margin-top:2.5rem; background:#0D0D0D; border-radius:16px; padding:2rem 2.5rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;">
+      <div style="margin-top:1.5rem; background:#0D0D0D; border-radius:16px; padding:2rem 2.5rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; flex-wrap:wrap;">
         <div>
           <div style="display:inline-flex;align-items:center;gap:6px;background:#1B6B45;color:#fff;padding:0.3rem 0.8rem;border-radius:99px;font-size:0.8rem;font-weight:600;margin-bottom:0.75rem;">🔍 Kostenloses Tool</div>
           <h3 style="font-size:1.25rem;font-weight:800;color:#fff;margin:0 0 0.4rem;line-height:1.2;">Wie gut ist deine aktuelle Website?</h3>
           <p style="color:#9CA3AF;font-size:0.95rem;margin:0;">Performance, SEO, Zugänglichkeit – kostenlos geprüft in Sekunden.</p>
         </div>
         <a href="website-check.html" style="background:#1B6B45;color:#fff;padding:0.85rem 1.7rem;border-radius:8px;font-weight:700;font-size:0.95rem;white-space:nowrap;display:inline-flex;align-items:center;gap:8px;text-decoration:none;flex-shrink:0;">Website jetzt prüfen →</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── EFFIZIENZ / ZEITFRESSER ───────────────────────── -->
-  <div class="effizienz-wrap" id="effizienz">
-    <div class="effizienz-inner">
-      <div class="section-header">
-        <div class="hero-badge" style="margin-bottom:1.2rem;">Neu: Effizienz für Architekturbüros</div>
-        <h2>Wir identifizieren deine Zeitfresser. <em>Und eliminieren sie.</em></h2>
-        <p>Angebote, Dokumentation, Kommunikation – viele Architekturbüros verlieren Stunden pro Woche an wiederkehrende Aufgaben. Wir setzen die richtigen Tools auf.</p>
-      </div>
-      <div class="cards-grid">
-        <div class="card">
-          <div class="card-head">
-            <div class="step-num">1</div>
-            <h3>Analyse-Workshop</h3>
-          </div>
-          <p>Wir setzen uns mit euch zusammen und identifizieren gemeinsam, wo in eurem Büroalltag die meiste Zeit verloren geht – von der Angebotserstellung bis zur Projektdokumentation.</p>
-        </div>
-        <div class="card">
-          <div class="card-head">
-            <div class="step-num">2</div>
-            <h3>Tool-Auswahl & Setup</h3>
-          </div>
-          <p>Wir wählen die passenden Tools aus und richten sie ein: KI-gestützte Workflows, Automatisierungen, smarte Vorlagen – individuell auf euren Büroalltag zugeschnitten.</p>
-        </div>
-        <div class="card">
-          <div class="card-head">
-            <div class="step-num">3</div>
-            <h3>Schulung & Einweisung</h3>
-          </div>
-          <p>Euer Team lernt, die neuen Tools selbstständig und effizient zu nutzen. Wir schulen praxisnah – ohne Technik-Überflutung, direkt auf eure Abläufe abgestimmt.</p>
-        </div>
-        <div class="card">
-          <div class="card-head">
-            <div class="step-num">4</div>
-            <h3>Ongoing Support</h3>
-          </div>
-          <p>Wir bleiben als fester Ansprechpartner. Wenn sich eure Abläufe ändern oder neue Tools verfügbar werden, passen wir euren Tool-Stack entsprechend an.</p>
-        </div>
-      </div>
-      <div style="text-align:center; margin-top:2.5rem;">
-        <a href="#kontakt" class="btn-primary">Erstgespräch anfragen →</a>
       </div>
     </div>
   </div>
@@ -1182,62 +1112,6 @@
           <div class="testimonial-divider"></div>
           <div class="testimonial-name">Volker G.</div>
           <div class="testimonial-role">Werbeagentur, Pfullendorf</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── WARUM XPONEXT ───────────────────────────────────── -->
-  <div class="warum-wrap">
-    <div class="warum-inner">
-      <div class="section-header">
-        <h2>Warum <em>XPONext?</em></h2>
-        <p>Wir sind keine Agentur für Konzerne. Wir sind für Architekturbüros, die online wachsen und intern effizienter werden wollen.</p>
-      </div>
-      <div class="warum-grid">
-        <div class="warum-item">
-          <div>
-            <h3>Alles aus einer Hand</h3>
-            <p>Wir übernehmen das, wofür du keine Zeit hast, aber von dem du weißt, dass es wichtig ist: Website, Ads, SEO und Bewertungen, koordiniert von einem festen Ansprechpartner, der dein Geschäft kennt.</p>
-          </div>
-        </div>
-        <div class="warum-item">
-          <div>
-            <h3>Spezialisiert auf Architekturbüros</h3>
-            <p>Wir arbeiten primär mit Architekturbüros und kennen ihre typischen Herausforderungen: von der Sichtbarkeit bei Bauherren bis zu ineffizienten internen Abläufen. Keine Konzern-Kompromisse.</p>
-          </div>
-        </div>
-        <div class="warum-item">
-          <div>
-            <h3>Transparente Ergebnisse</h3>
-            <p>Du siehst jeden Monat genau, was dein Investment bringt: Klicks, Anfragen, Rankings. Keine leeren Versprechen, nur Zahlen.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── TEAM ────────────────────────────────────────────── -->
-  <div class="team-wrap" id="ueber-uns">
-    <div class="team-inner">
-      <div class="section-header">
-        <h2>Die Leute <em>hinter XPONext.</em></h2>
-        <p>Keine riesige Agentur. Direkte Partnerschaft – du weißt immer, mit wem du sprichst.</p>
-      </div>
-      <div class="team-grid">
-        <div class="team-card">
-          <picture><source srcset="assets/team/tim.webp" type="image/webp"><img src="assets/team/tim.jpg" alt="Tim Bünger, Co-Founder XPONext" class="team-avatar"></picture>
-          <div class="team-name">Tim Bünger</div>
-          <div class="team-role">Co-Founder</div>
-          <p class="team-bio">Tim hat Betriebswirtschaftslehre studiert und kümmert sich bei XPONext um Strategie, Kundenkommunikation und Google Ads. Sein Fokus: Kampagnen, die wirklich konvertieren.</p>
-          <a href="https://www.linkedin.com/in/tim-b%C3%BCnger-924b49309/" target="_blank" rel="noopener" class="team-linkedin">LinkedIn →</a>
-        </div>
-        <div class="team-card">
-          <picture><source srcset="assets/team/simon.webp" type="image/webp"><img src="assets/team/simon.jpg" alt="Simon Meding, Co-Founder XPONext" class="team-avatar"></picture>
-          <div class="team-name">Simon Meding</div>
-          <div class="team-role">Co-Founder</div>
-          <p class="team-bio">Simon hat Wirtschaftsinformatik studiert und verantwortet bei XPONext die technische Umsetzung: Website-Entwicklung, SEO-Struktur und die Optimierung für KI-Suche und GEO.</p>
-          <a href="https://www.linkedin.com/in/simon-meding-279196234/" target="_blank" rel="noopener" class="team-linkedin">LinkedIn →</a>
         </div>
       </div>
     </div>
@@ -1343,20 +1217,6 @@
     </form>
   </div>
 
-  <script>
-    (function() {
-      var revealEls = document.querySelectorAll('.team-reveal, .team-reveal-right');
-      var obs = new IntersectionObserver(function(entries) {
-        entries.forEach(function(e) {
-          if (e.isIntersecting) {
-            e.target.classList.add('t-visible');
-            obs.unobserve(e.target);
-          }
-        });
-      }, { threshold: 0.18 });
-      revealEls.forEach(function(el) { obs.observe(el); });
-    })();
-  </script>
 
   <script>
     function closeFaqItem(item) {
@@ -1421,11 +1281,11 @@
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Nützliches</div>
-      <a href="#leistungen">Leistungen</a>
-      <a href="#effizienz">Effizienz</a>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="effizienz.html">Effizienz</a>
       <a href="#vorteile">Vorteile</a>
       <a href="#faq">FAQ</a>
-      <a href="#ueber-uns">Über uns</a>
+      <a href="ueber-uns.html">Über uns</a>
     </div>
     <div class="footer-col">
       <div class="footer-col-title">Rechtliches</div>

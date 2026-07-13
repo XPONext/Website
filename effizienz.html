@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zeitfresser-Workshop — XPONext</title>
+  <meta name="description" content="Wir identifizieren die Zeitfresser in deinem Architekturbüro und eliminieren sie mit den richtigen KI-Tools und Automatisierungen.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.xponext.de/effizienz.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="/css/cookie-banner.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0KYC5QEKH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-S0KYC5QEKH', { 'anonymize_ip': true });
+  </script>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      src: url('/assets/fonts/inter-variable.woff2') format('woff2');
+      font-weight: 100 900; font-style: normal; font-display: swap;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #fff; color: #0D0D0D; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; transition: opacity 0.15s, color 0.15s; }
+
+    /* NAV */
+    nav { display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 2.5%; background: #0D0D0D; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #1A1A1A; }
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; font-size: 1.15rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; }
+    .nav-logo .nav-wm { color: #fff; font-weight: 800; }
+    .nav-logo .nav-wm em { color: #4CAF7E; font-weight: 400; font-style: normal; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: #9CA3AF; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover, .nav-links a.active { color: #fff; opacity: 1; }
+    .nav-cta { background: #1B6B45; color: #fff !important; padding: 0.55rem 1.25rem; border-radius: 7px; font-weight: 600; font-size: 0.9rem; }
+    .nav-cta:hover { background: #134D32 !important; opacity: 1 !important; }
+
+    /* PAGE HERO */
+    .page-hero { padding: 4.5rem 5% 3.5rem; background: #F9FAFB; border-bottom: 1px solid #E5E7EB; text-align: center; }
+    .ps-badge { display: inline-flex; align-items: center; gap: 6px; background: #E8F0EB; color: #1B6B45; padding: 0.35rem 0.9rem; border-radius: 99px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.2rem; }
+    .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.1; color: #0D0D0D; margin-bottom: 0.9rem; letter-spacing: -0.02em; }
+    .page-hero h1 em { font-style: normal; color: #1B6B45; }
+    .page-hero p { font-size: 1.05rem; color: #4B5563; line-height: 1.7; max-width: 560px; margin: 0 auto; }
+
+    /* CONTENT */
+    .content-wrap { padding: 4rem 5%; }
+    .content-inner { max-width: 860px; margin: 0 auto; }
+
+    /* PROBLEM BLOCK */
+    .problem-block { background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 16px; padding: 2rem 2.5rem; margin-bottom: 3.5rem; }
+    .problem-block h2 { font-size: 1.3rem; font-weight: 800; color: #0D0D0D; margin-bottom: 1rem; }
+    .problem-block h2 em { font-style: normal; color: #1B6B45; }
+    .problem-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .problem-list li { display: flex; align-items: flex-start; gap: 0.6rem; font-size: 0.95rem; color: #4B5563; line-height: 1.5; list-style: none; }
+    .problem-list li::before { content: "⏱"; flex-shrink: 0; }
+
+    /* STEPS */
+    .steps-header { margin-bottom: 2.5rem; }
+    .steps-header h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #0D0D0D; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
+    .steps-header h2 em { font-style: normal; color: #1B6B45; }
+    .steps-header p { color: #4B5563; font-size: 1rem; line-height: 1.7; }
+
+    .steps-grid { display: flex; flex-direction: column; gap: 0; }
+    .step-item { display: grid; grid-template-columns: 56px 1fr; gap: 1.5rem; padding: 2rem 0; border-bottom: 1px solid #F3F4F6; align-items: flex-start; }
+    .step-item:last-child { border-bottom: none; }
+    .step-num-circle { width: 48px; height: 48px; background: #0D0D0D; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.1rem; flex-shrink: 0; }
+    .step-content h3 { font-size: 1.15rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.5rem; }
+    .step-content p { font-size: 0.95rem; color: #4B5563; line-height: 1.7; margin-bottom: 0.75rem; }
+    .step-highlights { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .step-highlight { background: #E8F0EB; color: #134D32; font-size: 0.8rem; font-weight: 600; padding: 0.25rem 0.65rem; border-radius: 99px; }
+
+    /* VORTEILE */
+    .vorteile-block { margin-top: 3.5rem; padding: 2rem 2.5rem; background: #0D0D0D; border-radius: 16px; }
+    .vorteile-block h2 { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 1.2rem; }
+    .vorteile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .vorteil { display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.9rem; color: rgba(255,255,255,0.75); line-height: 1.5; }
+    .vorteil::before { content: "✓"; color: #4CAF7E; font-weight: 700; flex-shrink: 0; }
+
+    /* CTA BLOCK */
+    .cta-block { padding: 5rem 5%; background: #F9FAFB; border-top: 1px solid #E5E7EB; text-align: center; }
+    .cta-block h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: #0D0D0D; margin-bottom: 0.9rem; letter-spacing: -0.01em; }
+    .cta-block h2 em { font-style: normal; color: #1B6B45; }
+    .cta-block p { color: #4B5563; font-size: 1rem; margin-bottom: 2rem; }
+    .btn-primary { background: #1B6B45; color: #fff; padding: 0.9rem 1.8rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; }
+    .btn-primary:hover { background: #134D32; opacity: 1; }
+
+    /* FOOTER */
+    footer { padding: 2rem 5%; border-top: 1px solid #E5E7EB; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
+    .footer-logo { font-size: 1rem; font-weight: 800; color: #0D0D0D; }
+    .footer-logo span { color: #1B6B45; }
+    .footer-copy { color: #9CA3AF; font-size: 0.82rem; margin-top: 0.7rem; }
+    .footer-col { display: flex; flex-direction: column; gap: 0.6rem; min-width: 130px; }
+    .footer-col-title { font-size: 0.75rem; font-weight: 700; color: #9CA3AF; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.2rem; }
+    .footer-col a { color: #6B7280; font-size: 0.88rem; }
+    .footer-col a:hover { color: #0D0D0D; opacity: 1; }
+    .cookie-reopen { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; color: #6B7280; font-size: 0.88rem; text-align: left; }
+    .cookie-reopen:hover { color: #0D0D0D; }
+
+    @media (max-width: 680px) {
+      .step-item { grid-template-columns: 44px 1fr; gap: 1rem; }
+      .vorteile-grid { grid-template-columns: 1fr; }
+      .nav-links a:not(.nav-cta) { display: none; }
+      footer { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <svg width="30" height="30" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg>
+      <span class="nav-wm">XPO<em>Next</em></span>
+    </a>
+    <div class="nav-links">
+      <a href="leistungen.html">Leistungen</a>
+      <a href="effizienz.html" class="active">Effizienz</a>
+      <a href="index.html#vorteile">Vorteile</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="website-check.html">Website-Check</a>
+      <a href="index.html#kontakt" class="nav-cta">Termin buchen</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="ps-badge">⚡ Zeitfresser-Workshop</div>
+    <h1>Wir identifizieren deine Zeitfresser. <em>Und eliminieren sie.</em></h1>
+    <p>Angebote, Dokumentation, Kommunikation – viele Architekturbüros verlieren Stunden pro Woche an wiederkehrende Aufgaben. Wir setzen die richtigen Tools auf.</p>
+  </div>
+
+  <div class="content-wrap">
+    <div class="content-inner">
+
+      <div class="problem-block">
+        <h2>Wo geht in Architekturbüros <em>die meiste Zeit verloren?</em></h2>
+        <ul class="problem-list">
+          <li>Angebotserstellung – jedes Mal fast von vorne anfangen</li>
+          <li>Projektdokumentation – manuell, unstrukturiert, zeitaufwändig</li>
+          <li>E-Mail-Kommunikation – zu viele Rückfragen, zu wenig Vorlagen</li>
+          <li>Terminkoordination – hin und her, ohne klares System</li>
+          <li>Übergaben und Briefings – jedes Mal erklären, was eigentlich Standard sein sollte</li>
+        </ul>
+      </div>
+
+      <div class="steps-header">
+        <h2>So funktioniert <em>der Workshop.</em></h2>
+        <p>In vier Schritten vom Zeitfresser-Problem zur dauerhaften Lösung – individuell auf euer Büro zugeschnitten.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-item">
+          <div class="step-num-circle">1</div>
+          <div class="step-content">
+            <h3>Analyse-Workshop</h3>
+            <p>Wir setzen uns mit euch zusammen und identifizieren gemeinsam, wo in eurem Büroalltag die meiste Zeit verloren geht – von der Angebotserstellung bis zur Projektdokumentation. Kein Fragebogen, sondern ein echtes Gespräch mit den Menschen, die die Abläufe kennen.</p>
+            <div class="step-highlights">
+              <span class="step-highlight">Vor-Ort oder remote</span>
+              <span class="step-highlight">1–2 Stunden</span>
+              <span class="step-highlight">Alle Büromitglieder einbeziehen</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num-circle">2</div>
+          <div class="step-content">
+            <h3>Tool-Auswahl & Setup</h3>
+            <p>Wir wählen die passenden Tools aus und richten sie ein: KI-gestützte Workflows, Automatisierungen, smarte Vorlagen – individuell auf euren Büroalltag zugeschnitten. Keine Tool-Flut, sondern gezielt nur das, was wirklich hilft.</p>
+            <div class="step-highlights">
+              <span class="step-highlight">KI-Tools</span>
+              <span class="step-highlight">Automatisierungen</span>
+              <span class="step-highlight">Smarte Vorlagen</span>
+              <span class="step-highlight">Technisches Setup inklusive</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num-circle">3</div>
+          <div class="step-content">
+            <h3>Schulung & Einweisung</h3>
+            <p>Euer Team lernt, die neuen Tools selbstständig und effizient zu nutzen. Wir schulen praxisnah – ohne Technik-Überflutung, direkt auf eure Abläufe abgestimmt. Danach weiß jeder, was zu tun ist.</p>
+            <div class="step-highlights">
+              <span class="step-highlight">Praxisnahe Einweisung</span>
+              <span class="step-highlight">Für alle Teammitglieder</span>
+              <span class="step-highlight">Dokumentation zum Nachlesen</span>
+            </div>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num-circle">4</div>
+          <div class="step-content">
+            <h3>Ongoing Support</h3>
+            <p>Wir bleiben als fester Ansprechpartner. Wenn sich eure Abläufe ändern oder neue Tools verfügbar werden, passen wir euren Tool-Stack entsprechend an. Kein einmaliges Projekt, sondern eine langfristige Zusammenarbeit.</p>
+            <div class="step-highlights">
+              <span class="step-highlight">Fester Ansprechpartner</span>
+              <span class="step-highlight">Laufende Optimierung</span>
+              <span class="step-highlight">Antwort innerhalb 16h</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vorteile-block">
+        <h2>Was ihr nach dem Workshop habt</h2>
+        <div class="vorteile-grid">
+          <div class="vorteil">Stunden pro Woche zurückgewonnen</div>
+          <div class="vorteil">KI-Tools individuell eingerichtet und erklärt</div>
+          <div class="vorteil">Automatisierte Workflows für Standardaufgaben</div>
+          <div class="vorteil">Einheitliche Vorlagen für Angebote & Docs</div>
+          <div class="vorteil">Team ist eigenständig und sicher im Umgang</div>
+          <div class="vorteil">Langfristiger Support für weitere Optimierungen</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="cta-block">
+    <h2>Bereit, <em>Zeitfresser loszuwerden?</em></h2>
+    <p>Im kostenlosen Erstgespräch schauen wir uns eure aktuelle Situation an – unverbindlich.</p>
+    <a href="index.html#kontakt" class="btn-primary">Kostenloses Erstgespräch →</a>
+  </div>
+
+  <footer>
+    <div class="footer-col">
+      <div class="footer-logo">XPO<span>Next</span></div>
+      <p style="color:#9CA3AF;font-size:0.85rem;line-height:1.6;max-width:220px;">Mehr Sichtbarkeit für Architekturbüros – aus einer Hand.</p>
+      <p class="footer-copy">© 2026 XPONext GbR</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Seiten</div>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="effizienz.html">Effizienz</a>
+      <a href="index.html#vorteile">Vorteile</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="ueber-uns.html">Über uns</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Rechtliches</div>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB</a>
+      <button data-action="cookie-settings" class="cookie-reopen">Cookie-Einstellungen</button>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Kontakt</div>
+      <address style="font-style:normal;color:#6B7280;font-size:0.88rem;line-height:1.6;">XPO Next GbR<br>Adrianstraße 88<br>53227 Bonn</address>
+      <a href="mailto:info@xponext.de" style="color:#6B7280;font-size:0.88rem;">info@xponext.de</a>
+    </div>
+  </footer>
+
+  <!-- Cookie-Banner (DSGVO) -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen" aria-hidden="true">
+    <div class="cookie-banner__card">
+      <div class="cookie-banner__head">
+        <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
+        <div>
+          <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit deiner Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+        </div>
+      </div>
+      <div class="cookie-banner__options" id="cookieOptions" hidden>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Notwendig</div>
+            <div class="cookie-option__desc">Speichert deine Cookie-Einstellungen im Browser. Kein Tracking.</div>
+          </div>
+          <span class="cookie-option__always">Immer aktiv</span>
+        </label>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Statistik</div>
+            <div class="cookie-option__desc">Anonyme Nutzungsanalyse via Google Analytics 4 und Microsoft Clarity.</div>
+          </div>
+          <input type="checkbox" id="consentStatistics" class="cookie-switch">
+          <span class="cookie-switch__slider" aria-hidden="true"></span>
+        </label>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--ghost" id="cookieEssentials" type="button">Nur notwendige</button>
+        <button class="cookie-btn cookie-btn--ghost" id="cookieSettingsToggle" type="button">Einstellungen</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieAcceptAll" type="button">Alle akzeptieren</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieSaveCustom" type="button" hidden>Auswahl speichern</button>
+      </div>
+    </div>
+  </div>
+  <script src="/js/cookie-banner.js"></script>
+
+</body>
+</html>
