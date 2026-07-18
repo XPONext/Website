@@ -41,6 +41,16 @@
     .nav-links { display: flex; gap: 2rem; align-items: center; }
     .nav-links a { color: #9CA3AF; font-size: 0.9rem; font-weight: 500; }
     .nav-links a:hover, .nav-links a.active { color: #fff; opacity: 1; }
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { display: inline-flex; align-items: center; gap: 4px; color: #9CA3AF; font-size: 0.9rem; font-weight: 500; }
+    .nav-dd-trigger:hover, .nav-dd-trigger.active { color: #fff; opacity: 1; }
+    .nav-dd-arrow { font-size: 0.6rem; transition: transform 0.15s; }
+    .nav-dd:hover .nav-dd-arrow { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; flex-direction: column; gap: 0.15rem; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid #E5E7EB; border-top: none; border-radius: 0 0 12px 12px; padding: 0.9rem 0.5rem 0.5rem; min-width: 200px; z-index: 200; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: flex; }
+    .nav-dd-menu a { color: #374151; opacity: 1; font-size: 0.88rem; font-weight: 500; padding: 0.55rem 0.75rem; border-radius: 8px; white-space: nowrap; }
+    .nav-dd-menu a:hover { background: #F9FAFB; color: #0D0D0D; }
+    .nav-dd-menu a.active { background: #E8F0EB; color: #134D32; font-weight: 700; }
     .nav-cta { background: #1B6B45; color: #fff !important; padding: 0.55rem 1.25rem; border-radius: 7px; font-weight: 600; font-size: 0.9rem; }
     .nav-cta:hover { background: #134D32 !important; opacity: 1 !important; }
 
@@ -89,6 +99,7 @@
       .service-features { grid-template-columns: 1fr; }
       .nav-links { gap: 1rem; }
       .nav-links a:not(.nav-cta) { display: none; }
+      .nav-dd { display: none; }
       footer { flex-direction: column; }
     }
   </style>
@@ -101,8 +112,13 @@
       <span class="nav-wm">XPO<em>Next</em></span>
     </a>
     <div class="nav-links">
-      <a href="leistungen.html" class="active">Leistungen</a>
-      <a href="effizienz.html">Effizienz</a>
+      <div class="nav-dd">
+        <a href="leistungen.html" class="nav-dd-trigger active">Leistungen <span class="nav-dd-arrow">▾</span></a>
+        <div class="nav-dd-menu">
+          <a href="leistungen.html" class="active">Online-Präsenz</a>
+          <a href="effizienz.html">Zeitfresser-Workshop</a>
+        </div>
+      </div>
       <a href="index.html#vorteile">Vorteile</a>
       <a href="index.html#faq">FAQ</a>
       <a href="ueber-uns.html">Über uns</a>
@@ -223,7 +239,7 @@
     <div class="footer-col">
       <div class="footer-col-title">Seiten</div>
       <a href="leistungen.html">Leistungen</a>
-      <a href="effizienz.html">Effizienz</a>
+      <a href="effizienz.html">Zeitfresser-Workshop</a>
       <a href="index.html#vorteile">Vorteile</a>
       <a href="index.html#faq">FAQ</a>
       <a href="ueber-uns.html">Über uns</a>
