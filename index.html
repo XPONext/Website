@@ -823,6 +823,21 @@
     });
     gtag('js', new Date());
     gtag('config', 'G-S0KYC5QEKH', { 'anonymize_ip': true });
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18218623343/-EIFCNn-hbocEO_CqO9D',
+          'value': 1.0,
+          'currency': 'EUR',
+          'event_callback': callback
+      });
+      return false;
+    }
   </script>
 </head>
 <body>
@@ -1268,6 +1283,7 @@
           .filter(Boolean)
           .join('\n')
       );
+      gtag_report_conversion();
       window.location.href = 'mailto:info@xponext.de?subject=' + subject + '&body=' + body;
     });
   </script>
