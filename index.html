@@ -512,6 +512,15 @@
       padding: 6rem 5%;
     }
     .faq-inner { max-width: 800px; margin: 0 auto; }
+    .faq-category-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #1B6B45;
+      margin: 2.5rem 0 1rem;
+    }
+    .faq-category-title:first-child { margin-top: 0; }
     .faq-item {
       background: #fff;
       border: 1px solid #E5E7EB;
@@ -561,6 +570,16 @@
       color: #6B7280;
       line-height: 1.7;
     }
+    .faq-answer ul {
+      margin: 0;
+      padding: 0 1.6rem 1.4rem 2.6rem;
+      font-size: 0.95rem;
+      color: #6B7280;
+      line-height: 1.7;
+    }
+    .faq-answer ul li { margin-bottom: 0.5rem; }
+    .faq-answer ul li:last-child { margin-bottom: 0; }
+    .faq-answer strong { color: #0D0D0D; }
 
     /* ── STATS (LIGHT GRAY) ──────────────────────────────── */
     .stats-wrap {
@@ -733,18 +752,26 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Was macht eine professionelle Website für lokale Unternehmen aus?",
+        "name": "Was macht eine professionelle Website aus?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Eine professionelle Website ist mobiloptimiert, lädt schnell und zeigt auf den ersten Blick, was dein Unternehmen anbietet, wo du sitzt und wie man dich erreicht. Dazu gehören klare Kontaktmöglichkeiten, Öffnungszeiten, Leistungsübersicht und ein sauberes Design, das auf dem Smartphone genauso gut funktioniert wie am Desktop. Technisch sauber aufgebaut ist sie außerdem die Grundlage dafür, dass dich Google und KI-Plattformen überhaupt finden und richtig einordnen können."
+          "text": "Eine professionelle Website lässt vor allem die beste Arbeit sprechen: eine klare Übersicht der Referenzen oder Leistungen mit kurzem Kontext statt langer Marketingtexte, dazu eine Team-Seite mit echten Namen und Rollen, ein zentrales Vertrauenssignal für Kunden und, dank EEAT-Kriterien (Experience, Expertise, Authoritativeness, Trustworthiness), auch für KI-Plattformen wie ChatGPT. Mobiloptimiert, schnell ladend und mit strukturierten Daten (Schema.org) im Quellcode ist sie zudem technisch so aufgebaut, dass Google und KI-Systeme sie überhaupt crawlen, verstehen und weiterempfehlen können."
         }
       },
       {
         "@type": "Question",
-        "name": "Was sind Google Ads und wie helfen sie meinem Betrieb?",
+        "name": "Kann ich meine bestehende Website behalten und nur SEO/Ads dazubuchen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Google Ads sind bezahlte Anzeigen, die ganz oben in den Google-Suchergebnissen erscheinen, genau dann, wenn jemand in deiner Region nach deiner Leistung sucht. Mit Google Ads bist du sofort sichtbar, du zahlst nur, wenn jemand auf deine Anzeige klickt, und das Budget bleibt planbar und messbar."
+          "text": "Ja, Website-Erstellung, SEO & GEO, Google Ads, Bewertungsmanagement und Prozessoptimierung sind modular buchbar. Wird deine bestehende Website aktuell von einem anderen Anbieter betreut, können wir SEO, GEO oder Ads unabhängig davon aufsetzen. Eine spätere komplette Website-Neuerstellung durch uns wäre ein separater Schritt mit eigenem Angebot, kein automatischer Wechsel im laufenden Vertrag."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was sind Google Ads und wie helfen sie meinem Unternehmen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Google Ads sind bezahlte Anzeigen, die ganz oben in den Google-Suchergebnissen erscheinen, genau dann, wenn jemand in deiner Region nach deiner Leistung sucht. Du zahlst nur, wenn jemand tatsächlich klickt, nicht für die reine Anzeigenschaltung. Wie oft eine Anzeige ausgespielt wird, entscheidet dabei nicht nur das Gebot, sondern vor allem der Quality Score, gute Anzeigentexte und eine passende Zielseite senken so aktiv die Kosten pro Klick. Das Budget bleibt jederzeit planbar und lässt sich flexibel an deine Auftragslage anpassen."
         }
       },
       {
@@ -752,7 +779,23 @@
         "name": "Was sind AI Ads bzw. GEO (Generative Engine Optimization)?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "AI Ads und GEO sind zwei unterschiedliche Dinge, ähnlich wie Google Ads und klassisches SEO. AI Ads sind bezahlte, KI-optimierte Kampagnen mit sofortiger Sichtbarkeit. GEO (Generative Engine Optimization) ist organisch und sorgt dafür, dass ein Betrieb in den Antworten von KI-Plattformen wie ChatGPT, Perplexity oder den Google AI Overviews genannt und empfohlen wird. Da kaum ein lokaler Betrieb das aktuell macht, ist das Feld noch wenig umkämpft."
+          "text": "AI Ads und GEO sind zwei unterschiedliche Dinge, ähnlich wie Google Ads und klassisches SEO: Ads sind click-driven, du zahlst pro Klick, GEO ist exposure-driven, Sichtbarkeit entsteht durch Erwähnung, oft ganz ohne Klick. GEO (Generative Engine Optimization) sorgt dafür, dass dein Unternehmen in den Antworten von KI-Plattformen wie ChatGPT oder Perplexity genannt wird, etwa wenn jemand fragt, welches Unternehmen für eine bestimmte Leistung in der Region gut bewertet ist. Voraussetzung dafür sind klare, belegbare Aussagen statt Marketing-Floskeln, sichtbare Autoren-/Team-Signale und strukturierte Daten im Quellcode, damit die KI die Inhalte versteht und als zitierfähig einstuft. Da das aktuell kaum ein Unternehmen macht, ist das Feld noch wenig umkämpft."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was ist lokales SEO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lokales SEO umfasst alle Maßnahmen, die dafür sorgen, dass dein Unternehmen bei Suchanfragen mit Ortsbezug und im Google Maps Local Pack ganz oben erscheint, etwa über ein gepflegtes Google-Unternehmensprofil mit aktuellen Fotos, passende Keywords, einheitliche Adressangaben und themenrelevante Verweise. Im Gegensatz zu Ads kostet jeder organische Klick nichts zusätzlich, die Sichtbarkeit bleibt auch bestehen, wenn ein Ads-Budget einmal pausiert."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was passiert, wenn mein Unternehmen bei Google nicht gefunden wird?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dann gehen Anfragen an die Konkurrenz, ohne dass du es merkst. Über 90 % der Nutzer klicken nie auf die zweite Google-Suchergebnisseite. Taucht dein Unternehmen bei Suchen wie \"deine Leistung + Stadt\" nicht unter den ersten Treffern auf, verlierst du tagtäglich Kundenanfragen an sichtbarere Anbieter."
         }
       },
       {
@@ -765,23 +808,7 @@
       },
       {
         "@type": "Question",
-        "name": "Was ist lokales SEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Lokales SEO umfasst alle Maßnahmen, die dafür sorgen, dass ein Betrieb bei Suchanfragen mit Ortsbezug und im Google Maps Local Pack ganz oben erscheint, etwa über ein gepflegtes Google-Unternehmensprofil, passende Keywords, einheitliche Adressangaben und themenrelevante Verweise. Im Gegensatz zu Ads kostet jeder organische Klick nichts zusätzlich."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was passiert, wenn mein Betrieb bei Google nicht gefunden wird?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dann gehen Anfragen an die Konkurrenz, ohne dass man es merkt. Die meisten Menschen klicken nur auf die ersten Suchergebnisse. Taucht ein Betrieb bei Suchen mit Leistung und Ort nicht unter den ersten Treffern auf, gehen täglich Kundenanfragen an besser sichtbare Betriebe."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie viele Google-Bewertungen braucht mein Betrieb?",
+        "name": "Wie viele Google-Bewertungen braucht mein Unternehmen?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Eine feste Zahl gibt es nicht, Faustregel ist: mehr und aktueller als die direkte Konkurrenz in der Region. Anzahl und Aktualität der Bewertungen sind beide entscheidend für Vertrauen und Ranking."
@@ -789,10 +816,18 @@
       },
       {
         "@type": "Question",
-        "name": "Wie lange dauert es, bis sich Ergebnisse zeigen?",
+        "name": "Für welche Büros ist XPONext geeignet?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Google Ads können bereits ab dem ersten Tag zu Anfragen führen. Lokales SEO, Bewertungsmanagement und GEO sind langfristige Maßnahmen, erste Verbesserungen zeigen sich meist nach einigen Wochen, ein stabil verbessertes Ranking entwickelt sich über mehrere Monate."
+          "text": "Website, SEO, GEO, Ads und Bewertungsmanagement setzt XPONext für Unternehmen aus unterschiedlichsten Branchen um. Ein besonderer Schwerpunkt liegt auf Architekturbüros, dort sind die typischen Herausforderungen der Branche bekannt: lokale Sichtbarkeit gegenüber Bauherren und Auftraggebern sowie Verwaltungsprozesse wie Angebotswesen, Bautagebuch oder Dokumentenmanagement, die zu viel Zeit kosten. Für den Zeitfresser-Workshop gilt eine klare Rollentrennung: keine Fachexpertise für VOB, HOAI oder bautechnische Detailfragen, sondern Expertise für die Tools und Prozesse, die den Büroalltag beschleunigen."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie schnell kann es losgehen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nach deiner Anfrage bekommst du in der Regel innerhalb von 16 Stunden eine Antwort für das kostenlose Erstgespräch. Von der ersten Absprache bis zur ersten sichtbaren Lösung vergehen danach in der Regel nicht mehr als 7 Tage. Umfangreichere Projekte wie eine komplette Website-Neuerstellung dauern je nach Umfang etwas länger."
         }
       },
       {
@@ -800,15 +835,15 @@
         "name": "Was kostet die Zusammenarbeit mit XPONext?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Das hängt davon ab, welche Leistungen für den jeweiligen Betrieb sinnvoll sind. Im kostenlosen Erstgespräch wird die aktuelle Online-Präsenz analysiert und daraus ein individuelles, transparentes Angebot ohne versteckte Kosten erstellt."
+          "text": "Das hängt davon ab, welche Leistungen relevant sind. Richtwerte: eine Website als einmaliges Projekt liegt je nach Umfang meist im unteren bis mittleren vierstelligen Bereich. Laufende Betreuung wie lokales SEO, Bewertungsmanagement, GEO oder Google Ads läuft in der Regel mit einer Mindestlaufzeit von 3 Monaten zu einem Einführungspreis, danach sinkt der monatliche Preis automatisch; bei Ads kommt das Werbebudget separat hinzu. Beim Zeitfresser-Workshop ist der Audit zu Beginn kostenlos oder sehr günstig, ein Festpreis für die Umsetzung wird erst danach quotiert, wenn der Umfang feststeht. Im kostenlosen Erstgespräch gibt es dazu ein konkretes, transparentes Angebot ohne versteckte Kosten."
         }
       },
       {
         "@type": "Question",
-        "name": "Für welche Büros ist XPONext geeignet?",
+        "name": "Wie lange dauert es, bis sich Ergebnisse zeigen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "XPONext richtet sich primär an Architekturbüros – unabhängig von Größe und Spezialisierung. Wir kennen die spezifischen Herausforderungen der Branche: lokale Sichtbarkeit gegenüber Bauherren und Auftraggebern sowie interne Prozesse, die zu viel Zeit kosten. Unsere Methoden und Tools funktionieren für Unternehmen jeder Branche."
+          "text": "Google Ads können bereits ab dem ersten Tag zu Anfragen führen. Lokales SEO, Bewertungsmanagement und GEO sind langfristige Maßnahmen, erste Verbesserungen zeigen sich meist nach 4 bis 8 Wochen, ein stabil verbessertes Ranking entwickelt sich über 3 bis 6 Monate. Beim Zeitfresser-Workshop zeigt sich die Entlastung meist sofort nach Einrichtung und Schulung."
         }
       },
       {
@@ -816,7 +851,31 @@
         "name": "Was ist der Zeitfresser-Workshop?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Im Zeitfresser-Workshop analysieren wir gemeinsam, wo in eurem Büroalltag die meiste Zeit unnötig verloren geht – typisch sind Angebotserstellung, Projektdokumentation, Kommunikation und Terminkoordination. Auf Basis dieser Analyse wählen wir passende Tools aus, richten sie ein und schulen euer Team. Danach stehen wir für Anpassungen und Support langfristig zur Verfügung."
+          "text": "Im Zeitfresser-Workshop analysieren wir an echten Beispielen aus dem Büro, etwa dem letzten Bautagebuch oder Leistungsverzeichnis, wo die meiste Zeit verloren geht, typisch sind LV-Erstellung, Bautagebuch/Mängeldokumentation, Protokollschreiben und Dokumentenmanagement. Laut Bundesarchitektenkammer (2025) nutzen nur 29 % der Architekt:innen KI-Tools im Büroalltag, 77 % wünschen sich Fortbildung dazu. Wir wählen passende Tools aus, richten sie ein und schulen das Team, die Umsetzung lässt sich unter Umständen über die BAFA-Förderung für Unternehmensberatung mitfinanzieren. Danach stehen wir für Anpassungen und Support langfristig zur Verfügung."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Prüft ihr, ob ich schon passende Tools lizenziert habe, bevor ihr etwas Neues vorschlagt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja, das ist fester Bestandteil unseres Vorgehens. Viele Büros haben bereits passende Software lizenziert, aber nie richtig eingeführt. Bevor ein neues Tool vorgeschlagen wird, prüfen wir immer zuerst, ob eine bestehende Lizenz das Problem schon lösen könnte, günstiger für den Kunden und ohne Konkurrenz zu den Software-Anbietern."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was passiert mit meinen Projektdaten, wenn ihr KI-Tools einführt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Bauherren-Daten, Pläne und Projektunterlagen sind sensibel. Bei manchen Zeitfressern, etwa der automatischen Protokollerstellung, gibt es neben Cloud-Lösungen auch komplett lokale, DSGVO-konforme Alternativen ohne externe Server. Ist lokale Datenhaltung wichtig, wird das im Audit berücksichtigt und gezielt danach ausgewählt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bekomme ich die Rechte an meiner Website, falls die Zusammenarbeit endet?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die genauen Nutzungs- und Urheberrechte regeln die AGB sowie der individuelle Vertrag. Inhalte, die der Kunde liefert (Texte, Bilder, Projektdaten), bleiben in jedem Fall sein Eigentum. Fragen zu Code-Übernahme oder Domainwechsel nach Vertragsende werden transparent im Erstgespräch bzw. vor Vertragsabschluss geklärt."
         }
       }
     ]
@@ -928,23 +987,37 @@
   <div class="ticker-wrap">
     <div class="ticker-track">
       <a href="#faq-website" class="ticker-chip faq-jump">Professionelle Website?</a>
+      <a href="#faq-website-behalten" class="ticker-chip faq-jump">Bestehende Website behalten?</a>
       <a href="#faq-google-ads" class="ticker-chip faq-jump">Was sind Google Ads?</a>
       <a href="#faq-ai-ads" class="ticker-chip faq-jump">Was sind AI Ads?</a>
-      <a href="#faq-bewertungsmanagement" class="ticker-chip faq-jump">Bewertungsmanagement?</a>
       <a href="#faq-lokales-seo" class="ticker-chip faq-jump">Was ist lokales SEO?</a>
+      <a href="#faq-nicht-gefunden" class="ticker-chip faq-jump">Nicht bei Google gefunden?</a>
+      <a href="#faq-bewertungsmanagement" class="ticker-chip faq-jump">Bewertungsmanagement?</a>
       <a href="#faq-bewertungen-anzahl" class="ticker-chip faq-jump">Wie viele Google-Bewertungen brauche ich?</a>
-      <a href="#faq-dauer" class="ticker-chip faq-jump">Wie lange dauert es?</a>
+      <a href="#faq-zielgruppe" class="ticker-chip faq-jump">Für welche Büros geeignet?</a>
+      <a href="#faq-start" class="ticker-chip faq-jump">Wie schnell geht's los?</a>
       <a href="#faq-kosten" class="ticker-chip faq-jump">Was kostet das?</a>
+      <a href="#faq-dauer" class="ticker-chip faq-jump">Wie lange dauert es?</a>
       <a href="#faq-zeitfresser" class="ticker-chip faq-jump">Was ist der Zeitfresser-Workshop?</a>
+      <a href="#faq-tools-check" class="ticker-chip faq-jump">Schon lizenzierte Tools?</a>
+      <a href="#faq-datenschutz-ki" class="ticker-chip faq-jump">Datenschutz bei KI-Tools?</a>
+      <a href="#faq-website-rechte" class="ticker-chip faq-jump">Website-Rechte bei Vertragsende?</a>
       <a href="#faq-website" class="ticker-chip faq-jump">Professionelle Website?</a>
+      <a href="#faq-website-behalten" class="ticker-chip faq-jump">Bestehende Website behalten?</a>
       <a href="#faq-google-ads" class="ticker-chip faq-jump">Was sind Google Ads?</a>
       <a href="#faq-ai-ads" class="ticker-chip faq-jump">Was sind AI Ads?</a>
-      <a href="#faq-bewertungsmanagement" class="ticker-chip faq-jump">Bewertungsmanagement?</a>
       <a href="#faq-lokales-seo" class="ticker-chip faq-jump">Was ist lokales SEO?</a>
+      <a href="#faq-nicht-gefunden" class="ticker-chip faq-jump">Nicht bei Google gefunden?</a>
+      <a href="#faq-bewertungsmanagement" class="ticker-chip faq-jump">Bewertungsmanagement?</a>
       <a href="#faq-bewertungen-anzahl" class="ticker-chip faq-jump">Wie viele Google-Bewertungen brauche ich?</a>
-      <a href="#faq-dauer" class="ticker-chip faq-jump">Wie lange dauert es?</a>
+      <a href="#faq-zielgruppe" class="ticker-chip faq-jump">Für welche Büros geeignet?</a>
+      <a href="#faq-start" class="ticker-chip faq-jump">Wie schnell geht's los?</a>
       <a href="#faq-kosten" class="ticker-chip faq-jump">Was kostet das?</a>
+      <a href="#faq-dauer" class="ticker-chip faq-jump">Wie lange dauert es?</a>
       <a href="#faq-zeitfresser" class="ticker-chip faq-jump">Was ist der Zeitfresser-Workshop?</a>
+      <a href="#faq-tools-check" class="ticker-chip faq-jump">Schon lizenzierte Tools?</a>
+      <a href="#faq-datenschutz-ki" class="ticker-chip faq-jump">Datenschutz bei KI-Tools?</a>
+      <a href="#faq-website-rechte" class="ticker-chip faq-jump">Website-Rechte bei Vertragsende?</a>
     </div>
   </div>
 
@@ -1139,83 +1212,129 @@
     <div class="faq-inner">
       <div class="section-header">
         <h2>Häufig gestellte <em>Fragen.</em></h2>
-        <p>Antworten auf die Fragen, die uns am häufigsten gestellt werden.</p>
       </div>
 
+      <h3 class="faq-category-title">Sichtbarkeit bei Google & KI</h3>
+
       <div class="faq-item" id="faq-website">
-        <button class="faq-question">Was macht eine professionelle Website für lokale Unternehmen aus?<span class="faq-icon">+</span></button>
+        <button class="faq-question">Was macht eine professionelle Website aus?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Eine professionelle Website ist mobiloptimiert, lädt schnell und zeigt auf den ersten Blick, was dein Unternehmen anbietet, wo du sitzt und wie man dich erreicht. Dazu gehören klare Kontaktmöglichkeiten, Öffnungszeiten, Leistungsübersicht und ein sauberes Design, das auf dem Smartphone genauso gut funktioniert wie am Desktop. Technisch sauber aufgebaut (saubere Struktur, schnelle Ladezeiten, korrekte Meta-Angaben) ist sie außerdem die Grundlage dafür, dass dich Google und KI-Plattformen überhaupt finden und richtig einordnen können.</p>
+          <p>Eine professionelle Website lässt vor allem deine beste Arbeit sprechen: eine klare Übersicht deiner Referenzen oder Leistungen mit kurzem Kontext statt langer Marketingtexte, dazu eine Team-Seite mit echten Namen und Rollen, ein zentrales Vertrauenssignal für Kunden und, dank EEAT-Kriterien (Experience, Expertise, Authoritativeness, Trustworthiness), auch für KI-Plattformen wie ChatGPT. Mobiloptimiert, schnell ladend und mit strukturierten Daten (Schema.org) im Quellcode ist sie zudem technisch so aufgebaut, dass Google und KI-Systeme sie überhaupt crawlen, verstehen und weiterempfehlen können.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-website-behalten">
+        <button class="faq-question">Kann ich meine bestehende Website behalten und nur SEO/Ads dazubuchen?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Ja. Website-Erstellung, SEO & GEO, Google Ads, Bewertungsmanagement und Prozessoptimierung sind bei uns modular buchbar, du wählst nur das, was du wirklich brauchst. Wird deine bestehende Website aktuell von einem anderen Anbieter betreut, ist das kein Problem: Wir können SEO, GEO oder Ads unabhängig davon aufsetzen. Solltest du dich später doch für eine komplett neue Website durch uns entscheiden, ist das ein separater Schritt mit eigenem Angebot, kein automatischer Wechsel im laufenden Vertrag.</p>
         </div>
       </div>
 
       <div class="faq-item" id="faq-google-ads">
-        <button class="faq-question">Was sind Google Ads und wie helfen sie meinem Betrieb?<span class="faq-icon">+</span></button>
+        <button class="faq-question">Was sind Google Ads und wie helfen sie meinem Unternehmen?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Google Ads sind bezahlte Anzeigen, die ganz oben in den Google-Suchergebnissen erscheinen, genau dann, wenn jemand in deiner Region nach deiner Leistung sucht (z. B. "Heizungsbauer Bonn"). Anders als beim klassischen SEO musst du nicht warten, bis du organisch gefunden wirst: Mit Google Ads bist du sofort sichtbar. Du zahlst nur, wenn jemand auf deine Anzeige klickt, das Budget bleibt also planbar und die Ergebnisse sind jederzeit messbar.</p>
+          <p>Google Ads sind bezahlte Anzeigen, die ganz oben in den Google-Suchergebnissen erscheinen, genau dann, wenn jemand in deiner Region nach deiner Leistung sucht, zum Beispiel nach "deine Leistung + deine Stadt". Du zahlst nur, wenn jemand tatsächlich klickt, nicht für die reine Anzeigenschaltung. Wie oft eine Anzeige ausgespielt wird, entscheidet dabei nicht nur das Gebot, sondern vor allem der sogenannte Quality Score: gute Anzeigentexte und eine passende Zielseite senken so aktiv die Kosten pro Klick. Das Budget bleibt jederzeit planbar und lässt sich flexibel an deine Auftragslage anpassen, etwa hochfahren, sobald wieder Kapazitäten frei sind.</p>
         </div>
       </div>
 
       <div class="faq-item" id="faq-ai-ads">
         <button class="faq-question">Was sind AI Ads bzw. GEO (Generative Engine Optimization)?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>AI Ads und GEO sind zwei unterschiedliche Dinge, ähnlich wie Google Ads und klassisches SEO. AI Ads sind bezahlte Kampagnen, bei denen künstliche Intelligenz Gebote, Zielgruppen und Anzeigentexte automatisch optimiert, du zahlst pro Klick, dafür ist die Sichtbarkeit sofort da. GEO (Generative Engine Optimization) ist organisch und kostet keine Klickgebühr: Immer mehr Menschen fragen nicht mehr nur Google, sondern direkt eine KI wie ChatGPT, Perplexity oder die Google AI Overviews ("Welcher Handwerker in meiner Nähe ist gut bewertet?"). GEO sorgt dafür, dass dein Unternehmen in genau diesen Antworten genannt und empfohlen wird. Da kaum ein lokaler Betrieb das aktuell macht, ist das Feld noch wenig umkämpft, ein klarer Vorteil für alle, die früh dabei sind.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-bewertungsmanagement">
-        <button class="faq-question">Was ist Bewertungsmanagement und warum ist es wichtig?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Bewertungsmanagement bedeutet, dass wir dir helfen, kontinuierlich neue, echte Google-Bewertungen von zufriedenen Kunden zu sammeln, und dass wir gemeinsam mit dir auf Bewertungen reagieren. Das ist deshalb wichtig, weil Sterne-Anzahl und Aktualität der Bewertungen direkt beeinflussen, ob jemand auf dein Google-Profil klickt und wie gut du bei Google Maps rankst. Viele aktuelle, positive Bewertungen wirken wie eine permanente Empfehlung, rund um die Uhr.</p>
+          <p>AI Ads und GEO sind zwei unterschiedliche Dinge, ähnlich wie Google Ads und klassisches SEO: Ads sind click-driven, du zahlst pro Klick, GEO ist exposure-driven, Sichtbarkeit entsteht durch Erwähnung, oft ganz ohne Klick. GEO (Generative Engine Optimization) sorgt dafür, dass dein Unternehmen in den Antworten von KI-Plattformen wie ChatGPT oder Perplexity genannt wird, etwa wenn jemand fragt "Welches Unternehmen für [deine Leistung] in meiner Region ist gut bewertet?". Voraussetzung dafür sind klare, belegbare Aussagen statt Marketing-Floskeln, sichtbare Autoren-/Team-Signale und strukturierte Daten im Quellcode, damit die KI die Inhalte versteht und als zitierfähig einstuft. Da das aktuell kaum ein Unternehmen macht, ist das Feld noch wenig umkämpft, ein klarer Vorteil für alle, die früh dabei sind.</p>
         </div>
       </div>
 
       <div class="faq-item" id="faq-lokales-seo">
         <button class="faq-question">Was ist lokales SEO?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Lokales SEO umfasst alle Maßnahmen, die dafür sorgen, dass dein Unternehmen bei Suchanfragen mit Ortsbezug ("Leistung + Stadt") und im Google Maps "Local Pack" ganz oben erscheint. Dazu gehören ein vollständig gepflegtes Google-Unternehmensprofil, die richtigen Keywords auf deiner Website, einheitliche Adressangaben im Web (Citations) und themenrelevante Verweise von anderen Seiten. Der große Vorteil: Im Gegensatz zu Ads kostet jeder Klick aus dem organischen Ranking nichts zusätzlich, die Sichtbarkeit bleibt langfristig bestehen.</p>
+          <p>Lokales SEO umfasst alle Maßnahmen, die dafür sorgen, dass dein Unternehmen bei Suchanfragen mit Ortsbezug ("deine Leistung" + Stadt) und im Google Maps "Local Pack" ganz oben erscheint. Dazu gehören ein vollständig gepflegtes Google-Unternehmensprofil mit aktuellen Fotos, die richtigen Keywords auf deiner Website, einheitliche Adressangaben im Web (Citations) und themenrelevante Verweise von anderen Seiten, etwa Branchenverzeichnissen oder Presseartikeln. Der Vorteil gegenüber Ads: Jeder Klick aus dem organischen Ranking kostet nichts zusätzlich, die Sichtbarkeit bleibt auch bestehen, wenn ein Ads-Budget einmal pausiert.</p>
         </div>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-question">Was passiert, wenn mein Betrieb bei Google nicht gefunden wird?<span class="faq-icon">+</span></button>
+      <div class="faq-item" id="faq-nicht-gefunden">
+        <button class="faq-question">Was passiert, wenn mein Unternehmen bei Google nicht gefunden wird?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Dann gehen Anfragen an die Konkurrenz, ohne dass du es überhaupt merkst. Die meisten Menschen klicken nur auf die ersten Ergebnisse einer Suche und prüfen nie, wer sonst noch infrage käme. Wenn dein Unternehmen bei "Leistung + Ort" nicht unter den ersten Treffern auftaucht, verlierst du jeden Tag Kundenanfragen an Unternehmen, die online präsenter sind, unabhängig davon, wer die bessere Arbeit liefert.</p>
+          <p>Dann gehen Anfragen an die Konkurrenz, ohne dass du es überhaupt merkst. Über 90 % der Nutzer klicken nie auf die zweite Google-Suchergebnisseite. Taucht dein Unternehmen bei Suchen wie "deine Leistung + deine Stadt" nicht unter den ersten Treffern auf, verlierst du tagtäglich Kundenanfragen an sichtbarere Anbieter, unabhängig davon, wie gut deine Arbeit tatsächlich ist.</p>
+        </div>
+      </div>
+
+      <h3 class="faq-category-title">Bewertungen</h3>
+
+      <div class="faq-item" id="faq-bewertungsmanagement">
+        <button class="faq-question">Was ist Bewertungsmanagement und warum ist es wichtig?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Bewertungsmanagement bedeutet, dass wir dir helfen, kontinuierlich neue, echte Google-Bewertungen von zufriedenen Kunden zu sammeln, und dass wir gemeinsam mit dir auf Bewertungen reagieren. Das ist wichtig, weil Sterne-Anzahl und Aktualität direkt beeinflussen, ob jemand auf dein Google-Profil klickt und wie gut du bei Google Maps rankst. Gerade bei einer größeren Investitionsentscheidung wirken viele aktuelle, positive Bewertungen wie eine permanente Referenz, rund um die Uhr.</p>
         </div>
       </div>
 
       <div class="faq-item" id="faq-bewertungen-anzahl">
-        <button class="faq-question">Wie viele Google-Bewertungen braucht mein Betrieb?<span class="faq-icon">+</span></button>
+        <button class="faq-question">Wie viele Google-Bewertungen braucht mein Unternehmen?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Eine feste Zahl gibt es nicht, aber Faustregel ist: mehr und aktueller als die direkte Konkurrenz in deiner Region. Entscheidend sind sowohl die Anzahl als auch die Aktualität der Bewertungen, ein Profil mit 50 Bewertungen, von denen die letzte vor zwei Jahren war, wirkt weniger vertrauenswürdig als eines mit 20 Bewertungen aus den letzten Monaten. Ziel ist ein stetiger, organischer Zustrom an neuen Bewertungen.</p>
+          <p>Eine feste Zahl gibt es nicht, Faustregel ist: mehr und aktueller als die direkte Konkurrenz in deiner Region. Entscheidend sind Anzahl und Aktualität gemeinsam, ein Profil mit 50 Bewertungen, von denen die letzte vor zwei Jahren war, wirkt weniger vertrauenswürdig als eines mit 20 Bewertungen aus den letzten Monaten. Ziel ist ein stetiger, organischer Zustrom neuer Bewertungen nach jedem abgeschlossenen Projekt.</p>
         </div>
       </div>
 
-      <div class="faq-item" id="faq-dauer">
-        <button class="faq-question">Wie lange dauert es, bis sich Ergebnisse zeigen?<span class="faq-icon">+</span></button>
+      <h3 class="faq-category-title">Ergebnisse & Zusammenarbeit</h3>
+
+      <div class="faq-item" id="faq-zielgruppe">
+        <button class="faq-question">Für welche Büros ist XPONext geeignet?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Das hängt von der Maßnahme ab. Google Ads können bereits ab dem ersten Tag nach dem Start zu Anfragen führen, da deine Anzeige sofort ausgespielt wird. Lokales SEO, Bewertungsmanagement und GEO sind dagegen langfristige Maßnahmen, hier sind erste spürbare Verbesserungen meist nach einigen Wochen sichtbar, ein stabil verbessertes Ranking entwickelt sich über mehrere Monate. Beides kombiniert ergibt: schnelle erste Ergebnisse über Ads und nachhaltiges Wachstum über SEO, Bewertungen und GEO.</p>
+          <p>Website, SEO, GEO, Ads und Bewertungsmanagement setzen wir für Unternehmen aus den unterschiedlichsten Branchen um. Ein besonderer Schwerpunkt liegt auf Architekturbüros, dort kennen wir die typischen Herausforderungen der Branche im Detail: lokale Sichtbarkeit gegenüber Bauherren und Auftraggebern sowie Verwaltungsprozesse wie Angebotswesen, Bautagebuch oder Dokumentenmanagement, die zu viel Zeit kosten. Für den Zeitfresser-Workshop/Prozessoptimierung gilt dabei eine klare Rollentrennung: Wir sind keine Fachexperten für VOB, HOAI oder bautechnische Detailfragen, sondern Experten für die Tools und Prozesse, die den Büroalltag beschleunigen, du kennst deine Abläufe am besten, wir bringen die passende Software und Automatisierung dazu.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-start">
+        <button class="faq-question">Wie schnell kann es losgehen?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Nach deiner Anfrage bekommst du in der Regel innerhalb von 16 Stunden eine Antwort für das kostenlose Erstgespräch. Von der ersten Absprache bis zur ersten sichtbaren Lösung, zum Beispiel einer laufenden Google-Ads-Kampagne oder den ersten eingerichteten Tools, vergehen danach in der Regel nicht mehr als 7 Tage. Umfangreichere Projekte wie eine komplette Website-Neuerstellung dauern je nach Umfang etwas länger, den genauen Zeitplan bekommst du direkt im Erstgespräch.</p>
         </div>
       </div>
 
       <div class="faq-item" id="faq-kosten">
         <button class="faq-question">Was kostet die Zusammenarbeit mit XPONext?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Das hängt davon ab, welche Leistungen für dein Unternehmen sinnvoll sind, ein Handwerksbetrieb ohne Website hat einen anderen Bedarf als ein Betrieb, der nur sein Bewertungsmanagement verbessern möchte. Im kostenlosen Erstgespräch schauen wir uns deine aktuelle Online-Präsenz an und erstellen dir auf dieser Basis ein individuelles, transparentes Angebot, ohne versteckte Kosten oder Mindestlaufzeiten, die nicht zu dir passen.</p>
+          <p>Die Kosten hängen stark davon ab, welche der folgenden Bereiche für dein Büro relevant sind. Ein realistischer Rahmen:</p>
+          <ul>
+            <li><strong>Website (einmaliges Projekt):</strong> je nach Umfang, von einer kompakten Seite mit Projektgalerie bis zu einem umfangreichen Auftritt mit mehreren Unterseiten, meist im unteren bis mittleren vierstelligen Bereich.</li>
+            <li><strong>Lokales SEO, Bewertungsmanagement, GEO und/oder Google Ads (laufende Betreuung):</strong> in der Regel mit einer Mindestlaufzeit von 3 Monaten zu einem Einführungspreis, weil sich Wirkung erst über diesen Zeitraum zeigt und auswerten lässt. Nach Ablauf der Mindestlaufzeit sinkt der monatliche Preis automatisch; bei Ads kommt dein frei wählbares Werbebudget separat hinzu.</li>
+            <li><strong>Zeitfresser-Workshop / Prozessoptimierung:</strong> Der Audit zu Beginn, bei dem wir gemeinsam herausfinden, wo genau Zeit verloren geht, ist kostenlos oder sehr günstig. Erst danach, wenn der konkrete Umfang feststeht, bekommst du einen Festpreis für die Umsetzung, nie vorab pauschal versprochen. Die anschließende Betreuung läuft als überschaubarer monatlicher Retainer weiter.</li>
+          </ul>
+          <p>Im kostenlosen Erstgespräch schauen wir uns deine aktuelle Situation an und erstellen dir auf dieser Basis ein konkretes, transparentes Angebot, ohne versteckte Kosten oder Mindestlaufzeiten, die nicht zu dir passen.</p>
         </div>
       </div>
 
-      <div class="faq-item">
-        <button class="faq-question">Für welche Büros ist XPONext geeignet?<span class="faq-icon">+</span></button>
+      <div class="faq-item" id="faq-dauer">
+        <button class="faq-question">Wie lange dauert es, bis sich Ergebnisse zeigen?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>XPONext richtet sich primär an Architekturbüros – unabhängig von Größe und Spezialisierung (Hochbau, Innenarchitektur, Landschaftsarchitektur etc.). Wir kennen die spezifischen Herausforderungen der Branche: lokale Sichtbarkeit gegenüber Bauherren, Projektentwicklern und privaten Auftraggebern sowie interne Prozesse, die zu viel Zeit kosten. Unsere Methoden und Tools funktionieren für Unternehmen jeder Branche.</p>
+          <p>Das hängt von der Maßnahme ab. Google Ads können bereits ab dem ersten Tag nach dem Start zu Anfragen führen, da deine Anzeige sofort ausgespielt wird. Lokales SEO, Bewertungsmanagement und GEO sind dagegen langfristige Maßnahmen: Erste spürbare Verbesserungen zeigen sich meist nach 4 bis 8 Wochen, ein stabil verbessertes Ranking entwickelt sich über 3 bis 6 Monate. Beim Zeitfresser-Workshop merkst du die Entlastung meist sofort nach Einrichtung und Schulung, weil die neuen Tools direkt im Tagesgeschäft greifen. Kombiniert ergibt das: schnelle erste Ergebnisse über Ads und Prozessoptimierung, nachhaltiges Wachstum über SEO, Bewertungen und GEO.</p>
         </div>
       </div>
 
       <div class="faq-item" id="faq-zeitfresser">
         <button class="faq-question">Was ist der Zeitfresser-Workshop?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Im Zeitfresser-Workshop analysieren wir gemeinsam mit euch, wo in eurem Büroalltag die meiste Zeit unnötig verloren geht – typisch sind Angebotserstellung, Projektdokumentation, Kommunikation und Terminkoordination. Auf Basis dieser Analyse wählen wir passende Tools aus (KI-Tools, Automatisierungen, smarte Vorlagen), richten sie technisch ein und schulen euer Team in der Nutzung. Danach stehen wir für Anpassungen und Support langfristig zur Verfügung.</p>
+          <p>Im Zeitfresser-Workshop analysieren wir gemeinsam mit dir an echten Beispielen aus deinem Büro, etwa dem letzten Bautagebuch, der letzten Mängelliste oder dem letzten Leistungsverzeichnis, wo die meiste Zeit unnötig verloren geht. Typische Zeitfresser sind die manuelle LV-Erstellung, das abendliche Rekonstruieren von Bautagebuch und Mängeln aus Zetteln und Fotos, das Protokollschreiben nach jeder Besprechung und die Unsicherheit, welcher Planstand gerade aktuell ist. Laut Bundesarchitektenkammer (Architektenbefragung 2025) nutzen aktuell nur 29 % der Architekt:innen KI-Tools im Büroalltag, 77 % wünschen sich aber Fortbildung dazu, die Lücke liegt selten bei fehlender Software, sondern bei Auswahl, Einführung und tatsächlicher Nutzung. Genau da setzen wir an: Wir wählen passende Tools aus (bereits lizenzierte Software wird dabei immer zuerst geprüft), richten sie technisch ein und schulen dein Team in der Nutzung. Für die Umsetzung lässt sich unter Umständen die BAFA-Förderung für Unternehmensberatung nutzen, die bis zu 50 % der Kosten übernimmt. Danach stehen wir für Anpassungen und Support langfristig zur Verfügung.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-tools-check">
+        <button class="faq-question">Prüft ihr, ob ich schon passende Tools lizenziert habe, bevor ihr etwas Neues vorschlagt?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Ja, das ist fester Bestandteil unseres Vorgehens. Viele Büros haben bereits passende Software lizenziert, aber nie richtig eingeführt oder genutzt. Bevor wir dir ein neues Tool vorschlagen, prüfen wir deshalb immer zuerst, ob eine bestehende Lizenz das Problem schon lösen könnte. Das ist günstiger für dich, und wir stehen dabei nicht in Konkurrenz zu den Software-Anbietern, sondern sorgen dafür, dass das, was du schon bezahlst, endlich auch genutzt wird.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-datenschutz-ki">
+        <button class="faq-question">Was passiert mit meinen Projektdaten, wenn ihr KI-Tools einführt?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Das hängt vom eingesetzten Tool und deinen Anforderungen ab. Bauherren-Daten, Pläne und Projektunterlagen sind sensibel, das nehmen wir ernst. Bei manchen Zeitfressern, etwa der automatischen Protokollerstellung aus Sprachmemos, gibt es neben Cloud-Lösungen auch komplett lokale, DSGVO-konforme Alternativen, die ohne externe Server auskommen. Wenn dir lokale Datenhaltung wichtig ist, sagst du uns das im Audit, wir wählen dann gezielt Tools aus, die das ermöglichen, statt dich pauschal in eine Cloud-Lösung zu drängen.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" id="faq-website-rechte">
+        <button class="faq-question">Bekomme ich die Rechte an meiner Website, falls die Zusammenarbeit endet?<span class="faq-icon">+</span></button>
+        <div class="faq-answer">
+          <p>Die genauen Nutzungs- und Urheberrechte regeln unsere AGB sowie der individuelle Vertrag. Inhalte, die du uns lieferst (Texte, Bilder, Projektdaten), bleiben in jedem Fall dein Eigentum. Fragen zu Code-Übernahme oder Domainwechsel nach Vertragsende klären wir transparent im Erstgespräch bzw. vor Vertragsabschluss, damit hier keine Unklarheiten entstehen.</p>
         </div>
       </div>
     </div>
