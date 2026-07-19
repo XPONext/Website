@@ -170,6 +170,21 @@
     });
     gtag('js', new Date());
     gtag('config', 'G-S0KYC5QEKH', { 'anonymize_ip': true });
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18218623343/-EIFCNn-hbocEO_CqO9D',
+          'value': 1.0,
+          'currency': 'EUR',
+          'event_callback': callback
+      });
+      return false;
+    }
   </script>
 </head>
 <body>
@@ -269,6 +284,7 @@
       e.preventDefault();
       var url = document.getElementById('ps-url').value.trim();
       if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
+      gtag_report_conversion();
       runCheck(url);
     });
 
