@@ -711,6 +711,10 @@
       cursor: pointer;
       margin-top: 0.3rem;
     }
+    .contact-form button:disabled { opacity: 0.6; cursor: default; }
+    .contact-form .hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+    .form-status { max-width: 460px; margin: 1rem auto 0; text-align: center; font-size: 0.92rem; font-weight: 600; color: #4CAF7E; }
+    .form-status.is-error { color: #F87171; }
 
     /* ── FOOTER ──────────────────────────────────────────── */
     footer {
@@ -1366,8 +1370,10 @@
       <input type="email" name="email" placeholder="Deine E-Mail-Adresse" required>
       <input type="tel" name="phone" placeholder="Telefonnummer (optional)">
       <textarea name="message" placeholder="Worum geht's? Erzähl uns kurz von deinem Unternehmen." rows="4" required></textarea>
+      <input type="text" name="website" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button type="submit" class="btn-primary">Kostenloses Erstgespräch anfragen →</button>
     </form>
+    <p class="form-status" id="form-status" hidden></p>
   </div>
 
 
@@ -1409,20 +1415,45 @@
   </script>
 
   <script>
+    var CONTACT_FORM_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw0gr0qUcnscoGS-1qk3l5PXCpX0wMWFpJKlPi5zkiLc_LMliyTjEELHSh_Xsg_H1Ux/exec';
+
     document.getElementById('contact-form').addEventListener('submit', function (e) {
       e.preventDefault();
-      const name = this.name.value.trim();
-      const email = this.email.value.trim();
-      const phone = this.phone.value.trim();
-      const message = this.message.value.trim();
-      const subject = encodeURIComponent('Kostenloses Erstgespräch – Anfrage von ' + name);
-      const body = encodeURIComponent(
-        ['Name: ' + name, 'E-Mail: ' + email, phone ? 'Telefon: ' + phone : null, '', message]
-          .filter(Boolean)
-          .join('\n')
-      );
-      gtag_report_conversion();
-      window.location.href = 'mailto:info@xponext.de?subject=' + subject + '&body=' + body;
+      const form = this;
+      const status = document.getElementById('form-status');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      const phone = form.phone.value.trim();
+      const message = form.message.value.trim();
+      const honeypot = form.website.value.trim();
+
+      if (honeypot) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Wird gesendet …';
+      status.hidden = true;
+      status.classList.remove('is-error');
+
+      fetch(CONTACT_FORM_ENDPOINT, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify({ name: name, email: email, phone: phone, message: message })
+      }).then(function () {
+        gtag_report_conversion();
+        form.reset();
+        form.hidden = true;
+        status.hidden = false;
+        status.textContent = 'Danke! Deine Anfrage ist bei uns angekommen — wir melden uns zeitnah.';
+      }).catch(function () {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Kostenloses Erstgespräch anfragen →";
+        status.hidden = false;
+        status.classList.add('is-error');
+        status.textContent = 'Da ist leider etwas schiefgelaufen. Schreib uns direkt an info@xponext.de.';
+      });
     });
   </script>
 
