@@ -1,0 +1,7 @@
+# Screenshots der Musterentwürfe: jederzeit neu erzeugbar über
+# tools/website_screenshot im Repo XPO_Agentic_Workflow, zusammen rund 41 MB.
+# Design-Brief, Prüfbericht, Bau-Notizen und build.py bleiben versioniert —
+# aus build.py entstehen die Seiten, das ist die Quelle der Wahrheit.
+musterentwuerfe/*/_doku/screenshots/
+
+.DS_Store

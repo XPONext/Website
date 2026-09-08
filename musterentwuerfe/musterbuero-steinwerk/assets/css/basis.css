@@ -1,0 +1,549 @@
+/* ==========================================================================
+   Musterbüro Steinwerk (Musterentwurf) — Basis-Stylesheet
+   Skeleton aus dem architect_website_creation-Skill (XPONext).
+
+   Was hier steht, ist Handwerk, kein Design: Schriften, Wertevorrat, Reset,
+   Layout-Primitive, Fokus, Formular, Fußzeile, Bewegung. Die Optik der Seite
+   (Hero, Projektraster, Navigation, Typo-Skala) entsteht pro Projekt aus dem
+   Design-Brief und wird UNTER Abschnitt 9 frei geschrieben.
+
+   Platzhalter des Skeletons sind ersetzt (Stand 2026-09-07).
+   ========================================================================== */
+
+/* --- 1. Schriften ---------------------------------------------------------
+   Immer self-hosted: fremde Schriftserver übertragen Besucher-IPs an Dritte.
+   Nur die Familien einbinden, die der Brief nennt. Nicht benötigte
+   @font-face-Blöcke und woff2-Dateien löschen — jede Datei kostet Ladezeit.
+   Verfügbar in assets/fonts/ (alle SIL Open Font License, siehe LICENSES.md):
+     inter            – Grotesk, variabel 100–900          (Body, Nav, Labels)
+     source-sans      – Humanist, variabel 300–700          (Body, ruhiger als Inter)
+     dm-sans          – Geometrisch, variabel 300–700       (Überschriften, modern)
+     fraunces         – Serif mit optischer Größe, variabel (Wow-Überschriften)
+     instrument-serif – Display-Serif, 400 + kursiv         (große Zeilen, Zitate)
+     cormorant-garamond – Klassische Serif, variabel        (edel, eher Innenarchitektur)
+     ibm-plex-mono    – Monospace 400/500 + kursiv           (Labels, Tabellen, Metazeilen)
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/inter-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+                 U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('../fonts/inter-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+                 U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+                 U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* IBM Plex Mono: Metazeilen, Chips, Filter, Tabellen, Telefon (wolveridge-com-au-F7) */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-400-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+                 U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-400-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+                 U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+                 U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-500-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+                 U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/ibm-plex-mono-500-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304,
+                 U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB,
+                 U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* --- 2. Wertevorrat ---------------------------------------------------------
+   Alle Werte kommen aus dem Design-Brief. Kontraste dort belegt (WCAG AA:
+   4,5:1 für Text, 3:1 für große Schrift und Bedienelemente).                */
+
+:root {
+  --schrift-text:  'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --schrift-titel: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --schrift-mono:  'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --farbe-grund:   #EDEFF0;   /* kühles Grau, Seitenhintergrund, Kopfzeile, Menü */
+  --farbe-flaeche: #E0E4E7;   /* Bild-Platzhalter, Tabellenkopf, Kontaktkasten, Fußzeile */
+  --farbe-text:    #15181B;   /* 15,45:1 auf Grund */
+  --farbe-text-2:  #454B51;   /* 7,65:1 auf Grund: Metazeile, Chips, Demo-Hinweis */
+  --farbe-text-3:  #5B6269;   /* 5,36:1 auf Grund, 4,84:1 auf Fläche: Labels, inaktive Filter */
+  --farbe-linie:   #C4CACF;   /* Hairlines */
+  --farbe-akzent:  #2B5876;   /* Stahlblau, 6,60:1 auf Grund: Textlinks, Fokus, ein Button */
+  --farbe-invers:  #EDEFF0;   /* Text auf dem Akzent-Button, 6,60:1 */
+  --farbe-fehler:  #B3261E;
+
+  /* Typo-Skala aus dem Brief. clamp() hält die Hero-Größe auf Mobil im Zaum. */
+  --t-chip:   0.75rem;                          /* 12 px, nur Chips */
+  --t-label:  0.8125rem;                        /* 13 px, Mono-Labels, Filter, Metazeile */
+  --t-tab:    0.875rem;                         /* 14 px, Tabellen */
+  --t-klein:  0.9375rem;                        /* 15 px, Navigation */
+  --t-basis:  clamp(1rem, 0.94rem + 0.2vw, 1.0625rem);   /* 16 → 17 px */
+  --t-mittel: 1.0625rem;                        /* 17 px, Kacheltitel, Leistungsfeld */
+  --t-gross:  clamp(1.5rem, 1.2rem + 0.9vw, 1.75rem);    /* 24 → 28 px, H2 */
+  --t-titel:  clamp(1.875rem, 1.4rem + 1.6vw, 2.5rem);   /* 30 → 40 px, H1 Unterseiten */
+  --t-hero:   clamp(2rem, 1.1rem + 3vw, 3.25rem);        /* 32 → 52 px, Statement */
+  --t-wert:   clamp(1.375rem, 1.1rem + 0.9vw, 1.75rem);  /* 22 → 28 px, Metadaten-Wert */
+
+  --lh-eng: 1.1;
+  --lh-mittel: 1.35;
+  --lh-text: 1.55;
+  --mass-text: 66ch;
+
+  --raum-halb: 1rem;
+  --raum: 2rem;
+  --raum-doppel: 4rem;
+  --abstand-sektion: 6rem;
+  --gasse: 64px;
+  --kopf-hoehe: 64px;
+
+  --breite: 1440px;
+  --rand: 2rem;
+  --radius: 0;
+  --tempo: 0.12s;
+  --kurve: ease-out;
+}
+
+/* --- 3. Grundlagen --------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--schrift-text);
+  font-size: var(--t-basis);
+  line-height: var(--lh-text);
+  color: var(--farbe-text-2);
+  background: var(--farbe-grund);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 { font-family: var(--schrift-titel); color: var(--farbe-text); line-height: var(--lh-eng); font-weight: 500; }
+h1 { font-size: var(--t-titel); letter-spacing: -0.02em; }
+h2 { font-size: var(--t-gross); line-height: 1.2; letter-spacing: -0.01em; }
+h3 { font-size: var(--t-mittel); line-height: var(--lh-mittel); }
+h4 { font-size: var(--t-basis); line-height: var(--lh-mittel); }
+
+p { max-width: var(--mass-text); }
+p + p { margin-top: var(--raum-halb); }
+a { color: inherit; text-decoration-color: var(--farbe-akzent); text-underline-offset: 3px; text-decoration-thickness: 1px; transition: text-decoration-color var(--tempo) var(--kurve); }
+a:hover { text-decoration-color: currentColor; }
+strong { font-weight: 500; color: var(--farbe-text); }
+img, svg, video { display: block; max-width: 100%; height: auto; }
+ul, ol { padding-left: 1.2em; }
+hr { border: 0; height: 1px; background: var(--farbe-linie); }
+
+/* Sichtbarer Tastaturfokus, auf jedem Untergrund erkennbar. */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--farbe-akzent);
+  outline-offset: 3px;
+}
+
+.nur-sr {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+.sprung {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: var(--farbe-text); color: var(--farbe-invers); padding: 0.75rem 1.25rem;
+}
+.sprung:focus { left: 0; }
+
+/* --- 4. Layout-Primitive ---------------------------------------------------- */
+
+.inhalt { max-width: var(--breite); margin-inline: auto; padding-inline: var(--rand); }
+.inhalt--schmal > * { max-width: 46rem; }
+.inhalt--schmal h2 { margin-top: 2.25rem; }
+.inhalt--schmal h3 { margin-top: 1.4rem; }
+.inhalt--schmal h2:first-child { margin-top: 0; }
+.inhalt--schmal p, .inhalt--schmal ul { margin-top: 0.75rem; }
+.inhalt--schmal li + li { margin-top: 0.25rem; }
+.sektion { padding-block: var(--abstand-sektion); }
+.sektion--flaeche { background: var(--farbe-flaeche); }
+.sektion--dunkel { background: var(--farbe-text); color: var(--farbe-invers); }
+.sektion--dunkel :is(h1, h2, h3, h4, strong) { color: var(--farbe-invers); }
+.mass { max-width: var(--mass-text); }
+.klein { font-size: var(--t-klein); color: var(--farbe-text-3); }
+
+.raster { display: grid; gap: var(--raum); }
+.raster--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.raster--3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+.label {
+  display: block;
+  font-family: var(--schrift-mono);
+  font-size: var(--t-label);
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--farbe-text-3);
+  margin-bottom: 0.75rem;
+}
+
+/* --- 5. Knöpfe ------------------------------------------------------------- */
+
+.knopf {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  background: var(--farbe-akzent);
+  color: var(--farbe-invers);
+  font-size: var(--t-klein);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: 1px solid var(--farbe-akzent);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--tempo) var(--kurve), color var(--tempo) var(--kurve);
+}
+.knopf:hover { background: var(--farbe-text); border-color: var(--farbe-text); }
+.knopf--linie { background: transparent; color: var(--farbe-text); border-color: currentColor; }
+.knopf--linie:hover { background: var(--farbe-text); color: var(--farbe-invers); }
+
+/* --- 6. Kopfzeile: nur das Verhalten, keine Optik ---------------------------
+   Sticky-Verhalten, Burger, Untermenü-Mechanik. Größe, Farbe, Ausrichtung
+   kommen aus dem Brief und stehen unten in Abschnitt 9.                      */
+
+.kopf { position: sticky; top: 0; z-index: 100; }
+.kopf__inhalt { display: flex; align-items: center; justify-content: space-between; gap: var(--raum); }
+.reiter { display: flex; align-items: center; gap: 1.5rem; list-style: none; padding: 0; }
+.reiter a { text-decoration: none; }
+.kopf__schalter {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  padding: 0.5rem 0.8rem;
+  font: inherit;
+  font-size: var(--t-klein);
+  color: inherit;
+  cursor: pointer;
+  min-height: 44px;
+}
+@media (max-width: 959px) {
+  .kopf__schalter { display: inline-flex; }
+  .reiter {
+    display: none;
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--farbe-grund);
+    border-bottom: 1px solid var(--farbe-linie);
+    padding: 0.5rem var(--rand) 1rem;
+  }
+  .reiter[data-offen="true"] { display: flex; }
+  .reiter a { display: block; padding: 0.9rem 0; border-bottom: 1px solid var(--farbe-linie); min-height: 44px; }
+}
+
+/* --- 7. (Formular: entfällt, kein Formular auf dieser Seite) ---------------- */
+
+/* --- 8. Fußzeile: Struktur, keine Optik --------------------------------------- */
+
+.fuss__raster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--raum);
+  padding-block: var(--raum-doppel) var(--raum);
+}
+.fuss__titel { font-size: var(--t-label); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.7rem; }
+.fuss p { font-size: var(--t-klein); max-width: none; }
+.fuss__liste { list-style: none; padding: 0; display: grid; gap: 0.4rem; font-size: var(--t-klein); }
+.fuss__schluss {
+  border-top: 1px solid var(--farbe-linie);
+  padding-block: 1rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
+  font-size: var(--t-klein);
+}
+/* Bei Referenzseiten Pflicht (siehe checklisten/qualitaet.md), bei Kundenseiten löschen. */
+.demo-hinweis { font-size: var(--t-label); letter-spacing: 0.04em; color: var(--farbe-text-3); }
+
+/* --- 9. Bewegung -------------------------------------------------------------
+   Grundsatz: alles ist auch ohne JavaScript sichtbar, Animation ist Zugabe.
+   .anim-Elemente blenden beim Scrollen ein (assets/js/basis.js).             */
+
+/* Keine Einblend-Animationen (Brief Abschnitt 9): .anim-Klassen werden nicht verwendet. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   10. PROJEKTSPEZIFISCH — ab hier frei nach Design-Brief
+   Kopfzeile-Optik, Hero, Projektraster, Projektdetail, Team, Kontakt,
+   Fußzeile-Optik. Jede Sektion mit Kommentar, welche Feature-ID aus dem
+   Brief sie umsetzt (z. B. "big-dk-F2 Metadatenblock rechtsbündig").
+   ========================================================================== */
+
+/* Grundraster: 4 Spalten à 296 px, Gasse 64 px (big-dk-F3 gemeinsame Kante) */
+.raster4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--gasse); }
+@media (max-width: 1099px) { .raster4 { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; } }
+@media (max-width: 719px)  { :root { --rand: 1rem; --kopf-hoehe: 56px; } .raster4 { grid-template-columns: minmax(0, 1fr); } }
+
+.mono {
+  font-family: var(--schrift-mono);
+  font-size: var(--t-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-feature-settings: "tnum";
+}
+main p, main li { font-feature-settings: "tnum"; }
+
+/* Textlinks im Fließtext: Tap-Fläche über Innenabstand, ohne Zeilenbild zu ändern */
+.fliesstext a { padding-block: 0.6rem; }
+
+/* --- Kopfzeile: wolveridge-com-au-F1 Dreiteilung (Wortmarke · Navigation · Ort + Telefon),
+   wolveridge-com-au-F10 Mobile als Vollbild ------------------------------------------------- */
+.kopf { background: var(--farbe-grund); border-bottom: 1px solid var(--farbe-linie); }
+.kopf__inhalt { min-height: var(--kopf-hoehe); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--gasse); align-items: center; }
+.marke {
+  grid-column: 1;
+  font-size: var(--t-mittel);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--farbe-text);
+  white-space: nowrap;
+  display: inline-flex; align-items: center; min-height: 44px;
+}
+.marke__lang { margin-left: 0.28em; }
+.kopf__ort { margin-right: 0.6em; }
+.kopf__nav { grid-column: 2 / 4; }
+.reiter { gap: 2rem; }
+.reiter a {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font-size: var(--t-klein); letter-spacing: 0.01em; line-height: 1;
+  color: var(--farbe-text);
+}
+.reiter a[aria-current="page"] { font-weight: 500; }
+.kopf__tel {
+  grid-column: 4; justify-self: end;
+  display: inline-flex; align-items: center; min-height: 44px;
+  text-decoration: none; color: var(--farbe-text); white-space: nowrap;
+}
+.kopf__tel:hover { text-decoration: underline; }
+.kopf__schalter { border: 0; padding: 0.5rem 0; min-width: 44px; font-size: var(--t-klein); color: var(--farbe-text); }
+.kopf__schalter-nojs { display: none; }
+.reiter__kontakt { display: none; }
+
+/* Umbruchpunkt 959 px (vorher 1099): die Wortmarke ist als „Musterbüro Steinwerk" 187 px breit
+   statt 296 px. Gemessen an den Textkanten bleiben bei 960 px 53 px zwischen Wortmarke und erstem
+   Navigationspunkt und 178 px zwischen „Kontakt" und der Telefonnummer; darunter fällt der Abstand
+   unter die halbe Rastergasse. Belege: _doku/screenshots/kopfzeile-umbruch/. */
+@media (max-width: 959px) {
+  .kopf__inhalt { display: flex; justify-content: space-between; }
+  .marke { order: 2; position: absolute; left: 50%; transform: translateX(-50%); }
+  .kopf__schalter { order: 1; }
+  .kopf__nav { order: 2; }      /* leerer Flex-Posten (Liste ist none/fixed) – sonst rückt „Menü" in die Mitte */
+  .kopf__tel { order: 3; }
+  .kopf__inhalt { position: relative; }
+  .reiter[data-offen="true"] {
+    position: fixed; top: var(--kopf-hoehe); left: 0; right: 0; bottom: 0;
+    overflow-y: auto;
+    padding: 0 var(--rand) 2rem;
+    border-bottom: 0;
+  }
+  .reiter a { font-size: 2rem; font-weight: 400; line-height: 1; padding: 1rem 0; min-height: 64px; }
+  .reiter__kontakt { display: block; padding-top: 1.5rem; }
+  .reiter__kontakt a { display: inline-flex; font-size: var(--t-label); padding: 0.6rem 0; min-height: 44px; border: 0; }
+  /* Ohne JavaScript: „Menü" ist ein Link auf die Navigation in der Fußzeile */
+  html:not(.js) .kopf__schalter { display: none; }
+  html:not(.js) .kopf__schalter-nojs { display: inline-flex; align-items: center; min-height: 44px; order: 1; text-decoration: none; font-size: var(--t-klein); color: var(--farbe-text); }
+}
+@media (max-width: 719px) {
+  .marke { font-size: 1rem; }
+  .kopf__tel .kopf__ort { display: none; }
+}
+/* Unter 450 px steht die längere Wortmarke links statt mittig, die Telefonnummer entfällt
+   (mittig gesetzt überlappte sie ab 390 px die Nummer). */
+@media (max-width: 449px) { .marke { position: static; transform: none; } .kopf__tel { display: none; } }
+
+/* --- Statement (Startseite, H1) mit Metadatenblock rechts: big-dk-F2, big-dk-F3 --------------- */
+.statement { padding-top: 6rem; align-items: end; }
+.statement h1 {
+  grid-column: 1 / 4;
+  font-size: var(--t-hero); font-weight: 500; letter-spacing: -0.025em; line-height: 1.08;
+  max-width: none;
+}
+.metablock { grid-column: 4; justify-self: end; text-align: right; }
+.metablock dl { display: grid; row-gap: 1.25rem; }
+.metablock dt { color: var(--farbe-text-3); }
+.metablock dd { font-size: var(--t-wert); font-weight: 500; letter-spacing: -0.01em; line-height: 1.1; color: var(--farbe-text); margin-top: 0.25rem; }
+@media (max-width: 1099px) {
+  .statement { padding-top: 4rem; }
+  .statement h1 { grid-column: 1 / -1; }
+  .metablock { grid-column: 1 / -1; justify-self: start; text-align: left; margin-top: 2rem; }
+  .metablock dl, .metablock dl > div { display: inline; }
+  .metablock dt, .metablock dd { display: inline; font-size: var(--t-label); font-weight: 400; letter-spacing: 0.06em; margin: 0; color: var(--farbe-text-2); }
+  .metablock dd { color: var(--farbe-text); }
+  .metablock .trenner::after { content: " · "; color: var(--farbe-text-3); }
+}
+.seitenkopf { padding-top: 6rem; align-items: end; }
+.seitenkopf h1 { grid-column: 1 / 4; max-width: none; }
+.seitenkopf .einleitung { grid-column: 1 / 3; margin-top: 1.5rem; }
+@media (max-width: 1099px) { .seitenkopf { padding-top: 4rem; } .seitenkopf h1, .seitenkopf .einleitung { grid-column: 1 / -1; } }
+
+/* --- Filterzeile + Umschalter: helenhard-no-F8 (Filter nach Typologie),
+   wolveridge-com-au-F2 (Umschalter in Checkbox-Schreibweise), wolveridge-com-au-F8 (Grau = inaktiv) --- */
+.filterzeile {
+  margin-top: 4rem;
+  border-top: 1px solid var(--farbe-linie); border-bottom: 1px solid var(--farbe-linie);
+  display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+  min-height: 48px;
+}
+.filter, .umschalter { list-style: none; padding: 0; display: flex; gap: 1.5rem; }
+.filter { flex-wrap: wrap; row-gap: 0; max-width: 100%; }   /* mobil umbrechen, aktiver Eintrag bleibt sichtbar */
+.filter li { flex: none; }
+.filter a, .filter button, .umschalter a, .umschalter button {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font: inherit; font-family: var(--schrift-mono); font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.5;
+  color: var(--farbe-text-3); text-decoration: none; background: none; border: 0; padding: 0; cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--tempo) var(--kurve);
+}
+.filter :is(a, button):hover, .umschalter :is(a, button):hover { color: var(--farbe-text); }
+.filter [aria-current="page"], .filter [aria-pressed="true"], .umschalter [aria-current="page"], .umschalter [aria-pressed="true"], .umschalter .an { color: var(--farbe-text); font-weight: 500; }
+@media (max-width: 719px) { .filterzeile { display: block; } .umschalter { border-top: 1px solid var(--farbe-linie); } }
+
+/* --- Projektraster: wolveridge-com-au-F3 (feste kleine Kachel, 3:2), wolveridge-com-au-F4
+   (Titel + Metazeile, Jahr absteigend), big-dk-F4 (Ort in Versalien), wolveridge-com-au-F16 (Chip) --- */
+.raster { list-style: none; padding: 0; row-gap: 56px; margin-top: 3rem; align-items: start; }
+@media (max-width: 719px) { .raster { row-gap: 40px; } }
+.kachel__bild { aspect-ratio: 3 / 2; background: var(--farbe-flaeche); overflow: hidden; }
+.kachel__bild img { width: 100%; height: 100%; object-fit: cover; }
+.kachel__titel { margin-top: 12px; font-size: var(--t-mittel); font-weight: 500; line-height: var(--lh-mittel); }
+.kachel__meta { margin-top: 4px; color: var(--farbe-text-2); display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.6rem; max-width: none; }
+.chip {
+  display: inline-flex; align-items: center; height: 22px; padding: 0 6px;
+  border: 1px solid var(--farbe-text-3); color: var(--farbe-text-2);
+  font-family: var(--schrift-mono); font-size: var(--t-chip); font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1;
+}
+html:not(.js) .nur-js { display: none; }   /* Ansicht, die es ohne JavaScript nur auf der anderen Seite gibt */
+[data-ansicht="raster"] .liste, [data-ansicht="liste"] .raster, .kachel[hidden], .liste tr[hidden] { display: none; }
+.leer { display: none; margin-top: 2rem; }
+.leer:only-child, .raster:empty + .leer { display: block; }
+
+/* --- Projektliste: wolveridge-com-au-F5 bildlose Tabelle mit Hairlines ------------------------ */
+.liste { margin-top: 3rem; }
+.liste table { width: 100%; border-collapse: collapse; font-family: var(--schrift-mono); font-size: var(--t-tab); letter-spacing: 0.02em; line-height: 1.5; font-feature-settings: "tnum"; }
+.liste caption { text-align: left; }
+.liste th { text-align: left; font-weight: 500; font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; color: var(--farbe-text-3); background: var(--farbe-flaeche); padding: 0.75rem 0.75rem 0.75rem 0; }
+.liste td { padding: 0.65rem 0.75rem 0.65rem 0; border-bottom: 1px solid var(--farbe-linie); color: var(--farbe-text); vertical-align: top; }
+.liste th:first-child, .liste td:first-child { padding-left: 0.5rem; }
+.liste .projekt { font-family: var(--schrift-text); font-size: var(--t-basis); letter-spacing: 0; }
+@media (max-width: 719px) {
+  .liste table, .liste tbody { display: block; width: 100%; }
+  .liste colgroup { display: none; }
+  .liste thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .liste tr { display: block; padding: 0.75rem 0; border-bottom: 1px solid var(--farbe-linie); }
+  .liste td, .liste td:first-child { display: inline; border: 0; padding: 0; font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; color: var(--farbe-text-2); }
+  .liste td.nr { color: var(--farbe-text-3); }
+  .liste td.projekt { display: block; font-size: 1rem; font-weight: 500; text-transform: none; letter-spacing: 0; color: var(--farbe-text); margin-bottom: 0.25rem; }
+  .liste td.nr { display: block; }
+  .liste td.meta + td.meta::before { content: " · "; color: var(--farbe-text-3); }
+}
+
+/* --- Büro: big-dk-F2 Metadatenblock, helenhard-no-F9 Label-Wert-Tabelle --------------------- */
+.buero__text { grid-column: 1 / 3; }
+.buero__text h2 { margin-top: 2.5rem; }
+.buero__text p { margin-top: 1.5rem; }
+.buero__text h2 + p { margin-top: 1rem; }
+.buero__meta { grid-column: 4; }
+.buero__bild { grid-column: 1 / 3; margin-top: 4rem; }
+@media (max-width: 1099px) { .buero__text, .buero__bild { grid-column: 1 / -1; } .buero__meta { grid-column: 1 / -1; margin-top: 2rem; } }
+.zahlen { grid-column: 1 / 4; margin-top: 4rem; }
+@media (max-width: 1099px) { .zahlen { grid-column: 1 / -1; } }
+.zahlen dl { display: grid; grid-template-columns: max-content 1fr; }
+.zahlen dt, .zahlen dd { padding: 0.9rem 0; border-bottom: 1px solid var(--farbe-linie); }
+.zahlen dt { color: var(--farbe-text-3); padding-right: 3rem; }
+.zahlen dd { color: var(--farbe-text); max-width: var(--mass-text); }
+@media (max-width: 719px) { .zahlen dl { grid-template-columns: 1fr; } .zahlen dt { border: 0; padding-bottom: 0; } }
+
+/* --- Leistungen: helenhard-no-F9 Zeilen mit Hairline, Label links, Text rechts -------------- */
+.leistungen { list-style: none; padding: 0; margin-top: 3rem; border-top: 1px solid var(--farbe-linie); }
+.leistung { padding: 2rem 0; border-bottom: 1px solid var(--farbe-linie); align-items: start; }
+.leistung h2 { grid-column: 1 / 3; font-size: var(--t-mittel); line-height: var(--lh-mittel); letter-spacing: 0; }
+.leistung div { grid-column: 3 / 5; }
+.leistung p + p { margin-top: 1rem; }
+@media (max-width: 1099px) { .leistung h2, .leistung div { grid-column: 1 / -1; } .leistung div { margin-top: 0.75rem; } }
+
+/* --- Kontakt: Kasten auf Fläche, einziger gefüllter Button (Akzent), keine Karte ------------- */
+.kontakt { margin-top: 3rem; align-items: start; }
+.kontakt__kasten { grid-column: 1 / 3; background: var(--farbe-flaeche); padding: 2rem; }
+.kontakt__kasten p { max-width: none; }
+.kontakt__kasten a { display: inline-flex; align-items: center; min-height: 44px; }
+.kontakt__text { grid-column: 3 / 5; }
+.kontakt__text h2 { margin-top: 0; }
+.kontakt__text p { margin-top: 1rem; }
+@media (max-width: 1099px) { .kontakt__kasten, .kontakt__text { grid-column: 1 / -1; } .kontakt__text { margin-top: 2rem; } }
+.knopf { font-family: var(--schrift-mono); font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; min-height: 48px; display: inline-flex; align-items: center; margin-top: 1.5rem; }
+.knopf:hover { background: var(--farbe-text); border-color: var(--farbe-text); color: var(--farbe-invers); }
+
+/* --- Fußzeile: helenhard-no-F13 Standortblock, hell auf Fläche, vier Spalten ---------------- */
+.fuss { background: var(--farbe-flaeche); border-top: 1px solid var(--farbe-linie); margin-top: 6rem; }
+.fuss__raster { grid-template-columns: repeat(4, minmax(0, 1fr)); column-gap: var(--gasse); padding-block: 3rem 2rem; row-gap: 2rem; }
+@media (max-width: 1099px) { .fuss__raster { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 40px; } }
+@media (max-width: 719px) { .fuss__raster { grid-template-columns: 1fr; } }
+.fuss__titel { font-family: var(--schrift-mono); font-weight: 400; letter-spacing: 0.06em; color: var(--farbe-text-3); }
+.fuss p { color: var(--farbe-text); }
+.fuss__liste { gap: 0; }
+.fuss a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+.fuss a:hover { text-decoration: underline; }
+.fuss__schluss { border-top: 1px solid var(--farbe-linie); padding-block: 1rem; color: var(--farbe-text-2); }
+.fuss__schluss p { color: var(--farbe-text-2); }
+.demo-hinweis { font-family: var(--schrift-mono); color: var(--farbe-text-2); padding-bottom: 1.5rem; }
+
+/* --- Rechtstexte, Bildnachweis ------------------------------------------------------------- */
+.recht { padding-top: 6rem; }
+.recht h1 { margin-top: 0.5rem; }
+.nachweis table { width: 100%; border-collapse: collapse; font-family: var(--schrift-mono); font-size: var(--t-tab); letter-spacing: 0.02em; line-height: 1.5; }
+.nachweis th { text-align: left; font-weight: 500; font-size: var(--t-label); letter-spacing: 0.06em; text-transform: uppercase; color: var(--farbe-text-3); background: var(--farbe-flaeche); padding: 0.75rem 0.75rem 0.75rem 0; }
+.nachweis td { padding: 0.65rem 0.75rem 0.65rem 0; border-bottom: 1px solid var(--farbe-linie); vertical-align: top; }
+.nachweis th:first-child, .nachweis td:first-child { padding-left: 0.5rem; }
+.nachweis a { display: inline-flex; align-items: center; min-height: 44px; }
+.nachweis { overflow-x: auto; overscroll-behavior-x: contain; margin-top: 2rem; max-width: none; }
+.nachweis table { min-width: 44rem; }
+.nachweis td:nth-child(2) { white-space: nowrap; }
+.nachweis__hinweis { display: none; }
+@media (max-width: 719px) { .nachweis__hinweis { display: block; } }

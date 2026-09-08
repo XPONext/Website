@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Musterbüro Steinwerk">
+  <rect width="64" height="64" fill="#EDEFF0"/>
+  <rect x="12" y="14" width="24" height="10" fill="#15181B"/>
+  <rect x="28" y="27" width="24" height="10" fill="#15181B"/>
+  <rect x="12" y="40" width="24" height="10" fill="#15181B"/>
+  <rect x="40" y="14" width="12" height="10" fill="#2B5876"/>
+  <rect x="12" y="27" width="12" height="10" fill="#2B5876"/>
+  <rect x="40" y="40" width="12" height="10" fill="#2B5876"/>
+</svg>

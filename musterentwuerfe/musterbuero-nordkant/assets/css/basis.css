@@ -1,0 +1,658 @@
+/* ==========================================================================
+   Musterbüro Nordkant — Basis-Stylesheet
+   Skeleton aus dem architect_website_creation-Skill (XPONext), befüllt nach
+   _doku/design-brief.md (07.09.2026).
+
+   Abschnitte 1–9: Handwerk (Schriften, Wertevorrat, Reset, Layout-Primitive,
+   Fokus, Formular, Fußzeile, Bewegung). Abschnitt 10: die Optik der Seite,
+   jede Sektion mit der Feature-ID aus dem Brief.
+   ========================================================================== */
+
+/* --- 1. Schriften ---------------------------------------------------------
+   Eine Familie: Fraunces (variabel 300–700, optische Größe 9–144) mit eigenem
+   Kursiv-Schnitt. Self-hosted, zwei woff2-Dateien, kein Fremd-Request.
+   Lizenz: SIL OFL, siehe assets/fonts/LICENSES.md.
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Fraunces';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('../fonts/fraunces-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+                 U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Fraunces';
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('../fonts/fraunces-latin-italic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC,
+                 U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* --- 2. Wertevorrat ---------------------------------------------------------
+   Alle Werte aus dem Design-Brief, Abschnitte 3 (Typografie), 4 (Farben) und
+   5 (Raster). Kontraste dort gerechnet: Text 14,31:1, Text-2 6,57:1,
+   Text-3 5,14:1 (4,58:1 auf Fläche), Akzent 5,22:1, Invers auf Akzent 5,22:1. */
+
+:root {
+  --schrift-text:  'Fraunces', Georgia, 'Times New Roman', serif;
+  --schrift-titel: 'Fraunces', Georgia, 'Times New Roman', serif;
+
+  --farbe-grund:   #F5F3EE;   /* warmes Off-White, Seitenhintergrund */
+  --farbe-flaeche: #EAE6DE;   /* Kopfzeile, Kästen, Footer */
+  --farbe-text:    #24221F;   /* Fließtext, Überschriften, Navigation */
+  --farbe-text-2:  #5A5650;   /* Metadaten-Werte, Bildunterschriften, Musterentwurf-Hinweis */
+  --farbe-text-3:  #6B665E;   /* Labels in Versalien, Bildzeile (auf Grund 5,14:1) */
+  --farbe-nav:     #605B54;   /* inaktive Nav-Punkte auf --farbe-flaeche: 5,40:1 (Text-3 läge dort bei 4,58) */
+  --farbe-linie:   #D8D2C7;   /* Hairlines */
+  --farbe-akzent:  #8B5A3C;   /* Ziegelton: Textlinks, Chevrons, Button, Fokusring */
+  --farbe-invers:  #F5F3EE;   /* Text auf dem Akzent-Button */
+  --farbe-fehler:  #B3261E;
+
+  /* Typo-Skala Desktop (Brief 3). Mobile Werte unten in der Media Query. */
+  --t-label:  0.8125rem;   /* 13 px Versalien */
+  --t-klein:  1rem;        /* 16 px Fußzeile, Fußnoten */
+  --t-basis:  1.1875rem;   /* 19 px Body */
+  --t-mittel: 1.5rem;      /* 24 px H3 */
+  --t-gross:  2rem;        /* 32 px H2 */
+  --t-titel:  2.75rem;     /* 44 px H1 */
+  --t-hero:   2.75rem;     /* kein Text auf dem Hero; Wert bleibt der H1 */
+  --t-nav:    1.0625rem;   /* 17 px Navigation */
+  --t-marke:  1.625rem;    /* 26 px Wortmarke */
+
+  --lh-eng: 1.15;
+  --lh-mittel: 1.3;
+  --lh-text: 1.55;
+  --mass-text: 34em;       /* ≈ 62 Zeichen bei 19 px */
+
+  --raum-halb: 1rem;
+  --raum: 2.5rem;
+  --raum-doppel: 5rem;
+  --abstand-sektion: 9rem;
+  --gutter: 58px;
+
+  --breite: 1280px;
+  --rand: clamp(1.25rem, 5.5vw, 5rem);
+  --kopf-hoehe: 88px;
+  --bildzeile-hoehe: 56px;
+  --radius: 0;
+  --tempo: 0.2s;
+  --kurve: ease-out;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --kopf-hoehe: 64px;
+    --bildzeile-hoehe: 48px;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --t-label:  0.75rem;     /* 12 px */
+    --t-basis:  1.0625rem;   /* 17 px */
+    --t-mittel: 1.3125rem;   /* 21 px */
+    --t-gross:  1.625rem;    /* 26 px */
+    --t-titel:  2rem;        /* 32 px */
+    --t-hero:   2rem;
+    --t-nav:    1rem;
+    --t-marke:  1.25rem;     /* 20 px */
+    --abstand-sektion: 5rem;
+    --raum: 2rem;
+    --gutter: 1.5rem;
+  }
+}
+
+/* --- 3. Grundlagen --------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--schrift-text);
+  font-size: var(--t-basis);
+  font-weight: 400;
+  font-optical-sizing: auto;
+  line-height: var(--lh-text);
+  color: var(--farbe-text);
+  background: var(--farbe-grund);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* big-dk-F1: Hierarchie über Größe, Grauwert und Versalien — kein Gewicht über 400. */
+h1, h2, h3, h4 { font-family: var(--schrift-titel); color: var(--farbe-text); }
+h1 { font-size: var(--t-titel); font-weight: 300; line-height: var(--lh-eng); letter-spacing: -0.01em; }
+h2 { font-size: var(--t-gross); font-weight: 300; line-height: 1.2; letter-spacing: -0.005em; }
+h3 { font-size: var(--t-mittel); font-weight: 400; line-height: var(--lh-mittel); }
+h4 { font-size: var(--t-basis); font-weight: 400; line-height: var(--lh-mittel); }
+
+p { max-width: var(--mass-text); }
+p + p { margin-top: var(--raum-halb); }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+strong { font-weight: 400; font-style: italic; }
+em { font-style: italic; }
+img, svg, video { display: block; max-width: 100%; height: auto; }
+ul, ol { padding-left: 1.2em; }
+hr { border: 0; height: 1px; background: var(--farbe-linie); }
+
+/* Textlinks im Fließtext: Unterstreichung in Akzent, bei Hover/Fokus in Textfarbe (Brief 9). */
+p a, .inhalt--schmal li a {
+  color: var(--farbe-text);
+  text-decoration: underline;
+  text-decoration-color: var(--farbe-akzent);
+  transition: text-decoration-color var(--tempo) var(--kurve);
+}
+p a:hover, p a:focus-visible, .inhalt--schmal li a:hover { text-decoration-color: var(--farbe-text); }
+
+/* Sichtbarer Tastaturfokus, auf jedem Untergrund erkennbar. */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--farbe-akzent);
+  outline-offset: 3px;
+}
+
+.nur-sr {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+.sprung {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: var(--farbe-text); color: var(--farbe-invers); padding: 0.75rem 1.25rem;
+}
+.sprung:focus { left: 0; }
+
+/* --- 4. Layout-Primitive ---------------------------------------------------- */
+
+.inhalt { max-width: var(--breite); margin-inline: auto; padding-inline: var(--rand); }
+.inhalt--schmal > * { max-width: var(--mass-text); }
+.inhalt--schmal h2 { margin-top: 2.5rem; }
+.inhalt--schmal h3 { margin-top: 1.5rem; }
+.inhalt--schmal p, .inhalt--schmal ul { margin-top: 0.75rem; }
+.inhalt--schmal li + li { margin-top: 0.25rem; }
+.sektion { padding-block: var(--abstand-sektion); }
+.sektion + .sektion { padding-top: 0; }
+.sektion--flaeche { background: var(--farbe-flaeche); }
+.mass { max-width: var(--mass-text); }
+.klein { font-size: var(--t-klein); color: var(--farbe-text-2); }
+
+.raster { display: grid; gap: var(--raum); }
+.raster--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+/* big-dk-F4 / Brief 3: Label 13 px Versalien, 0,10 em, Grau. */
+.label {
+  display: block;
+  font-size: var(--t-label);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: var(--farbe-text-3);
+  margin-bottom: 1rem;
+}
+
+/* --- 5. Knöpfe ---------------------------------------------------------------
+   pietboon-com-F2: der Akzent erscheint gefüllt nur auf Schaltflächen.           */
+
+.knopf {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  background: var(--farbe-akzent);
+  color: var(--farbe-invers);
+  font-size: var(--t-nav);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 1px solid var(--farbe-akzent);
+  border-radius: 0;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background var(--tempo) var(--kurve), border-color var(--tempo) var(--kurve);
+}
+.knopf:hover, .knopf:focus-visible { background: var(--farbe-text); border-color: var(--farbe-text); color: var(--farbe-invers); }
+.knopf--linie { background: transparent; color: var(--farbe-text); border-color: currentColor; }
+.knopf--linie:hover { background: var(--farbe-text); color: var(--farbe-invers); }
+
+/* --- 6. Kopfzeile: Verhalten -------------------------------------------------
+   Statisch, kein Sticky (Brief 7). Mobile-Mechanik: Text-Button „Menü" klappt
+   die Liste unter der Kopfzeile aus (helenhard-no-F12). Optik in Abschnitt 10. */
+
+.kopf { position: relative; z-index: 100; }
+.kopf__schalter {
+  display: none;
+  align-items: center;
+  background: none;
+  border: 0;
+  padding: 0 0.25rem;
+  font: inherit;
+  font-size: var(--t-nav);
+  color: var(--farbe-text);
+  cursor: pointer;
+  min-height: 44px;
+  min-width: 44px;
+}
+.reiter { display: flex; align-items: center; list-style: none; padding: 0; }
+.reiter a { text-decoration: none; }
+
+/* --- 7. Formular ------------------------------------------------------------
+   Die Seite hat kein Formular (Brief 6 und 10). Die Regeln bleiben als
+   Handwerk für den Fall, dass der Bausatz später ein Formular bekommt.        */
+
+.formular { display: grid; gap: var(--raum-halb); max-width: 36rem; position: relative; }
+.feld { display: grid; gap: 0.35rem; }
+.feld label { font-size: var(--t-klein); color: var(--farbe-text); }
+.feld input, .feld textarea {
+  font: inherit;
+  font-size: var(--t-klein);
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--farbe-text-3);
+  border-radius: 0;
+  background: var(--farbe-grund);
+  color: var(--farbe-text);
+  width: 100%;
+  min-height: 44px;
+}
+.feld textarea { min-height: 8rem; resize: vertical; }
+.feld input:focus, .feld textarea:focus { border-color: var(--farbe-text); }
+.pflicht { color: var(--farbe-fehler); }
+.formular__hinweis { font-size: var(--t-klein); color: var(--farbe-text-2); }
+.honig { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* --- 8. Fußzeile: Struktur --------------------------------------------------- */
+
+.fuss__raster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--raum);
+  padding-block: var(--raum-doppel) var(--raum);
+}
+.fuss__titel { font-size: var(--t-label); letter-spacing: 0.1em; text-transform: uppercase; color: var(--farbe-text-3); margin-bottom: 0.7rem; }
+.fuss p { font-size: var(--t-klein); max-width: none; }
+.fuss__liste { list-style: none; padding: 0; display: grid; gap: 0.4rem; font-size: var(--t-klein); }
+.fuss__schluss {
+  border-top: 1px solid var(--farbe-linie);
+  padding-block: 1rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
+  font-size: var(--t-klein);
+}
+.demo-hinweis { font-size: var(--t-label); letter-spacing: 0.04em; color: var(--farbe-text-2); padding-bottom: 1.5rem; }
+
+/* --- 9. Bewegung -------------------------------------------------------------
+   Brief 9: nur Farbwechsel auf Links (200 ms), Kachelbild 1,02 (500 ms),
+   Mobile-Menü über max-height (250 ms). Kein Fade-in, kein Parallax, kein
+   Scroll-Einblenden — die .anim-Klassen des Bausatzes werden nicht benutzt.  */
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .kachel a:hover img, .kachel a:focus-visible img { transform: none !important; }
+}
+
+/* ==========================================================================
+   10. PROJEKTSPEZIFISCH — nach Design-Brief Nordkant Architekten (jetzt Musterbüro Nordkant)
+   ========================================================================== */
+
+/* 10.1 Kopfzeile — helenhard-no-F1: geteilte Navigation, Wortmarke zentriert.
+   Zwei Punkte links, zwei rechts, kein Sticky, kein Button in der Leiste.
+   Liegt auf --farbe-flaeche (pietboon-com-F2: zwei Graustufen für Flächen). */
+
+.kopf { background: var(--farbe-flaeche); }
+.kopf__inhalt {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: var(--kopf-hoehe);
+}
+.marke {
+  grid-column: 2;
+  grid-row: 1;
+  font-size: var(--t-marke);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--farbe-text);
+  white-space: nowrap;
+}
+.kopf__nav { display: contents; }
+.reiter { gap: 2.5rem; grid-row: 1; }
+.reiter--links { grid-column: 1; justify-self: start; }
+.reiter--rechts { grid-column: 3; justify-self: end; }
+.reiter a {
+  display: inline-block;
+  font-size: var(--t-nav);
+  letter-spacing: 0.01em;
+  line-height: 1;
+  padding: 0.75rem 0;
+  color: var(--farbe-nav);
+  transition: color var(--tempo) var(--kurve);
+}
+.reiter a:hover, .reiter a:focus-visible, .reiter a[aria-current="page"] { color: var(--farbe-text); }
+
+/* helenhard-no-F12: Mobile-Kopfzeile aus Text — Wortmarke links, „Menü" rechts,
+   Liste klappt unter der Kopfzeile aus (max-height), kein Vollbild-Overlay. */
+@media (max-width: 900px) {
+  .kopf__inhalt { display: flex; justify-content: space-between; }
+  .kopf__schalter { display: inline-flex; }
+  .kopf__nav {
+    display: block;
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    background: var(--farbe-flaeche);
+    max-height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.25s ease-out, visibility 0s linear 0.25s;
+  }
+  .kopf__nav[data-offen="true"] {
+    max-height: 30rem;
+    visibility: visible;
+    transition: max-height 0.25s ease-out, visibility 0s;
+    border-bottom: 1px solid var(--farbe-linie);
+  }
+  .reiter { display: block; padding-inline: var(--rand); justify-self: auto; width: 100%; }  /* justify-self gilt in Chrome auch für Block-Boxen */
+  .reiter--links { padding-top: 0.25rem; }
+  .reiter--rechts { padding-bottom: 1rem; }
+  .reiter a {
+    display: block;
+    font-size: 1.3125rem;      /* 21 px */
+    line-height: 56px;         /* Tap-Ziel 56 px */
+    padding: 0;
+    border-top: 1px solid var(--farbe-linie);
+    color: var(--farbe-text);
+  }
+  .reiter--links li:first-child a { border-top: 0; }
+}
+
+/* 10.2 Hero — helenhard-no-F2: textfrei über die erste Bildschirmhöhe, randlos,
+   als stehendes <img> (kein Video, kein Overlay). Höhe = 100svh minus
+   Kopfzeile minus Bildzeile, mindestens 420 px. */
+
+.hero {
+  height: calc(100svh - var(--kopf-hoehe) - var(--bildzeile-hoehe));
+  min-height: 420px;
+  overflow: hidden;
+}
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62% 55%;
+}
+@media (max-width: 720px) {
+  .hero img { object-position: 66% 50%; }
+}
+
+/* big-dk-F4: Ort in Versalien als Unterzeile. Die eine Zeile unter dem Hero ist
+   der Hinweis, dass es weitergeht. */
+.bildzeile {
+  height: var(--bildzeile-hoehe);
+  display: flex;
+  align-items: center;
+}
+.bildzeile a {
+  display: inline-flex;          /* Tap-Ziel: füllt die 48/56 px hohe Bildzeile */
+  align-items: center;
+  height: 100%;
+  min-height: 44px;
+  font-size: var(--t-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: var(--farbe-text-3);
+  text-decoration: none;
+  transition: color var(--tempo) var(--kurve);
+}
+.bildzeile a:hover, .bildzeile a:focus-visible { color: var(--farbe-text); }
+
+/* 10.3 Intro — pietboon-com-F15: zentrierter Intro-Block mit Chevron-Linkliste
+   zu den vier Leistungen. H1 der Startseite. */
+
+.intro {
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+}
+.intro h1, .intro p { max-width: none; }
+.intro p { margin-top: 1.5rem; }
+.chevrons {
+  list-style: none;
+  padding: 0;
+  margin-top: 2.3rem;            /* 2.3 + 0.6 Padding = 2.9 rem bis zur Textkante, wie vorher 2.5 + 0.4 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 2.25rem;          /* 0.35 + 2 × 0.6 = 1.55 rem Zeilenabstand, wie vorher 0.75 + 2 × 0.4 */
+}
+.chevrons a {
+  display: inline-block;
+  padding: 0.6rem 0;             /* Tap-Ziel ≥ 44 px (17 px × 1.55 + 2 × 9.6 px) */
+  color: var(--farbe-akzent);
+  text-decoration: none;
+  transition: color var(--tempo) var(--kurve);
+}
+.chevrons a::after { content: " \203A"; }
+.chevrons a:hover, .chevrons a:focus-visible { color: var(--farbe-text); }
+
+/* 10.4 Projektraster — helenhard-no-F7: Kachel mit Titel zentriert über dem
+   Bild, kursiver Satz darunter. Zwei Spalten, Gutter 58 px, 3:2-Bilder.
+   Hover skaliert nur das Bild (1,02) — trägt keine Information (Brief 9). */
+
+.sektion__kopf { margin-bottom: var(--raum); }
+.raster-projekte {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: var(--gutter);
+  row-gap: var(--raum-doppel);
+  list-style: none;
+  padding: 0;
+}
+.kachel { text-align: center; }
+.kachel a { display: block; color: inherit; text-decoration: none; }
+.kachel__titel { margin-bottom: 1.25rem; }
+.kachel__bild { overflow: hidden; aspect-ratio: 3 / 2; }
+.kachel__bild img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.2, 0, 0, 1);
+}
+.kachel a:hover img, .kachel a:focus-visible img { transform: scale(1.02); }
+.kachel__satz { font-style: italic; margin-top: 1rem; max-width: none; color: var(--farbe-text-2); }
+.raster-projekte__mehr { margin-top: var(--raum-doppel); text-align: center; max-width: none; }
+.raster-projekte__mehr a { color: var(--farbe-akzent); text-decoration: none; display: inline-block; padding-block: 0.75rem; margin-block: -0.75rem; /* Tap-Ziel ≥ 44 px, Zeilenhöhe bleibt */ }
+.raster-projekte__mehr a::after { content: " \203A"; }
+.raster-projekte__mehr a:hover, .raster-projekte__mehr a:focus-visible { color: var(--farbe-text); }
+@media (max-width: 720px) {
+  .raster-projekte { grid-template-columns: 1fr; row-gap: 3.5rem; }
+}
+
+/* 10.5 Statement — pietboon-com-F6: versetzter Farbkasten, Bild überlappt den
+   Kasten. Kasten von der linken Fensterkante bis über die Spaltengrenze,
+   Bild (4:5) in der rechten Spalte, 4 rem nach oben in den Kasten gezogen. */
+
+.statement-sektion { overflow-x: clip; }
+.statement {
+  display: grid;
+  grid-template-columns: 55fr 45fr;
+  column-gap: var(--gutter);
+  align-items: start;
+  isolation: isolate;
+  padding-top: 4rem;
+}
+.statement__kasten {
+  position: relative;
+  padding: 4rem var(--raum) 4rem 0;
+}
+.statement__kasten::before {
+  content: "";
+  position: absolute;
+  inset: 0 calc(-1 * var(--gutter) - 3rem) 0 -100vw;
+  background: var(--farbe-flaeche);
+  z-index: -1;
+}
+.statement__kasten h1, .statement__kasten h2 { max-width: 18em; }
+.statement__kasten p { margin-top: 1.5rem; }
+.statement__kasten .label { margin-bottom: 1.25rem; }
+.statement__mehr a { color: var(--farbe-akzent); text-decoration: none; display: inline-block; padding-block: 0.75rem; margin-block: -0.75rem; /* Tap-Ziel ≥ 44 px, Zeilenhöhe bleibt */ }
+.statement__mehr a::after { content: " \203A"; }
+.statement__mehr a:hover, .statement__mehr a:focus-visible { color: var(--farbe-text); }
+.statement__bild { position: relative; margin-top: -4rem; justify-self: end; width: 100%; max-width: 500px; }
+.statement__bild img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 45%; }
+@media (max-width: 720px) {
+  .statement { grid-template-columns: 1fr; padding-top: 0; row-gap: 0; }
+  .statement__kasten { padding: 2.5rem 0 4.5rem; }
+  .statement__kasten::before { inset: 0 -100vw 0 -100vw; }
+  .statement__bild { margin-top: -2rem; max-width: 82%; }
+}
+
+/* 10.6 Kontakt-Aufforderung (Startseite) und Kontaktseite — pietboon-com-F2:
+   Kasten auf --farbe-flaeche, Akzent nur auf dem Button. Grid 5/7. */
+
+.kontakt {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  column-gap: var(--gutter);
+  align-items: start;
+}
+.kontakt__kasten { background: var(--farbe-flaeche); padding: 2.5rem; }
+.kontakt__kasten p { max-width: none; }
+.kontakt__kasten p + p { margin-top: 1.25rem; }
+.kontakt__kasten a { text-decoration: none; }
+.kontakt__kasten a:hover, .kontakt__kasten a:focus-visible { text-decoration: underline; text-decoration-color: var(--farbe-akzent); }
+/* Telefon und Mail als Blocklinks mit je ≥ 44 px Höhe (mobil 17 px × 1.55 + 2 × 9.6 px = 45.5);
+   der Kasten wird dadurch ~30 px höher, die Textkanten oben und unten bleiben durch die
+   verrechneten Ränder gleich (0.65 + 0.6 = 1.25 rem wie p + p). */
+.kontakt__kasten .kontakt__wege { margin-top: 0.65rem; margin-bottom: -0.6rem; }
+.kontakt__wege a { display: block; padding-block: 0.6rem; }
+.kontakt__text p + p { margin-top: 1rem; }
+.kontakt__text h2 { margin-bottom: 1.25rem; }
+.kontakt__text .knopf { margin-top: 1.5rem; }
+@media (max-width: 720px) {
+  .kontakt { grid-template-columns: 1fr; row-gap: 2.5rem; }
+  .kontakt__kasten { padding: 1.75rem var(--rand); margin-inline: calc(-1 * var(--rand)); }
+}
+
+/* 10.7 Projektseite Kopf — pietboon-com-F11: Hero 16:9 im Container, Titel und
+   Text erst darunter. Grid 5/7, gemeinsame linke Kante mit dem Bild. */
+
+.projekt-kopf__bild img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.projekt-kopf__text {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  column-gap: var(--gutter);
+  align-items: start;
+  margin-top: var(--raum);
+}
+.projekt-kopf__untertitel { font-style: italic; margin-top: 0.75rem; color: var(--farbe-text-2); max-width: none; }
+.projekt-kopf__lauf p + p { margin-top: 1rem; }
+.projekt-kopf__lauf .knopf { margin-top: 1.5rem; }
+@media (max-width: 720px) {
+  .projekt-kopf__text { grid-template-columns: 1fr; row-gap: 2rem; }
+}
+
+/* helenhard-no-F9 (Variante B): Metadatenblock, Label links, Wert rechts,
+   Hairline je Zeile. */
+.meta { margin-top: 2.5rem; }
+.meta > div {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1.5rem;
+  align-items: baseline;
+  padding: 0.7rem 0;
+  border-top: 1px solid var(--farbe-linie);
+}
+.meta > div:last-child { border-bottom: 1px solid var(--farbe-linie); }
+.meta dt {
+  font-size: var(--t-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: var(--farbe-text-3);
+}
+.meta dd { text-align: right; color: var(--farbe-text-2); }
+
+/* 10.8 Bildpaar — pietboon-com-F7: zwei Fotos in ungleicher Breite (7/5) und
+   versetztem Beginn (rechts 6 rem tiefer). Mobil untereinander ohne Versatz. */
+
+.bildpaar {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  column-gap: var(--gutter);
+  align-items: start;
+}
+.bildpaar img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.bildpaar > :last-child { margin-top: 6rem; }
+@media (max-width: 720px) {
+  .bildpaar { grid-template-columns: 1fr; row-gap: 1.5rem; }
+  .bildpaar > :last-child { margin-top: 0; }
+}
+
+/* Nächstes Projekt: Label plus Titel in H2-Größe, Ort in Versalien (big-dk-F4). */
+.weiter { border-top: 1px solid var(--farbe-linie); padding-top: 2.5rem; }
+.weiter a { text-decoration: none; color: var(--farbe-text); display: inline-block; }
+.weiter a:hover .weiter__titel, .weiter a:focus-visible .weiter__titel { text-decoration: underline; text-decoration-color: var(--farbe-akzent); }
+.weiter__titel { display: block; font-size: var(--t-gross); font-weight: 300; line-height: 1.2; }
+.weiter__ort { display: block; margin-top: 0.5rem; margin-bottom: 0; }
+
+/* 10.9 Leistungen — Liste mit Hairlines, Grid 4/8 je Eintrag (Brief 5). */
+
+.leistungen { list-style: none; padding: 0; }
+.leistung {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  column-gap: var(--gutter);
+  padding-block: 2.5rem;
+  border-top: 1px solid var(--farbe-linie);
+  scroll-margin-top: 2rem;
+}
+.leistung:last-child { border-bottom: 1px solid var(--farbe-linie); }
+.leistung p + p { margin-top: 1rem; }
+@media (max-width: 720px) {
+  .leistung { grid-template-columns: 1fr; row-gap: 1rem; padding-block: 2rem; }
+}
+
+/* 10.10 Team — Namensliste mit Rolle, Hairlines, keine Portraits (Brief 6). */
+
+.team { list-style: none; padding: 0; margin-top: var(--raum); }
+.team li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 1.5rem;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--farbe-linie);
+}
+.team li:last-child { border-bottom: 1px solid var(--farbe-linie); }
+.team li span:last-child { color: var(--farbe-text-2); text-align: right; }
+@media (max-width: 480px) {
+  .team li { grid-template-columns: 1fr; row-gap: 0.2rem; }
+  .team li span:last-child { text-align: left; }
+}
+
+/* 10.11 Seitenkopf der Unterseiten: Label, H1, ein Satz. */
+
+.seitenkopf { margin-bottom: var(--raum-doppel); }
+.seitenkopf h1 { max-width: 20em; }
+.seitenkopf p { margin-top: 1.25rem; }
+
+/* 10.12 Fußzeile — helenhard-no-F13: Standortblock, Ortsname kursiv, darunter
+   Adresse und Telefon. Hell auf --farbe-flaeche, keine dunkle Sektion (Brief 4). */
+
+.fuss { background: var(--farbe-flaeche); }
+.fuss__ort { font-style: italic; font-size: var(--t-mittel); line-height: 1.3; margin-bottom: 0.75rem; }
+.fuss a { text-decoration: none; }
+.fuss a:hover, .fuss a:focus-visible { text-decoration: underline; text-decoration-color: var(--farbe-akzent); }
+.fuss__liste a { display: inline-block; padding: 0.15rem 0; }
+
+/* Leistungs-Einträge sind H2 (direkt unter der H1), optisch in H3-Größe. */
+.leistung h2 { font-size: var(--t-mittel); font-weight: 400; line-height: var(--lh-mittel); letter-spacing: 0; }
+.fuss__schluss p { margin-top: 0; }
