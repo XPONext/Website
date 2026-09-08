@@ -1,0 +1,2360 @@
+{
+  "slug": "final",
+  "output_dir": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final",
+  "lokal": true,
+  "seiten": [
+    {
+      "url": "http://localhost:8765/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/01_start_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/01_start_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/01_start_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Studio Lindenau · Innenarchitektur in Hamburg",
+        "meta_description": "Innenarchitektur für Wohnungen, Häuser, Restaurants, Hotels und Praxen in Hamburg und Norddeutschland. Vom Grundriss bis zum letzten Stoff.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 110
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 14
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 49
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 28
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 16
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 13
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 5
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 6
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 5
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "64px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "70.4px",
+            "letter_spacing": "-0.64px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Räume, die ruhig wirken und lange gefallen."
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Ausgewählte Projekte"
+          },
+          "h3": {
+            "font_size": "30px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "36px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Altbauwohnung Harvestehude"
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 6,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 9,
+        "transfer_bytes": 460251,
+        "transfer_nach_typ": {
+          "bild": 274002,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 12421,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 100,
+        "dom_content_loaded_ms": 81,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/restaurant-fleet-02-960.webp",
+          "bytes": 124840,
+          "pixel": "960x640"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Räume, die ruhig wirken und lange gefallen.",
+          "h2: Ausgewählte Projekte",
+          "h3: Altbauwohnung Harvestehude",
+          "h3: Restaurant am Fleet",
+          "h3: Boutique-Hotel Speicherstadt",
+          "h3: Stadthaus Blankenese",
+          "h2: Studio",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 6,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/projekte/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/02_projekte_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/02_projekte_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/02_projekte_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Projekte · Studio Lindenau, Innenarchitektur Hamburg",
+        "meta_description": "Acht Projekte aus Hamburg, Berlin und Sylt: Wohnungen, Häuser, ein Restaurant, ein Hotel, eine Praxis und eine Kanzlei, eingerichtet von Studio Lindenau.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 96
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 13
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 33
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 29
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 8
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 8
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 1
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Projekte"
+          },
+          "h2": {
+            "font_size": "30px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "34.5px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(31, 29, 26)",
+            "text": "Altbauwohnung Harvestehude"
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 8,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 10,
+        "transfer_bytes": 493678,
+        "transfer_nach_typ": {
+          "bild": 308502,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 11348,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 32,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/restaurant-fleet-02-960.webp",
+          "bytes": 124840,
+          "pixel": "960x640"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Projekte",
+          "h2: Altbauwohnung Harvestehude",
+          "h2: Restaurant am Fleet",
+          "h2: Ferienhaus Kampen",
+          "h2: Zahnarztpraxis Eppendorf",
+          "h2: Penthouse Prenzlauer Berg",
+          "h2: Boutique-Hotel Speicherstadt",
+          "h2: Stadthaus Blankenese",
+          "h2: Kanzlei HafenCity",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 8,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/projekte/harvestehude/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/03_projekte-harvestehude_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/03_projekte-harvestehude_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/03_projekte-harvestehude_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Altbauwohnung Harvestehude · Studio Lindenau",
+        "meta_description": "Altbauwohnung Harvestehude, Hamburg 2024: private wohnräume von Studio Lindenau, Innenarchitektur Hamburg. Umbau, Einrichtung, Möbelentwurf.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 84
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 7
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 34
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 13
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 5
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 4
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 3
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Altbauwohnung Harvestehude"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Sprechen wir über Ihr Projekt."
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 4,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 9,
+        "transfer_bytes": 443608,
+        "transfer_nach_typ": {
+          "bild": 260982,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8798,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 36,
+        "dom_content_loaded_ms": 9,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/harvestehude-03-1440.webp",
+          "bytes": 115700,
+          "pixel": "1280x854"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Altbauwohnung Harvestehude",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 4,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/projekte/restaurant-fleet/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/04_projekte-restaurant-fleet_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/04_projekte-restaurant-fleet_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/04_projekte-restaurant-fleet_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Restaurant am Fleet · Studio Lindenau",
+        "meta_description": "Restaurant am Fleet, Hamburg 2024: gastronomie und hotellerie von Studio Lindenau, Innenarchitektur Hamburg. Innenausbau, Lichtplanung, Möbelentwurf.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 84
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 7
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 34
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 13
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 5
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 4
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 3
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Restaurant am Fleet"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Sprechen wir über Ihr Projekt."
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 4,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 9,
+        "transfer_bytes": 636652,
+        "transfer_nach_typ": {
+          "bild": 454024,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8800,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 36,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/restaurant-fleet-02-1440.webp",
+          "bytes": 208732,
+          "pixel": "1280x853"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Restaurant am Fleet",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 4,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/projekte/kampen/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/05_projekte-kampen_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/05_projekte-kampen_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/05_projekte-kampen_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Ferienhaus Kampen · Studio Lindenau",
+        "meta_description": "Ferienhaus Kampen, Sylt 2023: private wohnräume von Studio Lindenau, Innenarchitektur Hamburg. Einrichtung, Farb- und Materialkonzept.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 84
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 7
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 34
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 13
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 5
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 4
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 3
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Ferienhaus Kampen"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Sprechen wir über Ihr Projekt."
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 4,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 9,
+        "transfer_bytes": 460169,
+        "transfer_nach_typ": {
+          "bild": 277780,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8561,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 32,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/kampen-03-1440.webp",
+          "bytes": 115436,
+          "pixel": "1280x853"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Ferienhaus Kampen",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 4,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/projekte/praxis-eppendorf/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/06_projekte-praxis-eppendorf_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/06_projekte-praxis-eppendorf_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/06_projekte-praxis-eppendorf_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Zahnarztpraxis Eppendorf · Studio Lindenau",
+        "meta_description": "Zahnarztpraxis Eppendorf, Hamburg 2023: praxen und kanzleien von Studio Lindenau, Innenarchitektur Hamburg. Innenausbau, Empfang und Behandlungsräume.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 84
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 7
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 34
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 13
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 5
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 4
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 3
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Zahnarztpraxis Eppendorf"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Sprechen wir über Ihr Projekt."
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 4,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 9,
+        "transfer_bytes": 310033,
+        "transfer_nach_typ": {
+          "bild": 127320,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8885,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 28,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/praxis-eppendorf-03-1440.webp",
+          "bytes": 45314,
+          "pixel": "1280x853"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Zahnarztpraxis Eppendorf",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 4,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/projekte/penthouse-berlin/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/07_projekte-penthouse-berlin_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/07_projekte-penthouse-berlin_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/07_projekte-penthouse-berlin_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Penthouse Prenzlauer Berg · Studio Lindenau",
+        "meta_description": "Penthouse Prenzlauer Berg, Berlin 2023: private wohnräume von Studio Lindenau, Innenarchitektur Hamburg. Ausbau, Küchen- und Möbelentwurf.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 84
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 7
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 34
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 13
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 5
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 4
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 3
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Penthouse Prenzlauer Berg"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Sprechen wir über Ihr Projekt."
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 4,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 9,
+        "transfer_bytes": 398819,
+        "transfer_nach_typ": {
+          "bild": 216170,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8821,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 36,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/penthouse-berlin-03-1440.webp",
+          "bytes": 68124,
+          "pixel": "1280x853"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Penthouse Prenzlauer Berg",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 4,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/projekte/hotel-speicherstadt/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/08_projekte-hotel-speicherstadt_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/08_projekte-hotel-speicherstadt_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/08_projekte-hotel-speicherstadt_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Boutique-Hotel Speicherstadt · Studio Lindenau",
+        "meta_description": "Boutique-Hotel Speicherstadt, Hamburg 2022: gastronomie und hotellerie von Studio Lindenau, Innenarchitektur Hamburg. Lobby, Bar und Zimmer.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 81
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 7
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 34
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 13
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 5
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 4
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Boutique-Hotel Speicherstadt"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Sprechen wir über Ihr Projekt."
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 3,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 8,
+        "transfer_bytes": 439951,
+        "transfer_nach_typ": {
+          "bild": 257762,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8361,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 36,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/hotel-speicherstadt-03-1440.webp",
+          "bytes": 99938,
+          "pixel": "1280x853"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Boutique-Hotel Speicherstadt",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 3,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/projekte/blankenese/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/09_projekte-blankenese_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/09_projekte-blankenese_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/09_projekte-blankenese_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Stadthaus Blankenese · Studio Lindenau",
+        "meta_description": "Stadthaus Blankenese, Hamburg 2022: private wohnräume von Studio Lindenau, Innenarchitektur Hamburg. Umbau, Treppe und Einbauten.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 84
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 7
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 34
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 13
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 5
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 4
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 3
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Stadthaus Blankenese"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Sprechen wir über Ihr Projekt."
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 4,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 9,
+        "transfer_bytes": 460686,
+        "transfer_nach_typ": {
+          "bild": 278204,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8654,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 36,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/blankenese-02-1440.webp",
+          "bytes": 106766,
+          "pixel": "1280x875"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Stadthaus Blankenese",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 4,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/projekte/kanzlei-hafencity/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/10_projekte-kanzlei-hafencity_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/10_projekte-kanzlei-hafencity_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/10_projekte-kanzlei-hafencity_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Kanzlei HafenCity · Studio Lindenau",
+        "meta_description": "Kanzlei HafenCity, Hamburg 2021: praxen und kanzleien von Studio Lindenau, Innenarchitektur Hamburg. Empfang, Besprechungsräume, Arbeitsplätze.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 84
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 7
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 34
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 13
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 5
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 4
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 3
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 2
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Kanzlei HafenCity"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Sprechen wir über Ihr Projekt."
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 4,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 9,
+        "transfer_bytes": 503782,
+        "transfer_nach_typ": {
+          "bild": 321102,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8852,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 36,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/kanzlei-hafencity-02-1440.webp",
+          "bytes": 144860,
+          "pixel": "1280x862"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Kanzlei HafenCity",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 4,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/studio/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/11_studio_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/11_studio_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/11_studio_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Studio · Studio Lindenau, Innenarchitektur Hamburg",
+        "meta_description": "Vera Lindenau und ihr Team: ein Studio für Innenarchitektur in der Hamburger HafenCity, vier Personen, vier bis sechs Projekte im Jahr.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 78
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 6
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 33
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 12
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 5
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(233, 228, 218)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 1
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Studio"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(31, 29, 26)",
+            "text": "Wie wir arbeiten"
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 3,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 8,
+        "transfer_bytes": 320437,
+        "transfer_nach_typ": {
+          "bild": 138474,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8135,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 24,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/blankenese-03-960.webp",
+          "bytes": 59264,
+          "pixel": "640x425"
+        },
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Studio",
+          "h2: Wie wir arbeiten",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 3,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/leistungen/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/12_leistungen_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/12_leistungen_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/12_leistungen_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Leistungen · Studio Lindenau, Innenarchitektur Hamburg",
+        "meta_description": "Private Wohnräume, Gastronomie und Hotellerie, Praxen und Kanzleien, Möbel- und Einbauentwurf, Farb- und Materialkonzept. Innenarchitektur aus Hamburg.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 87
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 10
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 33
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 25
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 16
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 1
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Leistungen"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(31, 29, 26)",
+            "text": "Private Wohnräume"
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 0,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 5,
+        "transfer_bytes": 182012,
+        "transfer_nach_typ": {
+          "bild": 0,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 8184,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 24,
+        "dom_content_loaded_ms": 6,
+        "groesstes_bild": null,
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Leistungen",
+          "h2: Private Wohnräume",
+          "h2: Gastronomie und Hotellerie",
+          "h2: Praxen und Kanzleien",
+          "h2: Möbel- und Einbauentwurf",
+          "h2: Farb- und Materialkonzept",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 0,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/kontakt/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/13_kontakt_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/13_kontakt_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/13_kontakt_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Kontakt · Studio Lindenau, Hamburg",
+        "meta_description": "Studio Lindenau, Am Sandtorkai 4, 20457 Hamburg. Telefon 040 33 22 11-0, post@studio-lindenau.de. Termine nach Vereinbarung.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 64
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 6
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 34
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(102, 94, 86)",
+            "anzahl": 4
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 1
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Kontakt"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Sprechen wir über Ihr Projekt."
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 0,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 5,
+        "transfer_bytes": 180031,
+        "transfer_nach_typ": {
+          "bild": 0,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 6203,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 24,
+        "dom_content_loaded_ms": 7,
+        "groesstes_bild": null,
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Kontakt",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 0,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/impressum/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/14_impressum_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/14_impressum_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/14_impressum_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Impressum · Studio Lindenau",
+        "meta_description": "Impressum von Studio Lindenau, Am Sandtorkai 4, 20457 Hamburg.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 67
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 13
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 32
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 15
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 10
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 9
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 1
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Impressum"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(31, 29, 26)",
+            "text": "Angaben gemäß § 5 DDG"
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 0,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 5,
+        "transfer_bytes": 181052,
+        "transfer_nach_typ": {
+          "bild": 0,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 7224,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 40,
+        "dom_content_loaded_ms": 6,
+        "groesstes_bild": null,
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Impressum",
+          "h2: Angaben gemäß § 5 DDG",
+          "h2: Kontakt",
+          "h2: Berufsbezeichnung und Kammer",
+          "h2: Umsatzsteuer",
+          "h2: Berufshaftpflichtversicherung",
+          "h2: Verantwortlich für den Inhalt",
+          "h2: Streitbeilegung",
+          "h2: Bildnachweise",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 0,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    },
+    {
+      "url": "http://localhost:8765/datenschutz/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/15_datenschutz_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/15_datenschutz_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/studio-lindenau/_doku/screenshots/final/15_datenschutz_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Datenschutz · Studio Lindenau",
+        "meta_description": "Datenschutzerklärung von Studio Lindenau: keine Cookies, keine Analyse-Werkzeuge, keine fremden Server.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 83
+          },
+          {
+            "wert": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "anzahl": 12
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(244, 241, 234)",
+            "anzahl": 32
+          },
+          {
+            "wert": "rgb(92, 87, 79)",
+            "anzahl": 24
+          },
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 15
+          },
+          {
+            "wert": "rgb(181, 174, 163)",
+            "anzahl": 14
+          },
+          {
+            "wert": "rgb(158, 151, 139)",
+            "anzahl": 10
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(31, 29, 26)",
+            "anzahl": 4
+          },
+          {
+            "wert": "rgb(42, 39, 36)",
+            "anzahl": 1
+          },
+          {
+            "wert": "rgb(201, 169, 126)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "56px",
+            "font_weight": "300",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "61.6px",
+            "letter_spacing": "-0.56px",
+            "text_transform": "none",
+            "color": "rgb(244, 241, 234)",
+            "text": "Datenschutzerklärung"
+          },
+          "h2": {
+            "font_size": "40px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "46px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(31, 29, 26)",
+            "text": "Verantwortliche Stelle"
+          },
+          "h3": {
+            "font_size": "30px",
+            "font_weight": "400",
+            "font_family": "\"Cormorant Garamond\", Georgia, \"Times New Roman\", serif",
+            "line_height": "36px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(31, 29, 26)",
+            "text": "Hosting und Server-Protokolle"
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(244, 241, 234)",
+        "body_font": "\"DM Sans\", system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 0,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Kontakt",
+          "Studio Lindenau",
+          "Projekte",
+          "Studio",
+          "Leistungen",
+          "Kontakt",
+          "040 33 22 11-0",
+          "post@studio-lindenau.de"
+        ]
+      },
+      "messwerte": {
+        "requests": 5,
+        "transfer_bytes": 183159,
+        "transfer_nach_typ": {
+          "bild": 0,
+          "js": 3934,
+          "css": 68962,
+          "font": 100932,
+          "html": 9331,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 24,
+        "dom_content_loaded_ms": 6,
+        "groesstes_bild": null,
+        "geladene_fonts": [
+          "Cormorant Garamond 300 700 normal",
+          "Cormorant Garamond 300 700 italic",
+          "DM Sans 300 700 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Datenschutzerklärung",
+          "h2: Verantwortliche Stelle",
+          "h2: Besuch der Website",
+          "h3: Hosting und Server-Protokolle",
+          "h2: E-Mail und Telefon",
+          "h2: Verweise auf andere Websites",
+          "h2: Ihre Rechte",
+          "h2: Keine automatisierten Entscheidungen",
+          "h2: Sprechen wir über Ihr Projekt."
+        ],
+        "bilder_gesamt": 0,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    }
+  ],
+  "anzahl_screenshots": 45,
+  "gesamt_kb": 7339.3,
+  "fehler": []
+}

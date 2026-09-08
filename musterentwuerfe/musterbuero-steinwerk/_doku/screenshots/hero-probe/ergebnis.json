@@ -1,0 +1,175 @@
+{
+  "slug": "hero-probe",
+  "output_dir": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/steinwerk-planung/_doku/screenshots/hero-probe",
+  "lokal": true,
+  "seiten": [
+    {
+      "url": "http://localhost:8765/",
+      "screenshots": [
+        {
+          "typ": "desktop_hero",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/steinwerk-planung/_doku/screenshots/hero-probe/01_start_desktop_hero.jpg"
+        },
+        {
+          "typ": "desktop_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/steinwerk-planung/_doku/screenshots/hero-probe/01_start_desktop_full.jpg"
+        },
+        {
+          "typ": "mobile_full",
+          "pfad": "/Users/timbunger/Desktop/XPONext/Website XPO/Website/referenzen/steinwerk-planung/_doku/screenshots/hero-probe/01_start_mobile_full.jpg"
+        }
+      ],
+      "stil_daten": {
+        "titel": "Steinwerk Planungsgesellschaft, Köln: Schulen, Kitas, Verwaltung",
+        "meta_description": "Architekturbüro in Köln für Schulen, Kitas, Verwaltungs- und Gewerbebauten im Rheinland. 20 Projekte, 14 Mitarbeitende, Wettbewerbe und VgV-Verfahren.",
+        "lang": "de",
+        "schriftarten": [
+          {
+            "wert": "Inter, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "anzahl": 160
+          },
+          {
+            "wert": "\"IBM Plex Mono\", ui-monospace, \"SF Mono\", Menlo, monospace",
+            "anzahl": 65
+          }
+        ],
+        "textfarben": [
+          {
+            "wert": "rgb(69, 75, 81)",
+            "anzahl": 131
+          },
+          {
+            "wert": "rgb(21, 24, 27)",
+            "anzahl": 44
+          },
+          {
+            "wert": "rgb(91, 98, 105)",
+            "anzahl": 9
+          },
+          {
+            "wert": "rgb(237, 239, 240)",
+            "anzahl": 1
+          }
+        ],
+        "hintergrundfarben": [
+          {
+            "wert": "rgb(224, 228, 231)",
+            "anzahl": 21
+          },
+          {
+            "wert": "rgb(21, 24, 27)",
+            "anzahl": 1
+          },
+          {
+            "wert": "rgb(237, 239, 240)",
+            "anzahl": 1
+          }
+        ],
+        "ueberschriften": {
+          "h1": {
+            "font_size": "52px",
+            "font_weight": "500",
+            "font_family": "Inter, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "line_height": "56.16px",
+            "letter_spacing": "-1.3px",
+            "text_transform": "none",
+            "color": "rgb(21, 24, 27)",
+            "text": "Schulen, Kitas, Verwaltungs- und Gewerbebauten im Rheinland — von der Machbarkeitsstudie bis zur Übergabe."
+          },
+          "h3": {
+            "font_size": "17px",
+            "font_weight": "500",
+            "font_family": "Inter, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+            "line_height": "22.95px",
+            "letter_spacing": "normal",
+            "text_transform": "none",
+            "color": "rgb(21, 24, 27)",
+            "text": "Schulzentrum Kerpen"
+          }
+        },
+        "container_breite": "1440px",
+        "body_hintergrund": "rgb(237, 239, 240)",
+        "body_font": "Inter, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+        "body_font_size": "17px",
+        "anzahl_bilder": 20,
+        "anzahl_videos": 0,
+        "nav_links": [
+          "Steinwerk Planungsgesellschaft",
+          "Menü",
+          "Projekte",
+          "Leistungen",
+          "Büro",
+          "Kontakt",
+          "0221 55 44 33-0",
+          "info@steinwerk-planung.de",
+          "Köln · 0221 55 44 33-0"
+        ]
+      },
+      "messwerte": {
+        "requests": 25,
+        "transfer_bytes": 959549,
+        "transfer_nach_typ": {
+          "bild": 829730,
+          "js": 3779,
+          "css": 49784,
+          "font": 48732,
+          "html": 27524,
+          "sonst": 0
+        },
+        "fremd_domains": [],
+        "google_fonts": false,
+        "lcp_ms": 92,
+        "dom_content_loaded_ms": 41,
+        "groesstes_bild": {
+          "url": "http://localhost:8765/assets/bilder/kacheln/grundschule-ring-01-600.webp",
+          "bytes": 61010,
+          "pixel": "296x197"
+        },
+        "geladene_fonts": [
+          "Inter 100 900 normal",
+          "IBM Plex Mono 400 normal",
+          "IBM Plex Mono 500 normal"
+        ]
+      },
+      "a11y_fakten": {
+        "lang": "de",
+        "anzahl_h1": 1,
+        "outline": [
+          "h1: Schulen, Kitas, Verwaltungs- und Gewerbebauten im Rheinland — von der Machbarkei",
+          "h3: Schulzentrum Kerpen",
+          "h3: Verwaltungsgebäude Stadtwerke",
+          "h3: Sporthalle Wesseling",
+          "h3: Grundschule Am Ring",
+          "h3: Kita Rheinufer",
+          "h3: Produktionshalle Frechen",
+          "h3: Gesamtschule Nord",
+          "h3: Rathaus-Anbau Pulheim",
+          "h3: Logistikhalle Ost",
+          "h3: Quartiersschule Düsseldorf",
+          "h3: Bürogebäude Kalk",
+          "h3: Berufskolleg Süd",
+          "h3: Feuerwache Bergisch Gladbach",
+          "h3: Verwaltungszentrum Aachen",
+          "h3: Mensa Gymnasium Brühl",
+          "h3: Kita Sonnenhang",
+          "h3: Kita Waldstraße",
+          "h3: Grundschule Troisdorf",
+          "h3: Gewerbehof Mülheim",
+          "h3: Bürgerhaus Rösrath"
+        ],
+        "bilder_gesamt": 20,
+        "bilder_ohne_alt": 0,
+        "bilder_ohne_width_height": 0,
+        "skip_link": true,
+        "buttons_ohne_namen": 0,
+        "mobile_nav_mit_aria": true,
+        "horizontal_scroll": false
+      },
+      "fehler": [],
+      "mobile_horizontal_scroll": false
+    }
+  ],
+  "anzahl_screenshots": 3,
+  "gesamt_kb": 877.2,
+  "fehler": []
+}
