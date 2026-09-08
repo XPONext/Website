@@ -1,0 +1,18 @@
+# Musterstudio Lindenau (Musterentwurf von XPONext)
+# Alles darf indexiert werden. KI-Crawler ausdrücklich erlaubt: Die Seite soll
+# in KI-Antworten auftauchen, das ist Teil der Grundoptimierung.
+# Bei Musterentwürfen: die Seiten tragen noindex im HTML, robots.txt bleibt offen.
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.xponext.de/musterentwuerfe/musterstudio-lindenau/sitemap.xml

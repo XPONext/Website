@@ -1,0 +1,621 @@
+/* ==========================================================================
+   Studio Lindenau — Basis-Stylesheet
+   Skeleton aus dem architect_website_creation-Skill (XPONext).
+
+   Was hier steht, ist Handwerk, kein Design: Schriften, Wertevorrat, Reset,
+   Layout-Primitive, Fokus, Formular, Fußzeile, Bewegung. Die Optik der Seite
+   (Hero, Projektraster, Navigation, Typo-Skala) entsteht pro Projekt aus dem
+   Design-Brief und wird UNTER Abschnitt 9 frei geschrieben.
+
+   ========================================================================== */
+
+/* --- 1. Schriften ---------------------------------------------------------
+   Self-hosted, zwei Familien laut Brief (Abschnitt 3): Cormorant Garamond
+   für alles über 22 px, DM Sans für Text, Navigation, Labels.
+   -------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('../fonts/cormorant-garamond-latin.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('../fonts/cormorant-garamond-latin-italic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('../fonts/dm-sans-latin.woff2') format('woff2');
+}
+
+/* --- 2. Wertevorrat ---------------------------------------------------------
+   Alle Werte aus dem Design-Brief, Abschnitte 3–5. Kontraste dort gerechnet
+   (WCAG AA). Zwei Paletten: helle Sektionen (--farbe-*) und dunkle
+   Sektionen (--farbe-dunkel-*).                                              */
+
+:root {
+  --schrift-text:  'DM Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --schrift-titel: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+
+  /* Helle Sektionen */
+  --farbe-grund:   #F4F1EA;   /* Grund aller hellen Sektionen */
+  --farbe-flaeche: #E9E4DA;   /* Kasten, Metadaten-Hintergrund */
+  --farbe-text:    #1F1D1A;   /* 14,91:1 auf Grund */
+  --farbe-text-2:  #5C574F;   /* 6,35:1 auf Grund, 5,65:1 auf Fläche */
+  --farbe-text-3:  #665E56;   /* Labels, 5,64:1 / 5,02:1 */
+  --farbe-linie:   #D9D3C8;
+  --farbe-akzent:  #7A5F3E;   /* Nussbaum, 5,27:1 auf Grund */
+  --farbe-invers:  #F4F1EA;   /* Text auf Akzent, 5,27:1 */
+  --farbe-fehler:  #B3261E;
+
+  /* Dunkle Sektionen */
+  --farbe-dunkel:         #1F1D1A;
+  --farbe-dunkel-flaeche: #2A2724;
+  --farbe-dunkel-text:    #F4F1EA;   /* 14,91:1 */
+  --farbe-dunkel-text-2:  #B5AEA3;   /* 7,65:1 / 6,75:1 */
+  --farbe-dunkel-text-3:  #9E978B;   /* 5,81:1 / 5,13:1 */
+  --farbe-dunkel-linie:   #3A3631;
+  --farbe-dunkel-akzent:  #C9A97E;   /* 7,57:1; Text darauf #1F1D1A */
+
+  /* Typo-Skala (Brief 3): Desktop / Mobil */
+  --t-label:  0.75rem;                              /* 12 px Versalien */
+  --t-klein:  0.9375rem;                            /* 15 px Nav, Button */
+  --t-basis:  clamp(1rem, 0.95rem + 0.2vw, 1.0625rem); /* 16 → 17 px */
+  --t-kursiv: clamp(1.1875rem, 1rem + 0.5vw, 1.375rem); /* 19 → 22 px */
+  --t-mittel: clamp(1.5rem, 1.2rem + 0.9vw, 1.875rem);  /* H3 24 → 30 px */
+  --t-gross:  clamp(1.875rem, 1.5rem + 1.2vw, 2.5rem);  /* H2 30 → 40 px */
+  --t-titel:  clamp(2.25rem, 1.6rem + 2.2vw, 3.5rem);   /* H1 36 → 56 px */
+  --t-hero:   clamp(2.375rem, 1.5rem + 2.9vw, 4rem);    /* Hero 38 → 64 px */
+  --t-marke:  clamp(1.375rem, 1.1rem + 0.7vw, 1.75rem); /* 22 → 28 px */
+
+  --lh-eng: 1.1;
+  --lh-mittel: 1.35;
+  --lh-text: 1.6;
+  --mass-text: 60ch;
+
+  --raum-halb: 1rem;
+  --raum: clamp(2.5rem, 2rem + 1.5vw, 4rem);          /* innerhalb: 2,5 → 4 rem */
+  --raum-doppel: clamp(4rem, 3rem + 4vw, 8rem);        /* zwischen Projektbildern: 4 → 8 rem */
+  --abstand-sektion: clamp(5rem, 3rem + 5vw, 10rem);   /* Sektion: 5 → 10 rem */
+
+  --breite: 1280px;
+  --rand: 1.25rem;
+  --radius: 0;
+  --tempo: 0.25s;
+  --kurve: cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (min-width: 640px)  { :root { --rand: 2.5rem; } }
+@media (min-width: 1024px) { :root { --rand: 5rem; } }
+
+/* --- 3. Grundlagen --------------------------------------------------------- */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: var(--schrift-text);
+  font-size: var(--t-basis);
+  line-height: var(--lh-text);
+  color: var(--farbe-text);
+  background: var(--farbe-grund);
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4 { font-family: var(--schrift-titel); color: var(--farbe-text); line-height: var(--lh-eng); font-weight: 400; }
+h1 { font-size: var(--t-titel); font-weight: 300; letter-spacing: -0.01em; }
+h2 { font-size: var(--t-gross); line-height: 1.15; }
+h3 { font-size: var(--t-mittel); line-height: 1.2; }
+h4 { font-size: var(--t-basis); font-family: var(--schrift-text); font-weight: 600; }
+
+p { max-width: var(--mass-text); }
+p + p { margin-top: var(--raum-halb); }
+a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; text-decoration-color: var(--farbe-akzent); transition: color var(--tempo) linear; }
+.sektion--dunkel a { text-decoration-color: var(--farbe-dunkel-akzent); }
+strong { font-weight: 500; color: var(--farbe-text); }
+img, svg, video { display: block; max-width: 100%; height: auto; }
+ul, ol { padding-left: 1.2em; }
+hr { border: 0; height: 1px; background: var(--farbe-linie); }
+
+/* Sichtbarer Tastaturfokus, auf jedem Untergrund erkennbar. */
+:where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--farbe-akzent);
+  outline-offset: 3px;
+}
+
+.nur-sr {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+.sprung {
+  position: absolute; left: -9999px; top: 0; z-index: 200;
+  background: var(--farbe-text); color: var(--farbe-invers); padding: 0.75rem 1.25rem;
+}
+.sprung:focus { left: 0; }
+
+/* --- 4. Layout-Primitive ---------------------------------------------------- */
+
+.inhalt { max-width: var(--breite); margin-inline: auto; padding-inline: var(--rand); }
+.inhalt--schmal > * { max-width: 46rem; }
+.inhalt--schmal h2 { margin-top: 2.25rem; }
+.inhalt--schmal h3 { margin-top: 1.4rem; }
+.inhalt--schmal h2:first-child { margin-top: 0; }
+.inhalt--schmal p, .inhalt--schmal ul { margin-top: 0.75rem; }
+.inhalt--schmal li + li { margin-top: 0.25rem; }
+.sektion { padding-block: var(--abstand-sektion); }
+.sektion--flaeche { background: var(--farbe-flaeche); }
+.sektion--dunkel { background: var(--farbe-text); color: var(--farbe-invers); }
+.sektion--dunkel :is(h1, h2, h3, h4, strong) { color: var(--farbe-invers); }
+.mass { max-width: var(--mass-text); }
+.klein { font-size: var(--t-klein); color: var(--farbe-text-3); }
+
+.raster { display: grid; gap: var(--raum); }
+.raster--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.raster--3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+.label {
+  display: block;
+  font-size: var(--t-label);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--farbe-text-3);
+  margin-bottom: 0.75rem;
+}
+
+/* --- 5. Knöpfe ------------------------------------------------------------- */
+
+.knopf {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  background: var(--farbe-akzent);
+  color: var(--farbe-invers);
+  font-size: var(--t-klein);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  border: 1px solid var(--farbe-akzent);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background var(--tempo) var(--kurve), color var(--tempo) var(--kurve);
+}
+.knopf:hover { background: var(--farbe-text); border-color: var(--farbe-text); }
+.knopf--linie { background: transparent; color: var(--farbe-text); border-color: currentColor; }
+.knopf--linie:hover { background: var(--farbe-text); color: var(--farbe-invers); }
+
+/* --- 6. Kopfzeile: nur das Verhalten, keine Optik ---------------------------
+   Sticky-Verhalten, Burger, Untermenü-Mechanik. Größe, Farbe, Ausrichtung
+   kommen aus dem Brief und stehen unten in Abschnitt 9.                      */
+
+.kopf { position: sticky; top: 0; z-index: 100; }
+.kopf__inhalt { display: flex; align-items: center; justify-content: space-between; gap: var(--raum); }
+.reiter { display: flex; align-items: center; gap: 1.5rem; list-style: none; padding: 0; }
+.reiter a { text-decoration: none; }
+.kopf__schalter {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid currentColor;
+  border-radius: var(--radius);
+  padding: 0.5rem 0.8rem;
+  font: inherit;
+  font-size: var(--t-klein);
+  color: inherit;
+  cursor: pointer;
+  min-height: 44px;
+}
+@media (max-width: 900px) {
+  .kopf__schalter { display: inline-flex; }
+  .reiter {
+    display: none;
+    position: absolute;
+    inset-inline: 0;
+    top: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--farbe-grund);
+    border-bottom: 1px solid var(--farbe-linie);
+    padding: 0.5rem var(--rand) 1rem;
+  }
+  .reiter[data-offen="true"] { display: flex; }
+  .reiter a { display: block; padding: 0.9rem 0; border-bottom: 1px solid var(--farbe-linie); min-height: 44px; }
+}
+
+/* --- 7. Formular ------------------------------------------------------------ */
+
+.formular { display: grid; gap: var(--raum-halb); max-width: 36rem; position: relative; }
+.feld { display: grid; gap: 0.35rem; }
+.feld label { font-size: var(--t-klein); font-weight: 500; color: var(--farbe-text); }
+.feld input, .feld textarea {
+  font: inherit;
+  font-size: var(--t-klein);
+  padding: 0.8rem 0.9rem;
+  border: 1px solid var(--farbe-text-3);
+  border-radius: var(--radius);
+  background: var(--farbe-grund);
+  color: var(--farbe-text);
+  width: 100%;
+  min-height: 44px;
+}
+.feld textarea { min-height: 8rem; resize: vertical; }
+.feld input:focus, .feld textarea:focus { border-color: var(--farbe-text); }
+.pflicht { color: var(--farbe-fehler); }
+.formular__hinweis { font-size: var(--t-klein); color: var(--farbe-text-3); }
+.formular__fehler {
+  padding: 0.7rem 0.9rem;
+  border-left: 3px solid var(--farbe-fehler);
+  background: #FDECEA;
+  color: #7A1C16;
+  font-size: var(--t-klein);
+}
+/* Honigtopf: aus dem Sichtfeld, nicht display:none — das erkennen manche
+   Programme und lassen das Feld dann leer. */
+.honig { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* --- 8. Fußzeile: Struktur, keine Optik --------------------------------------- */
+
+.fuss__raster {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--raum);
+  padding-block: var(--raum-doppel) var(--raum);
+}
+.fuss__titel { font-size: var(--t-label); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.7rem; }
+.fuss p { font-size: var(--t-klein); max-width: none; }
+.fuss__liste { list-style: none; padding: 0; display: grid; gap: 0.4rem; font-size: var(--t-klein); }
+.fuss__schluss {
+  border-top: 1px solid var(--farbe-linie);
+  padding-block: 1rem;
+  display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem;
+  font-size: var(--t-klein);
+}
+/* Bei Referenzseiten Pflicht (siehe checklisten/qualitaet.md), bei Kundenseiten löschen. */
+.muster-hinweis { font-size: var(--t-label); letter-spacing: 0.04em; color: var(--farbe-text-3); }
+
+/* --- 9. Bewegung -------------------------------------------------------------
+   Grundsatz: alles ist auch ohne JavaScript sichtbar, Animation ist Zugabe.
+   .anim-Elemente blenden beim Scrollen ein (assets/js/basis.js).             */
+
+@media (prefers-reduced-motion: no-preference) {
+  .js .anim { opacity: 0; will-change: opacity, transform; }
+  .js .anim--auf   { transform: translateY(24px); }
+  .js .anim--links { transform: translateX(-24px); }
+  .js .anim--zoom  { transform: scale(0.97); }
+  .js .anim.sichtbar {
+    opacity: 1;
+    transform: none;
+    transition: opacity 0.7s var(--kurve), transform 0.7s var(--kurve);
+  }
+  .js .anim.verzoegert-1.sichtbar { transition-delay: 0.1s; }
+  .js .anim.verzoegert-2.sichtbar { transition-delay: 0.2s; }
+  .js .anim.verzoegert-3.sichtbar { transition-delay: 0.3s; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ==========================================================================
+   10. PROJEKTSPEZIFISCH — ab hier frei nach Design-Brief
+   Kopfzeile-Optik, Hero, Projektraster, Projektdetail, Team, Kontakt,
+   Fußzeile-Optik. Jede Sektion mit Kommentar, welche Feature-ID aus dem
+   Brief sie umsetzt (z. B. "big-dk-F2 Metadatenblock rechtsbündig").
+   ========================================================================== */
+
+/* Dunkle Sektionen: Palette umschalten (pietboon-com-F2 gespiegelt) */
+.sektion--dunkel, .kopf, .fuss {
+  background: var(--farbe-dunkel);
+  color: var(--farbe-dunkel-text);
+}
+.sektion--dunkel :is(h1, h2, h3, h4, strong), .fuss :is(h2, h3, strong) { color: var(--farbe-dunkel-text); }
+.sektion--dunkel :focus-visible, .kopf :focus-visible, .fuss :focus-visible { outline-color: var(--farbe-dunkel-akzent); }
+.sektion--dunkel .label { color: var(--farbe-dunkel-text-3); }
+.sektion--dunkel .klein { color: var(--farbe-dunkel-text-2); }
+
+/* Label (12 px Versalien, DM Sans 500) — big-dk-F4 Ort-Zeile, Metadaten-Label */
+.label { font-weight: 500; letter-spacing: 0.12em; line-height: 1.5; }
+
+/* Kursiv-Zeile (helenhard-no-F4): einzige Auszeichnung in Cormorant */
+.kursiv {
+  font-family: var(--schrift-titel);
+  font-style: italic;
+  font-size: var(--t-kursiv);
+  line-height: 1.4;
+  color: var(--farbe-text-2);
+}
+.sektion--dunkel .kursiv { color: var(--farbe-dunkel-text-2); }
+
+/* --- 10.1 Kopfzeile — helenhard-no-F1 geteilte Navigation mit zentrierter
+   Wortmarke, helenhard-no-F12 mobile Kopfzeile aus drei Textelementen.
+   Statisch, kein Sticky (Brief 7). Immer auf dunklem Grund.               */
+.kopf { position: static; }
+.kopf__inhalt {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-height: 88px;
+  gap: var(--raum-halb);
+}
+.marke {
+  grid-column: 2;
+  font-family: var(--schrift-titel);
+  font-size: var(--t-marke);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-decoration: none;
+  color: var(--farbe-dunkel-text);
+  padding: 0.75rem 0.25rem;                /* Tap-Ziel ≥ 44 px */
+  white-space: nowrap;
+}
+.kopf__nav { display: contents; }
+.reiter { gap: 0; }
+.reiter--links { grid-column: 1; grid-row: 1; justify-self: start; }
+.reiter--rechts { grid-column: 3; grid-row: 1; justify-self: end; }
+.reiter a {
+  display: inline-flex; align-items: center;
+  min-height: 44px; padding: 0 0.9rem;
+  font-size: var(--t-klein);
+  letter-spacing: 0.04em;
+  color: var(--farbe-dunkel-text-2);       /* 7,65:1 auf Dunkel */
+  transition: color var(--tempo) linear;
+}
+.reiter--links a:first-child { margin-left: -0.9rem; }
+.reiter--rechts li:last-child a { margin-right: -0.9rem; }
+.reiter a:hover, .reiter a[aria-current="page"] { color: var(--farbe-dunkel-text); }
+.reiter a[aria-current="page"] { text-decoration: underline; text-underline-offset: 6px; text-decoration-color: var(--farbe-dunkel-akzent); }
+.kopf__kontakt, .kopf__schalter, .kopf__nav-kontakt { display: none; }
+
+@media (max-width: 900px) {
+  .kopf__inhalt { min-height: 64px; grid-template-columns: 1fr auto 1fr; gap: 0.5rem; }
+  /* Zweiwortige Wortmarke bricht mobil auf zwei Zeilen, statt die Kopfzeile zu sprengen;
+     kleineres Polster hält das Tap-Ziel bei 44 px und die Kopfhöhe bei 64 px. */
+  .marke { white-space: normal; text-align: center; padding: 0.5rem 0.25rem; }
+  .kopf__kontakt {
+    display: inline-flex; align-items: center; grid-column: 1; justify-self: start;
+    min-height: 44px; padding: 0 0.75rem; margin-left: -0.75rem;
+    font-size: 1.0625rem; letter-spacing: 0.04em; text-decoration: none;
+    color: var(--farbe-dunkel-text-2);
+  }
+  .kopf__schalter {
+    display: inline-flex; grid-column: 3; justify-self: end;
+    border: 0; padding: 0 0.75rem; margin-right: -0.75rem;
+    font-size: 1.0625rem; letter-spacing: 0.04em;
+    color: var(--farbe-dunkel-text);
+    position: relative; z-index: 120;
+  }
+  /* Vollbild-Overlay auf --farbe-dunkel (helenhard-no-F12) */
+  .kopf__nav {
+    display: none;
+    position: fixed; inset: 0; z-index: 110;
+    background: var(--farbe-dunkel);
+    padding: 6rem var(--rand) 3rem;
+    overflow-y: auto;
+  }
+  .kopf__nav[data-offen="true"] { display: block; }
+  @media (prefers-reduced-motion: no-preference) {
+    .kopf__nav[data-offen="true"] { animation: overlay 250ms linear; }
+  }
+  @keyframes overlay { from { opacity: 0; } to { opacity: 1; } }
+  .reiter, .reiter[data-offen="true"] {
+    display: block; position: static; background: none; border: 0; padding: 0; justify-self: auto;
+  }
+  .reiter--links a:first-child, .reiter--rechts li:last-child a { margin: 0; }
+  .reiter a {
+    display: block; padding: 0.55rem 0; margin: 0; border: 0; min-height: 44px;
+    font-size: 1.75rem; line-height: 1.5; letter-spacing: 0.02em;
+    color: var(--farbe-dunkel-text);
+  }
+  .reiter a[aria-current="page"] { color: var(--farbe-dunkel-akzent); text-decoration: none; }
+  .kopf__nav-kontakt {
+    display: block; margin-top: 2.5rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--farbe-dunkel-linie);
+    color: var(--farbe-dunkel-text-2);
+  }
+  .kopf__nav-kontakt a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; }
+  body[data-menue="offen"] { overflow: hidden; }
+}
+
+/* --- 10.2 Bilder — robmills-com-au-F10 Lazy-Fade mit leichtem Zoom (der
+   eine Wow-Faktor, Brief 9). Wrapper mit overflow:hidden, Platzhalterfarbe. */
+.bild { overflow: hidden; background: var(--farbe-flaeche); }
+.sektion--dunkel .bild { background: var(--farbe-dunkel-flaeche); }
+.bild img { width: 100%; height: 100%; object-fit: cover; }
+@media (prefers-reduced-motion: no-preference) {
+  .js .bild--anim img { opacity: 0; transform: scale(1.03); }
+  .js .bild--anim.sichtbar img {
+    opacity: 1; transform: scale(1);
+    transition: opacity 700ms var(--kurve), transform 1200ms var(--kurve);
+  }
+  a:hover .bild img { transform: scale(1.02); transition: transform 600ms var(--kurve); }
+}
+
+/* --- 10.3 Start-Hero — pietboon-com-F11-Prinzip: Bild eingerückt auf der
+   dunklen Fläche (70 %, rechtsbündig), Hero-Satz links, gemeinsame
+   Unterkante (big-dk-F3). Bewegung nur beim Laden (Brief 9).             */
+.hero { padding-block: var(--raum) 0; }
+.hero__inhalt {
+  display: grid;
+  grid-template-columns: minmax(0, 30fr) minmax(0, 70fr);
+  column-gap: 4rem;
+  align-items: end;
+  min-height: calc(clamp(560px, 85vh, 900px) - 88px - var(--raum));
+}
+.hero__satz {
+  font-family: var(--schrift-titel);
+  font-size: var(--t-hero);
+  font-weight: 300;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--farbe-dunkel-text);
+  padding-bottom: 0.5rem;
+  max-width: none;
+}
+.hero__bild { aspect-ratio: 16 / 10; }
+.hero__bild img { object-position: 50% 55%; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero__bild img { animation: hero-bild 1600ms var(--kurve) 200ms both; }
+  .hero__satz { animation: hero-satz 900ms var(--kurve) 500ms both; }
+  @keyframes hero-bild { from { opacity: 0; transform: scale(1.05); } to { opacity: 1; transform: none; } }
+  @keyframes hero-satz { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+}
+@media (max-width: 900px) {
+  .hero__inhalt { grid-template-columns: 1fr; row-gap: 2rem; align-items: start; min-height: 0; }
+  .hero__satz { padding-bottom: 0; }
+}
+
+/* --- 10.4 Wachsende Linie — robmills-com-au-F3: 1 px mittig, wächst beim
+   ersten Scroll aus dem Hero 8 rem in die Intro-Sektion (nur Startseite). */
+.linie { display: block; width: 1px; margin-inline: auto; transform-origin: top; }
+.linie--dunkel { height: 4rem; margin-top: var(--raum); background: var(--farbe-dunkel-text-3); }
+.linie--hell { height: 8rem; margin-bottom: var(--raum); background: var(--farbe-text-3); }
+@media (prefers-reduced-motion: no-preference) {
+  .js .linie { transform: scaleY(0); }
+  .js.gescrollt .linie { transform: scaleY(1); transition: transform 900ms var(--kurve); }
+  .js.gescrollt .linie--hell { transition-delay: 450ms; }
+}
+
+/* --- 10.5 Intro — pietboon-com-F15: zentrierter Textblock (640 px) mit
+   Chevron-Linkliste zu den fünf Leistungsfeldern.                        */
+.intro { padding-top: 0; }
+.intro__block { max-width: 640px; margin-inline: auto; text-align: center; }
+.intro__block p { margin-inline: auto; max-width: 64ch; }
+.intro__text { font-family: var(--schrift-titel); font-size: var(--t-mittel); line-height: 1.35; font-weight: 400; }
+.chevrons { list-style: none; padding: 0; margin-top: var(--raum); border-top: 1px solid var(--farbe-linie); text-align: left; }
+.chevrons li { border-bottom: 1px solid var(--farbe-linie); }
+.chevrons a {
+  display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  min-height: 52px; padding: 0.6rem 0.25rem;
+  text-decoration: none;
+}
+.chevrons a::after { content: "›"; font-family: var(--schrift-titel); font-size: 1.5rem; line-height: 1; color: var(--farbe-akzent); }
+.chevrons a:hover { color: var(--farbe-akzent); }
+
+/* --- 10.6 Projektbilder — helenhard-no-F7 (Titel zentriert über dem Bild)
+   + big-dk-F4 (Ort · Jahr in Versalien darunter). 75 % Container, abwechselnd
+   links/rechts; Startseite dunkel, /projekte/ hell.                        */
+.projekte { list-style: none; padding: 0; display: grid; row-gap: var(--raum-doppel); }
+.projekt { width: 75%; }
+.projekt--rechts { margin-left: auto; }
+.projekt a { display: block; text-decoration: none; text-align: center; }
+.projekt__titel { font-size: var(--t-mittel); font-weight: 400; margin-bottom: 1.5rem; }
+.projekt a:hover .projekt__titel { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; text-decoration-color: currentColor; }
+.projekt .bild { aspect-ratio: 3 / 2; }
+.projekt__ort { margin-top: 1rem; margin-bottom: 0; }
+.projekte-kopf { padding-block: var(--raum) 0; }
+.projekte-kopf p { margin-top: 1rem; }
+@media (max-width: 640px) { .projekt { width: 100%; } }
+
+/* --- 10.7 Studio-Sektion — pietboon-com-F6: versetzter Kasten, Bild ragt
+   4 rem in den Kasten. Kanten fluchten mit dem Container (big-dk-F3).      */
+.studio { display: grid; grid-template-columns: 55fr 45fr; align-items: start; }
+.studio__kasten {
+  background: var(--farbe-flaeche);
+  padding: var(--raum) calc(var(--raum) + 4rem) var(--raum) var(--raum);
+  margin-top: 4rem;
+}
+.studio__kasten h2 { margin-bottom: 1.25rem; }
+.studio__kasten p + p { margin-top: 1rem; }
+.studio__bild { margin-left: -4rem; aspect-ratio: 3 / 2; }
+.team { list-style: none; padding: 0; margin-top: 1.5rem; display: grid; gap: 0.35rem; font-size: var(--t-klein); color: var(--farbe-text-2); }
+.team span { color: var(--farbe-text); }
+.studio__mehr { display: inline-flex; align-items: center; min-height: 44px; margin-top: 1rem; }
+@media (max-width: 900px) {
+  .studio { grid-template-columns: 1fr; }
+  .studio__bild { margin-left: 0; }
+  .studio__bild-rahmen { order: -1; } /* Grid-Kind ist der Rahmen, nicht das Bild: Bild oben, Kasten darunter (Brief 5) */
+  .studio__kasten { margin-top: 0; padding: var(--raum); }
+}
+
+/* --- 10.8 Seitenkopf der Unterseiten (dunkel): H1 + eine Zeile             */
+.seitenkopf { padding-block: var(--raum) var(--abstand-sektion); }
+.seitenkopf p { margin-top: 1.25rem; color: var(--farbe-dunkel-text-2); }
+.seitenkopf .telefon { display: inline-flex; align-items: center; min-height: 44px; margin-top: 1.5rem; font-family: var(--schrift-titel); font-size: var(--t-titel); font-weight: 300; line-height: 1.1; text-decoration: none; color: var(--farbe-dunkel-text); }
+.seitenkopf .telefon:hover { color: var(--farbe-dunkel-akzent); }
+
+/* --- 10.9 Projekt-Detail — pietboon-com-F11 (Hero 16:9 volle Containerbreite,
+   Titel darunter zentriert), big-dk-F2 (Metadaten rechtsbündig neben Bild 2),
+   pietboon-com-F7 (Bildpaar 560/640 versetzt, rechts 4:3-Ausschnitt).      */
+.detail-kopf { padding-block: var(--raum) var(--abstand-sektion); }
+.detail-kopf .bild { aspect-ratio: 16 / 9; }
+.detail-kopf__titel { text-align: center; margin-top: var(--raum); }
+.detail-kopf__titel p { margin: 0.75rem auto 0; }
+.detail { display: grid; grid-template-columns: 280px 1fr; column-gap: 4rem; row-gap: var(--raum-doppel); align-items: start; }
+.detail__rand { text-align: right; }
+.detail__rand p { margin-left: auto; max-width: none; text-align: left; margin-top: var(--raum); } /* Absatz linksbündig (Prüfbericht W10), nur die Metadaten bleiben rechtsbündig */
+.detail__rand dl { display: grid; gap: 0.9rem; }
+.detail__rand dt { font-size: var(--t-label); font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--farbe-text-3); }
+.detail__rand dd { color: var(--farbe-text-2); margin-top: 0.15rem; }
+.detail__gross .bild { aspect-ratio: 3 / 2; }
+.paar { grid-column: 1 / -1; display: grid; grid-template-columns: 560fr 640fr; column-gap: 5rem; align-items: start; }
+.paar__links { margin-top: 4rem; }
+.paar__links .bild { aspect-ratio: 3 / 2; }
+.paar__rechts .bild { aspect-ratio: 4 / 3; }
+.paar--einzel { grid-template-columns: 1fr; } /* drittes Bild allein: volle Breite statt leerem Feld */
+.detail__weiter { grid-column: 1 / -1; border-top: 1px solid var(--farbe-linie); padding-top: var(--raum); }
+.detail__weiter .label { margin-bottom: 0.25rem; }
+.detail__weiter a { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--schrift-titel); font-size: var(--t-mittel); text-decoration: none; }
+.detail__weiter a:hover { color: var(--farbe-akzent); }
+@media (max-width: 900px) {
+  .detail { grid-template-columns: 1fr; row-gap: var(--raum); }
+  .detail__rand, .detail__rand p { text-align: left; }
+  .detail__rand p { margin-left: 0; }
+  .detail__rand dl { grid-template-columns: repeat(2, 1fr); }
+  .paar { grid-template-columns: 1fr; row-gap: var(--raum); }
+  .paar__links { margin-top: 0; }
+}
+
+/* --- 10.10 Leistungen: fünf Einträge mit Hairlines, kein Bild             */
+.leistungen { list-style: none; padding: 0; border-top: 1px solid var(--farbe-linie); }
+.leistungen li { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); column-gap: 4rem; padding-block: var(--raum); border-bottom: 1px solid var(--farbe-linie); }
+.leistungen h2 { font-size: var(--t-gross); }
+.leistungen p + p { margin-top: 0.75rem; }
+.leistungen p a { display: inline-block; padding-block: 0.6rem; margin-block: -0.6rem; }
+@media (max-width: 720px) { .leistungen li { grid-template-columns: 1fr; row-gap: 1rem; } }
+
+/* --- 10.11 Kontaktkasten — auf jeder Seite vor der Fußzeile, dunkel,
+   zweite Stufe --farbe-dunkel-flaeche (pietboon-com-F2 gespiegelt).
+   Einziger gefüllter Button der Seite (Brief 7).                          */
+.kontakt-kasten { background: var(--farbe-dunkel-flaeche); color: var(--farbe-dunkel-text); padding-block: var(--abstand-sektion); }
+.kontakt-kasten__inhalt { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: var(--raum); align-items: end; }
+.kontakt-kasten h2 { color: var(--farbe-dunkel-text); font-size: var(--t-gross); }
+.kontakt-kasten .kursiv { color: var(--farbe-dunkel-text-2); margin-top: 0.75rem; }
+.kontakt-kasten__wege { display: grid; gap: 0.5rem; justify-items: start; }
+.kontakt-kasten__wege a:not(.knopf) { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; color: var(--farbe-dunkel-text-2); }
+.kontakt-kasten__wege a:not(.knopf):hover { color: var(--farbe-dunkel-text); }
+.knopf--hell { background: var(--farbe-dunkel-akzent); border-color: var(--farbe-dunkel-akzent); color: var(--farbe-dunkel); min-height: 48px; display: inline-flex; align-items: center; }
+.knopf--hell:hover { background: var(--farbe-dunkel-text); border-color: var(--farbe-dunkel-text); color: var(--farbe-dunkel); }
+@media (max-width: 900px) { .kontakt-kasten__inhalt { grid-template-columns: 1fr; } }
+
+/* --- 10.12 Fußzeile — helenhard-no-F13: ein Standortblock, Navigation,
+   Rechtstexte; drei Spalten mit gemeinsamer Kante (big-dk-F3).            */
+.fuss__raster { grid-template-columns: repeat(3, 1fr); padding-block: var(--raum-doppel) var(--raum); }
+.fuss__ort { font-family: var(--schrift-titel); font-style: italic; font-size: var(--t-kursiv); color: var(--farbe-dunkel-text); margin-bottom: 0.75rem; }
+.fuss p { color: var(--farbe-dunkel-text-2); }
+.fuss__titel { color: var(--farbe-dunkel-text-3); font-weight: 500; }
+.fuss a { text-decoration: none; color: var(--farbe-dunkel-text-3); }   /* 5,81:1 auf Dunkel */
+.fuss a:hover { color: var(--farbe-dunkel-text); }
+.fuss__liste { gap: 0; }
+.fuss__liste a, .fuss__wege a { display: inline-flex; align-items: center; min-height: 44px; }
+.fuss__schluss { border-top-color: var(--farbe-dunkel-linie); color: var(--farbe-dunkel-text-3); align-items: center; }
+.muster-hinweis { color: var(--farbe-dunkel-text-3); letter-spacing: 0.12em; text-transform: uppercase; padding-bottom: 1.5rem; }
+@media (max-width: 720px) { .fuss__raster { grid-template-columns: 1fr; } }
+
+/* --- 10.13 Rechtstexte: schmale Spalte, Fließtext in --farbe-text-2      */
+.rechtstext p, .rechtstext li { color: var(--farbe-text-2); }
+.rechtstext a { color: var(--farbe-text); }

@@ -1,0 +1,16 @@
+# Musterbüro Steinwerk (Musterentwurf von XPONext, Büro und Projekte erfunden)
+# KI-Crawler ausdrücklich erlaubt. Die Seiten tragen noindex im HTML, robots.txt bleibt offen.
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.xponext.de/musterentwuerfe/musterbuero-steinwerk/sitemap.xml

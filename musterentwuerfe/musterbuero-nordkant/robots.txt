@@ -1,0 +1,18 @@
+# Musterbüro Nordkant (Musterentwurf, erfundenes Büro)
+# Die Seite läuft als Unterordner von xponext.de; maßgeblich ist die robots.txt
+# der Hauptdomain. Diese Datei dokumentiert die Absicht: alles offen, KI-Crawler
+# erlaubt. Die Seiten selbst tragen noindex im HTML (Musterentwurf).
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.xponext.de/musterentwuerfe/musterbuero-nordkant/sitemap.xml
