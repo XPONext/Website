@@ -59,6 +59,34 @@ Das kostenlose Cloudflare-Kontingent (100.000 Requests/Tag) reicht für dieses T
 Änderungen am Worker-Code: `cloudflare-worker/geo-proxy.js` bearbeiten, dann im Cloudflare-
 Dashboard erneut „Edit code" → einfügen → Deploy (kein automatisches Deployment aus dem Repo).
 
+### GEO-Check Leads
+
+`geo-check.html` zeigt nur den Score + einen Teaser-Punkt frei; der vollständige Befund wird erst
+nach Eingabe einer E-Mail-Adresse freigeschaltet (`POST /lead` am selben Worker). Der Worker prüft
+Format + MX-Record der Adresse, legt den Lead in Cloudflare KV ab und verschickt optional eine
+Benachrichtigung über [Resend](https://resend.com). Kein Direktvertrieb/Kaltakquise — Zweck ist,
+bei Rückfragen zur Anfrage Kontakt aufnehmen zu können (siehe `datenschutz.html`, Abschnitt 5.3).
+
+**TODO:** Resend ist noch nicht eingerichtet — Leads landen aktuell nur in KV, es kommt noch
+**keine** Sofort-Benachrichtigung per E-Mail an info@xponext.de. Siehe Schritt 2 unten.
+
+**Einmaliges Setup zusätzlich zum Proxy-Setup oben:**
+
+1. ~~**KV-Namespace:**~~ ✅ erledigt (`xponext-geo-leads`, Variable `LEADS`, gebunden & getestet).
+2. **Resend (offen — für die Sofort-Benachrichtigung):**
+   - Kostenloses Konto auf [resend.com](https://resend.com) anlegen.
+   - Domain `xponext.de` verifizieren (DNS-Einträge, die Resend vorgibt).
+   - API-Key erstellen.
+   - Im Worker → Settings → Variables and Secrets → „Add" → Name `RESEND_API_KEY`, Typ **Secret**,
+     Wert = der API-Key → Deploy.
+   - Ohne diesen Schritt funktioniert die Freischaltung trotzdem (Leads landen in KV), es kommt
+     nur keine Sofort-Mail.
+3. **Leads einsehen:** Cloudflare-Dashboard → Storage & Databases → KV → `xponext-geo-leads` →
+   Einträge durchsuchen (Key-Präfix `lead:`, Wert ist JSON mit `email`, `domain`, `score`, `createdAt`).
+
+Der Sender `geo-check@xponext.de` in `sendNotification()` (in `geo-proxy.js`) muss zur in Resend
+verifizierten Domain passen — sonst schlägt der Mail-Versand fehl (Lead wird trotzdem gespeichert).
+
 ## Musterentwürfe (`musterentwuerfe/`)
 
 Vollständige Muster-Websites für Architektur- und Innenarchitekturbüros, gebaut mit dem
