@@ -85,6 +85,8 @@
       border: none; cursor: pointer; font-family: inherit;
     }
     .btn-primary:hover { background: #134D32; opacity: 1; }
+    .btn-primary:disabled { background: #D1D5DB; color: #9CA3AF; box-shadow: none; cursor: not-allowed; }
+    .btn-primary:disabled:hover { background: #D1D5DB; opacity: 1; }
     .form-hint { color: #9CA3AF; font-size: 0.82rem; margin-bottom: 2rem; }
 
     .ps-spinner {
@@ -155,6 +157,50 @@
       font-weight: 700; font-size: 0.9rem; white-space: nowrap;
     }
     .geo-disclaimer { color: #9CA3AF; font-size: 0.78rem; text-align: center; margin-top: 1.5rem; line-height: 1.6; }
+
+    /* ── LEAD GATE ── */
+    .gate-block {
+      background: #F9FAFB; border: 1.5px solid #E5E7EB; border-radius: 12px;
+      padding: 1.75rem; margin-bottom: 1.5rem;
+    }
+    .gate-block h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.4rem; }
+    .gate-block > p { color: #4B5563; font-size: 0.92rem; line-height: 1.55; margin-bottom: 1.1rem; }
+    .gate-form-row { display: flex; gap: 0.75rem; margin-bottom: 0.9rem; }
+    .gate-form-row .ps-input { background: #fff; }
+    .gate-consent { display: flex; align-items: flex-start; gap: 0.6rem; cursor: pointer; }
+    .gate-consent input { margin-top: 0.2rem; flex-shrink: 0; }
+    .gate-consent span { font-size: 0.82rem; color: #6B7280; line-height: 1.5; }
+    .gate-consent a { color: #1B6B45; }
+
+    /* ── BLUR-OVERLAY (gesperrter Bericht scheint im Hintergrund durch) ── */
+    .geo-locked-wrap { position: relative; margin-bottom: 1.5rem; }
+    .geo-locked-content {
+      filter: blur(7px);
+      user-select: none;
+      pointer-events: none;
+      transition: filter 0.3s ease;
+    }
+    .geo-locked-wrap.unlocked .geo-locked-content {
+      filter: none;
+      user-select: auto;
+      pointer-events: auto;
+    }
+    .geo-locked-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 1.25rem;
+      padding-top: 2.5rem;
+      background: linear-gradient(180deg, rgba(249,250,251,0.55), rgba(249,250,251,0.92) 45%);
+    }
+    .geo-locked-wrap.unlocked .geo-locked-overlay { display: none; }
+    .geo-locked-overlay .gate-block { width: 100%; max-width: 480px; box-shadow: 0 8px 28px rgba(13,13,13,0.1); }
+
+    @media (max-width: 640px) {
+      .gate-form-row { flex-direction: column; }
+    }
 
     /* ── FOOTER ── */
     footer {
@@ -285,15 +331,43 @@
           </div>
         </div>
 
-        <div class="ps-scores" id="geo-cats"></div>
-        <div class="ps-vitals" id="geo-context"></div>
-
-        <div class="findings-block">
-          <h3>Was du konkret verbessern kannst</h3>
-          <div id="geo-findings"></div>
+        <div class="findings-block" id="geo-teaser-block">
+          <h3 id="geo-teaser-title">Das läuft schon gut</h3>
+          <div id="geo-teaser"></div>
         </div>
 
-        <div id="geo-cta-banner" class="ps-cta-banner"></div>
+        <div id="geo-locked-wrap" class="geo-locked-wrap">
+          <div id="geo-locked" class="geo-locked-content" aria-hidden="true">
+            <div class="ps-scores" id="geo-cats"></div>
+            <div class="ps-vitals" id="geo-context"></div>
+
+            <div class="findings-block">
+              <h3>Was du konkret verbessern kannst</h3>
+              <div id="geo-findings"></div>
+            </div>
+
+            <div id="geo-cta-banner" class="ps-cta-banner"></div>
+          </div>
+
+          <div id="geo-gate-overlay" class="geo-locked-overlay">
+            <div id="geo-gate" class="gate-block">
+              <h3>Vollständigen Bericht freischalten</h3>
+              <p>Trag deine E-Mail-Adresse ein und du siehst sofort alle geprüften Punkte inkl. konkreter Verbesserungsvorschläge.</p>
+              <form id="geo-lead-form">
+                <input type="text" id="geo-lead-honeypot" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
+                <div class="gate-form-row">
+                  <input type="email" id="geo-lead-email" class="ps-input" placeholder="deine@email.de" required>
+                  <button type="submit" class="btn-primary" disabled>Bericht freischalten →</button>
+                </div>
+                <label class="gate-consent">
+                  <input type="checkbox" id="geo-lead-consent" required>
+                  <span>Ich möchte den vollständigen GEO-Check-Bericht erhalten. XPONext darf mich bei Rückfragen zu dieser Anfrage per E-Mail kontaktieren — keine Werbung, kein Spam. Infos dazu in der <a href="datenschutz.html" target="_blank">Datenschutzerklärung</a>.</span>
+                </label>
+                <div id="geo-lead-error"></div>
+              </form>
+            </div>
+          </div>
+        </div>
 
         <p class="geo-disclaimer">Der GEO-Check ist eine automatisierte Grobanalyse anhand öffentlich zugänglicher Signale (HTML, robots.txt, Sitemap). Für eine vollständige Einschätzung inkl. individueller Empfehlungen nutze unser kostenloses Erstgespräch.</p>
       </div>
@@ -335,10 +409,15 @@
 
     /* Eigener Cloudflare Worker, siehe cloudflare-worker/geo-proxy.js und
        README.md ("GEO-Check Proxy"). Nach dem Worker-Deploy die *.workers.dev-
-       URL hier eintragen (mit abschließendem "?url="). */
-    var PROXY = 'https://xponext-geo-proxy.s-meding.workers.dev/?url=';
+       URL hier eintragen. */
+    var WORKER_BASE = 'https://xponext-geo-proxy.s-meding.workers.dev';
+    var PROXY = WORKER_BASE + '/?url=';
+    var LEAD_ENDPOINT = WORKER_BASE + '/lead';
 
     function proxied(url) { return PROXY + encodeURIComponent(url); }
+
+    var currentDomain = null;
+    var currentScore = null;
 
     document.getElementById('geo-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -355,6 +434,60 @@
 
     function show(id) { document.getElementById(id).style.display = ''; }
     function hide(id) { document.getElementById(id).style.display = 'none'; }
+
+    document.getElementById('geo-lead-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var errEl = document.getElementById('geo-lead-error');
+      errEl.innerHTML = '';
+
+      var email = document.getElementById('geo-lead-email').value.trim();
+      var consent = document.getElementById('geo-lead-consent').checked;
+      var honeypot = document.getElementById('geo-lead-honeypot').value;
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!emailRegex.test(email)) {
+        errEl.innerHTML = '<div class="ps-error-box">Bitte eine gültige E-Mail-Adresse eingeben.</div>';
+        return;
+      }
+      if (!consent) {
+        errEl.innerHTML = '<div class="ps-error-box">Bitte bestätige die Checkbox, um fortzufahren.</div>';
+        return;
+      }
+
+      var submitBtn = e.target.querySelector('button[type="submit"]');
+      var originalLabel = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Wird gesendet…';
+
+      fetch(LEAD_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: email,
+          domain: currentDomain,
+          score: currentScore,
+          website: honeypot
+        })
+      }).then(function(r) {
+        if (!r.ok) return r.json().catch(function() { return {}; }).then(function(d) {
+          throw new Error((d && d.error) || 'http_' + r.status);
+        });
+        return r.json();
+      }).then(function() {
+        document.getElementById('geo-locked-wrap').classList.add('unlocked');
+      }).catch(function(err) {
+        var msg = 'Da ist etwas schiefgelaufen. Bitte versuch es gleich nochmal.';
+        if (err && err.message === 'invalid_email') msg = 'Diese E-Mail-Adresse scheint es nicht zu geben — bitte prüfen.';
+        errEl.innerHTML = '<div class="ps-error-box">' + msg + '</div>';
+      }).finally(function() {
+        submitBtn.disabled = !document.getElementById('geo-lead-consent').checked;
+        submitBtn.textContent = originalLabel;
+      });
+    });
+
+    document.getElementById('geo-lead-consent').addEventListener('change', function() {
+      document.querySelector('#geo-lead-form button[type="submit"]').disabled = !this.checked;
+    });
 
     function showError(msg) {
       hide('geo-loading');
@@ -644,6 +777,13 @@
       var result = score(d);
       var color = scoreColor(result.total);
 
+      currentDomain = d.hostname;
+      currentScore = result.total;
+      document.getElementById('geo-locked-wrap').classList.remove('unlocked');
+      document.getElementById('geo-lead-form').reset();
+      document.getElementById('geo-lead-error').innerHTML = '';
+      document.querySelector('#geo-lead-form button[type="submit"]').disabled = true;
+
       document.getElementById('geo-score-num').textContent = result.total;
       document.getElementById('geo-score-num').style.color = color;
       var ring = document.getElementById('geo-ring-fg');
@@ -683,18 +823,34 @@
       contextHtml += '<div class="ps-vital"><div class="ps-vital-val">' + (d.blockedBots.length ? d.blockedBots.length : '0') + '</div><div class="ps-vital-label">KI-Bots blockiert</div></div>';
       document.getElementById('geo-context').innerHTML = contextHtml;
 
-      var findingsHtml = '';
       var allChecks = [];
       ['crawler', 'schema', 'content', 'trust'].forEach(function(key) {
         result.cats[key].checks.forEach(function(c) { allChecks.push(c); });
       });
       allChecks.sort(function(a, b) { return (a.ok === b.ok) ? 0 : (a.ok ? 1 : -1); });
-      allChecks.forEach(function(c) {
-        findingsHtml += '<div class="finding-item">'
+
+      function findingHtml(c) {
+        return '<div class="finding-item">'
           + '<div class="finding-icon">' + (c.ok ? '✅' : '⚠️') + '</div>'
-          + '<div class="finding-text"><strong>' + c.title + '</strong><span>' + (c.ok ? c.text : c.text) + '</span></div>'
+          + '<div class="finding-text"><strong>' + c.title + '</strong><span>' + c.text + '</span></div>'
           + '</div>';
-      });
+      }
+
+      var positives = allChecks.filter(function(c) { return c.ok; });
+      var teaser = positives.length ? positives[0] : null;
+      var teaserBlockTitle = document.getElementById('geo-teaser-title');
+      var teaserEl = document.getElementById('geo-teaser');
+      if (teaser) {
+        teaserBlockTitle.textContent = 'Das läuft schon gut';
+        teaserEl.innerHTML = findingHtml(teaser);
+      } else {
+        teaserBlockTitle.textContent = 'Erste Einschätzung';
+        teaserEl.innerHTML = '<div class="finding-item"><div class="finding-icon">⚠️</div><div class="finding-text"><strong>Mehrere zentrale GEO-Kriterien fehlen</strong><span>Die vollständige Liste inkl. konkreter Verbesserungsvorschläge siehst du nach dem Freischalten unten.</span></div></div>';
+      }
+
+      var remainingChecks = allChecks.filter(function(c) { return c !== teaser; });
+      var findingsHtml = '';
+      remainingChecks.forEach(function(c) { findingsHtml += findingHtml(c); });
       document.getElementById('geo-findings').innerHTML = findingsHtml;
 
       var banner = document.getElementById('geo-cta-banner');
