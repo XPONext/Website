@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kostenloser GEO-Check — XPONext</title>
+  <meta name="description" content="Prüfe kostenlos, wie sichtbar deine Website für ChatGPT, Perplexity & Google AI Overviews ist — Schema.org, KI-Crawler-Zugang und Content-Struktur in Sekunden.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='28' fill='%231B6B45'/%3E%3Cline x1='32' y1='88' x2='32' y2='32' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='88' y1='32' x2='88' y2='88' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='32' y1='32' x2='88' y2='88' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='32' y1='88' x2='88' y2='32' stroke='%23fff' stroke-width='7' stroke-linecap='round' opacity='.3'/%3E%3C/svg%3E">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/cookie-banner.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: #fff; color: #0D0D0D; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; transition: opacity 0.15s; }
+    a:hover { opacity: 0.85; }
+
+    /* ── NAVIGATION ── */
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0.7rem 2.5%; background: #0D0D0D;
+      position: sticky; top: 0; z-index: 100;
+      border-bottom: 1px solid #1A1A1A;
+    }
+    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; font-size: 1.15rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; }
+    .nav-logo .nav-wm { color: #fff; font-weight: 800; }
+    .nav-logo .nav-wm em { color: #4CAF7E; font-weight: 400; font-style: normal; }
+    .nav-links { display: flex; gap: 2rem; align-items: center; }
+    .nav-links a { color: #9CA3AF; font-size: 0.9rem; font-weight: 500; }
+    .nav-links a:hover { color: #fff; opacity: 1; }
+    .nav-links a.active { color: #fff; }
+    .nav-dd { position: relative; }
+    .nav-dd-trigger { display: inline-flex; align-items: center; gap: 4px; color: #9CA3AF; font-size: 0.9rem; font-weight: 500; }
+    .nav-dd-trigger:hover, .nav-dd-trigger.active { color: #fff; opacity: 1; }
+    .nav-dd-arrow { font-size: 0.6rem; transition: transform 0.15s; }
+    .nav-dd:hover .nav-dd-arrow { transform: rotate(180deg); }
+    .nav-dd-menu { display: none; flex-direction: column; gap: 0.15rem; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid #E5E7EB; border-top: none; border-radius: 0 0 12px 12px; padding: 0.9rem 0.5rem 0.5rem; min-width: 200px; z-index: 200; }
+    .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: flex; }
+    .nav-dd-menu a { color: #374151; opacity: 1; font-size: 0.88rem; font-weight: 500; padding: 0.55rem 0.75rem; border-radius: 8px; white-space: nowrap; }
+    .nav-dd-menu a:hover { background: #F9FAFB; color: #0D0D0D; }
+    .nav-dd-menu a.active { background: #E8F0EB; color: #134D32; font-weight: 700; }
+    .nav-cta {
+      background: #1B6B45; color: #fff !important;
+      padding: 0.55rem 1.25rem; border-radius: 7px;
+      font-weight: 600; font-size: 0.9rem;
+    }
+    .nav-cta:hover { background: #134D32 !important; opacity: 1 !important; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 4.5rem 5% 3.5rem;
+      background: #F9FAFB;
+      border-bottom: 1px solid #E5E7EB;
+      text-align: center;
+    }
+    .ps-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #E8F0EB; color: #1B6B45;
+      padding: 0.35rem 0.9rem; border-radius: 99px;
+      font-size: 0.85rem; font-weight: 600; margin-bottom: 1.2rem;
+    }
+    .page-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 900; line-height: 1.1; color: #0D0D0D;
+      margin-bottom: 0.9rem; letter-spacing: -0.02em;
+    }
+    .page-hero h1 em { font-style: normal; color: #1B6B45; }
+    .page-hero p { font-size: 1.05rem; color: #4B5563; line-height: 1.7; max-width: 600px; margin: 0 auto; }
+
+    /* ── CHECK SECTION ── */
+    .check-wrap { padding: 4rem 5% 6rem; }
+    .check-inner { max-width: 860px; margin: 0 auto; }
+
+    .ps-form { display: flex; gap: 1rem; margin-bottom: 0.6rem; }
+    .ps-input {
+      flex: 1; padding: 0.85rem 1.1rem; border: 1.5px solid #E5E7EB;
+      border-radius: 8px; font-size: 1rem; font-family: inherit; color: #0D0D0D;
+      outline: none; transition: border-color 0.2s;
+    }
+    .ps-input:focus { border-color: #1B6B45; }
+    .btn-primary {
+      background: #1B6B45; color: #fff; padding: 0.85rem 1.7rem;
+      border-radius: 8px; font-weight: 700; font-size: 0.95rem;
+      display: inline-flex; align-items: center; gap: 6px;
+      box-shadow: 0 0 14px rgba(63, 81, 55, 0.35);
+      border: none; cursor: pointer; font-family: inherit;
+    }
+    .btn-primary:hover { background: #134D32; opacity: 1; }
+    .form-hint { color: #9CA3AF; font-size: 0.82rem; margin-bottom: 2rem; }
+
+    .ps-spinner {
+      width: 40px; height: 40px; border: 3px solid #E5E7EB;
+      border-top-color: #1B6B45; border-radius: 50%;
+      animation: ps-spin 0.8s linear infinite; margin: 0 auto;
+    }
+    @keyframes ps-spin { to { transform: rotate(360deg); } }
+    .ps-error-box {
+      margin-top: 1.5rem; padding: 1rem 1.25rem; background: #FEF2F2;
+      border: 1px solid #FECACA; border-radius: 8px; color: #B91C1C; font-size: 0.9rem;
+    }
+
+    /* ── RESULT: SCORE ── */
+    .geo-score-head {
+      display: flex; align-items: center; gap: 2rem; flex-wrap: wrap;
+      background: #fff; border: 1px solid #E5E7EB; border-radius: 12px;
+      padding: 2rem; margin-bottom: 1.5rem;
+    }
+    .geo-score-ring { position: relative; width: 128px; height: 128px; flex-shrink: 0; }
+    .geo-score-ring svg { transform: rotate(-90deg); }
+    .geo-score-ring-num {
+      position: absolute; inset: 0; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+    }
+    .geo-score-ring-num .n { font-size: 2.1rem; font-weight: 900; line-height: 1; }
+    .geo-score-ring-num .s { font-size: 0.68rem; color: #9CA3AF; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-top: 2px; }
+    .geo-score-summary h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.4rem; }
+    .geo-score-summary p { color: #4B5563; font-size: 0.95rem; line-height: 1.6; }
+
+    .ps-scores {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem; margin-bottom: 1.5rem;
+    }
+    .ps-score-card {
+      background: #fff; border: 1px solid #E5E7EB; border-radius: 12px;
+      padding: 1.5rem 1rem; text-align: center;
+    }
+    .ps-circle-num { font-size: 1.9rem; font-weight: 900; line-height: 1; margin-bottom: 0.3rem; }
+    .ps-circle-label { font-size: 0.76rem; color: #6B7280; font-weight: 600; }
+
+    .ps-vitals {
+      display: flex; gap: 2rem; justify-content: center;
+      padding: 1.25rem; background: #fff; border: 1px solid #E5E7EB;
+      border-radius: 12px; margin-bottom: 1.5rem; flex-wrap: wrap;
+    }
+    .ps-vital { text-align: center; }
+    .ps-vital-val { font-size: 1.2rem; font-weight: 800; color: #0D0D0D; }
+    .ps-vital-label { font-size: 0.76rem; color: #9CA3AF; font-weight: 600; margin-top: 0.2rem; }
+
+    /* ── FINDINGS LIST ── */
+    .findings-block { background: #fff; border: 1px solid #E5E7EB; border-radius: 12px; padding: 1.75rem; margin-bottom: 1.5rem; }
+    .findings-block h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 1rem; }
+    .finding-item { display: flex; gap: 0.7rem; padding: 0.7rem 0; border-top: 1px solid #F3F4F6; }
+    .finding-item:first-of-type { border-top: none; }
+    .finding-icon { flex-shrink: 0; font-size: 1rem; line-height: 1.5; }
+    .finding-text strong { display: block; font-size: 0.92rem; color: #0D0D0D; font-weight: 700; margin-bottom: 0.15rem; }
+    .finding-text span { font-size: 0.88rem; color: #4B5563; line-height: 1.55; }
+
+    .ps-cta-banner {
+      padding: 1.25rem 1.5rem; border-radius: 12px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .ps-cta-banner p { margin: 0; font-weight: 600; font-size: 0.95rem; }
+    .ps-cta-banner a {
+      padding: 0.6rem 1.3rem; border-radius: 8px; text-decoration: none;
+      font-weight: 700; font-size: 0.9rem; white-space: nowrap;
+    }
+    .geo-disclaimer { color: #9CA3AF; font-size: 0.78rem; text-align: center; margin-top: 1.5rem; line-height: 1.6; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #fff; border-top: 1px solid #E5E7EB;
+      padding: 3rem 5% 1.8rem;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 2.5rem;
+    }
+    .footer-logo { font-size: 1rem; font-weight: 800; color: #0D0D0D; }
+    .footer-logo span { color: #1B6B45; }
+    .footer-copy { color: #9CA3AF; font-size: 0.82rem; margin-top: 0.7rem; }
+    .footer-col { display: flex; flex-direction: column; gap: 0.6rem; min-width: 130px; }
+    .footer-col-title { font-size: 0.75rem; font-weight: 700; color: #9CA3AF; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.2rem; }
+    .footer-col a { color: #6B7280; font-size: 0.88rem; }
+    .footer-col a:hover { color: #0D0D0D; opacity: 1; }
+    .cookie-reopen { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; color: #6B7280; font-size: 0.88rem; text-align: left; }
+    .cookie-reopen:hover { color: #0D0D0D; }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .ps-scores { grid-template-columns: repeat(2, 1fr); }
+      .ps-form { flex-direction: column; }
+      .ps-vitals { flex-wrap: wrap; gap: 1rem; }
+      .geo-score-head { flex-direction: column; text-align: center; }
+      footer { flex-direction: column; text-align: center; }
+      .footer-col { align-items: center; }
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0KYC5QEKH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-S0KYC5QEKH', { 'anonymize_ip': true });
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-18218623343/-EIFCNn-hbocEO_CqO9D',
+          'value': 1.0,
+          'currency': 'EUR',
+          'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <svg width="30" height="30" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg>
+      <span class="nav-wm">XPO<em>Next</em></span>
+    </a>
+    <div class="nav-links">
+      <div class="nav-dd">
+        <a href="leistungen.html" class="nav-dd-trigger">Leistungen <span class="nav-dd-arrow">▾</span></a>
+        <div class="nav-dd-menu">
+          <a href="leistungen.html">Online-Präsenz (Übersicht)</a>
+          <a href="leistungen/seo.html">Lokales SEO</a>
+          <a href="leistungen/website-erstellung.html">Website-Erstellung</a>
+          <a href="leistungen/geo.html">GEO</a>
+          <a href="leistungen/google-ads.html">Google Ads &amp; AI Ads</a>
+          <a href="effizienz.html">Zeitfresser & Prozessoptimierung</a>
+        </div>
+      </div>
+      <a href="blog/index.html">Blog</a>
+      <a href="index.html#vorteile">Vorteile</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <div class="nav-dd">
+        <a href="website-check.html" class="nav-dd-trigger active">Website-Check <span class="nav-dd-arrow">▾</span></a>
+        <div class="nav-dd-menu">
+          <a href="website-check.html">SEO & Performance</a>
+          <a href="#" class="active">GEO-Check</a>
+        </div>
+      </div>
+      <a href="index.html#kontakt" class="nav-cta">Termin buchen</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="ps-badge">Kostenloser GEO-Check</div>
+    <h1>Findet dich <em>ChatGPT & Co.?</em></h1>
+    <p>Gib deine URL ein — wir prüfen in Sekunden, wie gut deine Website für KI-Suchen wie ChatGPT, Perplexity und Google AI Overviews aufgestellt ist.</p>
+  </div>
+
+  <div class="check-wrap">
+    <div class="check-inner">
+
+      <form class="ps-form" id="geo-form">
+        <input type="text" id="geo-url" class="ps-input" placeholder="z.B. example.de oder www.example.de" required>
+        <button type="submit" class="btn-primary">Analysieren →</button>
+      </form>
+      <p class="form-hint">Automatische Grobanalyse in wenigen Sekunden — ersetzt keine vollständige technische Prüfung.</p>
+
+      <div id="geo-loading" style="display:none; text-align:center; padding:2.5rem 0;">
+        <div class="ps-spinner"></div>
+        <p style="color:#6B7280; margin-top:1rem; font-size:0.95rem;">Seite wird analysiert, bitte kurz warten…</p>
+      </div>
+
+      <div id="geo-error"></div>
+
+      <div id="geo-result" style="display:none; margin-top:1rem;">
+        <div class="geo-score-head">
+          <div class="geo-score-ring">
+            <svg width="128" height="128" viewBox="0 0 128 128">
+              <circle cx="64" cy="64" r="56" fill="none" stroke="#E5E7EB" stroke-width="12"/>
+              <circle id="geo-ring-fg" cx="64" cy="64" r="56" fill="none" stroke="#1B6B45" stroke-width="12" stroke-linecap="round" stroke-dasharray="351.86" stroke-dashoffset="351.86"/>
+            </svg>
+            <div class="geo-score-ring-num">
+              <span class="n" id="geo-score-num">–</span>
+              <span class="s">GEO-Score</span>
+            </div>
+          </div>
+          <div class="geo-score-summary">
+            <h2 id="geo-score-title">Ergebnis</h2>
+            <p id="geo-score-text"></p>
+          </div>
+        </div>
+
+        <div class="ps-scores" id="geo-cats"></div>
+        <div class="ps-vitals" id="geo-context"></div>
+
+        <div class="findings-block">
+          <h3>Was du konkret verbessern kannst</h3>
+          <div id="geo-findings"></div>
+        </div>
+
+        <div id="geo-cta-banner" class="ps-cta-banner"></div>
+
+        <p class="geo-disclaimer">Der GEO-Check ist eine automatisierte Grobanalyse anhand öffentlich zugänglicher Signale (HTML, robots.txt, Sitemap). Für eine vollständige Einschätzung inkl. individueller Empfehlungen nutze unser kostenloses Erstgespräch.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-col">
+      <div class="footer-logo">XPO<span>Next</span></div>
+      <p class="footer-copy">© 2026 XPONext GbR</p>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Seiten</div>
+      <a href="leistungen.html">Leistungen</a>
+      <a href="blog/index.html">Blog</a>
+      <a href="effizienz.html">Zeitfresser & Prozessoptimierung</a>
+      <a href="index.html#vorteile">Vorteile</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="ueber-uns.html">Über uns</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Einzugsgebiete</div>
+      <a href="einzugsgebiet/bonn.html">Bonn</a>
+      <a href="einzugsgebiet/koeln.html">Köln</a>
+    </div>
+    <div class="footer-col">
+      <div class="footer-col-title">Rechtliches</div>
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="agb.html">AGB</a>
+      <button data-action="cookie-settings" class="cookie-reopen">Cookie-Einstellungen</button>
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+
+    /* Eigener Cloudflare Worker, siehe cloudflare-worker/geo-proxy.js und
+       README.md ("GEO-Check Proxy"). Nach dem Worker-Deploy die *.workers.dev-
+       URL hier eintragen (mit abschließendem "?url="). */
+    var PROXY = 'https://xponext-geo-proxy.s-meding.workers.dev/?url=';
+
+    function proxied(url) { return PROXY + encodeURIComponent(url); }
+
+    document.getElementById('geo-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var raw = document.getElementById('geo-url').value.trim();
+      if (!/^https?:\/\//i.test(raw)) raw = 'https://' + raw;
+      var parsed;
+      try { parsed = new URL(raw); } catch (err) {
+        showError('Das sieht nicht nach einer gültigen URL aus. Bitte prüfe die Adresse.');
+        return;
+      }
+      gtag_report_conversion();
+      runCheck(parsed);
+    });
+
+    function show(id) { document.getElementById(id).style.display = ''; }
+    function hide(id) { document.getElementById(id).style.display = 'none'; }
+
+    function showError(msg) {
+      hide('geo-loading');
+      hide('geo-result');
+      document.getElementById('geo-error').innerHTML = '<div class="ps-error-box">' + msg + '</div>';
+      show('geo-error');
+    }
+
+    function fetchText(url) {
+      return fetch(proxied(url)).then(function(r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.text();
+      });
+    }
+
+    function runCheck(parsedUrl) {
+      hide('geo-result');
+      hide('geo-error');
+
+      if (PROXY.indexOf('YOUR-SUBDOMAIN') !== -1) {
+        showError('Der GEO-Check ist noch nicht eingerichtet (Proxy-URL fehlt). Siehe README.md, Abschnitt „GEO-Check Proxy".');
+        return;
+      }
+
+      show('geo-loading');
+
+      var pageUrl = parsedUrl.href;
+      var origin = parsedUrl.protocol + '//' + parsedUrl.host;
+
+      var htmlPromise = fetchText(pageUrl);
+      var robotsPromise = fetchText(origin + '/robots.txt').catch(function() { return null; });
+
+      Promise.all([htmlPromise, robotsPromise]).then(function(results) {
+        var html = results[0];
+        var robotsTxt = results[1];
+
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(html, 'text/html');
+
+        var robotsInfo = parseRobots(robotsTxt);
+
+        var sitemapUrl = robotsInfo.sitemaps[0] || (origin + '/sitemap.xml');
+        fetchText(sitemapUrl).catch(function() { return null; }).then(function(sitemapXml) {
+          var sitemapInfo = parseSitemap(sitemapXml);
+          hide('geo-loading');
+          var data = analyze(doc, parsedUrl, robotsInfo, sitemapInfo);
+          renderResult(data);
+          show('geo-result');
+        });
+      }).catch(function(err) {
+        hide('geo-loading');
+        showError('Die Seite konnte nicht abgerufen werden. Das kann an der Zielseite liegen (z.B. Zugriffsschutz) oder am Analyse-Dienst — bitte in ein paar Sekunden erneut versuchen.');
+      });
+    }
+
+    /* ── robots.txt Parser ── */
+    function parseRobots(text) {
+      var info = { found: !!text, sitemaps: [], agents: {} };
+      if (!text) return info;
+
+      var currentGroup = [];
+      var groupStarted = false;
+
+      text.split('\n').forEach(function(rawLine) {
+        var line = rawLine.replace(/#.*$/, '').trim();
+        if (!line) return;
+
+        var m = /^user-agent:\s*(.+)$/i.exec(line);
+        if (m) {
+          if (groupStarted) { currentGroup = []; groupStarted = false; }
+          var agent = m[1].trim().toLowerCase();
+          currentGroup.push(agent);
+          info.agents[agent] = info.agents[agent] || [];
+          return;
+        }
+        m = /^(disallow|allow):\s*(.*)$/i.exec(line);
+        if (m) {
+          groupStarted = true;
+          var allow = /^allow/i.test(m[1]);
+          var path = m[2].trim();
+          currentGroup.forEach(function(a) {
+            info.agents[a] = info.agents[a] || [];
+            info.agents[a].push({ allow: allow, path: path });
+          });
+          return;
+        }
+        m = /^sitemap:\s*(.+)$/i.exec(line);
+        if (m) info.sitemaps.push(m[1].trim());
+      });
+      return info;
+    }
+
+    function botBlocked(robotsInfo, botName) {
+      if (!robotsInfo.found) return false;
+      var rules = robotsInfo.agents[botName.toLowerCase()] || robotsInfo.agents['*'];
+      if (!rules || !rules.length) return false;
+      var blocked = false;
+      rules.forEach(function(r) {
+        if (!r.allow && r.path === '/') blocked = true;
+        if (r.allow && r.path === '/') blocked = false;
+      });
+      return blocked;
+    }
+
+    /* ── sitemap.xml Parser ── */
+    function parseSitemap(xmlText) {
+      var info = { found: false, isIndex: false, count: 0 };
+      if (!xmlText) return info;
+      try {
+        var doc = new DOMParser().parseFromString(xmlText, 'application/xml');
+        if (doc.querySelector('parsererror')) return info;
+        var sitemaps = doc.getElementsByTagName('sitemap');
+        var urls = doc.getElementsByTagName('url');
+        if (sitemaps.length) {
+          info.found = true; info.isIndex = true; info.count = sitemaps.length;
+        } else if (urls.length) {
+          info.found = true; info.count = urls.length;
+        }
+      } catch (e) {}
+      return info;
+    }
+
+    /* ── Content-Analyse ── */
+    function analyze(doc, parsedUrl, robotsInfo, sitemapInfo) {
+      var d = {};
+
+      d.https = parsedUrl.protocol === 'https:';
+
+      var titleEl = doc.querySelector('title');
+      d.title = titleEl ? titleEl.textContent.trim() : '';
+
+      var descEl = doc.querySelector('meta[name="description"]');
+      d.metaDescription = descEl ? (descEl.getAttribute('content') || '').trim() : '';
+
+      d.canonical = !!doc.querySelector('link[rel="canonical"]');
+      d.ogTags = doc.querySelectorAll('meta[property^="og:"]').length;
+
+      var h1s = doc.querySelectorAll('h1');
+      d.h1Count = h1s.length;
+      var h2h3 = doc.querySelectorAll('h2, h3');
+      d.headingCount = h2h3.length;
+      var questionWords = /^(wie|was|warum|wo|wer|wann|welche|welcher|welches|kann|ist|sollte|lohnt)\b|\?/i;
+      d.questionHeadings = Array.prototype.filter.call(h2h3, function(h) {
+        return questionWords.test(h.textContent.trim());
+      }).length;
+
+      /* JSON-LD Schema */
+      var ldScripts = doc.querySelectorAll('script[type="application/ld+json"]');
+      var types = [];
+      ldScripts.forEach(function(s) {
+        try {
+          var json = JSON.parse(s.textContent);
+          collectTypes(json, types);
+        } catch (e) {}
+      });
+      d.schemaCount = ldScripts.length;
+      d.schemaTypes = types;
+      d.hasOrgOrLocalBusiness = types.some(function(t) { return /organization|business$|professionalservice|corporation|store|restaurant|governmentorg|ngo/i.test(t); });
+      d.hasFaqOrArticle = types.some(function(t) { return /faqpage|article|blogposting/i.test(t); });
+      d.hasBreadcrumb = types.some(function(t) { return /breadcrumblist/i.test(t); });
+
+      /* Bilder */
+      var imgs = doc.querySelectorAll('img');
+      var imgsWithAlt = Array.prototype.filter.call(imgs, function(i) {
+        return (i.getAttribute('alt') || '').trim().length > 0;
+      });
+      d.imgCount = imgs.length;
+      d.imgAltCount = imgsWithAlt.length;
+
+      /* Listen & Tabellen */
+      d.listCount = doc.querySelectorAll('ul, ol').length;
+      d.tableCount = doc.querySelectorAll('table').length;
+
+      /* Textmenge */
+      var bodyClone = doc.body ? doc.body.cloneNode(true) : null;
+      if (bodyClone) {
+        bodyClone.querySelectorAll('script, style, nav, footer, noscript').forEach(function(el) { el.remove(); });
+        var text = bodyClone.textContent.replace(/\s+/g, ' ').trim();
+        d.wordCount = text.length ? text.split(' ').length : 0;
+      } else {
+        d.wordCount = 0;
+      }
+
+      /* Verlinkung */
+      var links = doc.querySelectorAll('a[href]');
+      var internal = 0, external = 0;
+      links.forEach(function(a) {
+        var href = a.getAttribute('href');
+        if (!href || href.charAt(0) === '#') return;
+        try {
+          var u = new URL(href, parsedUrl.href);
+          if (u.host === parsedUrl.host) internal++; else if (/^https?:/.test(u.protocol)) external++;
+        } catch (e) {}
+      });
+      d.internalLinks = internal;
+      d.externalLinks = external;
+
+      /* Kontakt / NAP */
+      var bodyText = doc.body ? doc.body.textContent : '';
+      d.hasPhone = /(\+49[\s\d\-\/]{6,}|\b0\d{2,5}[\s\-\/]?\d{3,}\b)/.test(bodyText);
+      d.hasAddress = /\b\d{5}\b\s+[A-ZÄÖÜ][a-zäöüß]+/.test(bodyText);
+      d.hasMailto = !!doc.querySelector('a[href^="mailto:"]');
+
+      /* KI-Crawler */
+      d.robotsFound = robotsInfo.found;
+      d.blockedBots = [];
+      [['GPTBot', 'GPTBot (ChatGPT)'], ['ClaudeBot', 'ClaudeBot (Claude)'], ['PerplexityBot', 'PerplexityBot'], ['Google-Extended', 'Google-Extended (AI Overviews)']].forEach(function(pair) {
+        if (botBlocked(robotsInfo, pair[0])) d.blockedBots.push(pair[1]);
+      });
+      d.sitemapDeclared = robotsInfo.sitemaps.length > 0;
+      d.sitemapInfo = sitemapInfo;
+
+      d.hostname = parsedUrl.hostname;
+      return d;
+    }
+
+    function collectTypes(node, out) {
+      if (!node || typeof node !== 'object') return;
+      if (Array.isArray(node)) { node.forEach(function(n) { collectTypes(n, out); }); return; }
+      if (node['@type']) {
+        if (Array.isArray(node['@type'])) out.push.apply(out, node['@type']);
+        else out.push(node['@type']);
+      }
+      if (node['@graph']) collectTypes(node['@graph'], out);
+      Object.keys(node).forEach(function(k) {
+        if (k === '@type' || k === '@graph') return;
+        var v = node[k];
+        if (v && typeof v === 'object') collectTypes(v, out);
+      });
+    }
+
+    /* ── Scoring ── */
+    function score(d) {
+      var cats = {
+        crawler: { label: 'KI-Crawler-Zugang', max: 25, points: 0, checks: [] },
+        schema: { label: 'Strukturierte Daten', max: 25, points: 0, checks: [] },
+        content: { label: 'Content-Struktur', max: 30, points: 0, checks: [] },
+        trust: { label: 'Technik & Vertrauen', max: 20, points: 0, checks: [] }
+      };
+
+      function check(cat, pts, ok, title, badAdvice, goodAdvice) {
+        cats[cat].points += ok ? pts : 0;
+        cats[cat].checks.push({ ok: ok, title: title, text: ok ? (goodAdvice || '') : badAdvice });
+      }
+
+      /* KI-Crawler-Zugang */
+      check('crawler', 5, d.https, 'HTTPS aktiv', 'Deine Seite läuft noch über http:// — ohne HTTPS werden viele Crawler und Nutzer misstrauisch. Sollte als Erstes behoben werden.', 'Deine Seite ist über HTTPS erreichbar.');
+      check('crawler', 5, d.robotsFound, 'robots.txt vorhanden', 'Es wurde keine robots.txt gefunden. Ohne sie ist für Crawler unklar, was erlaubt ist — meist harmlos, aber besser explizit regeln.', 'robots.txt ist vorhanden.');
+      check('crawler', 5, d.blockedBots.indexOf('GPTBot (ChatGPT)') === -1, 'GPTBot nicht blockiert', 'GPTBot wird in der robots.txt blockiert — damit taucht deine Seite nicht in ChatGPT-Antworten auf.', 'GPTBot darf deine Seite crawlen.');
+      check('crawler', 5, d.blockedBots.indexOf('ClaudeBot (Claude)') === -1, 'ClaudeBot nicht blockiert', 'ClaudeBot wird blockiert — deine Inhalte fließen nicht in Claude-Antworten ein.', 'ClaudeBot darf deine Seite crawlen.');
+      check('crawler', 5, d.blockedBots.indexOf('PerplexityBot') === -1 && d.blockedBots.indexOf('Google-Extended (AI Overviews)') === -1, 'Perplexity & Google-Extended nicht blockiert', 'PerplexityBot oder Google-Extended werden blockiert — das kostet dich Sichtbarkeit in Perplexity bzw. Google AI Overviews.', 'Perplexity und Google AI Overviews dürfen deine Seite crawlen.');
+
+      /* Strukturierte Daten */
+      check('schema', 10, d.schemaCount > 0, 'Schema.org / JSON-LD vorhanden', 'Es wurde kein strukturiertes Datenformat (JSON-LD) gefunden. Das ist der stärkste Hebel, damit KI-Systeme deine Inhalte korrekt einordnen und zitieren.', d.schemaCount + ' Schema-Block(e) gefunden.');
+      check('schema', 8, d.hasOrgOrLocalBusiness, 'Organization- / LocalBusiness-Schema', 'Kein Organization- oder LocalBusiness-Schema erkennbar — dadurch fehlen KI-Systemen klare Basisdaten zu deinem Unternehmen (Name, Adresse, Kontakt).', 'Organization- oder LocalBusiness-Schema ist eingebunden.');
+      check('schema', 4, d.hasFaqOrArticle, 'FAQ- oder Article-Schema', 'Kein FAQPage- oder Article-Schema gefunden — gerade FAQ-Markup wird von KI-Antworten besonders gerne zitiert.', 'FAQ- oder Article-Schema ist vorhanden.');
+      check('schema', 3, d.hasBreadcrumb, 'BreadcrumbList-Schema', 'Kein Breadcrumb-Schema gefunden — kleiner, aber leicht zu ergänzender Baustein für mehr Struktur.', 'BreadcrumbList-Schema ist vorhanden.');
+
+      /* Content-Struktur */
+      check('content', 5, d.h1Count === 1, 'Genau eine H1-Überschrift', d.h1Count === 0 ? 'Es wurde keine H1-Überschrift gefunden — jede Seite sollte genau eine klare Hauptüberschrift haben.' : 'Es wurden ' + d.h1Count + ' H1-Überschriften gefunden — besser ist genau eine pro Seite.', 'Genau eine H1-Überschrift vorhanden.');
+      check('content', 5, d.headingCount >= 2, 'Klare Gliederung mit H2/H3', 'Kaum Zwischenüberschriften gefunden — eine klare H2/H3-Struktur hilft KI-Systemen, einzelne Abschnitte gezielt zu zitieren.', d.headingCount + ' Zwischenüberschriften strukturieren den Inhalt.');
+      check('content', 5, d.questionHeadings > 0, 'Frage-artige Überschriften', 'Keine Überschriften im Frage-Format gefunden (z.B. „Was kostet …?"). Solche Formulierungen werden von ChatGPT & Co. besonders oft direkt übernommen.', d.questionHeadings + ' Überschrift(en) im Frage-Format gefunden.');
+      check('content', 5, (d.listCount + d.tableCount) > 0, 'Listen oder Tabellen genutzt', 'Weder Listen noch Tabellen gefunden — Fakten in Fließtext sind für KI-Systeme schwerer extrahierbar als Aufzählungen oder Tabellen.', 'Inhalte sind teilweise als Liste oder Tabelle strukturiert.');
+      check('content', 5, d.wordCount >= 300, 'Ausreichend Textumfang', 'Der sichtbare Text ist mit ca. ' + d.wordCount + ' Wörtern eher knapp — mehr konkrete, spezifische Inhalte verbessern die Chance, zitiert zu werden.', 'Mit ca. ' + d.wordCount + ' Wörtern ausreichend Textumfang vorhanden.');
+      check('content', 5, d.imgCount === 0 || (d.imgAltCount / d.imgCount) >= 0.7, 'Bilder mit Alt-Text', 'Ein großer Teil der Bilder hat keinen Alt-Text (' + d.imgAltCount + ' von ' + d.imgCount + ') — Alt-Texte helfen sowohl SEO als auch KI-Systemen beim Verständnis der Seite.', 'Die meisten Bilder haben einen Alt-Text.');
+
+      /* Technik & Vertrauen */
+      check('trust', 5, d.metaDescription.length >= 50, 'Meta-Description vorhanden', 'Meta-Description fehlt oder ist sehr kurz — sie beeinflusst, wie deine Seite in Suchergebnissen und teils in KI-Zusammenfassungen dargestellt wird.', 'Eine aussagekräftige Meta-Description ist vorhanden.');
+      check('trust', 3, d.canonical, 'Canonical-Tag gesetzt', 'Kein Canonical-Tag gefunden — kann bei mehreren erreichbaren URL-Varianten zu Unklarheiten führen, welche Version die „echte" ist.', 'Canonical-Tag ist gesetzt.');
+      check('trust', 4, d.internalLinks >= 3, 'Interne Verlinkung', 'Wenige interne Links gefunden — gute interne Verlinkung hilft Crawlern (und Nutzern), weitere relevante Seiten zu finden.', d.internalLinks + ' interne Links gefunden.');
+      check('trust', 4, d.hasPhone || d.hasAddress || d.hasMailto, 'Kontaktdaten erkennbar', 'Auf der Seite wurden keine klaren Kontaktdaten (Telefon, Adresse, E-Mail) gefunden — das ist ein wichtiges Vertrauenssignal, gerade für lokale Unternehmen.', 'Kontaktdaten sind auf der Seite erkennbar.');
+      check('trust', 4, d.sitemapDeclared || d.sitemapInfo.found, 'Sitemap vorhanden', 'Es wurde keine Sitemap gefunden oder in der robots.txt deklariert — eine Sitemap hilft Suchmaschinen und KI-Crawlern, alle Seiten zu finden.', 'Sitemap ist vorhanden' + (d.sitemapInfo.found && !d.sitemapInfo.isIndex ? ' (ca. ' + d.sitemapInfo.count + ' Seiten gelistet).' : '.'));
+
+      var total = 0, max = 0;
+      Object.keys(cats).forEach(function(k) { total += cats[k].points; max += cats[k].max; });
+
+      return { cats: cats, total: Math.round((total / max) * 100) };
+    }
+
+    function scoreColor(s) {
+      if (s >= 80) return '#1B6B45';
+      if (s >= 50) return '#DD6B20';
+      return '#E53E3E';
+    }
+
+    function renderResult(d) {
+      var result = score(d);
+      var color = scoreColor(result.total);
+
+      document.getElementById('geo-score-num').textContent = result.total;
+      document.getElementById('geo-score-num').style.color = color;
+      var ring = document.getElementById('geo-ring-fg');
+      var circumference = 351.86;
+      ring.setAttribute('stroke', color);
+      ring.setAttribute('stroke-dashoffset', circumference - (circumference * result.total / 100));
+
+      var title, text;
+      if (result.total >= 80) {
+        title = 'Gut aufgestellt für KI-Suchen';
+        text = 'Deine Website erfüllt die meisten wichtigen GEO-Kriterien. Mit ein paar Feinheiten kannst du deine Sichtbarkeit in ChatGPT, Perplexity & Co. noch weiter ausbauen.';
+      } else if (result.total >= 50) {
+        title = 'Solide Basis, aber Luft nach oben';
+        text = 'Einige wichtige GEO-Bausteine fehlen noch. Mit gezielten Anpassungen bei Struktur und strukturierten Daten kannst du deutlich sichtbarer werden.';
+      } else {
+        title = 'Für KI-Suchen aktuell kaum sichtbar';
+        text = 'Deine Website ist für klassisches SEO vielleicht okay, aber für ChatGPT, Perplexity & Google AI Overviews fehlen zentrale Grundlagen. Hier steckt aktuell das größte Potenzial.';
+      }
+      document.getElementById('geo-score-title').textContent = title;
+      document.getElementById('geo-score-text').textContent = text;
+
+      var catsHtml = '';
+      ['crawler', 'schema', 'content', 'trust'].forEach(function(key) {
+        var c = result.cats[key];
+        var pct = Math.round((c.points / c.max) * 100);
+        catsHtml += '<div class="ps-score-card">'
+          + '<div class="ps-circle-num" style="color:' + scoreColor(pct) + ';">' + pct + '</div>'
+          + '<div class="ps-circle-label">' + c.label + '</div>'
+          + '</div>';
+      });
+      document.getElementById('geo-cats').innerHTML = catsHtml;
+
+      var contextHtml = '';
+      contextHtml += '<div class="ps-vital"><div class="ps-vital-val">' + (d.schemaCount || 0) + '</div><div class="ps-vital-label">Schema-Blöcke</div></div>';
+      contextHtml += '<div class="ps-vital"><div class="ps-vital-val">' + (d.sitemapInfo.found ? (d.sitemapInfo.isIndex ? d.sitemapInfo.count + ' Sitemaps' : d.sitemapInfo.count) : '–') + '</div><div class="ps-vital-label">' + (d.sitemapInfo.isIndex ? 'Sitemap-Index' : 'Seiten in Sitemap') + '</div></div>';
+      contextHtml += '<div class="ps-vital"><div class="ps-vital-val">~' + (d.wordCount || 0) + '</div><div class="ps-vital-label">Wörter (Startseite)</div></div>';
+      contextHtml += '<div class="ps-vital"><div class="ps-vital-val">' + (d.blockedBots.length ? d.blockedBots.length : '0') + '</div><div class="ps-vital-label">KI-Bots blockiert</div></div>';
+      document.getElementById('geo-context').innerHTML = contextHtml;
+
+      var findingsHtml = '';
+      var allChecks = [];
+      ['crawler', 'schema', 'content', 'trust'].forEach(function(key) {
+        result.cats[key].checks.forEach(function(c) { allChecks.push(c); });
+      });
+      allChecks.sort(function(a, b) { return (a.ok === b.ok) ? 0 : (a.ok ? 1 : -1); });
+      allChecks.forEach(function(c) {
+        findingsHtml += '<div class="finding-item">'
+          + '<div class="finding-icon">' + (c.ok ? '✅' : '⚠️') + '</div>'
+          + '<div class="finding-text"><strong>' + c.title + '</strong><span>' + (c.ok ? c.text : c.text) + '</span></div>'
+          + '</div>';
+      });
+      document.getElementById('geo-findings').innerHTML = findingsHtml;
+
+      var banner = document.getElementById('geo-cta-banner');
+      if (result.total < 50) {
+        banner.style.background = '#FEF3E2';
+        banner.style.border = '1px solid #FCD34D';
+        banner.innerHTML = '<p style="color:#92400E;">⚠️ Du bist für KI-Suchen aktuell kaum auffindbar — das wird schnell mehr.</p>'
+          + '<a href="index.html#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
+      } else if (result.total >= 80) {
+        banner.style.background = '#F0FBF4';
+        banner.style.border = '1px solid #6EE7A0';
+        banner.innerHTML = '<p style="color:#166534;">✅ Guter Stand! Wir helfen dir, die letzten Punkte mitzunehmen.</p>'
+          + '<a href="index.html#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
+      } else {
+        banner.style.background = '#F9FAFB';
+        banner.style.border = '1px solid #E5E7EB';
+        banner.innerHTML = '<p style="color:#4B5563;">Wir helfen dir, die größten GEO-Hebel gezielt umzusetzen.</p>'
+          + '<a href="index.html#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
+      }
+    }
+  })();
+  </script>
+
+  <!-- Cookie-Banner (DSGVO) -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen" aria-hidden="true">
+    <div class="cookie-banner__card">
+      <div class="cookie-banner__head">
+        <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
+        <div>
+          <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit deiner Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+        </div>
+      </div>
+      <div class="cookie-banner__options" id="cookieOptions" hidden>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Notwendig</div>
+            <div class="cookie-option__desc">Speichert deine Cookie-Einstellungen im Browser. Kein Tracking.</div>
+          </div>
+          <span class="cookie-option__always">Immer aktiv</span>
+        </label>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Statistik</div>
+            <div class="cookie-option__desc">Anonyme Nutzungsanalyse via Google Analytics 4 und Microsoft Clarity.</div>
+          </div>
+          <input type="checkbox" id="consentStatistics" class="cookie-switch">
+          <span class="cookie-switch__slider" aria-hidden="true"></span>
+        </label>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--ghost" id="cookieEssentials" type="button">Nur notwendige</button>
+        <button class="cookie-btn cookie-btn--ghost" id="cookieSettingsToggle" type="button">Einstellungen</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieAcceptAll" type="button">Alle akzeptieren</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieSaveCustom" type="button" hidden>Auswahl speichern</button>
+      </div>
+    </div>
+  </div>
+  <script src="/js/cookie-banner.js"></script>
+
+</body>
+</html>

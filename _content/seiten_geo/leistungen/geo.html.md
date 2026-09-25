@@ -16,4 +16,6 @@ GEO (Generative Engine Optimization) sorgt dafür, dass ein Architekturbüro in 
 
 GEO ist damit der organische Gegenpart zu Google Ads: keine Klickkosten, dafür strukturierte Daten und Schema-Markup, damit KI-Systeme die Inhalte einer Website korrekt verstehen und zitieren können, plus laufendes Monitoring, wie und ob das eigene Büro in KI-Antworten erwähnt wird. Kaum ein Architekturbüro betreibt GEO aktuell aktiv. Wer jetzt anfängt, sichert sich einen Platz in einem Feld, das in ein bis zwei Jahren deutlich voller sein wird. Konkret umgesetzt für Auftraggeber in [Bonn](/einzugsgebiet/bonn/geo.html) und [Köln](/einzugsgebiet/koeln/geo.html) zeigen die jeweiligen Standort-Seiten.
 
+Wer selbst einschätzen möchte, wo die eigene Website aktuell steht, kann den kostenlosen [GEO-Check](/geo-check.html) von XPONext nutzen — in Sekunden ein GEO-Score inklusive konkreter Verbesserungspunkte.
+
 **Quelle(n):** [seotrust.de, Google AI Overviews Deutschland 2026: Status & Strategie](https://www.seotrust.de/news/google-aio-deutschland-2026/)
