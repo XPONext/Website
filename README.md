@@ -67,12 +67,13 @@ Format + MX-Record der Adresse, legt den Lead in Cloudflare KV ab und verschickt
 Benachrichtigung über [Resend](https://resend.com). Kein Direktvertrieb/Kaltakquise — Zweck ist,
 bei Rückfragen zur Anfrage Kontakt aufnehmen zu können (siehe `datenschutz.html`, Abschnitt 5.3).
 
+**TODO:** Resend ist noch nicht eingerichtet — Leads landen aktuell nur in KV, es kommt noch
+**keine** Sofort-Benachrichtigung per E-Mail an info@xponext.de. Siehe Schritt 2 unten.
+
 **Einmaliges Setup zusätzlich zum Proxy-Setup oben:**
 
-1. **KV-Namespace:** Im Worker (`xponext-geo-proxy`) → Settings → Bindings → „Add binding" → KV
-   Namespace → neuen Namespace anlegen (z. B. `xponext-geo-leads`) → Variable-Name **`LEADS`**
-   (muss exakt so heißen, wird im Code referenziert) → Deploy.
-2. **Resend (optional, für die Sofort-Benachrichtigung):**
+1. ~~**KV-Namespace:**~~ ✅ erledigt (`xponext-geo-leads`, Variable `LEADS`, gebunden & getestet).
+2. **Resend (offen — für die Sofort-Benachrichtigung):**
    - Kostenloses Konto auf [resend.com](https://resend.com) anlegen.
    - Domain `xponext.de` verifizieren (DNS-Einträge, die Resend vorgibt).
    - API-Key erstellen.
