@@ -37,6 +37,28 @@ ausgeliefert. Quelle und Generator lagen bis 14.08.2026 im Repo `XPO_Agentic_Wor
 und Ausgabe im selben Repo liegen. Erzeugt werden die Content-Pakete vom
 `programmatic_seo_geo`-Skill.
 
+## GEO-Check Proxy (`cloudflare-worker/`)
+
+`geo-check.html` (Startseite → „GEO-Check") lässt Besucher eine beliebige URL auf GEO-Signale
+prüfen (Schema.org, KI-Crawler-Zugang in robots.txt, Content-Struktur, Sitemap). Da die Seite
+statisch ist, kann der Browser fremde Domains wegen CORS nicht direkt abrufen — dafür holt ein
+kleiner eigener Cloudflare Worker (`cloudflare-worker/geo-proxy.js`) die Zielseite serverseitig
+und gibt sie mit CORS-Headern zurück. Bewusst **kein** freier öffentlicher CORS-Proxy
+(allorigins.win o.ä.) — die fallen erfahrungsgemäß häufig aus oder werden kostenpflichtig.
+
+**Einmaliges Setup (falls der Worker noch nicht deployt ist):**
+
+1. Kostenloses Konto auf [dash.cloudflare.com](https://dash.cloudflare.com) anlegen (keine Kreditkarte nötig).
+2. Workers & Pages → Create → Create Worker → einen Namen vergeben (z.B. `xponext-geo-proxy`) → Deploy.
+3. Im Worker auf „Edit code" gehen, den Inhalt von `cloudflare-worker/geo-proxy.js` einfügen, Deploy.
+4. Die zugewiesene `*.workers.dev`-URL kopieren und in `geo-check.html` bei der Konstante `PROXY`
+   eintragen (`YOUR-SUBDOMAIN` ersetzen), z.B. `https://xponext-geo-proxy.<konto>.workers.dev/?url=`.
+5. Committen & pushen.
+
+Das kostenlose Cloudflare-Kontingent (100.000 Requests/Tag) reicht für dieses Tool bei Weitem.
+Änderungen am Worker-Code: `cloudflare-worker/geo-proxy.js` bearbeiten, dann im Cloudflare-
+Dashboard erneut „Edit code" → einfügen → Deploy (kein automatisches Deployment aus dem Repo).
+
 ## Musterentwürfe (`musterentwuerfe/`)
 
 Vollständige Muster-Websites für Architektur- und Innenarchitekturbüros, gebaut mit dem

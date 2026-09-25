@@ -5,3 +5,7 @@
 musterentwuerfe/*/_doku/screenshots/
 
 .DS_Store
+
+# Lokaler Cloudflare-Worker-Testserver (wrangler dev): simuliert KV/R2/D1/Cache
+# lokal, hat nichts mit dem deployten Worker zu tun, jederzeit neu erzeugbar.
+cloudflare-worker/.wrangler/
