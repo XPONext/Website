@@ -9,6 +9,14 @@ The official XPONext Website
 Dateien direkt bearbeiten, dann pushen — GitHub Pages aktualisiert sich automatisch.
 Ausnahme: die generierten Seiten unter `_content/`, siehe unten.
 
+**Anrede:** Die Website siezt die Besucher (seit 28.09.2026, vorher du). Neue Texte,
+Content-Pakete und Vorlagen im Generator ebenfalls in Sie-Form, auch Cookie-Banner,
+Formular-Meldungen und die Ergebnis-Texte in GEO-Check und Website-Check.
+
+**Navigation auf dem Handy:** Menü-Button und aufklappbares Menü kommen aus
+`css/nav-mobile.css` und `js/nav-mobile.js`. Neue Seiten mit Navigation binden beide
+Dateien vor `</head>` ein.
+
 ## Generierte Seiten (`_content/`)
 
 Die Leistungs-, Einzugsgebiet-, Kombi- und Blogseiten werden **nicht von Hand gepflegt**.

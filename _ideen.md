@@ -290,8 +290,9 @@ man auf der Website aktuell kaum. Der Fokus soll deutlicher auf Websites und Des
   Anspruch unglaubwürdig. Das spricht dafür, Idee 6 und 8 zusammen mit dieser Idee anzugehen.
 - Passt zu Idee 4: Die Stil-Auswahl im Konfigurator zeigt gleichzeitig die Bandbreite
   unserer Gestaltung.
-- Die Übersichtsseite der Musterentwürfe spricht mit „Sie“ an, der Rest der Website mit „du“.
-  Vereinheitlichen.
+- ~~Die Übersichtsseite der Musterentwürfe spricht mit „Sie“ an, der Rest der Website mit
+  „du“.~~ Erledigt am 28.09.2026: Die ganze Website siezt jetzt (Tims Entscheidung, „erst
+  einmal“).
 
 **Umgesetzt (28.09.2026), erster Schritt:** Tim hat die Musterentwürfe freigegeben. Neuer
 Abschnitt auf der Startseite mit den drei Entwürfen, Links von `leistungen.html` und
