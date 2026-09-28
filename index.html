@@ -262,9 +262,6 @@
       color: #9CA3AF;
       margin-top: 0.25rem;
     }
-    .dash-review-stars { color: #F59E0B; font-size: 0.9rem; margin-bottom: 0.4rem; }
-    .dash-review-text { font-size: 0.83rem; color: #4B5563; line-height: 1.55; }
-    .dash-review-author { font-size: 0.75rem; color: #9CA3AF; margin-top: 0.4rem; }
 
     /* ── SOCIAL PROOF BAR ────────────────────────────────── */
     .proof-bar {
@@ -302,7 +299,7 @@
       display: inline-flex;
       align-items: center;
       gap: 0.7rem;
-      animation: ticker-scroll 38s linear infinite;
+      animation: ticker-scroll 24s linear infinite;
       will-change: transform;
     }
     .ticker-wrap:hover .ticker-track { animation-play-state: paused; }
@@ -513,15 +510,6 @@
       padding: 6rem 5%;
     }
     .faq-inner { max-width: 800px; margin: 0 auto; }
-    .faq-category-title {
-      font-size: 0.78rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: #1B6B45;
-      margin: 2.5rem 0 1rem;
-    }
-    .faq-category-title:first-child { margin-top: 0; }
     .faq-item {
       background: #fff;
       border: 1px solid #E5E7EB;
@@ -615,52 +603,46 @@
     .promise-item h3 { font-size: 1rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.35rem; }
     .promise-item p { font-size: 0.85rem; color: #6B7280; line-height: 1.6; }
 
-    /* ── TESTIMONIAL ─────────────────────────────────────── */
-    .testimonial-wrap {
+    /* ── MUSTERENTWÜRFE ──────────────────────────────────── */
+    .muster-wrap {
       background: #fff;
-      padding: 6rem 5% 3rem;
+      padding: 6rem 5%;
       border-top: 1px solid #E5E7EB;
     }
-    .testimonial-inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .testimonial-grid {
+    .muster-inner { max-width: 1100px; margin: 0 auto; }
+    .muster-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
-      margin-top: 3rem;
     }
-    @media (max-width: 768px) {
-      .testimonial-grid { grid-template-columns: 1fr; }
-    }
-    .testimonial-wrap .section-header h2 { color: #0D0D0D; }
-    .testimonial-wrap .section-header p { color: #6B7280; }
-    .testimonial-card {
-      background: #F9FAFB;
+    .muster-card {
+      display: flex;
+      flex-direction: column;
       border: 1px solid #E5E7EB;
-      border-radius: 16px;
-      padding: 2.5rem;
-      text-align: left;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+      color: inherit;
+      transition: box-shadow 0.2s, transform 0.2s;
     }
-    .testimonial-stars { color: #F59E0B; font-size: 1.1rem; letter-spacing: 2px; margin-bottom: 1.2rem; }
-    .testimonial-quote {
-      font-size: 1.15rem;
-      color: #4B5563;
-      line-height: 1.7;
-      font-weight: 500;
-      font-style: italic;
-      margin-bottom: 1.5rem;
+    .muster-card:hover { box-shadow: 0 12px 32px rgba(13,13,13,0.08); transform: translateY(-2px); }
+    .muster-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      object-position: top;
+      border-bottom: 1px solid #E5E7EB;
     }
-    .testimonial-divider {
-      width: 40px;
-      height: 2px;
-      background: #1B6B45;
-      margin: 0 auto 1.2rem;
-    }
-    .testimonial-name { font-size: 0.95rem; font-weight: 700; color: #0D0D0D; }
-    .testimonial-role { font-size: 0.85rem; color: #6B7280; margin-top: 0.2rem; }
+    .muster-body { padding: 1.3rem 1.4rem 1.5rem; display: flex; flex-direction: column; gap: 0.5rem; flex: 1; }
+    .muster-tag { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: #1B6B45; }
+    .muster-card h3 { font-size: 1.15rem; font-weight: 800; color: #0D0D0D; letter-spacing: -0.01em; }
+    .muster-card p { font-size: 0.92rem; color: #4B5563; line-height: 1.6; }
+    .muster-link { margin-top: auto; padding-top: 0.6rem; font-weight: 600; color: #1B6B45; font-size: 0.92rem; }
+    .muster-more { text-align: center; margin-top: 2.5rem; }
+    .muster-more a { font-weight: 600; color: #1B6B45; }
+    .muster-more a:hover { color: #134D32; }
 
     /* ── WARUM XPONEXT (LIGHT) ───────────────────────────── */
     /* ── CTA (DARK – einzige dunkle Sektion) ────────────── */
@@ -759,82 +741,10 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Was macht eine professionelle Website aus?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eine professionelle Website lässt vor allem die beste Arbeit sprechen: eine klare Übersicht der Referenzen oder Leistungen mit kurzem Kontext statt langer Marketingtexte, dazu eine Team-Seite mit echten Namen und Rollen, ein zentrales Vertrauenssignal für Kunden und, dank EEAT-Kriterien (Experience, Expertise, Authoritativeness, Trustworthiness), auch für KI-Plattformen wie ChatGPT. Mobiloptimiert, schnell ladend und mit strukturierten Daten (Schema.org) im Quellcode ist sie zudem technisch so aufgebaut, dass Google und KI-Systeme sie überhaupt crawlen, verstehen und weiterempfehlen können."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Kann ich meine bestehende Website behalten und nur SEO/Ads dazubuchen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, Website-Erstellung, SEO & GEO, Google Ads, Bewertungsmanagement und Prozessoptimierung sind modular buchbar. Wird deine bestehende Website aktuell von einem anderen Anbieter betreut, können wir SEO, GEO oder Ads unabhängig davon aufsetzen. Eine spätere komplette Website-Neuerstellung durch uns wäre ein separater Schritt mit eigenem Angebot, kein automatischer Wechsel im laufenden Vertrag."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was sind Google Ads und wie helfen sie meinem Unternehmen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Google Ads sind bezahlte Anzeigen, die ganz oben in den Google-Suchergebnissen erscheinen, genau dann, wenn jemand in deiner Region nach deiner Leistung sucht. Du zahlst nur, wenn jemand tatsächlich klickt, nicht für die reine Anzeigenschaltung. Wie oft eine Anzeige ausgespielt wird, entscheidet dabei nicht nur das Gebot, sondern vor allem der Quality Score, gute Anzeigentexte und eine passende Zielseite senken so aktiv die Kosten pro Klick. Das Budget bleibt jederzeit planbar und lässt sich flexibel an deine Auftragslage anpassen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was sind AI Ads bzw. GEO (Generative Engine Optimization)?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "AI Ads und GEO sind zwei unterschiedliche Dinge, ähnlich wie Google Ads und klassisches SEO: Ads sind click-driven, du zahlst pro Klick, GEO ist exposure-driven, Sichtbarkeit entsteht durch Erwähnung, oft ganz ohne Klick. GEO (Generative Engine Optimization) sorgt dafür, dass dein Unternehmen in den Antworten von KI-Plattformen wie ChatGPT oder Perplexity genannt wird, etwa wenn jemand fragt, welches Unternehmen für eine bestimmte Leistung in der Region gut bewertet ist. Voraussetzung dafür sind klare, belegbare Aussagen statt Marketing-Floskeln, sichtbare Autoren-/Team-Signale und strukturierte Daten im Quellcode, damit die KI die Inhalte versteht und als zitierfähig einstuft. Da das aktuell kaum ein Unternehmen macht, ist das Feld noch wenig umkämpft."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist lokales SEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Lokales SEO umfasst alle Maßnahmen, die dafür sorgen, dass dein Unternehmen bei Suchanfragen mit Ortsbezug und im Google Maps Local Pack ganz oben erscheint, etwa über ein gepflegtes Google-Unternehmensprofil mit aktuellen Fotos, passende Keywords, einheitliche Adressangaben und themenrelevante Verweise. Im Gegensatz zu Ads kostet jeder organische Klick nichts zusätzlich, die Sichtbarkeit bleibt auch bestehen, wenn ein Ads-Budget einmal pausiert."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was passiert, wenn mein Unternehmen bei Google nicht gefunden wird?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Dann gehen Anfragen an die Konkurrenz, ohne dass du es merkst. Über 90 % der Nutzer klicken nie auf die zweite Google-Suchergebnisseite. Taucht dein Unternehmen bei Suchen wie \"deine Leistung + Stadt\" nicht unter den ersten Treffern auf, verlierst du tagtäglich Kundenanfragen an sichtbarere Anbieter."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was ist Bewertungsmanagement und warum ist es wichtig?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bewertungsmanagement bedeutet, kontinuierlich neue, echte Google-Bewertungen von zufriedenen Kunden zu sammeln und auf Bewertungen zu reagieren. Sterne-Anzahl und Aktualität der Bewertungen beeinflussen direkt die Klickrate und das Ranking bei Google Maps."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie viele Google-Bewertungen braucht mein Unternehmen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eine feste Zahl gibt es nicht, Faustregel ist: mehr und aktueller als die direkte Konkurrenz in der Region. Anzahl und Aktualität der Bewertungen sind beide entscheidend für Vertrauen und Ranking."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "Für welche Büros ist XPONext geeignet?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Website, SEO, GEO, Ads und Bewertungsmanagement setzt XPONext für Unternehmen aus unterschiedlichsten Branchen um. Ein besonderer Schwerpunkt liegt auf Architekturbüros, dort sind die typischen Herausforderungen der Branche bekannt: lokale Sichtbarkeit gegenüber Bauherren und Auftraggebern sowie Verwaltungsprozesse wie Angebotswesen, Bautagebuch oder Dokumentenmanagement, die zu viel Zeit kosten. Für Zeitfresser & Prozessoptimierung gilt eine klare Rollentrennung: keine Fachexpertise für VOB, HOAI oder bautechnische Detailfragen, sondern Expertise für die Tools und Prozesse, die den Büroalltag beschleunigen."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie schnell kann es losgehen?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nach deiner Anfrage bekommst du in der Regel innerhalb von 16 Stunden eine Antwort für das kostenlose Erstgespräch. Von der ersten Absprache bis zur ersten sichtbaren Lösung vergehen danach in der Regel nicht mehr als 7 Tage. Umfangreichere Projekte wie eine komplette Website-Neuerstellung dauern je nach Umfang etwas länger."
         }
       },
       {
@@ -847,34 +757,18 @@
       },
       {
         "@type": "Question",
-        "name": "Wie lange dauert es, bis sich Ergebnisse zeigen?",
+        "name": "Wie schnell kann es losgehen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Google Ads können bereits ab dem ersten Tag zu Anfragen führen. Lokales SEO, Bewertungsmanagement und GEO sind langfristige Maßnahmen, erste Verbesserungen zeigen sich meist nach 4 bis 8 Wochen, ein stabil verbessertes Ranking entwickelt sich über 3 bis 6 Monate. Bei Zeitfresser & Prozessoptimierung zeigt sich die Entlastung meist sofort nach der Einrichtung, ganz ohne lange Einarbeitung."
+          "text": "Nach deiner Anfrage bekommst du in der Regel innerhalb von 16 Stunden eine Antwort für das kostenlose Erstgespräch. Von der ersten Absprache bis zur ersten sichtbaren Lösung vergehen danach in der Regel nicht mehr als 7 Tage. Umfangreichere Projekte wie eine komplette Website-Neuerstellung dauern je nach Umfang etwas länger."
         }
       },
       {
         "@type": "Question",
-        "name": "Was ist Zeitfresser & Prozessoptimierung?",
+        "name": "Kann ich meine bestehende Website behalten und nur SEO/Ads dazubuchen?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Bei Zeitfresser & Prozessoptimierung analysieren wir an echten Beispielen aus dem Büro, etwa dem letzten Bautagebuch oder Leistungsverzeichnis, wo die meiste Zeit verloren geht, typisch sind LV-Erstellung, Bautagebuch/Mängeldokumentation, Protokollschreiben und Dokumentenmanagement. Laut Bundesarchitektenkammer (2025) nutzen nur 29 % der Architekt:innen KI-Tools im Büroalltag, 77 % wünschen sich Fortbildung dazu. Wir wählen passende Tools aus und richten sie maßgeschneidert so ein, dass sie sofort einsatzbereit sind, ganz ohne langwierige Schulungen; die Umsetzung lässt sich unter Umständen über die BAFA-Förderung für Unternehmensberatung mitfinanzieren. Danach stehen wir für Anpassungen und Support langfristig zur Verfügung."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Prüft ihr, ob ich schon passende Tools lizenziert habe, bevor ihr etwas Neues vorschlagt?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Ja, das ist fester Bestandteil unseres Vorgehens. Viele Büros haben bereits passende Software lizenziert, aber nie richtig eingeführt. Bevor ein neues Tool vorgeschlagen wird, prüfen wir immer zuerst, ob eine bestehende Lizenz das Problem schon lösen könnte, günstiger für den Kunden und ohne Konkurrenz zu den Software-Anbietern."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Was passiert mit meinen Projektdaten, wenn ihr KI-Tools einführt?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bauherren-Daten, Pläne und Projektunterlagen sind sensibel. Bei manchen Zeitfressern, etwa der automatischen Protokollerstellung, gibt es neben Cloud-Lösungen auch komplett lokale, DSGVO-konforme Alternativen ohne externe Server. Ist lokale Datenhaltung wichtig, wird das im Audit berücksichtigt und gezielt danach ausgewählt."
+          "text": "Ja, Website-Erstellung, SEO & GEO, Google Ads, Bewertungsmanagement und Prozessoptimierung sind modular buchbar. Wird deine bestehende Website aktuell von einem anderen Anbieter betreut, können wir SEO, GEO oder Ads unabhängig davon aufsetzen. Eine spätere komplette Website-Neuerstellung durch uns wäre ein separater Schritt mit eigenem Angebot, kein automatischer Wechsel im laufenden Vertrag."
         }
       },
       {
@@ -1000,12 +894,6 @@
             <span class="dash-row-text">KI-Tools individuell eingerichtet</span>
           </div>
         </div>
-        <div class="dash-card">
-          <div class="dash-label">Letzte Bewertung</div>
-          <div class="dash-review-stars">★★★★★</div>
-          <div class="dash-review-text">"Man merkt einfach, dass das Team von XPONext wirklich weiß, was es tut. Alles wurde schnell und zuverlässig umgesetzt."</div>
-          <div class="dash-review-author">Martin B., Architekt</div>
-        </div>
       </div>
     </section>
   </div>
@@ -1018,37 +906,25 @@
   <!-- ── FAQ TICKER ──────────────────────────────────────── -->
   <div class="ticker-wrap">
     <div class="ticker-track">
-      <a href="#faq-website" class="ticker-chip faq-jump">Professionelle Website?</a>
-      <a href="#faq-website-behalten" class="ticker-chip faq-jump">Bestehende Website behalten?</a>
-      <a href="#faq-google-ads" class="ticker-chip faq-jump">Was sind Google Ads?</a>
-      <a href="#faq-ai-ads" class="ticker-chip faq-jump">Was sind AI Ads?</a>
-      <a href="#faq-lokales-seo" class="ticker-chip faq-jump">Was ist lokales SEO?</a>
-      <a href="#faq-nicht-gefunden" class="ticker-chip faq-jump">Nicht bei Google gefunden?</a>
-      <a href="#faq-bewertungsmanagement" class="ticker-chip faq-jump">Bewertungsmanagement?</a>
-      <a href="#faq-bewertungen-anzahl" class="ticker-chip faq-jump">Wie viele Google-Bewertungen brauche ich?</a>
       <a href="#faq-zielgruppe" class="ticker-chip faq-jump">Für welche Büros geeignet?</a>
-      <a href="#faq-start" class="ticker-chip faq-jump">Wie schnell geht's los?</a>
       <a href="#faq-kosten" class="ticker-chip faq-jump">Was kostet das?</a>
-      <a href="#faq-dauer" class="ticker-chip faq-jump">Wie lange dauert es?</a>
-      <a href="#faq-zeitfresser" class="ticker-chip faq-jump">Was ist Zeitfresser & Prozessoptimierung?</a>
-      <a href="#faq-tools-check" class="ticker-chip faq-jump">Schon lizenzierte Tools?</a>
-      <a href="#faq-datenschutz-ki" class="ticker-chip faq-jump">Datenschutz bei KI-Tools?</a>
+      <a href="#faq-start" class="ticker-chip faq-jump">Wie schnell geht's los?</a>
+      <a href="#faq-website-behalten" class="ticker-chip faq-jump">Bestehende Website behalten?</a>
       <a href="#faq-website-rechte" class="ticker-chip faq-jump">Website-Rechte bei Vertragsende?</a>
-      <a href="#faq-website" class="ticker-chip faq-jump">Professionelle Website?</a>
-      <a href="#faq-website-behalten" class="ticker-chip faq-jump">Bestehende Website behalten?</a>
-      <a href="#faq-google-ads" class="ticker-chip faq-jump">Was sind Google Ads?</a>
-      <a href="#faq-ai-ads" class="ticker-chip faq-jump">Was sind AI Ads?</a>
-      <a href="#faq-lokales-seo" class="ticker-chip faq-jump">Was ist lokales SEO?</a>
-      <a href="#faq-nicht-gefunden" class="ticker-chip faq-jump">Nicht bei Google gefunden?</a>
-      <a href="#faq-bewertungsmanagement" class="ticker-chip faq-jump">Bewertungsmanagement?</a>
-      <a href="#faq-bewertungen-anzahl" class="ticker-chip faq-jump">Wie viele Google-Bewertungen brauche ich?</a>
       <a href="#faq-zielgruppe" class="ticker-chip faq-jump">Für welche Büros geeignet?</a>
-      <a href="#faq-start" class="ticker-chip faq-jump">Wie schnell geht's los?</a>
       <a href="#faq-kosten" class="ticker-chip faq-jump">Was kostet das?</a>
-      <a href="#faq-dauer" class="ticker-chip faq-jump">Wie lange dauert es?</a>
-      <a href="#faq-zeitfresser" class="ticker-chip faq-jump">Was ist Zeitfresser & Prozessoptimierung?</a>
-      <a href="#faq-tools-check" class="ticker-chip faq-jump">Schon lizenzierte Tools?</a>
-      <a href="#faq-datenschutz-ki" class="ticker-chip faq-jump">Datenschutz bei KI-Tools?</a>
+      <a href="#faq-start" class="ticker-chip faq-jump">Wie schnell geht's los?</a>
+      <a href="#faq-website-behalten" class="ticker-chip faq-jump">Bestehende Website behalten?</a>
+      <a href="#faq-website-rechte" class="ticker-chip faq-jump">Website-Rechte bei Vertragsende?</a>
+      <a href="#faq-zielgruppe" class="ticker-chip faq-jump">Für welche Büros geeignet?</a>
+      <a href="#faq-kosten" class="ticker-chip faq-jump">Was kostet das?</a>
+      <a href="#faq-start" class="ticker-chip faq-jump">Wie schnell geht's los?</a>
+      <a href="#faq-website-behalten" class="ticker-chip faq-jump">Bestehende Website behalten?</a>
+      <a href="#faq-website-rechte" class="ticker-chip faq-jump">Website-Rechte bei Vertragsende?</a>
+      <a href="#faq-zielgruppe" class="ticker-chip faq-jump">Für welche Büros geeignet?</a>
+      <a href="#faq-kosten" class="ticker-chip faq-jump">Was kostet das?</a>
+      <a href="#faq-start" class="ticker-chip faq-jump">Wie schnell geht's los?</a>
+      <a href="#faq-website-behalten" class="ticker-chip faq-jump">Bestehende Website behalten?</a>
       <a href="#faq-website-rechte" class="ticker-chip faq-jump">Website-Rechte bei Vertragsende?</a>
     </div>
   </div>
@@ -1209,33 +1085,43 @@
     </div>
   </div>
 
-  <!-- ── TESTIMONIAL ─────────────────────────────────────── -->
-  <div class="testimonial-wrap">
-    <div class="testimonial-inner">
+  <!-- ── MUSTERENTWÜRFE ──────────────────────────────────── -->
+  <div class="muster-wrap" id="musterentwuerfe">
+    <div class="muster-inner">
       <div class="section-header">
-        <h2>Was unsere <em>Kunden sagen.</em></h2>
-        <p>Echte Ergebnisse von Architekturbüros wie deinem.</p>
+        <h2>So können Websites <em>für Architekturbüros aussehen.</em></h2>
+        <p>Drei Musterentwürfe mit drei ganz unterschiedlichen Handschriften. Büros und Projekte sind erfunden, Gestaltung und Technik sind echt.</p>
       </div>
-      <div class="testimonial-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <div class="testimonial-quote">
-            "Ich bin super zufrieden mit der Zusammenarbeit. Alles, was wir besprochen haben, wurde schnell und zuverlässig umgesetzt. Man merkt einfach, dass das Team von XPONext wirklich weiß, was es tut."
+      <div class="muster-grid">
+        <a class="muster-card" href="musterentwuerfe/musterbuero-nordkant/">
+          <img src="musterentwuerfe/assets/musterbuero-nordkant.webp" alt="Startseite des Musterentwurfs Musterbüro Nordkant" width="1200" height="750" loading="lazy">
+          <div class="muster-body">
+            <span class="muster-tag">Wohnbau · kleines Büro</span>
+            <h3>Musterbüro Nordkant</h3>
+            <p>Ein großes Bild über die ganze erste Bildschirmhöhe, darunter sechs Projekte mit viel Raum. Eine Schrift, drei Farben, nichts, was ablenkt.</p>
+            <span class="muster-link">Entwurf ansehen →</span>
           </div>
-          <div class="testimonial-divider"></div>
-          <div class="testimonial-name">Martin B.</div>
-          <div class="testimonial-role">Architekt, Bad Honnef</div>
-        </div>
-        <div class="testimonial-card">
-          <div class="testimonial-stars">★★★★★</div>
-          <div class="testimonial-quote">
-            "Ich wusste lange nicht, wie ich mit meiner Internetpräsenz online sichtbarer werden kann. XPONext hat sich bei mir gemeldet und sich das Problem angehört. Die ersten Schritte waren nach wenigen Tagen umgesetzt – mittlerweile werde ich auf der ersten Seite gefunden und die Resonanz ist wirklich gut. Schnelle, kompetente Beratung."
+        </a>
+        <a class="muster-card" href="musterentwuerfe/musterstudio-lindenau/">
+          <img src="musterentwuerfe/assets/musterstudio-lindenau.webp" alt="Startseite des Musterentwurfs Musterstudio Lindenau" width="1200" height="750" loading="lazy">
+          <div class="muster-body">
+            <span class="muster-tag">Innenarchitektur · Studio</span>
+            <h3>Musterstudio Lindenau</h3>
+            <p>Dunkle und helle Abschnitte im Wechsel, jedes Projekt als großes Einzelbild mit zwei Zeilen Text.</p>
+            <span class="muster-link">Entwurf ansehen →</span>
           </div>
-          <div class="testimonial-divider"></div>
-          <div class="testimonial-name">Volker G.</div>
-          <div class="testimonial-role">Werbeagentur, Pfullendorf</div>
-        </div>
+        </a>
+        <a class="muster-card" href="musterentwuerfe/musterbuero-steinwerk/">
+          <img src="musterentwuerfe/assets/musterbuero-steinwerk.webp" alt="Startseite des Musterentwurfs Musterbüro Steinwerk" width="1200" height="750" loading="lazy">
+          <div class="muster-body">
+            <span class="muster-tag">Öffentliche Bauten · mittleres Büro</span>
+            <h3>Musterbüro Steinwerk</h3>
+            <p>Kein Titelbild, sondern ein Raster, das zwanzig Projekte ordnet, mit Filter und Listenansicht.</p>
+            <span class="muster-link">Entwurf ansehen →</span>
+          </div>
+        </a>
       </div>
+      <div class="muster-more"><a href="musterentwuerfe/">Alle Musterentwürfe und unser Vorgehen ansehen →</a></div>
     </div>
   </div>
 
@@ -1246,79 +1132,10 @@
         <h2>Häufig gestellte <em>Fragen.</em></h2>
       </div>
 
-      <h3 class="faq-category-title">Sichtbarkeit bei Google & KI</h3>
-
-      <div class="faq-item" id="faq-website">
-        <button class="faq-question">Was macht eine professionelle Website aus?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Eine professionelle Website lässt vor allem deine beste Arbeit sprechen: eine klare Übersicht deiner Referenzen oder Leistungen mit kurzem Kontext statt langer Marketingtexte, dazu eine Team-Seite mit echten Namen und Rollen, ein zentrales Vertrauenssignal für Kunden und, dank EEAT-Kriterien (Experience, Expertise, Authoritativeness, Trustworthiness), auch für KI-Plattformen wie ChatGPT. Mobiloptimiert, schnell ladend und mit strukturierten Daten (Schema.org) im Quellcode ist sie zudem technisch so aufgebaut, dass Google und KI-Systeme sie überhaupt crawlen, verstehen und weiterempfehlen können.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-website-behalten">
-        <button class="faq-question">Kann ich meine bestehende Website behalten und nur SEO/Ads dazubuchen?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Ja. Website-Erstellung, SEO & GEO, Google Ads, Bewertungsmanagement und Prozessoptimierung sind bei uns modular buchbar, du wählst nur das, was du wirklich brauchst. Wird deine bestehende Website aktuell von einem anderen Anbieter betreut, ist das kein Problem: Wir können SEO, GEO oder Ads unabhängig davon aufsetzen. Solltest du dich später doch für eine komplett neue Website durch uns entscheiden, ist das ein separater Schritt mit eigenem Angebot, kein automatischer Wechsel im laufenden Vertrag.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-google-ads">
-        <button class="faq-question">Was sind Google Ads und wie helfen sie meinem Unternehmen?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Google Ads sind bezahlte Anzeigen, die ganz oben in den Google-Suchergebnissen erscheinen, genau dann, wenn jemand in deiner Region nach deiner Leistung sucht, zum Beispiel nach "deine Leistung + deine Stadt". Du zahlst nur, wenn jemand tatsächlich klickt, nicht für die reine Anzeigenschaltung. Wie oft eine Anzeige ausgespielt wird, entscheidet dabei nicht nur das Gebot, sondern vor allem der sogenannte Quality Score: gute Anzeigentexte und eine passende Zielseite senken so aktiv die Kosten pro Klick. Das Budget bleibt jederzeit planbar und lässt sich flexibel an deine Auftragslage anpassen, etwa hochfahren, sobald wieder Kapazitäten frei sind.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-ai-ads">
-        <button class="faq-question">Was sind AI Ads bzw. GEO (Generative Engine Optimization)?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>AI Ads und GEO sind zwei unterschiedliche Dinge, ähnlich wie Google Ads und klassisches SEO: Ads sind click-driven, du zahlst pro Klick, GEO ist exposure-driven, Sichtbarkeit entsteht durch Erwähnung, oft ganz ohne Klick. GEO (Generative Engine Optimization) sorgt dafür, dass dein Unternehmen in den Antworten von KI-Plattformen wie ChatGPT oder Perplexity genannt wird, etwa wenn jemand fragt "Welches Unternehmen für [deine Leistung] in meiner Region ist gut bewertet?". Voraussetzung dafür sind klare, belegbare Aussagen statt Marketing-Floskeln, sichtbare Autoren-/Team-Signale und strukturierte Daten im Quellcode, damit die KI die Inhalte versteht und als zitierfähig einstuft. Da das aktuell kaum ein Unternehmen macht, ist das Feld noch wenig umkämpft, ein klarer Vorteil für alle, die früh dabei sind.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-lokales-seo">
-        <button class="faq-question">Was ist lokales SEO?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Lokales SEO umfasst alle Maßnahmen, die dafür sorgen, dass dein Unternehmen bei Suchanfragen mit Ortsbezug ("deine Leistung" + Stadt) und im Google Maps "Local Pack" ganz oben erscheint. Dazu gehören ein vollständig gepflegtes Google-Unternehmensprofil mit aktuellen Fotos, die richtigen Keywords auf deiner Website, einheitliche Adressangaben im Web (Citations) und themenrelevante Verweise von anderen Seiten, etwa Branchenverzeichnissen oder Presseartikeln. Der Vorteil gegenüber Ads: Jeder Klick aus dem organischen Ranking kostet nichts zusätzlich, die Sichtbarkeit bleibt auch bestehen, wenn ein Ads-Budget einmal pausiert.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-nicht-gefunden">
-        <button class="faq-question">Was passiert, wenn mein Unternehmen bei Google nicht gefunden wird?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Dann gehen Anfragen an die Konkurrenz, ohne dass du es überhaupt merkst. Über 90 % der Nutzer klicken nie auf die zweite Google-Suchergebnisseite. Taucht dein Unternehmen bei Suchen wie "deine Leistung + deine Stadt" nicht unter den ersten Treffern auf, verlierst du tagtäglich Kundenanfragen an sichtbarere Anbieter, unabhängig davon, wie gut deine Arbeit tatsächlich ist.</p>
-        </div>
-      </div>
-
-      <h3 class="faq-category-title">Bewertungen</h3>
-
-      <div class="faq-item" id="faq-bewertungsmanagement">
-        <button class="faq-question">Was ist Bewertungsmanagement und warum ist es wichtig?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Bewertungsmanagement bedeutet, dass wir dir helfen, kontinuierlich neue, echte Google-Bewertungen von zufriedenen Kunden zu sammeln, und dass wir gemeinsam mit dir auf Bewertungen reagieren. Das ist wichtig, weil Sterne-Anzahl und Aktualität direkt beeinflussen, ob jemand auf dein Google-Profil klickt und wie gut du bei Google Maps rankst. Gerade bei einer größeren Investitionsentscheidung wirken viele aktuelle, positive Bewertungen wie eine permanente Referenz, rund um die Uhr.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-bewertungen-anzahl">
-        <button class="faq-question">Wie viele Google-Bewertungen braucht mein Unternehmen?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Eine feste Zahl gibt es nicht, Faustregel ist: mehr und aktueller als die direkte Konkurrenz in deiner Region. Entscheidend sind Anzahl und Aktualität gemeinsam, ein Profil mit 50 Bewertungen, von denen die letzte vor zwei Jahren war, wirkt weniger vertrauenswürdig als eines mit 20 Bewertungen aus den letzten Monaten. Ziel ist ein stetiger, organischer Zustrom neuer Bewertungen nach jedem abgeschlossenen Projekt.</p>
-        </div>
-      </div>
-
-      <h3 class="faq-category-title">Ergebnisse & Zusammenarbeit</h3>
-
       <div class="faq-item" id="faq-zielgruppe">
         <button class="faq-question">Für welche Büros ist XPONext geeignet?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
           <p>Website, SEO, GEO, Ads und Bewertungsmanagement setzen wir für Unternehmen aus den unterschiedlichsten Branchen um. Ein besonderer Schwerpunkt liegt auf Architekturbüros, dort kennen wir die typischen Herausforderungen der Branche im Detail: lokale Sichtbarkeit gegenüber Bauherren und Auftraggebern sowie Verwaltungsprozesse wie Angebotswesen, Bautagebuch oder Dokumentenmanagement, die zu viel Zeit kosten. Für Zeitfresser & Prozessoptimierung gilt dabei eine klare Rollentrennung: Wir sind keine Fachexperten für VOB, HOAI oder bautechnische Detailfragen, sondern Experten für die Tools und Prozesse, die den Büroalltag beschleunigen, du kennst deine Abläufe am besten, wir bringen die passende Software und Automatisierung dazu.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-start">
-        <button class="faq-question">Wie schnell kann es losgehen?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Nach deiner Anfrage bekommst du in der Regel innerhalb von 16 Stunden eine Antwort für das kostenlose Erstgespräch. Von der ersten Absprache bis zur ersten sichtbaren Lösung, zum Beispiel einer laufenden Google-Ads-Kampagne oder den ersten eingerichteten Tools, vergehen danach in der Regel nicht mehr als 7 Tage. Umfangreichere Projekte wie eine komplette Website-Neuerstellung dauern je nach Umfang etwas länger, den genauen Zeitplan bekommst du direkt im Erstgespräch.</p>
         </div>
       </div>
 
@@ -1335,31 +1152,17 @@
         </div>
       </div>
 
-      <div class="faq-item" id="faq-dauer">
-        <button class="faq-question">Wie lange dauert es, bis sich Ergebnisse zeigen?<span class="faq-icon">+</span></button>
+      <div class="faq-item" id="faq-start">
+        <button class="faq-question">Wie schnell kann es losgehen?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Das hängt von der Maßnahme ab. Google Ads können bereits ab dem ersten Tag nach dem Start zu Anfragen führen, da deine Anzeige sofort ausgespielt wird. Lokales SEO, Bewertungsmanagement und GEO sind dagegen langfristige Maßnahmen: Erste spürbare Verbesserungen zeigen sich meist nach 4 bis 8 Wochen, ein stabil verbessertes Ranking entwickelt sich über 3 bis 6 Monate. Bei Zeitfresser & Prozessoptimierung merkst du die Entlastung meist sofort nach der Einrichtung, weil die neuen Tools direkt im Tagesgeschäft greifen, ganz ohne lange Einarbeitung. Kombiniert ergibt das: schnelle erste Ergebnisse über Ads und Prozessoptimierung, nachhaltiges Wachstum über SEO, Bewertungen und GEO.</p>
+          <p>Nach deiner Anfrage bekommst du in der Regel innerhalb von 16 Stunden eine Antwort für das kostenlose Erstgespräch. Von der ersten Absprache bis zur ersten sichtbaren Lösung, zum Beispiel einer laufenden Google-Ads-Kampagne oder den ersten eingerichteten Tools, vergehen danach in der Regel nicht mehr als 7 Tage. Umfangreichere Projekte wie eine komplette Website-Neuerstellung dauern je nach Umfang etwas länger, den genauen Zeitplan bekommst du direkt im Erstgespräch.</p>
         </div>
       </div>
 
-      <div class="faq-item" id="faq-zeitfresser">
-        <button class="faq-question">Was ist Zeitfresser & Prozessoptimierung?<span class="faq-icon">+</span></button>
+      <div class="faq-item" id="faq-website-behalten">
+        <button class="faq-question">Kann ich meine bestehende Website behalten und nur SEO/Ads dazubuchen?<span class="faq-icon">+</span></button>
         <div class="faq-answer">
-          <p>Bei Zeitfresser & Prozessoptimierung analysieren wir gemeinsam mit dir an echten Beispielen aus deinem Büro, etwa dem letzten Bautagebuch, der letzten Mängelliste oder dem letzten Leistungsverzeichnis, wo die meiste Zeit unnötig verloren geht. Typische Zeitfresser sind die manuelle LV-Erstellung, das abendliche Rekonstruieren von Bautagebuch und Mängeln aus Zetteln und Fotos, das Protokollschreiben nach jeder Besprechung und die Unsicherheit, welcher Planstand gerade aktuell ist. Laut Bundesarchitektenkammer (Architektenbefragung 2025) nutzen aktuell nur 29 % der Architekt:innen KI-Tools im Büroalltag, 77 % wünschen sich aber Fortbildung dazu, die Lücke liegt selten bei fehlender Software, sondern bei Auswahl, Einführung und tatsächlicher Nutzung. Genau da setzen wir an: Wir wählen passende Tools aus (bereits lizenzierte Software wird dabei immer zuerst geprüft) und richten sie maßgeschneidert so ein, dass sie sofort einsatzbereit sind, ganz ohne langwierige Schulungen. Für die Umsetzung lässt sich unter Umständen die BAFA-Förderung für Unternehmensberatung nutzen, die bis zu 50 % der Kosten übernimmt. Danach stehen wir für Anpassungen und Support langfristig zur Verfügung.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-tools-check">
-        <button class="faq-question">Prüft ihr, ob ich schon passende Tools lizenziert habe, bevor ihr etwas Neues vorschlagt?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Ja, das ist fester Bestandteil unseres Vorgehens. Viele Büros haben bereits passende Software lizenziert, aber nie richtig eingeführt oder genutzt. Bevor wir dir ein neues Tool vorschlagen, prüfen wir deshalb immer zuerst, ob eine bestehende Lizenz das Problem schon lösen könnte. Das ist günstiger für dich, und wir stehen dabei nicht in Konkurrenz zu den Software-Anbietern, sondern sorgen dafür, dass das, was du schon bezahlst, endlich auch genutzt wird.</p>
-        </div>
-      </div>
-
-      <div class="faq-item" id="faq-datenschutz-ki">
-        <button class="faq-question">Was passiert mit meinen Projektdaten, wenn ihr KI-Tools einführt?<span class="faq-icon">+</span></button>
-        <div class="faq-answer">
-          <p>Das hängt vom eingesetzten Tool und deinen Anforderungen ab. Bauherren-Daten, Pläne und Projektunterlagen sind sensibel, das nehmen wir ernst. Bei manchen Zeitfressern, etwa der automatischen Protokollerstellung aus Sprachmemos, gibt es neben Cloud-Lösungen auch komplett lokale, DSGVO-konforme Alternativen, die ohne externe Server auskommen. Wenn dir lokale Datenhaltung wichtig ist, sagst du uns das im Audit, wir wählen dann gezielt Tools aus, die das ermöglichen, statt dich pauschal in eine Cloud-Lösung zu drängen.</p>
+          <p>Ja. Website-Erstellung, SEO & GEO, Google Ads, Bewertungsmanagement und Prozessoptimierung sind bei uns modular buchbar, du wählst nur das, was du wirklich brauchst. Wird deine bestehende Website aktuell von einem anderen Anbieter betreut, ist das kein Problem: Wir können SEO, GEO oder Ads unabhängig davon aufsetzen. Solltest du dich später doch für eine komplett neue Website durch uns entscheiden, ist das ein separater Schritt mit eigenem Angebot, kein automatischer Wechsel im laufenden Vertrag.</p>
         </div>
       </div>
 

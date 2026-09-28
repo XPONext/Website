@@ -131,7 +131,8 @@ def load_all():
     return entries
 
 def build_link_labels(entries):
-    labels = {"/": "Startseite", "/leistungen.html": "Leistungen", "/effizienz.html": "Zeitfresser & Prozessoptimierung"}
+    labels = {"/": "Startseite", "/leistungen.html": "Leistungen", "/effizienz.html": "Zeitfresser & Prozessoptimierung",
+              "/musterentwuerfe/": "Musterentwürfe: So können Websites für Architekturbüros aussehen"}
     for slug, (fm, body, f) in entries.items():
         target = REDIRECT.get(slug, slug)
         labels[target] = fm.get("h1") or fm.get("title")
