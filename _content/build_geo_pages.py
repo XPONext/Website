@@ -431,6 +431,8 @@ def head(title, meta_desc, canonical, schemas):
   </script>
   {schema_scripts}
   <style>{PAGE_CSS}</style>
+  <link rel="stylesheet" href="/css/nav-mobile.css">
+  <script src="/js/nav-mobile.js" defer></script>
 </head>
 <body>
 {NAV}"""
