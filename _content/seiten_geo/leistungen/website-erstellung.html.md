@@ -7,6 +7,7 @@ meta_description: "Individuelle, mobiloptimierte Websites für Architekturbüros
 h1: "Website für Architekturbüros: schnell, mobiloptimiert, SEO-bereit von Tag eins"
 differenzierungs_fakt: "Rekonstruiert aus bestehender HTML-Seite nach Datenverlust am 2026-08-03; Original-Differenzierungsfakt nicht separat wiederherstellbar, Inhalt/Quellen sind aber vollstaendig erhalten."
 interne_links:
+  - /musterentwuerfe/
   - /einzugsgebiet/bonn/website-erstellung.html
   - /einzugsgebiet/koeln/website-erstellung.html
   - /blog/gute-website-architekturbuero-merkmale.html

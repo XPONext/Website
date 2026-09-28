@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Musterentwürfe — XPONext</title>
   <meta name="description" content="Drei Musterentwürfe für Architektur- und Innenarchitekturbüros: jeder mit eigenem Konzept, gebaut nach den Qualitätsregeln von XPONext. Büros, Personen und Projekte sind erfunden.">
-  <meta name="robots" content="noindex, follow">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.xponext.de/musterentwuerfe/">
   <link rel="icon" type="image/png" sizes="32x32" href="../favicon.png">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
@@ -132,6 +132,8 @@
     .ref-note { max-width: 720px; margin: 3rem auto 0; padding: 1.2rem 1.4rem; background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 12px; font-size: 0.9rem; color: #4B5563; line-height: 1.65; }
     .ref-note strong { color: #0D0D0D; }
   </style>
+  <link rel="stylesheet" href="/css/nav-mobile.css">
+  <script src="/js/nav-mobile.js" defer></script>
 </head>
 <body>
 
@@ -156,7 +158,13 @@
       <a href="../index.html#vorteile">Vorteile</a>
       <a href="../index.html#faq">FAQ</a>
       <a href="../ueber-uns.html">Über uns</a>
-      <a href="../website-check.html">Website-Check</a>
+      <div class="nav-dd">
+        <a href="../website-check.html" class="nav-dd-trigger">Website-Check <span class="nav-dd-arrow">▾</span></a>
+        <div class="nav-dd-menu">
+          <a href="../website-check.html">SEO & Performance</a>
+          <a href="../geo-check.html">GEO-Check</a>
+        </div>
+      </div>
       <a href="../index.html#kontakt" class="nav-cta">Termin buchen</a>
     </div>
   </nav>
@@ -251,14 +259,14 @@
         <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
         <div>
           <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
-          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit deiner Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
         </div>
       </div>
       <div class="cookie-banner__options" id="cookieOptions" hidden>
         <label class="cookie-option">
           <div>
             <div class="cookie-option__title">Notwendig</div>
-            <div class="cookie-option__desc">Speichert deine Cookie-Einstellungen im Browser. Kein Tracking.</div>
+            <div class="cookie-option__desc">Speichert Ihre Cookie-Einstellungen im Browser. Kein Tracking.</div>
           </div>
           <span class="cookie-option__always">Immer aktiv</span>
         </label>

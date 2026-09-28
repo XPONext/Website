@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kostenloser GEO-Check — XPONext</title>
-  <meta name="description" content="Prüfe kostenlos, wie sichtbar deine Website für ChatGPT, Perplexity & Google AI Overviews ist — Schema.org, KI-Crawler-Zugang und Content-Struktur in Sekunden.">
+  <meta name="description" content="Prüfen Sie kostenlos, wie sichtbar Ihre Website für ChatGPT, Perplexity & Google AI Overviews ist — Schema.org, KI-Crawler-Zugang und Content-Struktur in Sekunden.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='28' fill='%231B6B45'/%3E%3Cline x1='32' y1='88' x2='32' y2='32' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='88' y1='32' x2='88' y2='88' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='32' y1='32' x2='88' y2='88' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='32' y1='88' x2='88' y2='32' stroke='%23fff' stroke-width='7' stroke-linecap='round' opacity='.3'/%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/cookie-banner.css">
@@ -256,6 +256,8 @@
       return false;
     }
   </script>
+  <link rel="stylesheet" href="/css/nav-mobile.css">
+  <script src="/js/nav-mobile.js" defer></script>
 </head>
 <body>
 
@@ -293,8 +295,8 @@
 
   <div class="page-hero">
     <div class="ps-badge">Kostenloser GEO-Check</div>
-    <h1>Findet dich <em>ChatGPT & Co.?</em></h1>
-    <p>Gib deine URL ein — wir prüfen in Sekunden, wie gut deine Website für KI-Suchen wie ChatGPT, Perplexity und Google AI Overviews aufgestellt ist.</p>
+    <h1>Findet Sie <em>ChatGPT & Co.?</em></h1>
+    <p>Geben Sie Ihre URL ein — wir prüfen in Sekunden, wie gut Ihre Website für KI-Suchen wie ChatGPT, Perplexity und Google AI Overviews aufgestellt ist.</p>
   </div>
 
   <div class="check-wrap">
@@ -342,7 +344,7 @@
             <div class="ps-vitals" id="geo-context"></div>
 
             <div class="findings-block">
-              <h3>Was du konkret verbessern kannst</h3>
+              <h3>Was Sie konkret verbessern können</h3>
               <div id="geo-findings"></div>
             </div>
 
@@ -352,11 +354,11 @@
           <div id="geo-gate-overlay" class="geo-locked-overlay">
             <div id="geo-gate" class="gate-block">
               <h3>Vollständigen Bericht freischalten</h3>
-              <p>Trag deine E-Mail-Adresse ein und du siehst sofort alle geprüften Punkte inkl. konkreter Verbesserungsvorschläge.</p>
+              <p>Tragen Sie Ihre E-Mail-Adresse ein und Sie sehen sofort alle geprüften Punkte inkl. konkreter Verbesserungsvorschläge.</p>
               <form id="geo-lead-form">
                 <input type="text" id="geo-lead-honeypot" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
                 <div class="gate-form-row">
-                  <input type="email" id="geo-lead-email" class="ps-input" placeholder="deine@email.de" required>
+                  <input type="email" id="geo-lead-email" class="ps-input" placeholder="name@ihr-buero.de" required>
                   <button type="submit" class="btn-primary" disabled>Bericht freischalten →</button>
                 </div>
                 <label class="gate-consent">
@@ -369,7 +371,7 @@
           </div>
         </div>
 
-        <p class="geo-disclaimer">Der GEO-Check ist eine automatisierte Grobanalyse anhand öffentlich zugänglicher Signale (HTML, robots.txt, Sitemap). Für eine vollständige Einschätzung inkl. individueller Empfehlungen nutze unser kostenloses Erstgespräch.</p>
+        <p class="geo-disclaimer">Der GEO-Check ist eine automatisierte Grobanalyse anhand öffentlich zugänglicher Signale (HTML, robots.txt, Sitemap). Für eine vollständige Einschätzung inkl. individueller Empfehlungen nutzen Sie unser kostenloses Erstgespräch.</p>
       </div>
 
     </div>
@@ -425,7 +427,7 @@
       if (!/^https?:\/\//i.test(raw)) raw = 'https://' + raw;
       var parsed;
       try { parsed = new URL(raw); } catch (err) {
-        showError('Das sieht nicht nach einer gültigen URL aus. Bitte prüfe die Adresse.');
+        showError('Das sieht nicht nach einer gültigen URL aus. Bitte prüfen Sie die Adresse.');
         return;
       }
       gtag_report_conversion();
@@ -450,7 +452,7 @@
         return;
       }
       if (!consent) {
-        errEl.innerHTML = '<div class="ps-error-box">Bitte bestätige die Checkbox, um fortzufahren.</div>';
+        errEl.innerHTML = '<div class="ps-error-box">Bitte bestätigen Sie die Checkbox, um fortzufahren.</div>';
         return;
       }
 
@@ -476,7 +478,7 @@
       }).then(function() {
         document.getElementById('geo-locked-wrap').classList.add('unlocked');
       }).catch(function(err) {
-        var msg = 'Da ist etwas schiefgelaufen. Bitte versuch es gleich nochmal.';
+        var msg = 'Da ist etwas schiefgelaufen. Bitte versuchen Sie es gleich nochmal.';
         if (err && err.message === 'invalid_email') msg = 'Diese E-Mail-Adresse scheint es nicht zu geben — bitte prüfen.';
         errEl.innerHTML = '<div class="ps-error-box">' + msg + '</div>';
       }).finally(function() {
@@ -734,15 +736,15 @@
       }
 
       /* KI-Crawler-Zugang */
-      check('crawler', 5, d.https, 'HTTPS aktiv', 'Deine Seite läuft noch über http:// — ohne HTTPS werden viele Crawler und Nutzer misstrauisch. Sollte als Erstes behoben werden.', 'Deine Seite ist über HTTPS erreichbar.');
+      check('crawler', 5, d.https, 'HTTPS aktiv', 'Ihre Seite läuft noch über http:// — ohne HTTPS werden viele Crawler und Nutzer misstrauisch. Sollte als Erstes behoben werden.', 'Ihre Seite ist über HTTPS erreichbar.');
       check('crawler', 5, d.robotsFound, 'robots.txt vorhanden', 'Es wurde keine robots.txt gefunden. Ohne sie ist für Crawler unklar, was erlaubt ist — meist harmlos, aber besser explizit regeln.', 'robots.txt ist vorhanden.');
-      check('crawler', 5, d.blockedBots.indexOf('GPTBot (ChatGPT)') === -1, 'GPTBot nicht blockiert', 'GPTBot wird in der robots.txt blockiert — damit taucht deine Seite nicht in ChatGPT-Antworten auf.', 'GPTBot darf deine Seite crawlen.');
-      check('crawler', 5, d.blockedBots.indexOf('ClaudeBot (Claude)') === -1, 'ClaudeBot nicht blockiert', 'ClaudeBot wird blockiert — deine Inhalte fließen nicht in Claude-Antworten ein.', 'ClaudeBot darf deine Seite crawlen.');
-      check('crawler', 5, d.blockedBots.indexOf('PerplexityBot') === -1 && d.blockedBots.indexOf('Google-Extended (AI Overviews)') === -1, 'Perplexity & Google-Extended nicht blockiert', 'PerplexityBot oder Google-Extended werden blockiert — das kostet dich Sichtbarkeit in Perplexity bzw. Google AI Overviews.', 'Perplexity und Google AI Overviews dürfen deine Seite crawlen.');
+      check('crawler', 5, d.blockedBots.indexOf('GPTBot (ChatGPT)') === -1, 'GPTBot nicht blockiert', 'GPTBot wird in der robots.txt blockiert — damit taucht Ihre Seite nicht in ChatGPT-Antworten auf.', 'GPTBot darf Ihre Seite crawlen.');
+      check('crawler', 5, d.blockedBots.indexOf('ClaudeBot (Claude)') === -1, 'ClaudeBot nicht blockiert', 'ClaudeBot wird blockiert — Ihre Inhalte fließen nicht in Claude-Antworten ein.', 'ClaudeBot darf Ihre Seite crawlen.');
+      check('crawler', 5, d.blockedBots.indexOf('PerplexityBot') === -1 && d.blockedBots.indexOf('Google-Extended (AI Overviews)') === -1, 'Perplexity & Google-Extended nicht blockiert', 'PerplexityBot oder Google-Extended werden blockiert — das kostet Sie Sichtbarkeit in Perplexity bzw. Google AI Overviews.', 'Perplexity und Google AI Overviews dürfen Ihre Seite crawlen.');
 
       /* Strukturierte Daten */
-      check('schema', 10, d.schemaCount > 0, 'Schema.org / JSON-LD vorhanden', 'Es wurde kein strukturiertes Datenformat (JSON-LD) gefunden. Das ist der stärkste Hebel, damit KI-Systeme deine Inhalte korrekt einordnen und zitieren.', d.schemaCount + ' Schema-Block(e) gefunden.');
-      check('schema', 8, d.hasOrgOrLocalBusiness, 'Organization- / LocalBusiness-Schema', 'Kein Organization- oder LocalBusiness-Schema erkennbar — dadurch fehlen KI-Systemen klare Basisdaten zu deinem Unternehmen (Name, Adresse, Kontakt).', 'Organization- oder LocalBusiness-Schema ist eingebunden.');
+      check('schema', 10, d.schemaCount > 0, 'Schema.org / JSON-LD vorhanden', 'Es wurde kein strukturiertes Datenformat (JSON-LD) gefunden. Das ist der stärkste Hebel, damit KI-Systeme Ihre Inhalte korrekt einordnen und zitieren.', d.schemaCount + ' Schema-Block(e) gefunden.');
+      check('schema', 8, d.hasOrgOrLocalBusiness, 'Organization- / LocalBusiness-Schema', 'Kein Organization- oder LocalBusiness-Schema erkennbar — dadurch fehlen KI-Systemen klare Basisdaten zu Ihrem Unternehmen (Name, Adresse, Kontakt).', 'Organization- oder LocalBusiness-Schema ist eingebunden.');
       check('schema', 4, d.hasFaqOrArticle, 'FAQ- oder Article-Schema', 'Kein FAQPage- oder Article-Schema gefunden — gerade FAQ-Markup wird von KI-Antworten besonders gerne zitiert.', 'FAQ- oder Article-Schema ist vorhanden.');
       check('schema', 3, d.hasBreadcrumb, 'BreadcrumbList-Schema', 'Kein Breadcrumb-Schema gefunden — kleiner, aber leicht zu ergänzender Baustein für mehr Struktur.', 'BreadcrumbList-Schema ist vorhanden.');
 
@@ -755,7 +757,7 @@
       check('content', 5, d.imgCount === 0 || (d.imgAltCount / d.imgCount) >= 0.7, 'Bilder mit Alt-Text', 'Ein großer Teil der Bilder hat keinen Alt-Text (' + d.imgAltCount + ' von ' + d.imgCount + ') — Alt-Texte helfen sowohl SEO als auch KI-Systemen beim Verständnis der Seite.', 'Die meisten Bilder haben einen Alt-Text.');
 
       /* Technik & Vertrauen */
-      check('trust', 5, d.metaDescription.length >= 50, 'Meta-Description vorhanden', 'Meta-Description fehlt oder ist sehr kurz — sie beeinflusst, wie deine Seite in Suchergebnissen und teils in KI-Zusammenfassungen dargestellt wird.', 'Eine aussagekräftige Meta-Description ist vorhanden.');
+      check('trust', 5, d.metaDescription.length >= 50, 'Meta-Description vorhanden', 'Meta-Description fehlt oder ist sehr kurz — sie beeinflusst, wie Ihre Seite in Suchergebnissen und teils in KI-Zusammenfassungen dargestellt wird.', 'Eine aussagekräftige Meta-Description ist vorhanden.');
       check('trust', 3, d.canonical, 'Canonical-Tag gesetzt', 'Kein Canonical-Tag gefunden — kann bei mehreren erreichbaren URL-Varianten zu Unklarheiten führen, welche Version die „echte" ist.', 'Canonical-Tag ist gesetzt.');
       check('trust', 4, d.internalLinks >= 3, 'Interne Verlinkung', 'Wenige interne Links gefunden — gute interne Verlinkung hilft Crawlern (und Nutzern), weitere relevante Seiten zu finden.', d.internalLinks + ' interne Links gefunden.');
       check('trust', 4, d.hasPhone || d.hasAddress || d.hasMailto, 'Kontaktdaten erkennbar', 'Auf der Seite wurden keine klaren Kontaktdaten (Telefon, Adresse, E-Mail) gefunden — das ist ein wichtiges Vertrauenssignal, gerade für lokale Unternehmen.', 'Kontaktdaten sind auf der Seite erkennbar.');
@@ -794,13 +796,13 @@
       var title, text;
       if (result.total >= 80) {
         title = 'Gut aufgestellt für KI-Suchen';
-        text = 'Deine Website erfüllt die meisten wichtigen GEO-Kriterien. Mit ein paar Feinheiten kannst du deine Sichtbarkeit in ChatGPT, Perplexity & Co. noch weiter ausbauen.';
+        text = 'Ihre Website erfüllt die meisten wichtigen GEO-Kriterien. Mit ein paar Feinheiten können Sie Ihre Sichtbarkeit in ChatGPT, Perplexity & Co. noch weiter ausbauen.';
       } else if (result.total >= 50) {
         title = 'Solide Basis, aber Luft nach oben';
-        text = 'Einige wichtige GEO-Bausteine fehlen noch. Mit gezielten Anpassungen bei Struktur und strukturierten Daten kannst du deutlich sichtbarer werden.';
+        text = 'Einige wichtige GEO-Bausteine fehlen noch. Mit gezielten Anpassungen bei Struktur und strukturierten Daten können Sie deutlich sichtbarer werden.';
       } else {
         title = 'Für KI-Suchen aktuell kaum sichtbar';
-        text = 'Deine Website ist für klassisches SEO vielleicht okay, aber für ChatGPT, Perplexity & Google AI Overviews fehlen zentrale Grundlagen. Hier steckt aktuell das größte Potenzial.';
+        text = 'Ihre Website ist für klassisches SEO vielleicht okay, aber für ChatGPT, Perplexity & Google AI Overviews fehlen zentrale Grundlagen. Hier steckt aktuell das größte Potenzial.';
       }
       document.getElementById('geo-score-title').textContent = title;
       document.getElementById('geo-score-text').textContent = text;
@@ -845,7 +847,7 @@
         teaserEl.innerHTML = findingHtml(teaser);
       } else {
         teaserBlockTitle.textContent = 'Erste Einschätzung';
-        teaserEl.innerHTML = '<div class="finding-item"><div class="finding-icon">⚠️</div><div class="finding-text"><strong>Mehrere zentrale GEO-Kriterien fehlen</strong><span>Die vollständige Liste inkl. konkreter Verbesserungsvorschläge siehst du nach dem Freischalten unten.</span></div></div>';
+        teaserEl.innerHTML = '<div class="finding-item"><div class="finding-icon">⚠️</div><div class="finding-text"><strong>Mehrere zentrale GEO-Kriterien fehlen</strong><span>Die vollständige Liste inkl. konkreter Verbesserungsvorschläge sehen Sie nach dem Freischalten unten.</span></div></div>';
       }
 
       var remainingChecks = allChecks.filter(function(c) { return c !== teaser; });
@@ -857,17 +859,17 @@
       if (result.total < 50) {
         banner.style.background = '#FEF3E2';
         banner.style.border = '1px solid #FCD34D';
-        banner.innerHTML = '<p style="color:#92400E;">⚠️ Du bist für KI-Suchen aktuell kaum auffindbar — das wird schnell mehr.</p>'
+        banner.innerHTML = '<p style="color:#92400E;">⚠️ Sie sind für KI-Suchen aktuell kaum auffindbar — das wird schnell mehr.</p>'
           + '<a href="index.html#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
       } else if (result.total >= 80) {
         banner.style.background = '#F0FBF4';
         banner.style.border = '1px solid #6EE7A0';
-        banner.innerHTML = '<p style="color:#166534;">✅ Guter Stand! Wir helfen dir, die letzten Punkte mitzunehmen.</p>'
+        banner.innerHTML = '<p style="color:#166534;">✅ Guter Stand! Wir helfen Ihnen, die letzten Punkte mitzunehmen.</p>'
           + '<a href="index.html#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
       } else {
         banner.style.background = '#F9FAFB';
         banner.style.border = '1px solid #E5E7EB';
-        banner.innerHTML = '<p style="color:#4B5563;">Wir helfen dir, die größten GEO-Hebel gezielt umzusetzen.</p>'
+        banner.innerHTML = '<p style="color:#4B5563;">Wir helfen Ihnen, die größten GEO-Hebel gezielt umzusetzen.</p>'
           + '<a href="index.html#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
       }
     }
@@ -881,14 +883,14 @@
         <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
         <div>
           <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
-          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit deiner Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
         </div>
       </div>
       <div class="cookie-banner__options" id="cookieOptions" hidden>
         <label class="cookie-option">
           <div>
             <div class="cookie-option__title">Notwendig</div>
-            <div class="cookie-option__desc">Speichert deine Cookie-Einstellungen im Browser. Kein Tracking.</div>
+            <div class="cookie-option__desc">Speichert Ihre Cookie-Einstellungen im Browser. Kein Tracking.</div>
           </div>
           <span class="cookie-option__always">Immer aktiv</span>
         </label>

@@ -9,6 +9,14 @@ The official XPONext Website
 Dateien direkt bearbeiten, dann pushen — GitHub Pages aktualisiert sich automatisch.
 Ausnahme: die generierten Seiten unter `_content/`, siehe unten.
 
+**Anrede:** Die Website siezt die Besucher (seit 28.09.2026, vorher du). Neue Texte,
+Content-Pakete und Vorlagen im Generator ebenfalls in Sie-Form, auch Cookie-Banner,
+Formular-Meldungen und die Ergebnis-Texte in GEO-Check und Website-Check.
+
+**Navigation auf dem Handy:** Menü-Button und aufklappbares Menü kommen aus
+`css/nav-mobile.css` und `js/nav-mobile.js`. Neue Seiten mit Navigation binden beide
+Dateien vor `</head>` ein.
+
 ## Generierte Seiten (`_content/`)
 
 Die Leistungs-, Einzugsgebiet-, Kombi- und Blogseiten werden **nicht von Hand gepflegt**.
@@ -99,7 +107,10 @@ Verkaufsgespräch: für einen Kunden geliefert. Erlaubt sind Musterentwurf, Must
 
 Jeder Entwurf liegt als eigenständige statische Site unter `musterentwuerfe/<slug>/` (relative
 Pfade, eigene `assets/`, eigene Fonts, `noindex` auf jeder Seite, Hinweis in der Fußzeile).
-Übersicht: `musterentwuerfe/index.html`, aktuell ebenfalls `noindex`.
+Übersicht: `musterentwuerfe/index.html`, seit 28.09.2026 von Tim freigegeben: indexierbar, in der
+`sitemap.xml` und verlinkt von Startseite, `leistungen.html` und `leistungen/website-erstellung.html`.
+Die Entwürfe selbst bleiben bewusst `noindex`: Sie tragen `ArchitectOffice`-Daten mit erfundener
+Anschrift und Telefonnummer, die sollen nicht als echte Büros bei Google landen.
 
 Unter `_doku/` (von GitHub Pages nicht ausgeliefert) liegt je Entwurf die komplette Entstehung:
 `inhalte.md` → `design-brief.md` → `build.py` (erzeugt alle Seiten) → `pruefbericht.md` →
@@ -113,4 +124,5 @@ Dateien).
 | `musterstudio-lindenau` | Innenarchitektur-Studio, Hamburg | dunkel/hell im Wechsel, Cormorant & DM Sans, Messing |
 | `musterbuero-steinwerk` | mittleres Büro für öffentliche Bauten, Köln | kein Titelbild, Raster + Liste + Filter, Inter & IBM Plex Mono |
 
-**Livegang und Indexierung nur nach Freigabe durch Tim** — die Seiten sind Außendarstellung.
+**Neue Entwürfe erst nach Freigabe durch Tim verlinken**, die Seiten sind Außendarstellung.
+`noindex` auf den Entwürfen nicht entfernen, solange sie erfundene Bürodaten enthalten.

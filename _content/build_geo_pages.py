@@ -33,7 +33,7 @@ CLUSTER_META = {
     },
     "Zeitfresser & Prozessoptimierung": {
         "tag": "Zeitfresser",
-        "desc": "Wo im Büroalltag Zeit verloren geht, und wie ihr sie zurückgewinnt.",
+        "desc": "Wo im Büroalltag Zeit verloren geht, und wie Sie sie zurückgewinnen.",
     },
     "Kosten von Online-Marketing für Architekturbüros": {
         "tag": "Kosten",
@@ -131,7 +131,8 @@ def load_all():
     return entries
 
 def build_link_labels(entries):
-    labels = {"/": "Startseite", "/leistungen.html": "Leistungen", "/effizienz.html": "Zeitfresser & Prozessoptimierung"}
+    labels = {"/": "Startseite", "/leistungen.html": "Leistungen", "/effizienz.html": "Zeitfresser & Prozessoptimierung",
+              "/musterentwuerfe/": "Musterentwürfe: So können Websites für Architekturbüros aussehen"}
     for slug, (fm, body, f) in entries.items():
         target = REDIRECT.get(slug, slug)
         labels[target] = fm.get("h1") or fm.get("title")
@@ -360,14 +361,14 @@ FOOTER = """
         <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
         <div>
           <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
-          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit deiner Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
         </div>
       </div>
       <div class="cookie-banner__options" id="cookieOptions" hidden>
         <label class="cookie-option">
           <div>
             <div class="cookie-option__title">Notwendig</div>
-            <div class="cookie-option__desc">Speichert deine Cookie-Einstellungen im Browser. Kein Tracking.</div>
+            <div class="cookie-option__desc">Speichert Ihre Cookie-Einstellungen im Browser. Kein Tracking.</div>
           </div>
           <span class="cookie-option__always">Immer aktiv</span>
         </label>
@@ -430,6 +431,8 @@ def head(title, meta_desc, canonical, schemas):
   </script>
   {schema_scripts}
   <style>{PAGE_CSS}</style>
+  <link rel="stylesheet" href="/css/nav-mobile.css">
+  <script src="/js/nav-mobile.js" defer></script>
 </head>
 <body>
 {NAV}"""
@@ -465,7 +468,7 @@ def build_page(fm, body, slug, labels):
         related_cards.append(f'<a class="related-card" href="{target}">{label}</a>')
     related_html = ""
     if related_cards:
-        related_html = f'''<div class="related-links"><h3>Das könnte dich auch interessieren</h3><div class="related-grid">{"".join(related_cards)}</div></div>'''
+        related_html = f'''<div class="related-links"><h3>Das könnte Sie auch interessieren</h3><div class="related-grid">{"".join(related_cards)}</div></div>'''
 
     badge = badge_for(fm, slug)
     html = head(fm["title"], fm["meta_description"], canonical, schemas)
@@ -486,7 +489,7 @@ def build_page(fm, body, slug, labels):
 
   <div class="cta-block">
     <h2>Bereit für <em>mehr Sichtbarkeit?</em></h2>
-    <p>Kostenloses Erstgespräch – wir schauen uns deine Situation an und zeigen, was möglich ist.</p>
+    <p>Kostenloses Erstgespräch – wir schauen uns Ihre Situation an und zeigen, was möglich ist.</p>
     <a href="/index.html#kontakt" class="btn-primary">Kostenloses Erstgespräch →</a>
   </div>
 {FOOTER}
@@ -567,7 +570,7 @@ def build_blog_index(entries, labels):
 
   <div class="cta-block">
     <h2>Bereit für <em>mehr Sichtbarkeit?</em></h2>
-    <p>Kostenloses Erstgespräch – wir schauen uns deine Situation an und zeigen, was möglich ist.</p>
+    <p>Kostenloses Erstgespräch – wir schauen uns Ihre Situation an und zeigen, was möglich ist.</p>
     <a href="/index.html#kontakt" class="btn-primary">Kostenloses Erstgespräch →</a>
   </div>
 """

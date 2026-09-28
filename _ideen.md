@@ -19,12 +19,12 @@ Abhängigkeiten nach außen
 | 2 | Partner und Büros verlinken | Vertrauen | offen | M |
 | 3 | Video von uns aufnehmen | Vertrauen | offen | M |
 | 4 | Website-Konfigurator mit Preisrahmen | Angebot | offen | L |
-| 5 | Kundenstimmen entfernen | Startseite | offen | S |
+| 5 | Kundenstimmen entfernen | Startseite | erledigt | S |
 | 6 | Startseite entschlacken | Startseite | offen | M |
-| 7 | FAQ radikal kürzen | Startseite | offen | S |
+| 7 | FAQ radikal kürzen | Startseite | erledigt | S |
 | 8 | Leistungen übersichtlicher gestalten | Leistungen | offen | M |
 | 9 | Einzugsgebiete ausbauen oder streichen | Einzugsgebiete | offen | M |
-| 10 | Websites und Design in den Vordergrund | Positionierung | offen | M |
+| 10 | Websites und Design in den Vordergrund | Positionierung | in Arbeit | M |
 | 11 | Projekte selbst pflegen (CMS) in unseren Websites | Angebot | offen | M |
 | 12 | KI-Pflegedienst auch für fremde Websites | Angebot | offen | L |
 | 13 | Produktvision: KI-Redakteur für Websites, jede Branche | Produkt | Brainstorm | L+ |
@@ -79,8 +79,8 @@ Bereich „Unsere Partner“ oder „Beispiele“.
   eventuell Screenshot).
 - Nur Logo und Link, oder kurze Fallbeispiele mit Ergebnis?
 - Wo platzieren: Startseite, „Über uns“ oder eigene Seite?
-- Die Musterentwürfe sind noch `noindex` und warten auf Freigabe. Passt das in denselben
-  Schritt?
+- Die Musterentwürfe sind seit 28.09.2026 auf der Startseite verlinkt (Idee 10). Echte
+  Partnerbüros könnten dort später als eigener Bereich dazukommen.
 
 ---
 
@@ -132,7 +132,7 @@ Passt zum Schritt hin zu standardisierteren Websites.
 
 ## 5. Kundenstimmen entfernen
 
-- **Status:** offen
+- **Status:** erledigt am 28.09.2026
 - **Aufwand:** S
 - **Eingebracht:** 25.09.2026
 
@@ -151,6 +151,9 @@ Passt zum Schritt hin zu standardisierteren Websites.
 - Die zugehörigen CSS-Regeln (`.testimonial-*`) gleich mit entfernen.
 - Später könnte Idee 2 (echte Partnerbüros) diesen Platz übernehmen.
 
+**Umgesetzt (28.09.2026):** Alle drei Zitate entfernt, auch die Karte „Letzte Bewertung“ im
+Hero, samt CSS. An die Stelle des Abschnitts sind die Musterentwürfe gerückt (Idee 10).
+
 ---
 
 ## 6. Startseite entschlacken
@@ -168,8 +171,9 @@ Botschaft.
 3. „Deine Website hat eine neue Zielgruppe. Und sie ist nicht menschlich.“
 4. „Unsere Leistungen“
 5. „Worauf du dich bei XPONext verlassen kannst“
-6. „Was unsere Kunden sagen“ (fällt weg, siehe Idee 5)
-7. „Häufig gestellte Fragen“ mit 16 Fragen (siehe Idee 7)
+6. „So können Websites für Architekturbüros aussehen“ (Musterentwürfe, seit 28.09.2026,
+   ersetzt die Kundenstimmen)
+7. „Häufig gestellte Fragen“, seit 28.09.2026 nur noch 5 Fragen
 8. „Bereit anzufangen?“ mit Kontaktformular
 
 **Offene Fragen / Ansätze:**
@@ -177,12 +181,17 @@ Botschaft.
   streichen oder zusammenlegen.
 - Hängt mit Idee 3 (Video) und Idee 4 (Konfigurator) zusammen: Wenn beides kommt, bekommt
   es wahrscheinlich einen festen Platz auf der Startseite. Am besten alles zusammen planen.
+- Das FAQ-Laufband unter dem Hero zeigt jetzt nur noch die fünf verbliebenen Fragen im
+  Kreis. Kandidat zum Streichen.
+- **Fehler, gefunden am 28.09.2026:** Auf dem Handy lässt sich die Startseite seitlich
+  scrollen. Ursache ist die Karte `#effizienz` im Abschnitt „Unsere Leistungen“, die über
+  den Rand ragt. Beim Umbau mit beheben.
 
 ---
 
 ## 7. FAQ radikal kürzen
 
-- **Status:** offen
+- **Status:** erledigt am 28.09.2026
 - **Aufwand:** S
 - **Eingebracht:** 25.09.2026
 
@@ -197,6 +206,11 @@ Botschaft.
 - Ganz weg oder auf die fünf wichtigsten Fragen kürzen?
 - Beim Kürzen das FAQPage-Schema im Quelltext mit anpassen. Es darf nur Fragen enthalten,
   die auch sichtbar auf der Seite stehen.
+
+**Umgesetzt (28.09.2026):** Auf fünf Fragen gekürzt, ohne Kategorien: Für welche Büros, Kosten,
+Start, bestehende Website behalten, Rechte an der Website. FAQPage-Schema und Laufband
+passen dazu. Die Erklärfragen (Google Ads, GEO, lokales SEO, Bewertungen, Zeitfresser)
+sind raus und gehören, falls nötig, auf die jeweilige Leistungsseite.
 
 ---
 
@@ -253,7 +267,7 @@ rausnehmen.
 
 ## 10. Websites und Design in den Vordergrund
 
-- **Status:** offen
+- **Status:** in Arbeit (erster Schritt am 28.09.2026)
 - **Aufwand:** M
 - **Eingebracht:** 25.09.2026
 
@@ -264,9 +278,8 @@ man auf der Website aktuell kaum. Der Fokus soll deutlicher auf Websites und Des
 - Der Hero sagt „Mehr Projekte. Weniger Zeitfresser.“ Die Website ist dort nur ein Punkt in
   der Aufzählung „Webseite, SEO, GEO, Ads und effiziente Prozesse mit KI“.
 - Auf `leistungen.html` ist die Website einer von fünf gleichrangigen Blöcken.
-- Nirgends auf der Website ist eine Arbeit von uns zu sehen. Die drei Musterentwürfe unter
-  `musterentwuerfe/` zeigen genau das, sind aber noch `noindex` und nirgends verlinkt
-  (Livegang nur nach Tims Freigabe).
+- Nirgends auf der Website war eine Arbeit von uns zu sehen. Die drei Musterentwürfe unter
+  `musterentwuerfe/` zeigen genau das, waren aber `noindex` und nirgends verlinkt.
 
 **Offene Fragen / Ansätze:**
 - Hero und Seitentitel auf Websites für Architekturbüros zuspitzen, SEO, GEO und Ads als
@@ -277,6 +290,15 @@ man auf der Website aktuell kaum. Der Fokus soll deutlicher auf Websites und Des
   Anspruch unglaubwürdig. Das spricht dafür, Idee 6 und 8 zusammen mit dieser Idee anzugehen.
 - Passt zu Idee 4: Die Stil-Auswahl im Konfigurator zeigt gleichzeitig die Bandbreite
   unserer Gestaltung.
+- ~~Die Übersichtsseite der Musterentwürfe spricht mit „Sie“ an, der Rest der Website mit
+  „du“.~~ Erledigt am 28.09.2026: Die ganze Website siezt jetzt (Tims Entscheidung, „erst
+  einmal“).
+
+**Umgesetzt (28.09.2026), erster Schritt:** Tim hat die Musterentwürfe freigegeben. Neuer
+Abschnitt auf der Startseite mit den drei Entwürfen, Links von `leistungen.html` und
+`leistungen/website-erstellung.html`, Übersichtsseite indexierbar und in der Sitemap. Die
+Entwürfe selbst bleiben `noindex`, weil sie erfundene Bürodaten (Adresse, Telefon) als
+strukturierte Daten tragen. Offen bleiben Hero, Seitentitel und Leistungsseite.
 
 ---
 

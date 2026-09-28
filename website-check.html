@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kostenloser Website-Check — XPONext</title>
-  <meta name="description" content="Prüfe deine Website kostenlos auf Performance, SEO, Zugänglichkeit und Best Practices — powered by Google PageSpeed.">
+  <meta name="description" content="Prüfen Sie Ihre Website kostenlos auf Performance, SEO, Zugänglichkeit und Best Practices — powered by Google PageSpeed.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' rx='28' fill='%231B6B45'/%3E%3Cline x1='32' y1='88' x2='32' y2='32' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='88' y1='32' x2='88' y2='88' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='32' y1='32' x2='88' y2='88' stroke='%23fff' stroke-width='7' stroke-linecap='round'/%3E%3Cline x1='32' y1='88' x2='88' y2='32' stroke='%23fff' stroke-width='7' stroke-linecap='round' opacity='.3'/%3E%3C/svg%3E">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/cookie-banner.css">
@@ -186,6 +186,8 @@
       return false;
     }
   </script>
+  <link rel="stylesheet" href="/css/nav-mobile.css">
+  <script src="/js/nav-mobile.js" defer></script>
 </head>
 <body>
 
@@ -223,8 +225,8 @@
 
   <div class="page-hero">
     <div class="ps-badge">Kostenloser Website-Check</div>
-    <h1>Wie performant ist <em>deine Website?</em></h1>
-    <p>Gib deine URL ein — wir prüfen sie in Sekunden auf Performance, SEO, Zugänglichkeit und Best Practices.</p>
+    <h1>Wie performant ist <em>Ihre Website?</em></h1>
+    <p>Geben Sie Ihre URL ein — wir prüfen sie in Sekunden auf Performance, SEO, Zugänglichkeit und Best Practices.</p>
   </div>
 
   <div class="check-wrap">
@@ -339,7 +341,7 @@
           } else if (err && err.message) {
             msg = 'Fehler: ' + err.message;
           } else {
-            msg = 'Die URL konnte nicht analysiert werden. Bitte prüfe die Adresse und versuche es erneut.';
+            msg = 'Die URL konnte nicht analysiert werden. Bitte prüfen Sie die Adresse und versuchen Sie es erneut.';
           }
           var el = document.getElementById('ps-error');
           el.innerHTML = '<div class="ps-error-box">' + msg + '</div>';
@@ -404,7 +406,7 @@
       if (perfScore !== null && perfScore < 70) {
         banner.style.background = '#FEF3E2';
         banner.style.border = '1px solid #FCD34D';
-        banner.innerHTML = '<p style="color:#92400E;">⚠️ Deine Website hat Optimierungspotenzial, das kostet dich täglich Kunden.</p>'
+        banner.innerHTML = '<p style="color:#92400E;">⚠️ Ihre Website hat Optimierungspotenzial, das kostet Sie täglich Kunden.</p>'
           + '<a href="index.html#kontakt" style="background:#1B6B45;color:#fff;">Jetzt optimieren lassen →</a>';
       } else if (perfScore !== null && perfScore >= 90) {
         banner.style.background = '#F0FBF4';
@@ -414,7 +416,7 @@
       } else {
         banner.style.background = '#F9FAFB';
         banner.style.border = '1px solid #E5E7EB';
-        banner.innerHTML = '<p style="color:#4B5563;">Wir helfen dir, noch mehr aus deiner Website rauszuholen.</p>'
+        banner.innerHTML = '<p style="color:#4B5563;">Wir helfen Ihnen, noch mehr aus Ihrer Website rauszuholen.</p>'
           + '<a href="index.html#kontakt" style="background:#1B6B45;color:#fff;">Kostenlos beraten lassen →</a>';
       }
 
@@ -430,14 +432,14 @@
         <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
         <div>
           <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
-          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit deiner Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
         </div>
       </div>
       <div class="cookie-banner__options" id="cookieOptions" hidden>
         <label class="cookie-option">
           <div>
             <div class="cookie-option__title">Notwendig</div>
-            <div class="cookie-option__desc">Speichert deine Cookie-Einstellungen im Browser. Kein Tracking.</div>
+            <div class="cookie-option__desc">Speichert Ihre Cookie-Einstellungen im Browser. Kein Tracking.</div>
           </div>
           <span class="cookie-option__always">Immer aktiv</span>
         </label>

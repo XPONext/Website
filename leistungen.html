@@ -76,6 +76,7 @@
     .service-benefit { background: #E8F0EB; border-left: 3px solid #1B6B45; padding: 0.9rem 1.2rem; border-radius: 0 8px 8px 0; font-size: 0.93rem; color: #134D32; font-weight: 500; line-height: 1.5; }
     .service-more { display: inline-flex; align-items: center; gap: 5px; margin-top: 1rem; color: #1B6B45; font-weight: 700; font-size: 0.9rem; }
     .service-more:hover { color: #134D32; opacity: 1; }
+    .service-links { display: flex; flex-wrap: wrap; column-gap: 1.5rem; }
 
     /* CTA BLOCK */
     .cta-block { padding: 5rem 5%; background: #0D0D0D; text-align: center; }
@@ -105,6 +106,8 @@
       footer { flex-direction: column; }
     }
   </style>
+  <link rel="stylesheet" href="/css/nav-mobile.css">
+  <script src="/js/nav-mobile.js" defer></script>
 </head>
 <body>
 
@@ -142,7 +145,7 @@
 
   <div class="page-hero">
     <div class="ps-badge">🚀 Online-Marketing aus einer Hand</div>
-    <h1>Alles, was dein Büro <em>online braucht.</em></h1>
+    <h1>Alles, was Ihr Büro <em>online braucht.</em></h1>
     <p>Fünf Leistungen. Ein Ansprechpartner. Messbare Ergebnisse für Architekturbüros.</p>
   </div>
 
@@ -151,9 +154,9 @@
     <div class="service-inner">
       <div class="service-badge">🌐 Leistung 1</div>
       <h2>Professionelle <em>Webseite</em></h2>
-      <p class="service-desc">Deine Website ist dein digitales Schaufenster – oft der erste Eindruck, den potenzielle Kunden von dir bekommen. Eine professionelle Website überzeugt durch klares Design, schnelle Ladezeiten und eine intuitive Nutzerführung. Sie vermittelt Vertrauen, spiegelt deine Marke wider und verwandelt Besucher in Anfragen.</p>
+      <p class="service-desc">Ihre Website ist Ihr digitales Schaufenster – oft der erste Eindruck, den potenzielle Kunden von Ihnen bekommen. Eine professionelle Website überzeugt durch klares Design, schnelle Ladezeiten und eine intuitive Nutzerführung. So vermittelt sie Vertrauen, spiegelt Ihre Marke wider und verwandelt Besucher in Anfragen.</p>
       <div class="service-features">
-        <div class="service-feature">Individuelles Design auf dein Büro zugeschnitten</div>
+        <div class="service-feature">Individuelles Design auf Ihr Büro zugeschnitten</div>
         <div class="service-feature">Mobiloptimiert und schnell auf allen Geräten</div>
         <div class="service-feature">SEO-optimierte Struktur von Anfang an</div>
         <div class="service-feature">KI-lesbare Inhalte für ChatGPT & Co.</div>
@@ -161,7 +164,10 @@
         <div class="service-feature">Technische Wartung und Updates inklusive</div>
       </div>
       <div class="service-benefit">Ergebnis: Eine Website, die nicht nur gut aussieht, sondern von Bauherren, Suchmaschinen und KI-Systemen gleichermaßen verstanden wird.</div>
-      <a href="leistungen/website-erstellung.html" class="service-more">Mehr zur Website-Erstellung →</a>
+      <div class="service-links">
+        <a href="leistungen/website-erstellung.html" class="service-more">Mehr zur Website-Erstellung →</a>
+        <a href="musterentwuerfe/" class="service-more">Musterentwürfe ansehen →</a>
+      </div>
     </div>
   </div>
 
@@ -170,7 +176,7 @@
     <div class="service-inner">
       <div class="service-badge">📢 Leistung 2</div>
       <h2>Google Ads <em>& AI Ads</em></h2>
-      <p class="service-desc">Google Ads und KI-gestützte Anzeigen sorgen dafür, dass du genau dann sichtbar bist, wenn Menschen aktiv nach deiner Leistung suchen. Künstliche Intelligenz optimiert dabei automatisch Gebote, Zielgruppen und Anzeigentexte – für mehr Reichweite bei weniger Streuverlust. Du zahlst nur, wenn jemand klickt. Das Budget bleibt planbar, jede Kampagne ist messbar.</p>
+      <p class="service-desc">Google Ads und KI-gestützte Anzeigen sorgen dafür, dass Sie genau dann sichtbar sind, wenn Menschen aktiv nach Ihrer Leistung suchen. Künstliche Intelligenz optimiert dabei automatisch Gebote, Zielgruppen und Anzeigentexte – für mehr Reichweite bei weniger Streuverlust. Sie zahlen nur, wenn jemand klickt. Das Budget bleibt planbar, jede Kampagne ist messbar.</p>
       <div class="service-features">
         <div class="service-feature">Google-zertifizierte Kampagnen-Einrichtung</div>
         <div class="service-feature">Keyword-Recherche und Zielgruppenanalyse</div>
@@ -179,7 +185,7 @@
         <div class="service-feature">Laufende Optimierung und A/B-Tests</div>
         <div class="service-feature">Direkter Ansprechpartner – keine Blackbox</div>
       </div>
-      <div class="service-benefit">Ergebnis: Sofort mehr Sichtbarkeit bei deiner Zielgruppe – mit planbarem Budget und ohne lange Anlaufzeit.</div>
+      <div class="service-benefit">Ergebnis: Sofort mehr Sichtbarkeit bei Ihrer Zielgruppe – mit planbarem Budget und ohne lange Anlaufzeit.</div>
       <a href="leistungen/google-ads.html" class="service-more">Mehr zu Google Ads &amp; AI Ads →</a>
     </div>
   </div>
@@ -189,7 +195,7 @@
     <div class="service-inner">
       <div class="service-badge">🤖 Leistung 3</div>
       <h2>GEO <span class="badge-neu">Neu</span> — <em>Generative Engine Optimization</em></h2>
-      <p class="service-desc">GEO ist der organische Gegenpart zu Ads: Ganz ohne Klickgebühr sorgt es dafür, dass dein Unternehmen in den Antworten von KI-Systemen wie ChatGPT, Perplexity oder den Google AI Overviews genannt und empfohlen wird. Da kaum ein Architekturbüro das aktuell macht, ist das Feld noch wenig umkämpft – ein klarer Vorteil für alle, die früh dabei sind.</p>
+      <p class="service-desc">GEO ist der organische Gegenpart zu Ads: Ganz ohne Klickgebühr sorgt es dafür, dass Ihr Unternehmen in den Antworten von KI-Systemen wie ChatGPT, Perplexity oder den Google AI Overviews genannt und empfohlen wird. Da kaum ein Architekturbüro das aktuell macht, ist das Feld noch wenig umkämpft – ein klarer Vorteil für alle, die früh dabei sind.</p>
       <div class="service-features">
         <div class="service-feature">Optimierung für ChatGPT, Perplexity & Google AI</div>
         <div class="service-feature">Strukturierte Daten und Schema-Markup</div>
@@ -198,7 +204,7 @@
         <div class="service-feature">Keine Klickkosten – organische Sichtbarkeit</div>
         <div class="service-feature">Laufendes Monitoring der KI-Erwähnungen</div>
       </div>
-      <div class="service-benefit">Ergebnis: Dein Büro wird von KI-Systemen als Empfehlung ausgespielt – heute noch bevor die Konkurrenz überhaupt davon weiß.</div>
+      <div class="service-benefit">Ergebnis: Ihr Büro wird von KI-Systemen als Empfehlung ausgespielt – heute noch bevor die Konkurrenz überhaupt davon weiß.</div>
       <a href="leistungen/geo.html" class="service-more">Mehr zu GEO →</a>
     </div>
   </div>
@@ -208,7 +214,7 @@
     <div class="service-inner">
       <div class="service-badge">⭐ Leistung 4</div>
       <h2><em>Bewertungs</em>management</h2>
-      <p class="service-desc">Online-Bewertungen sind das digitale Empfehlungsschreiben deines Unternehmens. Aktives Bewertungsmanagement bedeutet, positive Rezensionen gezielt zu fördern und auf Feedback professionell zu reagieren. Das stärkt das Vertrauen neuer Kunden, verbessert dein Google-Ranking und zeigt, dass dir die Meinung deiner Kundschaft wichtig ist.</p>
+      <p class="service-desc">Online-Bewertungen sind das digitale Empfehlungsschreiben Ihres Unternehmens. Aktives Bewertungsmanagement bedeutet, positive Rezensionen gezielt zu fördern und auf Feedback professionell zu reagieren. Das stärkt das Vertrauen neuer Kunden, verbessert Ihr Google-Ranking und zeigt, dass Ihnen die Meinung Ihrer Kundschaft wichtig ist.</p>
       <div class="service-features">
         <div class="service-feature">Systematische Strategie zur Bewertungsgewinnung</div>
         <div class="service-feature">Automatisierte Erinnerungs-Workflows</div>
@@ -226,7 +232,7 @@
     <div class="service-inner">
       <div class="service-badge">📍 Leistung 5</div>
       <h2>Lokales <em>SEO</em></h2>
-      <p class="service-desc">Lokales SEO sorgt dafür, dass du von Menschen in deiner Region gefunden wirst – genau dann, wenn sie nach einem Anbieter wie dir suchen. Durch die Optimierung deines Google Business Profils, lokaler Suchbegriffe und einheitlicher Unternehmensangaben erscheinst du ganz oben in der Karte und in den lokalen Suchergebnissen.</p>
+      <p class="service-desc">Lokales SEO sorgt dafür, dass Sie von Menschen in Ihrer Region gefunden werden – genau dann, wenn sie nach einem Anbieter wie Ihnen suchen. Durch die Optimierung Ihres Google Business Profils, lokaler Suchbegriffe und einheitlicher Unternehmensangaben erscheinen Sie ganz oben in der Karte und in den lokalen Suchergebnissen.</p>
       <div class="service-features">
         <div class="service-feature">Vollständige Google Business Profil-Optimierung</div>
         <div class="service-feature">Lokale Keyword-Recherche und On-Page-SEO</div>
@@ -235,7 +241,7 @@
         <div class="service-feature">Maps-Optimierung für das Local Pack</div>
         <div class="service-feature">Monatliches Rankings-Reporting</div>
       </div>
-      <div class="service-benefit">Ergebnis: Du erscheinst bei "Architekt + Ort"-Suchen ganz oben – dauerhaft, ohne laufende Klickkosten.</div>
+      <div class="service-benefit">Ergebnis: Sie erscheinen bei "Architekt + Ort"-Suchen ganz oben – dauerhaft, ohne laufende Klickkosten.</div>
       <a href="leistungen/seo.html" class="service-more">Mehr zu lokalem SEO →</a>
     </div>
   </div>
@@ -243,7 +249,7 @@
   <!-- CTA -->
   <div class="cta-block">
     <h2>Bereit für <em>mehr Sichtbarkeit?</em></h2>
-    <p>Kostenloses Erstgespräch – wir schauen uns deine Situation an und zeigen, was möglich ist.</p>
+    <p>Kostenloses Erstgespräch – wir schauen uns Ihre Situation an und zeigen, was möglich ist.</p>
     <a href="index.html#kontakt" class="btn-primary">Kostenloses Erstgespräch →</a>
   </div>
 
@@ -288,14 +294,14 @@
         <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
         <div>
           <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
-          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit deiner Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
         </div>
       </div>
       <div class="cookie-banner__options" id="cookieOptions" hidden>
         <label class="cookie-option">
           <div>
             <div class="cookie-option__title">Notwendig</div>
-            <div class="cookie-option__desc">Speichert deine Cookie-Einstellungen im Browser. Kein Tracking.</div>
+            <div class="cookie-option__desc">Speichert Ihre Cookie-Einstellungen im Browser. Kein Tracking.</div>
           </div>
           <span class="cookie-option__always">Immer aktiv</span>
         </label>
