@@ -83,8 +83,9 @@
       offen = offen.filter(function (g) {
         var r = g.box.getBoundingClientRect();
         if (!r.height) return true;
-        // Start: Oberkante bei 85 % der Fensterhöhe. Fertig: Unterkante bei 75 %.
-        var p = (vh * 0.85 - r.top) / (r.height + vh * 0.1);
+        // Start: Oberkante bei 90 % der Fensterhöhe. Fertig erst, wenn die Unterkante bei 40 % ist:
+        // langer Scrollweg, damit man jeden Balken wachsen sieht. Mehr Weg = größerer Faktor bei vh.
+        var p = (vh * 0.9 - r.top) / (r.height + vh * 0.5);
         if (p > g.max) { g.max = Math.min(p, 1); setze(g); }
         return g.max < 1;
       });

@@ -9,7 +9,8 @@ Glänzendes, schwebendes Objekt über der Eyebrow auf `index.html`, nach dem Vor
 - **Klick/Tap:** im Ruhezustand Erschrecken, während der Geste sofort Wechsel, bei neuer Form direkt zur nächsten,
   während eines Spins ignoriert
 - **Easter Egg:** fünf Klicks aufs Icon innerhalb von zwei Sekunden lassen feine grüne Linien vom Icon aus
-  über den Bildschirm laufen und wieder verblassen (`EGG_*` im `CONFIG`-Block)
+  über den Bildschirm laufen und wieder verblassen; die nächsten drei Klicks schießen je sechs Linien nach
+  (`EGG_*` im `CONFIG`-Block)
 - **Farbe:** in Ruhe Grundfarbe, beim Wechsel Verlauf; zwei farbige Punktlichter driften und folgen der Maus leicht
 
 - **Formen:** `assets/hero-shapes/<name>.svg`
