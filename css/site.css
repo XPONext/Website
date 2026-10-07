@@ -309,8 +309,16 @@ a.chip:hover { border-color: var(--green); color: var(--green); }
 .person span { font-size: 0.88rem; color: var(--muted); }
 
 .person-card { border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: #fff; display: flex; flex-direction: column; }
-.person-card__img { aspect-ratio: 1 / 1; background: var(--soft); }
+.person-card__img { aspect-ratio: 1 / 1; overflow: hidden; background: var(--soft); }
 .person-card__img img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 20%; }
+/* Freisteller (transparentes Bild): ganz zeigen, unten bündig, auf hellem Schimmer wie im Hero */
+.person-card__img--frei { background: radial-gradient(ellipse 60% 55% at 50% 55%, var(--green-50) 0%, var(--soft) 75%); }
+.person-card__img--frei { display: flex; justify-content: center; align-items: flex-end; }
+.person-card__img--frei img { width: auto; height: 90%; object-fit: initial;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%), linear-gradient(to bottom, #000 72%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to right, transparent 0, #000 14%, #000 86%, transparent 100%), linear-gradient(to bottom, #000 72%, transparent 100%);
+  mask-composite: intersect; }
 .person-card__body { padding: 1.5rem; display: grid; gap: 0.6rem; }
 .person-card__role { color: var(--green); font-weight: 650; font-size: 0.92rem; }
 .person-grid { display: grid; gap: 1.2rem; }

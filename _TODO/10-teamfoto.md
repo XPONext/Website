@@ -18,5 +18,11 @@ schon im Hero.
 4. In `assets/BILDER.md` eintragen (Fotograf, Datum, Rechte).
 5. Optional: Mit dem Foto auch `assets/og-image.jpg` erneuern (1200 × 630 px).
 
+## Zusätzlich: Einzelporträt Simon
+Auf `ueber-uns.html` (Karte „Wer macht was?“) steht übergangsweise `assets/team/simon-karte.webp`,
+ein Ausschnitt aus dem Teamfoto. Beim Shooting ein Einzelporträt im Stil von `tim.webp` machen
+(Querformat, Büro im Hintergrund), als `assets/team/simon.webp` speichern und auf der Karte die Klasse
+`person-card__img--frei` entfernen.
+
 ## Fertig, wenn
 - [ ] Foto eingebaut, Rechte schriftlich geklärt und in `BILDER.md` dokumentiert
