@@ -2,24 +2,45 @@
 The official XPONext Website
 
 ## Tech Stack
-- HTML/CSS — kein Framework, kein Build-Step
-- Hosted via GitHub Pages
+- HTML/CSS — kein Framework, Hosting über GitHub Pages
+- Ein gemeinsames Stylesheet `css/site.css` und ein Skript `js/site.js` (Menü auf dem Handy, Kontaktformular)
+- Schrift Inter selbst gehostet (`assets/fonts/`), nie über Google Fonts
 
 ## Development
-Dateien direkt bearbeiten, dann pushen — GitHub Pages aktualisiert sich automatisch.
-Ausnahme: die generierten Seiten unter `_content/`, siehe unten.
+
+**Alles bauen:** `python3 _content/build_all.py`. Das baut die generierten Seiten, schreibt Kopf,
+Kopfzeile und Fußzeile in die handgebauten Seiten, erzeugt `sitemap.xml` und listet offene Platzhalter.
+Danach lokal ansehen: `python3 -m http.server 8000`, dann http://localhost:8000.
+
+**Kopfzeile, Fußzeile, Analytics:** stehen nur noch in `_content/layout.py`. Handgebaute Seiten
+(Startseite, Leistungen, Projekte, Über uns, Kontakt, Checks, Rechtliches, 404) enthalten Markierungen
+`<!-- @layout:head -->`, `<!-- @layout:header -->` und `<!-- @layout:footer -->`. Was dazwischen steht,
+wird beim Bauen ersetzt, alles andere bleibt von Hand bearbeitbar. Der aktive Menüpunkt kommt aus
+`<body data-nav="…">`. Neue handgebaute Seite: Markierungen übernehmen und in `HANDGEBAUT` in
+`_content/sync_layout.py` eintragen.
+
+**FAQ-Schema:** Steht in einer Seite `<!-- @layout:faq-schema -->`, wird das FAQPage-Schema beim Bauen
+aus den sichtbaren Fragen (`<div class="faq">` mit `<details>`) erzeugt. Schema und Seite können so
+nicht auseinanderlaufen.
+
+**Platzhalter:** Fehlende Inhalte (Kundenlogos, Fallstudien, Kundenstimmen, Fotos, Video, Kalender,
+Preise) stehen als gelb gestreifte Kästen mit `data-ph="…"` in den Seiten, jeweils mit einem Kommentar
+`PLATZHALTER-BLOCK`. Vor dem Push: Inhalt einsetzen oder den Block bewusst entfernen.
+`python3 _content/build_all.py --streng` bricht ab, solange noch Platzhalter da sind.
+Kundennamen, Logos und Zahlen nur mit schriftlicher Freigabe des Kunden. Das Repo ist öffentlich.
 
 **Anrede:** Die Website siezt die Besucher (seit 28.09.2026, vorher du). Neue Texte,
 Content-Pakete und Vorlagen im Generator ebenfalls in Sie-Form, auch Cookie-Banner,
 Formular-Meldungen und die Ergebnis-Texte in GEO-Check und Website-Check.
 
-**Navigation auf dem Handy:** Menü-Button und aufklappbares Menü kommen aus
-`css/nav-mobile.css` und `js/nav-mobile.js`. Neue Seiten mit Navigation binden beide
-Dateien vor `</head>` ein.
+**Kontaktformular:** Alle Formulare mit `class="contact-form"` senden über `js/site.js` an das
+Google-Apps-Script. `data-quelle` und der URL-Parameter `?quelle=` landen vorn in der Nachricht,
+so sieht man, von welcher Seite oder Kampagne eine Anfrage kommt.
 
 ## Generierte Seiten (`_content/`)
 
-Die Leistungs-, Einzugsgebiet-, Kombi- und Blogseiten werden **nicht von Hand gepflegt**.
+Die Leistungs-, Einzugsgebiet-, Kombi- und Blogseiten sowie die Branchenseiten unter `/fuer/`
+werden **nicht von Hand gepflegt**.
 Ihre Quelle sind die Markdown-Content-Pakete unter `_content/seiten_geo/`:
 
 ```
@@ -38,6 +59,20 @@ python3 _content/build_geo_pages.py
 
 Das Skript schreibt die fertigen `.html` in den Repo-Root. **Das HTML dieser Seiten nicht
 direkt bearbeiten** — beim nächsten Lauf wird es überschrieben.
+
+Seit dem Relaunch (Oktober 2026) kennen die `.md` Zwischenüberschriften (`## Frage?`), Listen
+(`- `, `1. `) und Tabellen. Erster Absatz = Kernaussage, Antwort zuerst. Die Ortsseiten Bonn und Köln
+werden mit `noindex` gebaut und sind nicht mehr verlinkt, die Dateien bleiben für alte Links.
+`/effizienz.html` ist eine Weiterleitung auf `/leistungen/ki-automatisierung.html`.
+
+### Branchenseiten (`/fuer/<branche>/`)
+
+Eine YAML-Datei je Branche unter `_content/landingpages/`, gebaut von `_content/build_landingpages.py`.
+`index: false` = Testphase: `noindex`, nicht in der Sitemap, nirgends verlinkt, nur aus der jeweiligen
+Kampagne (Signatur, Folgemail, Video-Mail). Trägt eine Hypothese, `index: true` setzen und auf der
+Startseite in der Branchenleiste verlinken. Indexiert ist bisher nur `/fuer/architekturbueros/`.
+Die Buttons führen auf `/kontakt.html?quelle=<branche>`. Keine internen Kampagnendetails in die YAML
+schreiben, das Repo ist öffentlich.
 
 `_content/` beginnt mit einem Unterstrich und wird von GitHub Pages/Jekyll nicht
 ausgeliefert. Quelle und Generator lagen bis 14.08.2026 im Repo `XPO_Agentic_Workflow`
@@ -107,10 +142,10 @@ Verkaufsgespräch: für einen Kunden geliefert. Erlaubt sind Musterentwurf, Must
 
 Jeder Entwurf liegt als eigenständige statische Site unter `musterentwuerfe/<slug>/` (relative
 Pfade, eigene `assets/`, eigene Fonts, `noindex` auf jeder Seite, Hinweis in der Fußzeile).
-Übersicht: `musterentwuerfe/index.html`, seit 28.09.2026 von Tim freigegeben: indexierbar, in der
-`sitemap.xml` und verlinkt von Startseite, `leistungen.html` und `leistungen/website-erstellung.html`.
-Die Entwürfe selbst bleiben bewusst `noindex`: Sie tragen `ArchitectOffice`-Daten mit erfundener
-Anschrift und Telefonnummer, die sollen nicht als echte Büros bei Google landen.
+Übersicht: `musterentwuerfe/index.html`. **Seit dem Relaunch (07.10.2026) nur noch per Link:** Tim will
+die Entwürfe nicht mehr auf der Website zeigen, sondern Interessenten direkt schicken. Deshalb ist auch
+die Übersicht `noindex`, steht nicht in der Sitemap und wird von keiner Seite verlinkt. Nicht per
+robots.txt sperren, sonst sieht Google das `noindex` nicht.
 
 Unter `_doku/` (von GitHub Pages nicht ausgeliefert) liegt je Entwurf die komplette Entstehung:
 `inhalte.md` → `design-brief.md` → `build.py` (erzeugt alle Seiten) → `pruefbericht.md` →
@@ -124,5 +159,5 @@ Dateien).
 | `musterstudio-lindenau` | Innenarchitektur-Studio, Hamburg | dunkel/hell im Wechsel, Cormorant & DM Sans, Messing |
 | `musterbuero-steinwerk` | mittleres Büro für öffentliche Bauten, Köln | kein Titelbild, Raster + Liste + Filter, Inter & IBM Plex Mono |
 
-**Neue Entwürfe erst nach Freigabe durch Tim verlinken**, die Seiten sind Außendarstellung.
+**Neue Entwürfe erst nach Freigabe durch Tim verschicken**, die Seiten sind Außendarstellung.
 `noindex` auf den Entwürfen nicht entfernen, solange sie erfundene Bürodaten enthalten.

@@ -4,7 +4,7 @@ seitentyp: blogartikel
 cluster: "Sichtbarkeit bei Bauherren & Kommunen"
 schema_typ: [ArticleSchema, BreadcrumbList]
 title: "Welche digitalen Tools nutzen Architekturbüros für Sichtbarkeit?"
-meta_description: "Website, Google-Unternehmensprofil, SEO, Google Ads und GEO: die Tools, mit denen Architekturbüros online gefunden werden, statt sich auf Empfehlungen zu verlassen."
+meta_description: "Website, Google-Unternehmensprofil, SEO, Google Ads und GEO: die Tools, mit denen Architekturbüros online gefunden werden, nicht nur über Empfehlungen."
 h1: "Welche digitalen Tools helfen Architekturbüros, online sichtbar zu werden?"
 differenzierungs_fakt: "Rekonstruiert aus bestehender HTML-Seite nach Datenverlust am 2026-08-03; Original-Differenzierungsfakt nicht separat wiederherstellbar, Inhalt/Quellen sind aber vollstaendig erhalten."
 interne_links:

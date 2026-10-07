@@ -1,0 +1,58 @@
+# Branchenseite Zulieferer und Lohnfertiger (Kampagne in Vorbereitung).
+# Testphase: noindex. Angebot noch offen, deshalb Platzhalter.
+slug: zulieferer
+index: false
+kurzname: Zulieferer und Lohnfertiger
+service_name: Websites für Zulieferer und Lohnfertiger
+title: "Websites für Zulieferer und Lohnfertiger | XPONext"
+meta_description: "Einkäufer suchen neue Lieferanten bei Google. XPONext baut Websites für Zulieferer und Lohnfertiger, die Fertigungstiefe zeigen und gefunden werden."
+eyebrow: Für Zulieferer und Lohnfertiger
+h1: "Einkäufer suchen neue Lieferanten bei Google. Finden sie Sie?"
+lead: "Für CNC-Fertigung, Blechbearbeitung, Spritzguss, Oberflächentechnik und andere Lohnfertiger: eine Website, die Ihre Möglichkeiten zeigt und bei den Suchen der Einkäufer auftaucht."
+
+situationen_titel: "Woran Anfragen heute scheitern"
+situationen:
+  - titel: "Die Suche des Einkäufers"
+    text: "Ein Einkäufer sucht nach einem Lohnfertiger für ein Bauteil und eine Region. Er findet Plattformen und große Wettbewerber, aber nicht Ihren Betrieb."
+  - titel: "Die Website ohne Fakten"
+    text: "Auf der Website stehen Qualität und Termintreue, aber keine Maschinen, Materialien, Toleranzen oder Losgrößen. Der Einkäufer kann nicht einschätzen, ob Sie passen."
+  - titel: "Der umständliche Weg zur Anfrage"
+    text: "Wer eine Zeichnung schicken will, sucht erst nach der richtigen Adresse. Ein Teil der Anfragen kommt so nie an."
+
+schritte_titel: "Was Sie von uns bekommen"
+schritte:
+  - titel: "Website mit Fertigungstiefe"
+    text: "Maschinenpark, Materialien, Toleranzen, Losgrößen und Zertifikate, so aufbereitet, dass ein Einkäufer in einer Minute sieht, ob Sie passen."
+  - titel: "Gefunden werden"
+    text: "Seiten für Ihre Verfahren und Werkstoffe, damit Sie bei den Suchen der Einkäufer auftauchen, bei Google und in KI-Suchmaschinen."
+  - titel: "Einfache Anfrage"
+    text: "Ein Anfrageweg, über den Einkäufer Zeichnung und Stückzahl direkt schicken können."
+
+einwaende_titel: "Was Betriebe uns zuerst fragen"
+einwaende:
+  - titel: "Wir haben keine Zeit für Texte."
+    text: "Müssen Sie auch nicht. Wir brauchen Ihre Maschinenliste, Werkstoffe, Toleranzen und Zertifikate. Die Texte schreiben wir."
+  - titel: "Muss die bestehende Website weg?"
+    text: "Nicht unbedingt. Ob ein Umbau reicht oder eine neue Website sinnvoller ist, sagen wir Ihnen nach einem kurzen Blick ehrlich."
+  - titel: "Woran sehen wir, ob es wirkt?"
+    text: "Wir halten vor dem Start fest, wo Ihr Betrieb bei typischen Suchen der Einkäufer steht, und messen danach erneut."
+
+beleg:
+  titel: "Was wir mitbringen"
+  text: "Wir bauen Websites, die schnell laden, klar aufgebaut sind und von Google und KI-Suchmaschinen verstanden werden. Unsere Arbeitsweise zeigen wir Ihnen im Erstgespräch an Beispielen."
+  platzhalter: "Beispiel oder Fall aus Industrie und Fertigung, nach Freigabe."
+
+angebot:
+  titel: "So starten wir"
+  text: "Im Erstgespräch prüfen wir, wo Ihr Betrieb bei den typischen Suchen der Einkäufer heute steht."
+  platzhalter: "Angebot für Zulieferer, sobald entschieden."
+
+faq:
+  - frage: "Für welche Betriebe ist das gedacht?"
+    antwort: "Für Zulieferer und Lohnfertiger, die neue Kunden aus Industrie und Gewerbe gewinnen wollen, etwa in CNC-Fertigung, Blechbearbeitung, Spritzguss oder Oberflächentechnik."
+  - frage: "Was kostet eine Website?"
+    antwort: "Eine Website ist ein einmaliges Projekt und liegt je nach Umfang meist im unteren bis mittleren vierstelligen Bereich. Den genauen Preis nennen wir nach dem Erstgespräch schriftlich."
+
+abschluss:
+  titel: "Wo stehen Sie, wenn Einkäufer suchen? <em>Wir sehen nach.</em>"
+  text: "30 Minuten, kostenlos. Danach wissen Sie, wie Einkäufer Sie heute finden und was fehlt."

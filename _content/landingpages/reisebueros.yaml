@@ -1,0 +1,59 @@
+# Branchenseite Reisebüros (Kampagne Oktober 2026).
+# Testphase: noindex, nur aus der Kampagne verlinkt. Überschrift an die finale
+# Kampagnen-Copy anpassen (Message Match). Kampagnendetails gehören nicht hierher, das Repo ist öffentlich.
+slug: reisebueros
+index: false
+kurzname: Reisebüros
+service_name: KI-Sichtbarkeit für Reisebüros
+title: "KI-Sichtbarkeit für Reisebüros | XPONext"
+meta_description: "Reiseplanung beginnt heute oft in ChatGPT. XPONext arbeitet daran, dass Ihr Reisebüro in KI-Antworten genannt wird, und misst das vorher und nachher."
+eyebrow: Für inhabergeführte Reisebüros
+h1: "Ihre Kunden fragen ChatGPT. Ihr Reisebüro sollte in der Antwort stehen."
+lead: "Reiseplanung beginnt heute oft in einer KI. Wir arbeiten daran, dass Ihr Reisebüro genannt wird, wenn jemand nach einem Reisebüro in Ihrer Stadt fragt oder seine nächste Reise plant."
+
+situationen_titel: "Wo Reisebüros heute unsichtbar sind"
+situationen:
+  - titel: "Die Frage nach dem Reisebüro vor Ort"
+    text: "Jemand fragt ChatGPT, welches Reisebüro in seiner Stadt gut zu Kreuzfahrten berät. Genannt werden Portale und Ketten, nicht das Büro mit der besten Beratung."
+  - titel: "Die Reiseplanung in der KI"
+    text: "Eine Familie plant mit ChatGPT eine Reise nach Ägypten. Am Ende steht ein Buchungsportal in der Antwort, obwohl Ihr Büro genau diese Reise seit Jahren verkauft."
+  - titel: "Die Google-Suche nach dem Reisebüro"
+    text: "Bei der Suche „Reisebüro Köln“ standen am 6. Oktober 2026 auf den ersten zehn Plätzen nur Verzeichnisse und soziale Netzwerke. Kein einziges Reisebüro hatte dort einen eigenen Treffer."
+situationen_quelle: "Stichprobe von XPONext, Google-Suche „Reisebüro Köln“ am 6. Oktober 2026, organische Treffer 1 bis 10."
+
+schritte_titel: "So kommt Ihr Reisebüro in die Antworten"
+schritte:
+  - titel: "Ausgangsmessung"
+    text: "Wir stellen Google, ChatGPT und Gemini einen festen Katalog typischer Fragen zu Reisebüros und Reisezielen in Ihrer Region und halten fest, wer genannt wird."
+  - titel: "Seiten für Ihre Schwerpunkte"
+    text: "Für Ihre Reiseziele und Beratungsthemen entstehen Seiten, die die Fragen Ihrer Kunden direkt beantworten, mit Ihrer Erfahrung statt Katalogtext."
+  - titel: "Folgemessung"
+    text: "Nach einigen Monaten stellen wir dieselben Fragen erneut. Sie sehen schwarz auf weiß, in wie vielen Antworten Ihr Büro vorher und nachher vorkommt."
+
+einwaende_titel: "Was Reisebüros uns zuerst fragen"
+einwaende:
+  - titel: "Kostet mich das Zeit?"
+    text: "Wenig. Wir brauchen von Ihnen Stichpunkte zu Ihren Schwerpunkten und ein, zwei Gespräche. Die Texte schreiben wir."
+  - titel: "Muss meine Website neu?"
+    text: "Nicht unbedingt. Oft reichen neue Seiten auf Ihrer bestehenden Website. Ob das bei Ihnen geht, prüfen wir vorab kostenlos."
+  - titel: "Kann man das messen?"
+    text: "Ja. Wir frieren den Fragenkatalog vor dem Start ein und stellen danach exakt dieselben Fragen. So lässt sich nichts schönrechnen."
+
+beleg:
+  titel: "Erfahrung in der Touristik"
+  platzhalter: "Beleg aus der Touristik, nach Freigabe des Kunden."
+
+angebot:
+  titel: "So starten wir"
+  text: "Im Erstgespräch zeigen wir Ihnen, ob und wo Ihr Reisebüro heute in KI-Antworten vorkommt. Danach entscheiden Sie, ob wir loslegen."
+  platzhalter: "Angebot für Reisebüros, sobald entschieden."
+
+faq:
+  - frage: "Was ist GEO?"
+    antwort: "GEO (Generative Engine Optimization) ist die Arbeit daran, dass ein Unternehmen in den Antworten von KI-Suchmaschinen wie ChatGPT, Gemini oder Google AI Overviews genannt wird."
+  - frage: "Funktioniert das auch für kleine Reisebüros?"
+    antwort: "Gerade dort. Die KI nennt Reisebüros, die zu einer konkreten Frage passende Inhalte haben. Persönliche Beratung und echte Reiseerfahrung lassen sich gut zeigen, egal wie groß das Büro ist."
+
+abschluss:
+  titel: "Wird Ihr Reisebüro genannt? <em>Wir sehen nach.</em>"
+  text: "Im Erstgespräch zeigen wir Ihnen, was ChatGPT und Google heute zu Reisebüros in Ihrer Stadt antworten."

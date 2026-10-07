@@ -3,60 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datenschutz — XPONext</title>
+  <title>Datenschutz | XPONext</title>
   <meta name="description" content="Datenschutzerklärung der XPO Next GbR gemäß DSGVO.">
   <meta name="robots" content="noindex, follow">
   <link rel="canonical" href="https://www.xponext.de/datenschutz.html">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Datenschutz | XPONext">
+  <meta property="og:description" content="Datenschutzerklärung der XPO Next GbR gemäß DSGVO.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.xponext.de/datenschutz.html">
+  <meta property="og:image" content="https://www.xponext.de/assets/og-image.jpg">
+  <!-- @layout:head -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
   <link rel="stylesheet" href="/css/cookie-banner.css">
-  <style>
-    @font-face {
-      font-family: 'Inter';
-      src: url('assets/fonts/inter-variable.woff2') format('woff2');
-      font-weight: 100 900;
-      font-style: normal;
-      font-display: swap;
+  <script>
+    /* Google-Tag (gtag.js) wird erst nach Einwilligung im Cookie-Banner geladen, siehe js/cookie-banner.js. */
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied', 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-S0KYC5QEKH', { 'anonymize_ip': true });
+    function gtag_report_conversion(url) {
+      var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+      gtag('event', 'conversion', { 'send_to': 'AW-18218623343/-EIFCNn-hbocEO_CqO9D', 'value': 1.0, 'currency': 'EUR', 'event_callback': callback });
+      return false;
     }
+  </script>
+  <script src="/js/site.js" defer></script>
+  <!-- /@layout:head -->
+  <style>
+    
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #fff; color: #0D0D0D; -webkit-font-smoothing: antialiased; }
-    a { color: #1B6B45; }
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1.1rem 5%;
-      border-bottom: 1px solid #E5E7EB;
-    }
-    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; font-size: 1.2rem; font-weight: 800; color: #0D0D0D; letter-spacing: -0.01em; text-decoration: none; }
-    .nav-logo .nav-wm { color: #0D0D0D; font-weight: 800; }
-    .nav-logo .nav-wm em { color: #1B6B45; font-weight: 400; font-style: normal; }
+main a { color: #1B6B45; }
+    
+    
+    
+    
     .back-link { font-size: 0.9rem; font-weight: 500; color: #4B5563; text-decoration: none; }
     .back-link:hover { color: #0D0D0D; }
     main { max-width: 760px; margin: 0 auto; padding: 4rem 5% 6rem; }
 
-    /* FOOTER */
-    footer { padding: 2rem 5%; border-top: 1px solid #E5E7EB; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
-    .footer-logo { font-size: 1rem; font-weight: 800; color: #0D0D0D; }
-    .footer-logo span { color: #1B6B45; }
-    .footer-copy { color: #9CA3AF; font-size: 0.82rem; margin-top: 0.7rem; }
-    .footer-col { display: flex; flex-direction: column; gap: 0.6rem; min-width: 130px; }
-    .footer-col-title { font-size: 0.75rem; font-weight: 700; color: #9CA3AF; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.2rem; }
-    .footer-col a { color: #6B7280; font-size: 0.88rem; }
-    .footer-col a:hover { color: #0D0D0D; opacity: 1; }
-    .cookie-reopen { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; color: #6B7280; font-size: 0.88rem; text-align: left; }
-    .cookie-reopen:hover { color: #0D0D0D; }
-
-    @media (max-width: 680px) {
-      footer { flex-direction: column; }
-    }
-    h1 { font-size: 2.2rem; font-weight: 900; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
-    h2 { font-size: 1.2rem; font-weight: 700; margin: 2.2rem 0 0.6rem; }
-    h3 { font-size: 1.02rem; font-weight: 700; margin: 1.4rem 0 0.5rem; }
-    p { font-size: 0.98rem; line-height: 1.75; color: #4B5563; margin-bottom: 0.6rem; }
-    ul { font-size: 0.98rem; line-height: 1.75; color: #4B5563; margin: 0 0 0.8rem 1.3rem; }
-    li { margin-bottom: 0.2rem; }
-    strong { color: #0D0D0D; font-weight: 700; }
+    main h1 { font-size: 2.2rem; font-weight: 900; letter-spacing: -0.02em; margin-bottom: 1.5rem; }
+main h2 { font-size: 1.2rem; font-weight: 700; margin: 2.2rem 0 0.6rem; }
+main h3 { font-size: 1.02rem; font-weight: 700; margin: 1.4rem 0 0.5rem; }
+main p { font-size: 0.98rem; line-height: 1.75; color: #4B5563; margin-bottom: 0.6rem; }
+main ul { font-size: 0.98rem; line-height: 1.75; color: #4B5563; margin: 0 0 0.8rem 1.3rem; }
+main li { margin-bottom: 0.2rem; }
+main strong { color: #0D0D0D; font-weight: 700; }
     .note-box {
       background: #F9FAFB;
       border: 1px solid #E5E7EB;
@@ -70,26 +68,85 @@
     .note-box ul { color: #6B7280; font-size: 0.9rem; }
     .note-box .note-label { display: block; font-weight: 700; color: #4B5563; margin-bottom: 0.4rem; }
   </style>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0KYC5QEKH"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
-    });
-    gtag('js', new Date());
-    gtag('config', 'G-S0KYC5QEKH', { 'anonymize_ip': true });
-  </script>
 </head>
-<body>
-  <nav>
-    <a href="index.html" class="nav-logo"><svg width="30" height="30" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg><span class="nav-wm">XPO<em>Next</em></span></a>
-    <a href="index.html" class="back-link">← Zurück zur Startseite</a>
-  </nav>
-  <main>
+<body data-nav="">
+  <!-- @layout:header -->
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen" aria-hidden="true">
+    <div class="cookie-banner__card">
+      <div class="cookie-banner__head">
+        <div class="cookie-banner__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9 3 3 0 01-3.5-3A3 3 0 0114 5.5 3 3 0 0112 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="9" cy="10" r="1.1" fill="currentColor"/><circle cx="14" cy="15" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/></svg></div>
+        <div>
+          <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
+          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
+        </div>
+      </div>
+      <div class="cookie-banner__options" id="cookieOptions" hidden>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Notwendig</div>
+            <div class="cookie-option__desc">Speichert Ihre Cookie-Einstellungen im Browser. Kein Tracking.</div>
+          </div>
+          <span class="cookie-option__always">Immer aktiv</span>
+        </label>
+        <label class="cookie-option">
+          <div>
+            <div class="cookie-option__title">Statistik</div>
+            <div class="cookie-option__desc">Anonyme Nutzungsanalyse via Google Analytics 4 und Microsoft Clarity.</div>
+          </div>
+          <input type="checkbox" id="consentStatistics" class="cookie-switch">
+          <span class="cookie-switch__slider" aria-hidden="true"></span>
+        </label>
+      </div>
+      <div class="cookie-banner__actions">
+        <button class="cookie-btn cookie-btn--ghost" id="cookieEssentials" type="button">Nur notwendige</button>
+        <button class="cookie-btn cookie-btn--ghost" id="cookieSettingsToggle" type="button">Einstellungen</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieAcceptAll" type="button">Alle akzeptieren</button>
+        <button class="cookie-btn cookie-btn--primary" id="cookieSaveCustom" type="button" hidden>Auswahl speichern</button>
+      </div>
+    </div>
+  </div>
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="XPONext, zur Startseite"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg><span>XPO<em>Next</em></span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li class="has-sub">
+            <a href="/leistungen.html">Leistungen <svg class="caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+            <div class="sub">
+              <div>
+                <p class="sub__group-title">Gefunden werden</p>
+                <a href="/leistungen/website-erstellung.html">Website<span>Gestaltet, schnell, gut auffindbar</span></a>
+                <a href="/leistungen/seo.html">SEO<span>Bei Google weiter oben</span></a>
+                <a href="/leistungen/geo.html">GEO<span>Genannt in ChatGPT und KI-Suche</span></a>
+                <a href="/leistungen/google-ads.html">Google Ads<span>Sofort sichtbar, planbares Budget</span></a>
+              </div>
+              <div>
+                <p class="sub__group-title">Zeit zurückgewinnen</p>
+                <a href="/leistungen/ki-automatisierung.html">KI-Automatisierung<span>Protokolle, Mails, Angebote</span></a>
+                <p class="sub__group-title">Kostenlos prüfen</p>
+                <a href="/website-check.html">Website-Check<span>Tempo, SEO, Barrierefreiheit</span></a>
+                <a href="/geo-check.html">GEO-Check<span>Bereit für KI-Suchmaschinen?</span></a>
+              </div>
+              <div class="sub__all"><a href="/leistungen.html">Alle Leistungen im Überblick</a></div>
+            </div>
+          </li>
+          <li><a href="/projekte.html">Projekte</a></li>
+          <li><a href="/ueber-uns.html">Über uns</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class="site-nav__mobile">
+          <a class="btn btn--secondary" href="tel:+491636857434">Anrufen: 0163 6857434</a>
+        </div>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="/kontakt.html">Erstgespräch buchen</a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <!-- /@layout:header -->
+  <main id="inhalt">
     <h1>Datenschutzerklärung</h1>
 
     <h2>1. Verantwortlicher</h2>
@@ -234,70 +291,62 @@
     <p>Stand: Juni 2026</p>
   </main>
 
-  <footer>
-    <div class="footer-col">
-      <div class="footer-logo">XPO<span>Next</span></div>
-      <p style="color:#9CA3AF;font-size:0.85rem;line-height:1.6;max-width:220px;">Mehr Sichtbarkeit für Architekturbüros – aus einer Hand.</p>
-      <p class="footer-copy">© 2026 XPONext GbR</p>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Seiten</div>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="effizienz.html">Zeitfresser-Workshop</a>
-      <a href="index.html#vorteile">Vorteile</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="ueber-uns.html">Über uns</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Rechtliches</div>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="agb.html">AGB</a>
-      <button data-action="cookie-settings" class="cookie-reopen">Cookie-Einstellungen</button>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Kontakt</div>
-      <address style="font-style:normal;color:#6B7280;font-size:0.88rem;line-height:1.6;">XPO Next GbR<br>Adrianstraße 88<br>53227 Bonn</address>
-      <a href="mailto:info@xponext.de" style="color:#6B7280;font-size:0.88rem;">info@xponext.de</a>
+  <!-- @layout:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="XPONext, zur Startseite"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg><span>XPO<em>Next</em></span></a>
+          <p>Websites, Sichtbarkeit in Google und KI-Suche und KI-Automatisierung für Büros. Aus Bonn, für Unternehmen in ganz Deutschland.</p>
+          <address>
+            XPO Next GbR<br>Adrianstraße 88<br>53227 Bonn<br>
+            <a href="tel:+491636857434">0163 6857434</a><br>
+            <a href="mailto:info@xponext.de">info@xponext.de</a>
+          </address>
+        </div>
+        <div class="footer-col">
+          <h2>Leistungen</h2>
+          <ul>
+            <li><a href="/leistungen/website-erstellung.html">Website</a></li>
+            <li><a href="/leistungen/seo.html">SEO</a></li>
+            <li><a href="/leistungen/geo.html">GEO</a></li>
+            <li><a href="/leistungen/google-ads.html">Google Ads</a></li>
+            <li><a href="/leistungen/ki-automatisierung.html">KI-Automatisierung</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>XPONext</h2>
+          <ul>
+            <li><a href="/projekte.html">Projekte</a></li>
+            <li><a href="/ueber-uns.html">Über uns</a></li>
+            <li><a href="/kontakt.html">Kontakt</a></li>
+            <li><a href="/fuer/architekturbueros/">Für Architekturbüros</a></li>
+            <li><a href="/blog/index.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Kostenlos prüfen</h2>
+          <ul>
+            <li><a href="/website-check.html">Website-Check</a></li>
+            <li><a href="/geo-check.html">GEO-Check</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 XPO Next GbR</p>
+        <ul>
+          <li><a href="/impressum.html">Impressum</a></li>
+          <li><a href="/datenschutz.html">Datenschutz</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+          <li><button data-action="cookie-settings" class="cookie-reopen" type="button">Cookie-Einstellungen</button></li>
+        </ul>
+      </div>
     </div>
   </footer>
 
-  <!-- Cookie-Banner (DSGVO) -->
-  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen" aria-hidden="true">
-    <div class="cookie-banner__card">
-      <div class="cookie-banner__head">
-        <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
-        <div>
-          <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
-          <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
-        </div>
-      </div>
-      <div class="cookie-banner__options" id="cookieOptions" hidden>
-        <label class="cookie-option">
-          <div>
-            <div class="cookie-option__title">Notwendig</div>
-            <div class="cookie-option__desc">Speichert Ihre Cookie-Einstellungen im Browser. Kein Tracking.</div>
-          </div>
-          <span class="cookie-option__always">Immer aktiv</span>
-        </label>
-        <label class="cookie-option">
-          <div>
-            <div class="cookie-option__title">Statistik</div>
-            <div class="cookie-option__desc">Anonyme Nutzungsanalyse via Google Analytics 4 und Microsoft Clarity.</div>
-          </div>
-          <input type="checkbox" id="consentStatistics" class="cookie-switch">
-          <span class="cookie-switch__slider" aria-hidden="true"></span>
-        </label>
-      </div>
-      <div class="cookie-banner__actions">
-        <button class="cookie-btn cookie-btn--ghost" id="cookieEssentials" type="button">Nur notwendige</button>
-        <button class="cookie-btn cookie-btn--ghost" id="cookieSettingsToggle" type="button">Einstellungen</button>
-        <button class="cookie-btn cookie-btn--primary" id="cookieAcceptAll" type="button">Alle akzeptieren</button>
-        <button class="cookie-btn cookie-btn--primary" id="cookieSaveCustom" type="button" hidden>Auswahl speichern</button>
-      </div>
-    </div>
-  </div>
   <script src="/js/cookie-banner.js"></script>
+  <!-- /@layout:footer -->
+  
 
 </body>
 </html>

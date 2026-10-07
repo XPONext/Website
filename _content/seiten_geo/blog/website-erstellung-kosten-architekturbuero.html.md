@@ -4,7 +4,7 @@ seitentyp: blogartikel
 cluster: "Kosten von Online-Marketing für Architekturbüros"
 schema_typ: [ArticleSchema, BreadcrumbList]
 title: "Was kostet eine neue Website für ein Architekturbüro?"
-meta_description: "Website-Kosten für Architekturbüros: meist unterer bis mittlerer vierstelliger Bereich einmalig, abhängig von Umfang und Design, plus geringe laufende Wartungskosten."
+meta_description: "Website-Kosten für Architekturbüros: meist unterer bis mittlerer vierstelliger Bereich einmalig, je nach Umfang und Design, plus geringe Wartungskosten."
 h1: "Was kostet eine neue Website für ein Architekturbüro?"
 differenzierungs_fakt: "Rekonstruiert aus bestehender HTML-Seite nach Datenverlust am 2026-08-03; Original-Differenzierungsfakt nicht separat wiederherstellbar, Inhalt/Quellen sind aber vollstaendig erhalten."
 interne_links:

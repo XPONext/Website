@@ -1,0 +1,63 @@
+# Branchenseite Bau und Planung (Kampagne Oktober 2026).
+# Zielgruppe: Planungs- und Ingenieurbüros, Bauunternehmen mit Bauleitung, größere Architekturbüros.
+# Testphase: noindex. Angebot noch offen, deshalb Platzhalter.
+slug: bau-und-planung
+index: false
+kurzname: Bau und Planung
+service_name: KI-Automatisierung für Planungsbüros und Bauunternehmen
+title: "KI für Planungsbüros und Bauleitung | XPONext"
+meta_description: "Protokolle, Mailflut, Unterlagen: XPONext richtet KI so ein, dass Planungsbüros und Bauunternehmen weniger Zeit mit Routine verlieren. Ihr Team gibt frei."
+eyebrow: Für Planungsbüros und Bauunternehmen
+h1: "Protokolle, Mails, Unterlagen. Wir ziehen das bei Ihnen glatt."
+lead: "Für Planungs- und Ingenieurbüros und Bauunternehmen mit Bauleitung: KI bereitet Besprechungsprotokolle vor, sortiert die Mailflut und findet jede Absprache wieder. Ihr Team prüft und gibt frei."
+
+situationen_titel: "Was wir aus Büros und von Baustellen immer wieder hören"
+situationen:
+  - titel: "Das Protokoll nach Feierabend"
+    text: "Die Baubesprechung ist um vier vorbei. Das Protokoll entsteht abends aus Notizen und Fotos, wird nachgebessert und erst am nächsten Tag verschickt."
+  - titel: "Die Mailflut je Projekt"
+    text: "Pläne, Nachträge, Rückfragen und Freigaben kommen über viele Postfächer. Wer gerade auf der Baustelle ist, verliert den Überblick."
+  - titel: "Die Frage nach der Absprache"
+    text: "Wer hat wann was zugesagt? Die Antwort liegt irgendwo in Protokollen, Mails und Ordnern, und jemand sucht eine halbe Stunde danach."
+
+schritte_titel: "So gehen wir vor"
+schritte_lead: "Wir fangen mit einem Ablauf an, nicht mit einem großen Projekt."
+schritte:
+  - titel: "Zeitfresser finden"
+    text: "Wir sehen uns zwei, drei Abläufe genau an, etwa Protokolle und Mails, und rechnen aus, wie viele Stunden sie im Monat kosten."
+  - titel: "Einrichten und testen"
+    text: "Wir richten die Lösung in Ihren gewohnten Programmen ein und testen sie mit echten Besprechungen und echten Mails."
+  - titel: "Nachmessen"
+    text: "Nach einigen Wochen vergleichen wir mit dem Ausgangswert. Sie sehen, wie viel Zeit tatsächlich gespart wird."
+
+einwaende_titel: "Die drei Fragen, die wir am häufigsten hören"
+einwaende:
+  - titel: "Wer hat die Kontrolle?"
+    text: "Ihr Team. Die KI schreibt den Entwurf, ein Mensch prüft und gibt frei. Nichts geht ungeprüft raus."
+  - titel: "Wo liegen unsere Daten?"
+    text: "Das klären wir vor dem Start mit Ihnen. Eine Vereinbarung zur Auftragsverarbeitung ist Teil unserer AGB."
+  - titel: "Müssen wir neue Software lernen?"
+    text: "Nein. Ihr Team arbeitet weiter in den Programmen, die es kennt. Die KI arbeitet im Hintergrund zu."
+programme: ["Outlook", "Microsoft 365", "Google Workspace", "PDF und Excel", "Ihre Bausoftware"]
+
+beleg:
+  titel: "Wo wir herkommen"
+  text: "Die meisten unserer Kunden kommen aus Architektur und Planung. Deshalb kennen wir Leistungsphasen, Baubesprechungen und die Ablage dahinter aus der Praxis."
+  platzhalter: "Beispielablauf oder erster Fall aus Bau und Planung: Ausgangslage, Lösung, gesparte Stunden. Nur mit Freigabe."
+
+angebot:
+  titel: "So starten wir"
+  text: "Im Erstgespräch suchen wir gemeinsam den Ablauf, der Sie am meisten Zeit kostet, und sagen ehrlich, ob sich eine Automatisierung lohnt."
+  platzhalter: "Angebot für Bau und Planung, sobald entschieden."
+
+faq:
+  - frage: "Welche Abläufe eignen sich für den Anfang?"
+    antwort: "Abläufe, die oft vorkommen und nach festem Muster laufen: Protokolle aus wiederkehrenden Besprechungen, das Sortieren von Projektmails oder das Zusammenstellen von Unterlagen. Mit einem davon fangen wir an."
+  - frage: "Brauchen wir dafür eine eigene IT-Abteilung?"
+    antwort: "Nein. Wir richten die Lösung ein, erklären sie Ihrem Team und bleiben Ansprechpartner, wenn etwas angepasst werden muss."
+  - frage: "Was passiert mit vertraulichen Projektunterlagen?"
+    antwort: "Welche Unterlagen die KI sehen darf, legen wir vor dem Start gemeinsam fest. Eine Vereinbarung zur Auftragsverarbeitung ist Teil unserer AGB."
+
+abschluss:
+  titel: "Welcher Ablauf kostet Sie die meiste Zeit? <em>Fangen wir dort an.</em>"
+  text: "30 Minuten am Telefon oder per Video. Danach wissen Sie, wo sich KI bei Ihnen lohnt und wo nicht."

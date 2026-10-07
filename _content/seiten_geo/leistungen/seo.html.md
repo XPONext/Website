@@ -2,19 +2,40 @@
 slug: /leistungen/seo.html
 seitentyp: leistungsseite
 schema_typ: [ServiceSchema, BreadcrumbList]
-title: "Lokales SEO für Architekturbüros | XPONext"
-meta_description: "Lokales SEO für Architekturbüros: Google Business Profile, Local Pack, Bewertungsmanagement. Sichtbar werden, wenn Bauherren in Ihrer Region suchen."
-h1: "Lokales SEO für Architekturbüros: Sichtbar werden, wenn Bauherren suchen"
-differenzierungs_fakt: "Rekonstruiert aus bestehender HTML-Seite nach Datenverlust am 2026-08-03; Original-Differenzierungsfakt nicht separat wiederherstellbar, Inhalt/Quellen sind aber vollstaendig erhalten."
+title: "SEO: bei Google und in Google Maps weiter oben | XPONext"
+meta_description: "SEO von XPONext: Google-Unternehmensprofil, lokale Suche, Seitenstruktur und Bewertungen, damit Kunden Sie bei Google und in Google Maps finden."
+h1: "SEO: bei Google und in Google Maps gefunden werden"
+kurzname: "SEO"
+lead: "Wer nach Ihrer Leistung sucht, soll Sie finden. Wir verbessern Ihre Plätze bei Google und in Google Maps und zeigen Ihnen, was sich verändert hat."
+differenzierungs_fakt: "SEO und Bewertungsmanagement laufen bei XPONext zusammen, weil Anzahl und Aktualität der Bewertungen beeinflussen, ob jemand auf das Profil klickt."
 interne_links:
-  - /einzugsgebiet/bonn/seo.html
-  - /einzugsgebiet/koeln/seo.html
-  - /blog/kosten-online-marketing-architekturbuero.html
-quelle_content: "Rekonstruktion, 2026-08-03"
+  - /leistungen/geo.html
+  - /leistungen/google-ads.html
+  - /blog/google-business-profil-architekturbuero-einrichten.html
+  - /blog/bewertungen-architekturbuero-sammeln.html
+quelle_content: "Relaunch Oktober 2026, branchenoffen neu geschrieben"
 ---
 
-Lokales SEO sorgt dafür, dass Ihr Architekturbüro bei ortsbezogenen Suchanfragen und im Google Maps Local Pack erscheint. Das ist entscheidend: Auf der ersten Google-Ergebnisseite liegt die Klickrate bei über 71 %, die zweite Seite erreicht zusammen nur noch rund 4–6 %.
+SEO (Suchmaschinenoptimierung) ist die Arbeit daran, dass Ihr Unternehmen bei Google weiter oben erscheint, wenn jemand nach Ihrer Leistung sucht. Das zählt, weil laut einer Klickraten-Studie über 71 Prozent der Nutzer auf der ersten Ergebnisseite klicken. Für Betriebe mit regionalen Kunden ist dabei Google Maps besonders wichtig.
 
-Konkret umfasst lokales SEO bei XPONext: ein vollständig gepflegtes Google-Unternehmensprofil, lokale Keyword-Recherche und On-Page-Optimierung, einheitliche Adressangaben (Citations) über alle Verzeichnisse hinweg, sowie den Aufbau themenrelevanter lokaler Backlinks. Ergänzend dazu läuft systematisches Bewertungsmanagement: kontinuierliche Sammlung echter Google-Bewertungen und professionelle Reaktion darauf, denn Anzahl und Aktualität der Bewertungen beeinflussen direkt, ob ein Bauherr auf Ihr Profil klickt und wie gut Sie bei Google Maps ranken. Wie sich das konkret für Ihr Einzugsgebiet auswirkt, zeigen die Standort-Seiten für [Bonn](/einzugsgebiet/bonn/seo.html) und [Köln](/einzugsgebiet/koeln/seo.html).
+## Was macht XPONext bei SEO?
 
-**Quelle(n):** [onlinemarketing.de](https://onlinemarketing.de/seo/ctr-studie-7133-prozent-der-user-klicken-auf-der-ersten-seite-der-serps)
+- **Google-Unternehmensprofil:** vollständig gepflegt, mit passenden Kategorien, Leistungen, Fotos und Beiträgen.
+- **Lokale Suche:** Recherche, wonach Ihre Kunden in Ihrer Region suchen, und passende Seiten dafür.
+- **Technik und Struktur:** Seitentitel, Beschreibungen, Ladezeit, interne Verlinkung und strukturierte Daten.
+- **Einheitliche Angaben:** Name, Adresse und Telefon stimmen in allen Verzeichnissen überein.
+- **Bewertungen:** ein einfacher Ablauf, mit dem zufriedene Kunden Sie bewerten, und professionelle Antworten darauf.
+
+## Woran sehen Sie, ob es wirkt?
+
+Wir halten vor dem Start fest, wo Sie für Ihre wichtigsten Suchbegriffe stehen, und messen danach regelmäßig erneut. Sie bekommen einen kurzen Bericht mit Plätzen, Klicks und Anfragen, ohne Fachchinesisch.
+
+## Wie lange dauert SEO?
+
+Erste Verbesserungen im Google-Profil zeigen sich oft nach wenigen Wochen. Für stabile Plätze in der normalen Suche rechnen Sie mit mehreren Monaten. Deshalb hat die laufende Betreuung eine Mindestlaufzeit von drei Monaten.
+
+## SEO, GEO oder Google Ads?
+
+SEO bringt Sie in der normalen Google-Suche nach vorn. [GEO](/leistungen/geo.html) sorgt dafür, dass KI-Suchmaschinen wie ChatGPT Sie nennen. [Google Ads](/leistungen/google-ads.html) bringt sofort Sichtbarkeit, kostet aber pro Klick. Welche Mischung sich für Sie lohnt, besprechen wir im Erstgespräch.
+
+**Quelle(n):** [onlinemarketing.de, CTR-Studie: 71,33 Prozent der User klicken auf der ersten Seite der SERPs](https://onlinemarketing.de/seo/ctr-studie-7133-prozent-der-user-klicken-auf-der-ersten-seite-der-serps)

@@ -9,3 +9,8 @@ musterentwuerfe/*/_doku/screenshots/
 # Lokaler Cloudflare-Worker-Testserver (wrangler dev): simuliert KV/R2/D1/Cache
 # lokal, hat nichts mit dem deployten Worker zu tun, jederzeit neu erzeugbar.
 cloudflare-worker/.wrangler/
+
+# Screenshots der Prüfungen unter _doku/: jederzeit neu erzeugbar
+_doku/*/screenshots/
+# Prüfberichte enthalten interne Befunde (Repo ist öffentlich), liegen nur lokal und im Planungsdokument
+_doku/relaunch-2026-10/pruefbericht*.md
