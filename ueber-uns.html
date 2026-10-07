@@ -3,258 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Über uns — XPONext</title>
-  <meta name="description" content="Das Team hinter XPONext: Tim Bünger und Simon Meding. Wir helfen Architekturbüros, online sichtbar zu werden und intern effizienter zu arbeiten.">
+  <title>Über uns: Tim Bünger und Simon Meding | XPONext</title>
+  <meta name="description" content="XPONext sind Tim Bünger und Simon Meding aus Bonn. Zwei Gründer, die Websites bauen, Unternehmen sichtbar machen und Büros mit KI Routinearbeit abnehmen.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.xponext.de/ueber-uns.html">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:title" content="Über uns | XPONext">
+  <meta property="og:description" content="Tim Bünger und Simon Meding, die Gründer von XPONext aus Bonn.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.xponext.de/ueber-uns.html">
+  <meta property="og:image" content="https://www.xponext.de/assets/og-image.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "AboutPage",
+        "url": "https://www.xponext.de/ueber-uns.html",
+        "name": "Über XPONext",
+        "about": { "@id": "https://www.xponext.de/#organisation" }
+      },
+      {
+        "@type": "Person",
+        "name": "Tim Bünger",
+        "jobTitle": "Mitgründer, Strategie und Google Ads",
+        "image": "https://www.xponext.de/assets/team/tim.webp",
+        "worksFor": { "@id": "https://www.xponext.de/#organisation" },
+        "sameAs": "https://www.linkedin.com/in/tim-b%C3%BCnger-924b49309/"
+      },
+      {
+        "@type": "Person",
+        "name": "Simon Meding",
+        "jobTitle": "Mitgründer, Technik, SEO und GEO",
+        "image": "https://www.xponext.de/assets/team/simon.webp",
+        "worksFor": { "@id": "https://www.xponext.de/#organisation" },
+        "sameAs": "https://www.linkedin.com/in/simon-meding-279196234/"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.xponext.de/" },
+          { "@type": "ListItem", "position": 2, "name": "Über uns", "item": "https://www.xponext.de/ueber-uns.html" }
+        ]
+      }
+    ]
+  }
+  </script>
+  <!-- @layout:head -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preload" href="/assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
   <link rel="stylesheet" href="/css/cookie-banner.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S0KYC5QEKH"></script>
   <script>
+    /* Google-Tag (gtag.js) wird erst nach Einwilligung im Cookie-Banner geladen, siehe js/cookie-banner.js. */
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('consent', 'default', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied',
-      'ad_user_data': 'denied',
-      'ad_personalization': 'denied'
+      'analytics_storage': 'denied', 'ad_storage': 'denied', 'ad_user_data': 'denied', 'ad_personalization': 'denied'
     });
     gtag('js', new Date());
     gtag('config', 'G-S0KYC5QEKH', { 'anonymize_ip': true });
+    function gtag_report_conversion(url) {
+      var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
+      gtag('event', 'conversion', { 'send_to': 'AW-18218623343/-EIFCNn-hbocEO_CqO9D', 'value': 1.0, 'currency': 'EUR', 'event_callback': callback });
+      return false;
+    }
   </script>
-  <style>
-    @font-face {
-      font-family: 'Inter';
-      src: url('/assets/fonts/inter-variable.woff2') format('woff2');
-      font-weight: 100 900; font-style: normal; font-display: swap;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', -apple-system, sans-serif; background: #fff; color: #0D0D0D; -webkit-font-smoothing: antialiased; }
-    a { text-decoration: none; transition: opacity 0.15s, color 0.15s; }
-
-    /* NAV */
-    nav { display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 2.5%; background: #0D0D0D; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid #1A1A1A; }
-    .nav-logo { display: inline-flex; align-items: center; gap: 0.55rem; font-size: 1.15rem; font-weight: 800; color: #fff; letter-spacing: -0.01em; }
-    .nav-logo .nav-wm { color: #fff; font-weight: 800; }
-    .nav-logo .nav-wm em { color: #4CAF7E; font-weight: 400; font-style: normal; }
-    .nav-links { display: flex; gap: 2rem; align-items: center; }
-    .nav-links a { color: #9CA3AF; font-size: 0.9rem; font-weight: 500; }
-    .nav-links a:hover, .nav-links a.active { color: #fff; opacity: 1; }
-    .nav-dd { position: relative; }
-    .nav-dd-trigger { display: inline-flex; align-items: center; gap: 4px; color: #9CA3AF; font-size: 0.9rem; font-weight: 500; }
-    .nav-dd-trigger:hover, .nav-dd-trigger.active { color: #fff; opacity: 1; }
-    .nav-dd-arrow { font-size: 0.6rem; transition: transform 0.15s; }
-    .nav-dd:hover .nav-dd-arrow { transform: rotate(180deg); }
-    .nav-dd-menu { display: none; flex-direction: column; gap: 0.15rem; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid #E5E7EB; border-top: none; border-radius: 0 0 12px 12px; padding: 0.9rem 0.5rem 0.5rem; min-width: 200px; z-index: 200; }
-    .nav-dd:hover .nav-dd-menu, .nav-dd:focus-within .nav-dd-menu { display: flex; }
-    .nav-dd-menu a { color: #374151; opacity: 1; font-size: 0.88rem; font-weight: 500; padding: 0.55rem 0.75rem; border-radius: 8px; white-space: nowrap; }
-    .nav-dd-menu a:hover { background: #F9FAFB; color: #0D0D0D; }
-    .nav-dd-menu a.active { background: #E8F0EB; color: #134D32; font-weight: 700; }
-    .nav-cta { background: #1B6B45; color: #fff !important; padding: 0.55rem 1.25rem; border-radius: 7px; font-weight: 600; font-size: 0.9rem; }
-    .nav-cta:hover { background: #134D32 !important; opacity: 1 !important; }
-
-    /* PAGE HERO */
-    .page-hero { padding: 4.5rem 5% 3.5rem; background: #F9FAFB; border-bottom: 1px solid #E5E7EB; text-align: center; }
-    .ps-badge { display: inline-flex; align-items: center; gap: 6px; background: #E8F0EB; color: #1B6B45; padding: 0.35rem 0.9rem; border-radius: 99px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.2rem; }
-    .page-hero h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 900; line-height: 1.1; color: #0D0D0D; margin-bottom: 0.9rem; letter-spacing: -0.02em; }
-    .page-hero h1 em { font-style: normal; color: #1B6B45; }
-    .page-hero p { font-size: 1.05rem; color: #4B5563; line-height: 1.7; max-width: 560px; margin: 0 auto; }
-
-    /* WARUM SECTION */
-    .warum-wrap { padding: 4rem 5%; background: #F9FAFB; border-top: 1px solid #E5E7EB; }
-    .warum-inner { max-width: 860px; margin: 0 auto; }
-    .warum-inner h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #0D0D0D; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
-    .warum-inner h2 em { font-style: normal; color: #1B6B45; }
-    .warum-inner > p { font-size: 1rem; color: #4B5563; line-height: 1.7; margin-bottom: 2.5rem; }
-    .warum-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .warum-item { background: #F9FAFB; border: 1px solid #E5E7EB; border-radius: 14px; padding: 1.5rem; }
-    .warum-item h3 { font-size: 1rem; font-weight: 700; color: #0D0D0D; margin-bottom: 0.5rem; }
-    .warum-item p { font-size: 0.9rem; color: #4B5563; line-height: 1.65; }
-
-    /* TEAM SECTION */
-    .team-wrap { padding: 4rem 5%; background: #fff; }
-    .team-inner { max-width: 860px; margin: 0 auto; }
-    .team-inner h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; color: #0D0D0D; margin-bottom: 0.6rem; letter-spacing: -0.01em; }
-    .team-inner h2 em { font-style: normal; color: #1B6B45; }
-    .team-inner > p { font-size: 1rem; color: #4B5563; line-height: 1.7; margin-bottom: 2.5rem; }
-    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-    .team-card { background: #fff; border: 1px solid #E5E7EB; border-radius: 16px; padding: 2rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0; }
-    .team-avatar { width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-bottom: 1.1rem; border: 3px solid #E8F0EB; }
-    .team-name { font-size: 1.1rem; font-weight: 800; color: #0D0D0D; margin-bottom: 0.2rem; }
-    .team-role { font-size: 0.85rem; font-weight: 600; color: #1B6B45; margin-bottom: 0.9rem; letter-spacing: 0.02em; }
-    .team-bio { font-size: 0.92rem; color: #4B5563; line-height: 1.7; margin-bottom: 1.2rem; }
-    .team-linkedin { display: inline-flex; align-items: center; gap: 5px; color: #1B6B45; font-size: 0.88rem; font-weight: 600; border: 1.5px solid #C6DDD1; padding: 0.4rem 0.9rem; border-radius: 99px; margin-top: auto; }
-    .team-linkedin:hover { background: #E8F0EB; opacity: 1; }
-
-    /* CTA BLOCK */
-    .cta-block { padding: 5rem 5%; background: #0D0D0D; text-align: center; }
-    .cta-block h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 800; color: #fff; margin-bottom: 0.9rem; letter-spacing: -0.01em; }
-    .cta-block h2 em { font-style: normal; color: #4CAF7E; }
-    .cta-block p { color: #9CA3AF; font-size: 1rem; margin-bottom: 2rem; }
-    .btn-primary { background: #1B6B45; color: #fff; padding: 0.9rem 1.8rem; border-radius: 8px; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 6px; }
-    .btn-primary:hover { background: #134D32; opacity: 1; }
-
-    /* FOOTER */
-    footer { padding: 2rem 5%; border-top: 1px solid #E5E7EB; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 2rem; }
-    .footer-logo { font-size: 1rem; font-weight: 800; color: #0D0D0D; }
-    .footer-logo span { color: #1B6B45; }
-    .footer-copy { color: #9CA3AF; font-size: 0.82rem; margin-top: 0.7rem; }
-    .footer-col { display: flex; flex-direction: column; gap: 0.6rem; min-width: 130px; }
-    .footer-col-title { font-size: 0.75rem; font-weight: 700; color: #9CA3AF; letter-spacing: 0.07em; text-transform: uppercase; margin-bottom: 0.2rem; }
-    .footer-col a { color: #6B7280; font-size: 0.88rem; }
-    .footer-col a:hover { color: #0D0D0D; opacity: 1; }
-    .cookie-reopen { background: none; border: 0; padding: 0; font: inherit; cursor: pointer; color: #6B7280; font-size: 0.88rem; text-align: left; }
-    .cookie-reopen:hover { color: #0D0D0D; }
-
-    @media (max-width: 680px) {
-      .warum-grid, .team-grid { grid-template-columns: 1fr; }
-      .nav-links a:not(.nav-cta) { display: none; }
-      .nav-dd { display: none; }
-      footer { flex-direction: column; }
-    }
-  </style>
-  <link rel="stylesheet" href="/css/nav-mobile.css">
-  <script src="/js/nav-mobile.js" defer></script>
+  <script src="/js/site.js" defer></script>
+  <!-- /@layout:head -->
 </head>
-<body>
-
-  <nav>
-    <a href="index.html" class="nav-logo">
-      <svg width="30" height="30" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg>
-      <span class="nav-wm">XPO<em>Next</em></span>
-    </a>
-    <div class="nav-links">
-      <div class="nav-dd">
-        <a href="leistungen.html" class="nav-dd-trigger">Leistungen <span class="nav-dd-arrow">▾</span></a>
-        <div class="nav-dd-menu">
-          <a href="leistungen.html">Online-Präsenz (Übersicht)</a>
-          <a href="leistungen/seo.html">Lokales SEO</a>
-          <a href="leistungen/website-erstellung.html">Website-Erstellung</a>
-          <a href="leistungen/geo.html">GEO</a>
-          <a href="leistungen/google-ads.html">Google Ads &amp; AI Ads</a>
-          <a href="effizienz.html">Zeitfresser & Prozessoptimierung</a>
-        </div>
-      </div>
-      <a href="blog/index.html">Blog</a>
-      <a href="index.html#vorteile">Vorteile</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="ueber-uns.html" class="active">Über uns</a>
-      <div class="nav-dd">
-        <a href="website-check.html" class="nav-dd-trigger">Website-Check <span class="nav-dd-arrow">▾</span></a>
-        <div class="nav-dd-menu">
-          <a href="website-check.html">SEO & Performance</a>
-          <a href="geo-check.html">GEO-Check</a>
-        </div>
-      </div>
-      <a href="index.html#kontakt" class="nav-cta">Termin buchen</a>
-    </div>
-  </nav>
-
-  <div class="page-hero">
-    <div class="ps-badge">👋 Das Team</div>
-    <h1>Die Leute <em>hinter XPONext.</em></h1>
-    <p>Keine riesige Agentur, keine anonymen Projektmanager. Sie wissen immer, mit wem Sie sprechen – und wer für Ihr Ergebnis verantwortlich ist.</p>
-  </div>
-
-  <!-- TEAM -->
-  <div class="team-wrap">
-    <div class="team-inner">
-      <h2>Das Team <em>persönlich.</em></h2>
-      <p>Zwei Gründer, zwei Fachgebiete – eine gemeinsame Mission: lokale Unternehmen online stark machen.</p>
-      <div class="team-grid">
-        <div class="team-card">
-          <picture>
-            <source srcset="assets/team/tim.webp" type="image/webp">
-            <img src="assets/team/tim.jpg" alt="Tim Bünger, Co-Founder XPONext" class="team-avatar">
-          </picture>
-          <div class="team-name">Tim Bünger</div>
-          <div class="team-role">Co-Founder — Strategie & Google Ads</div>
-          <p class="team-bio">Tim hat Betriebswirtschaftslehre studiert und kümmert sich bei XPONext um Strategie, Kundenkommunikation und Google Ads. Sein Fokus: Kampagnen, die wirklich konvertieren – mit klaren Zahlen, klarem Budget und direkter Kommunikation.</p>
-          <a href="https://www.linkedin.com/in/tim-b%C3%BCnger-924b49309/" target="_blank" rel="noopener" class="team-linkedin">LinkedIn →</a>
-        </div>
-        <div class="team-card">
-          <picture>
-            <source srcset="assets/team/simon.webp" type="image/webp">
-            <img src="assets/team/simon.jpg" alt="Simon Meding, Co-Founder XPONext" class="team-avatar">
-          </picture>
-          <div class="team-name">Simon Meding</div>
-          <div class="team-role">Co-Founder — Technik & SEO</div>
-          <p class="team-bio">Simon hat Wirtschaftsinformatik studiert und verantwortet bei XPONext die technische Umsetzung: Website-Entwicklung, SEO-Struktur, GEO und die Optimierung für KI-Suche. Sein Ziel: Websites, die nicht nur Menschen, sondern auch KI-Systeme überzeugen.</p>
-          <a href="https://www.linkedin.com/in/simon-meding-279196234/" target="_blank" rel="noopener" class="team-linkedin">LinkedIn →</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- WARUM XPONEXT -->
-  <div class="warum-wrap">
-    <div class="warum-inner">
-      <h2>Warum <em>XPONext?</em></h2>
-      <p>Wir sind keine Agentur für Konzerne. Wir sind für Architekturbüros, die online wachsen und intern effizienter werden wollen.</p>
-      <div class="warum-grid">
-        <div class="warum-item">
-          <h3>Alles aus einer Hand</h3>
-          <p>Wir übernehmen das, wofür Sie keine Zeit haben, aber von dem Sie wissen, dass es wichtig ist: Website, Ads, SEO und Bewertungen – koordiniert von einem festen Ansprechpartner, der Ihr Geschäft kennt.</p>
-        </div>
-        <div class="warum-item">
-          <h3>Spezialisiert auf Architekturbüros</h3>
-          <p>Wir arbeiten primär mit Architekturbüros und kennen ihre typischen Herausforderungen: von der Sichtbarkeit bei Bauherren bis zu ineffizienten internen Abläufen. Keine Konzern-Kompromisse.</p>
-        </div>
-        <div class="warum-item">
-          <h3>Transparente Ergebnisse</h3>
-          <p>Sie sehen jeden Monat genau, was Ihr Investment bringt: Klicks, Anfragen, Rankings. Keine leeren Versprechen, nur Zahlen.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="cta-block">
-    <h2>Gemeinsam <em>mehr erreichen?</em></h2>
-    <p>Kostenloses Erstgespräch – kein Risiko, keine versteckten Kosten.</p>
-    <a href="index.html#kontakt" class="btn-primary">Erstgespräch anfragen →</a>
-  </div>
-
-  <footer>
-    <div class="footer-col">
-      <div class="footer-logo">XPO<span>Next</span></div>
-      <p style="color:#9CA3AF;font-size:0.85rem;line-height:1.6;max-width:220px;">Mehr Sichtbarkeit für Architekturbüros – aus einer Hand.</p>
-      <p class="footer-copy">© 2026 XPONext GbR</p>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Seiten</div>
-      <a href="leistungen.html">Leistungen</a>
-      <a href="blog/index.html">Blog</a>
-      <a href="effizienz.html">Zeitfresser & Prozessoptimierung</a>
-      <a href="index.html#vorteile">Vorteile</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="ueber-uns.html">Über uns</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Einzugsgebiete</div>
-      <a href="einzugsgebiet/bonn.html">Bonn</a>
-      <a href="einzugsgebiet/koeln.html">Köln</a>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Rechtliches</div>
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
-      <a href="agb.html">AGB</a>
-      <button data-action="cookie-settings" class="cookie-reopen">Cookie-Einstellungen</button>
-    </div>
-    <div class="footer-col">
-      <div class="footer-col-title">Kontakt</div>
-      <address style="font-style:normal;color:#6B7280;font-size:0.88rem;line-height:1.6;">XPO Next GbR<br>Adrianstraße 88<br>53227 Bonn</address>
-      <a href="mailto:info@xponext.de" style="color:#6B7280;font-size:0.88rem;">info@xponext.de</a>
-    </div>
-  </footer>
-
-  <!-- Cookie-Banner (DSGVO) -->
+<body data-nav="ueber-uns">
+  <!-- @layout:header -->
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
   <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Cookie-Einstellungen" aria-hidden="true">
     <div class="cookie-banner__card">
       <div class="cookie-banner__head">
-        <div class="cookie-banner__icon" aria-hidden="true">🍪</div>
+        <div class="cookie-banner__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 109 9 3 3 0 01-3.5-3A3 3 0 0114 5.5 3 3 0 0112 3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="9" cy="10" r="1.1" fill="currentColor"/><circle cx="14" cy="15" r="1.1" fill="currentColor"/><circle cx="8.5" cy="15.5" r="1.1" fill="currentColor"/></svg></div>
         <div>
           <h2 class="cookie-banner__title">Cookies & Datenschutz</h2>
           <p class="cookie-banner__text">Wir nutzen technisch notwendige Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung setzen wir zusätzlich Google Analytics und Microsoft Clarity ein, um die Nutzung anonymisiert zu analysieren. Details in unserer <a href="/datenschutz.html">Datenschutzerklärung</a>.</p>
@@ -285,7 +111,212 @@
       </div>
     </div>
   </div>
-  <script src="/js/cookie-banner.js"></script>
+  <header class="site-header" id="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="/" aria-label="XPONext, zur Startseite"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg><span>XPO<em>Next</em></span></a>
+      <nav class="site-nav" id="site-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li class="has-sub">
+            <a href="/leistungen.html">Leistungen <svg class="caret" viewBox="0 0 10 10" aria-hidden="true"><path d="M2 3.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></a>
+            <div class="sub">
+              <div>
+                <p class="sub__group-title">Gefunden werden</p>
+                <a href="/leistungen/website-erstellung.html">Website<span>Gestaltet, schnell, gut auffindbar</span></a>
+                <a href="/leistungen/seo.html">SEO<span>Bei Google weiter oben</span></a>
+                <a href="/leistungen/geo.html">GEO<span>Genannt in ChatGPT und KI-Suche</span></a>
+                <a href="/leistungen/google-ads.html">Google Ads<span>Sofort sichtbar, planbares Budget</span></a>
+              </div>
+              <div>
+                <p class="sub__group-title">Zeit zurückgewinnen</p>
+                <a href="/leistungen/ki-automatisierung.html">KI-Automatisierung<span>Protokolle, Mails, Angebote</span></a>
+                <p class="sub__group-title">Kostenlos prüfen</p>
+                <a href="/website-check.html">Website-Check<span>Tempo, SEO, Barrierefreiheit</span></a>
+                <a href="/geo-check.html">GEO-Check<span>Bereit für KI-Suchmaschinen?</span></a>
+              </div>
+              <div class="sub__all"><a href="/leistungen.html">Alle Leistungen im Überblick</a></div>
+            </div>
+          </li>
+          
+          <li><a href="/ueber-uns.html" aria-current="page">Über uns</a></li>
+          <li><a href="/kontakt.html">Kontakt</a></li>
+        </ul>
+        <div class="site-nav__mobile">
+          <a class="btn btn--secondary" href="tel:+491636857434">Anrufen: 0163 6857434</a>
+        </div>
+      </nav>
+      <div class="site-header__actions">
+        <a class="btn btn--primary btn--sm" href="/kontakt.html">Erstgespräch buchen</a>
+        <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+  <!-- /@layout:header -->
 
+  <main id="inhalt">
+    <section class="page-hero">
+      <div class="container split">
+        <div>
+          <nav class="breadcrumb" aria-label="Brotkrumen"><ol><li><a href="/">Startseite</a></li><li><span aria-current="page">Über uns</span></li></ol></nav>
+          <p class="eyebrow">Über uns</p>
+          <h1>Zwei Gründer. <em>Keine Projektmanager dazwischen.</em></h1>
+          <p class="lead">XPONext sind Tim Bünger und Simon Meding aus Bonn. Sie sprechen bei uns immer mit den Leuten, die Ihre Website bauen, Ihre Kampagnen steuern und Ihre Abläufe automatisieren.</p>
+        </div>
+        <figure class="team-photo">
+          <img src="/assets/team/team-hell.webp" alt="Tim Bünger (links) und Simon Meding (rechts)" width="892" height="659" fetchpriority="high">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="team-titel">
+      <div class="container">
+        <div class="section-head">
+          <h2 id="team-titel">Wer macht was?</h2>
+        </div>
+        <div class="person-grid">
+          <article class="person-card">
+            <div class="person-card__img person-card__img--frei"><img src="/assets/team/tim-karte.webp" alt="Tim Bünger" width="385" height="667" loading="lazy"></div>
+            <div class="person-card__body">
+              <h3>Tim Bünger</h3>
+              <p class="person-card__role">Mitgründer · Strategie, Google Ads, Kundenkontakt</p>
+              <p>Tim hat Betriebswirtschaftslehre studiert. Bei XPONext verantwortet er Strategie, Kundenkommunikation und Google Ads. In den meisten Projekten ist er Ihr erster Ansprechpartner, vom Erstgespräch bis zum monatlichen Bericht.</p>
+              <p><a class="text-link" href="https://www.linkedin.com/in/tim-b%C3%BCnger-924b49309/" rel="noopener">Tim auf LinkedIn →</a></p>
+            </div>
+          </article>
+          <article class="person-card">
+            <div class="person-card__img person-card__img--frei"><img src="/assets/team/simon-karte.webp" alt="Simon Meding" width="450" height="667" loading="lazy"></div>
+            <div class="person-card__body">
+              <h3>Simon Meding</h3>
+              <p class="person-card__role">Mitgründer · Technik, Websites, SEO und GEO</p>
+              <p>Simon hat Wirtschaftsinformatik studiert. Er verantwortet die technische Umsetzung: Websites, SEO, GEO und die Automatisierungen dahinter. Sein Ziel sind Websites und Werkzeuge, die Menschen und KI-Systeme gleichermaßen verstehen.</p>
+              <p><a class="text-link" href="https://www.linkedin.com/in/simon-meding-279196234/" rel="noopener">Simon auf LinkedIn →</a></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" aria-labelledby="geschichte-titel" hidden>
+      <div class="container split split--top">
+        <div>
+          <p class="eyebrow">Wie alles anfing</p>
+          <h2 id="geschichte-titel">Warum es XPONext gibt</h2>
+        </div>
+        <div>
+          <!-- PLATZHALTER-BLOCK: Gründergeschichte. Warum Architektur und Planung, warum KI, wie die ersten Kunden kamen. Erzählt, in eigenen Worten, drei bis fünf Sätze. -->
+          <div class="ph ph--block" data-ph="Gründergeschichte" style="min-height:180px">Gründergeschichte in eigenen Worten: Warum Architektur und Planung, warum KI, wie die ersten Kunden kamen. Drei bis fünf Sätze.</div>
+          <!-- PLATZHALTER-BLOCK: Video -->
+          <div class="ph" data-ph="Video Über uns" style="margin-top:1rem;aspect-ratio:16/9">Video, 60 bis 90 Sekunden: wer wir sind und wie wir arbeiten. Selbst gehostet, ohne YouTube.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="arbeitsweise-titel">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow">Arbeitsweise</p>
+          <h2 id="arbeitsweise-titel">Wie wir arbeiten</h2>
+        </div>
+        <div class="facts">
+          <div class="fact">
+            <h3>Direkt</h3>
+            <p>Sie sprechen mit den Leuten, die umsetzen. Auf Anfragen antworten wir innerhalb von 24 Stunden an Werktagen.</p>
+          </div>
+          <div class="fact">
+            <h3>Messbar</h3>
+            <p>Vor jedem Projekt halten wir einen Ausgangswert fest und messen danach mit derselben Methode erneut.</p>
+          </div>
+          <div class="fact">
+            <h3>Ehrlich</h3>
+            <p>Wir sagen Ihnen auch, wenn sich etwas nicht lohnt. Eine Automatisierung für drei Angebote im Jahr bauen wir nicht.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft section--tight" aria-labelledby="fakten-titel">
+      <div class="container">
+        <h2 id="fakten-titel" class="visually-hidden">XPONext auf einen Blick</h2>
+        <ul class="trust-row" style="margin-top:0;font-size:1rem">
+          <li><img src="/assets/google-ads-badge.webp" alt="" width="22" height="22" loading="lazy">Google Ads zertifiziert</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Sitz in Bonn, Adrianstraße 88</li>
+          <li><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Kunden aus Architektur, Innenausbau und Touristik</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="cta-band" aria-labelledby="cta-titel">
+      <div class="container cta-band__grid">
+        <div>
+          <h2 id="cta-titel">Lernen Sie uns kennen. <em>30 Minuten reichen.</em></h2>
+          <p>Erzählen Sie uns, wo es hakt. Wir sagen Ihnen ehrlich, ob und wie wir helfen können.</p>
+          <div class="btn-row">
+            <a class="btn btn--light" href="/kontakt.html">Erstgespräch buchen</a>
+            <a class="btn btn--ghost-light" href="tel:+491636857434">0163 6857434</a>
+          </div>
+          <p class="cta-note">Kostenlos und unverbindlich, per Video oder Telefon.</p>
+        </div>
+        <div class="cta-band__person">
+          <img src="/assets/team/simon.webp" alt="Simon Meding" width="64" height="64" loading="lazy">
+          <div><strong>Simon Meding</strong>Mitgründer, Technik<br><a href="mailto:info@xponext.de">info@xponext.de</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- @layout:footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="XPONext, zur Startseite"><svg viewBox="0 0 120 120" aria-hidden="true" focusable="false"><rect width="120" height="120" rx="28" fill="#1B6B45"/><line x1="32" y1="88" x2="32" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="88" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="32" x2="88" y2="88" stroke="#fff" stroke-width="7" stroke-linecap="round"/><line x1="32" y1="88" x2="88" y2="32" stroke="#fff" stroke-width="7" stroke-linecap="round" opacity="0.3"/></svg><span>XPO<em>Next</em></span></a>
+          <p>Websites, Sichtbarkeit in Google und KI-Suche und KI-Automatisierung für Büros. Aus Bonn, für Unternehmen in ganz Deutschland.</p>
+          <address>
+            XPO Next GbR<br>Adrianstraße 88<br>53227 Bonn<br>
+            <a href="tel:+491636857434">0163 6857434</a><br>
+            <a href="mailto:info@xponext.de">info@xponext.de</a>
+          </address>
+        </div>
+        <div class="footer-col">
+          <h2>Leistungen</h2>
+          <ul>
+            <li><a href="/leistungen/website-erstellung.html">Website</a></li>
+            <li><a href="/leistungen/seo.html">SEO</a></li>
+            <li><a href="/leistungen/geo.html">GEO</a></li>
+            <li><a href="/leistungen/google-ads.html">Google Ads</a></li>
+            <li><a href="/leistungen/ki-automatisierung.html">KI-Automatisierung</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>XPONext</h2>
+          <ul>
+            
+            <li><a href="/ueber-uns.html">Über uns</a></li>
+            <li><a href="/kontakt.html">Kontakt</a></li>
+            <li><a href="/fuer/architekturbueros/">Für Architekturbüros</a></li>
+            <li><a href="/blog/index.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Kostenlos prüfen</h2>
+          <ul>
+            <li><a href="/website-check.html">Website-Check</a></li>
+            <li><a href="/geo-check.html">GEO-Check</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 XPO Next GbR</p>
+        <ul>
+          <li><a href="/impressum.html">Impressum</a></li>
+          <li><a href="/datenschutz.html">Datenschutz</a></li>
+          <li><a href="/agb.html">AGB</a></li>
+          <li><button data-action="cookie-settings" class="cookie-reopen" type="button">Cookie-Einstellungen</button></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/cookie-banner.js"></script>
+  <!-- /@layout:footer -->
 </body>
 </html>

@@ -1,0 +1,69 @@
+# Branchenseite Architekturbüros: indexiert, weil hier echte Kunden sitzen. Nimmt die
+# Architekten-Ansprache auf, die vorher auf der Startseite stand, und verlinkt den Blog.
+# Musterentwürfe hier bewusst nicht verlinken (nur noch per Link an Interessenten).
+slug: architekturbueros
+index: true
+kurzname: Architekturbüros
+service_name: Website, Sichtbarkeit und KI-Automatisierung für Architekturbüros
+title: "Für Architekturbüros: Website, Sichtbarkeit, KI | XPONext"
+meta_description: "XPONext arbeitet vor allem für Architektur- und Planungsbüros: Websites, Sichtbarkeit in Google und KI-Suche und weniger Zeit für Protokolle und Angebote."
+eyebrow: Für Architektur- und Planungsbüros
+h1: "Für Architekturbüros, die mehr planen und weniger verwalten wollen."
+lead: "Die meisten unserer Kunden sind Architektur- und Planungsbüros. Wir bauen Websites, die Ihre Projekte zeigen, arbeiten daran, dass Auftraggeber Sie finden, und nehmen Ihrem Büro mit KI Routinearbeit ab."
+
+situationen_titel: "Was wir von Architekturbüros immer wieder hören"
+situationen:
+  - titel: "Aufträge kommen nur über Empfehlungen"
+    text: "Über das Internet kommt wenig rein. Meist liegt das nicht am Internet, sondern daran, wo das Büro angezeigt wird, bei Google, in Google Maps und in KI-Antworten."
+  - titel: "Die Website zeigt die Projekte nicht"
+    text: "Die besten Projekte sind fotografiert, aber die Website ist alt, langsam oder auf dem Handy kaum zu bedienen."
+  - titel: "Verwaltung frisst die Planung"
+    text: "Protokolle, Mails, Angebote und die Einschätzung von Ausschreibungen binden Leute, die eigentlich planen sollten."
+
+schritte_titel: "Was wir für Architekturbüros machen"
+schritte:
+  - titel: "Website"
+    text: "Eine eigene Gestaltung, die zu Ihrer Architektur passt, mit Projekten, die auch auf dem Handy wirken. [Mehr zur Website](/leistungen/website-erstellung.html)"
+  - titel: "Sichtbarkeit"
+    text: "Bessere Plätze bei Google und in Google Maps und Nennungen in ChatGPT und Google AI Overviews, mit Messung vorher und nachher. [Mehr zu GEO](/leistungen/geo.html)"
+  - titel: "Weniger Verwaltung"
+    text: "Protokolle, Mails und Angebote, von KI vorbereitet und von Ihrem Team freigegeben. [Mehr zur KI-Automatisierung](/leistungen/ki-automatisierung.html)"
+
+einwaende_titel: "Was Architekturbüros uns zuerst fragen"
+einwaende:
+  - titel: "Kennen Sie unsere Branche?"
+    text: "Ja. Die meisten unserer Kunden sind Architektur- und Planungsbüros. HOAI und VOB bleiben Ihr Fach, die Werkzeuge und die Sichtbarkeit sind unseres."
+  - titel: "Brauchen wir eine neue Website?"
+    text: "Nicht immer. SEO, GEO und Google Ads lassen sich auch auf einer bestehenden Website aufsetzen. Wir sagen Ihnen ehrlich, was sich lohnt."
+  - titel: "Wie viel Zeit kostet uns das?"
+    text: "Wenig. Wir brauchen Stichpunkte, Fotos und ein, zwei Gespräche. Texte und Technik übernehmen wir."
+
+beleg:
+  titel: "Für Architekturbüros umgesetzt"
+  platzhalter: "Ein bis zwei Fallstudien aus Architekturbüros mit Screenshot, Zahl und Zitat, nach Freigabe der Büros."
+
+angebot:
+  titel: "So starten wir"
+  text: "Im Erstgespräch sehen wir uns gemeinsam an, wo Ihr Büro bei Google und in KI-Antworten heute steht und wo im Alltag Zeit verloren geht. Danach bekommen Sie ein schriftliches Angebot."
+
+faq:
+  - frage: "Wie finden Auftraggeber heute ein Architekturbüro?"
+    antwort: "Über Empfehlungen, über die Google-Suche und Google Maps und zunehmend über KI-Suchmaschinen wie ChatGPT. Wer dort nicht auftaucht, bekommt die Anfragen nicht, die nicht über das eigene Netzwerk laufen."
+  - frage: "Was kostet eine Website für ein Architekturbüro?"
+    antwort: "Eine Website ist ein einmaliges Projekt und liegt je nach Umfang meist im unteren bis mittleren vierstelligen Bereich. Den genauen Preis nennen wir nach dem Erstgespräch schriftlich."
+  - frage: "Können Sie auch bei Ausschreibungen und Wettbewerben helfen?"
+    antwort: "Bei der fachlichen Bewertung nicht, das bleibt Ihr Fach. Wir können aber Abläufe rund um Ausschreibungen beschleunigen, etwa das Sammeln und Zusammenfassen der Unterlagen."
+
+links:
+  - href: /blog/wie-finden-bauherren-einen-architekten.html
+    text: "Wie finden Bauherren heute einen Architekten?"
+  - href: /blog/sichtbarkeit-chatgpt-google-ai-overviews-architekturbuero.html
+    text: "Sichtbar in ChatGPT und Google AI Overviews"
+  - href: /blog/groesste-zeitfresser-im-architekturbuero.html
+    text: "Die größten Zeitfresser im Architekturbüro"
+  - href: /blog/index.html
+    text: "Alle Artikel für Architekturbüros"
+
+abschluss:
+  titel: "Mehr Planung, weniger Verwaltung. <em>Sprechen wir darüber.</em>"
+  text: "30 Minuten, kostenlos. Danach wissen Sie, wo Ihr Büro bei Google und in KI-Antworten steht und wo sich KI im Alltag lohnt."

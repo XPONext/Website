@@ -1,5 +1,5 @@
 /* Cookie-Banner Logik (DSGVO-konform)
-   - Blockt GA4 bis zur expliziten Einwilligung via Google Consent Mode v2
+   - Lädt gtag.js (GA4, Google Ads) erst nach expliziter Einwilligung, setzt zusätzlich Consent Mode v2
    - Speichert Auswahl 365 Tage im localStorage
    - Banner öffnet sich erneut bei Klick auf [data-action="cookie-settings"] */
 
@@ -45,7 +45,18 @@
         "ad_personalization": "denied"
       });
     }
-    if (statistics) loadClarity();
+    if (statistics) { loadGtag(); loadClarity(); }
+  }
+
+  // gtag.js wird erst nach Einwilligung geladen (wie in der Datenschutzerklärung beschrieben).
+  // Vorher sammelt der Stub im <head> Aufrufe nur in window.dataLayer, es geht nichts an Google.
+  function loadGtag() {
+    if (window.__xpoGtagLoaded) return;
+    window.__xpoGtagLoaded = true;
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=G-S0KYC5QEKH";
+    document.head.appendChild(s);
   }
 
   function loadClarity() {

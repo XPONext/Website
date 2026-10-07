@@ -1,0 +1,62 @@
+# Branchenseite Hausverwaltungen (Kampagne in Vorbereitung).
+# Nicht mit dem Protokoll der Eigentümerversammlung aufmachen, dafür gibt es fertige Produkte.
+# Testphase: noindex. Angebot noch offen, deshalb Platzhalter.
+slug: hausverwaltungen
+index: false
+kurzname: Hausverwaltungen
+service_name: KI-Automatisierung für Hausverwaltungen
+title: "KI-Automatisierung für Hausverwaltungen | XPONext"
+meta_description: "Neue Objekte annehmen, ohne neue Leute einzustellen: XPONext nimmt Hausverwaltungen mit KI Routine ab, von Eigentümeranfragen bis Handwerkerkoordination."
+eyebrow: Für Haus- und Immobilienverwaltungen
+h1: "Neue Objekte annehmen, ohne neue Leute einzustellen."
+lead: "Viele Hausverwaltungen lehnen Objekte ab, weil das Team ausgelastet ist. Wir nehmen Ihnen mit KI die Routine ab: Eigentümeranfragen, Handwerkerkoordination, Angebotsvergleiche."
+
+situationen_titel: "Wo die Zeit in der Verwaltung bleibt"
+situationen_lead: "Laut VDIV-Branchenbarometer 2026 ist der schwer vorhersehbare Zeitaufwand pro Objekt für 64,7 Prozent der Verwaltungen die größte Herausforderung."
+situationen:
+  - titel: "Anfragen von Eigentümern und Mietern"
+    text: "Dieselben Fragen kommen per Mail, Telefon und Portal, und jede will einzeln beantwortet werden."
+  - titel: "Handwerker koordinieren"
+    text: "Schaden melden, Handwerker suchen, Termin abstimmen, nachfassen. Für einen tropfenden Wasserhahn gehen schnell mehrere Mails hin und her."
+  - titel: "Angebote vergleichen"
+    text: "Drei Angebote für dieselbe Maßnahme, jedes anders aufgebaut. Der Vergleich für die Eigentümer kostet jedes Mal Stunden."
+situationen_quelle: "Quelle: VDIV Deutschland, Branchenbarometer 2026 (veröffentlicht 19.08.2026)."
+
+schritte_titel: "So gehen wir vor"
+schritte:
+  - titel: "Zeitfresser finden"
+    text: "Wir sehen uns mit Ihnen die Abläufe an, die am meisten Zeit kosten, und rechnen aus, wie viele Stunden das im Monat sind."
+  - titel: "Werkzeug einrichten"
+    text: "Wir richten die Lösung in Ihren gewohnten Programmen ein. Die KI sortiert, fasst zusammen und formuliert vor."
+  - titel: "Gemeinsam messen"
+    text: "Nach einigen Wochen vergleichen wir mit dem Ausgangswert. Spart es keine Zeit, sehen Sie das genauso schnell wie wir."
+
+einwaende_titel: "Die drei Fragen, die wir am häufigsten hören"
+einwaende:
+  - titel: "Wer antwortet den Eigentümern?"
+    text: "Ihr Team. Die KI bereitet Antworten vor, ein Mensch prüft und schickt sie ab."
+  - titel: "Wo liegen die Daten?"
+    text: "Das klären wir vor dem Start. Eine Vereinbarung zur Auftragsverarbeitung ist Teil unserer AGB."
+  - titel: "Was ist mit unserer Verwaltungssoftware?"
+    text: "Die bleibt. Wir arbeiten mit dem, was Sie haben, und ersetzen nichts, was funktioniert."
+
+beleg:
+  titel: "Erfahrung aus anderen Büros"
+  text: "Mails sortieren, Angebote vergleichen und Antworten vorbereiten automatisieren wir auch in Planungsbüros. Die Abläufe ähneln sich mehr, als man denkt."
+  platzhalter: "Erster Fall aus einer Hausverwaltung, nach Freigabe."
+
+angebot:
+  titel: "So starten wir"
+  platzhalter: "Angebot für Hausverwaltungen, sobald entschieden."
+
+faq:
+  - frage: "Welche Aufgaben eignen sich zuerst?"
+    antwort: "Aufgaben, die oft vorkommen und nach Muster laufen: wiederkehrende Fragen von Eigentümern und Mietern, die Abstimmung mit Handwerkern oder der Vergleich mehrerer Angebote für dieselbe Maßnahme."
+  - frage: "Müssen Eigentümer und Mieter etwas Neues lernen?"
+    antwort: "Nein. Eigentümer und Mieter schreiben und rufen an wie bisher. Die Entlastung passiert in Ihrem Büro."
+  - frage: "Wann sehen wir, ob es Zeit spart?"
+    antwort: "Nach einigen Wochen. Wir halten vorher fest, wie lange ein Ablauf dauert, und vergleichen danach mit demselben Maßstab."
+
+abschluss:
+  titel: "Wie viele Stunden kostet Sie die Routine? <em>Rechnen wir es aus.</em>"
+  text: "30 Minuten, kostenlos. Danach wissen Sie, wo KI in Ihrer Verwaltung Zeit spart und wo nicht."

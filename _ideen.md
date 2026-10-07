@@ -11,20 +11,26 @@ Freigabe, interne Preise).
 **Aufwand (grob):** S = ein Nachmittag · M = ein bis zwei Tage · L = mehrere Tage oder
 Abhängigkeiten nach außen
 
+
+**Relaunch 07.10.2026:** Die Website ist branchenoffen umgebaut (Startseite, Leistungen, Projekte,
+Über uns, Kontakt, Branchenseiten unter `/fuer/`). Musterentwürfe sind nur noch per Link erreichbar,
+nicht mehr verlinkt und `noindex`. Plan und Begründung stehen im Claude-Doc „Website-Relaunch
+xponext.de: Audit und Plan“. Offene Inhalte stehen als Platzhalter in den Seiten, siehe README.
+
 ## Überblick
 
 | Nr. | Idee | Bereich | Status | Aufwand |
 |---|---|---|---|---|
-| 1 | Blogartikel überarbeiten | Blog | offen | M |
-| 2 | Partner und Büros verlinken | Vertrauen | offen | M |
-| 3 | Video von uns aufnehmen | Vertrauen | offen | M |
+| 1 | Blogartikel überarbeiten | Blog | offen, Blog seit Relaunch nur noch im Footer | M |
+| 2 | Partner und Büros verlinken | Vertrauen | vorbereitet, Platzhalter für Logos und Fallstudien | M |
+| 3 | Video von uns aufnehmen | Vertrauen | vorbereitet, Platzhalter auf Startseite und Über uns | M |
 | 4 | Website-Konfigurator mit Preisrahmen | Angebot | offen | L |
 | 5 | Kundenstimmen entfernen | Startseite | erledigt | S |
-| 6 | Startseite entschlacken | Startseite | offen | M |
+| 6 | Startseite entschlacken | Startseite | erledigt (Relaunch) | M |
 | 7 | FAQ radikal kürzen | Startseite | erledigt | S |
-| 8 | Leistungen übersichtlicher gestalten | Leistungen | offen | M |
-| 9 | Einzugsgebiete ausbauen oder streichen | Einzugsgebiete | offen | M |
-| 10 | Websites und Design in den Vordergrund | Positionierung | in Arbeit | M |
+| 8 | Leistungen übersichtlicher gestalten | Leistungen | erledigt (Relaunch) | M |
+| 9 | Einzugsgebiete ausbauen oder streichen | Einzugsgebiete | noindex und entlinkt, Löschen nach Search Console | M |
+| 10 | Websites und Design in den Vordergrund | Positionierung | überholt durch Relaunch, siehe unten | M |
 | 11 | Projekte selbst pflegen (CMS) in unseren Websites | Angebot | offen | M |
 | 12 | KI-Pflegedienst auch für fremde Websites | Angebot | offen | L |
 | 13 | Produktvision: KI-Redakteur für Websites, jede Branche | Produkt | Brainstorm | L+ |

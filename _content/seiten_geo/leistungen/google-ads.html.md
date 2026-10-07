@@ -2,18 +2,36 @@
 slug: /leistungen/google-ads.html
 seitentyp: leistungsseite
 schema_typ: [ServiceSchema, BreadcrumbList]
-title: "Google Ads für Architekturbüros: Anfragen gewinnen | XPONext"
-meta_description: "Google-zertifizierte Google Ads Kampagnen für Architekturbüros: KI-gestützte Gebotsoptimierung, laufende A/B-Tests, monatliches Reporting mit KPIs."
-h1: "Google Ads für Architekturbüros: qualifizierte Anfragen statt Streuverlust"
-differenzierungs_fakt: "Rekonstruiert aus bestehender HTML-Seite nach Datenverlust am 2026-08-03; Original-Differenzierungsfakt nicht separat wiederherstellbar, Inhalt/Quellen sind aber vollstaendig erhalten."
+title: "Google Ads: sofort sichtbar, planbares Budget | XPONext"
+meta_description: "Google Ads von XPONext, Google-zertifiziert: Kampagnen für die richtigen Suchanfragen. Sie zahlen pro Klick und bekommen jeden Monat einen klaren Bericht."
+h1: "Google Ads: sofort sichtbar, wenn Kunden nach Ihnen suchen"
+kurzname: "Google Ads"
+lead: "Mit Google Ads kann Ihre Anzeige über den normalen Ergebnissen erscheinen, sobald jemand nach Ihrer Leistung sucht. Wir richten die Kampagnen so ein, dass Ihr Budget bei den richtigen Anfragen landet."
+differenzierungs_fakt: "Kampagnen werden von Tim Bünger betreut, Google Ads zertifiziert, mit monatlichem Bericht zu Klicks, Kosten und Anfragen."
 interne_links:
-  - /einzugsgebiet/bonn/google-ads.html
-  - /einzugsgebiet/koeln/google-ads.html
-quelle_content: "Rekonstruktion, 2026-08-03"
+  - /leistungen/seo.html
+  - /leistungen/geo.html
+  - /blog/google-ads-budget-architekten.html
+  - /leistungen.html
+quelle_content: "Relaunch Oktober 2026, branchenoffen neu geschrieben"
 ---
 
-Google Ads bringt ein Architekturbüro bezahlt ganz oben in die Suchergebnisse, abgerechnet ausschließlich pro Klick. Branchenbenchmarks für Beratungsdienstleistungen zeigen Klickraten von rund 4,4 Prozent im Suchnetzwerk bei einer Conversion-Rate von etwa 2 Prozent. Ohne saubere Kampagnenstruktur verschenken Büros hier schnell Budget an die falsche Zielgruppe.
+Google Ads ist bezahlte Werbung in der Google-Suche: Ihre Anzeige erscheint über den normalen Ergebnissen, sobald jemand nach Ihrer Leistung sucht, und Sie zahlen nur, wenn jemand klickt. Für Beratungsdienstleistungen liegt die Klickrate im Suchnetzwerk laut Branchenvergleich bei rund 4,4 Prozent. Entscheidend ist, dass das Budget bei den Suchanfragen landet, aus denen Aufträge werden.
 
-XPONext richtet Google Ads Kampagnen Google-zertifiziert ein, optimiert Gebote KI-gestützt und testet Anzeigen laufend im A/B-Verfahren, damit das Budget bei den Suchanfragen landet, die tatsächlich zu Bauherren-Anfragen führen. Zahlt wird ausschließlich, wenn jemand klickt, dazu gibt es monatliches Reporting mit den relevanten KPIs statt einer Blackbox. Wie sich das für Auftraggeber in [Bonn](/einzugsgebiet/bonn/google-ads.html) und [Köln](/einzugsgebiet/koeln/google-ads.html) auswirkt, zeigen die jeweiligen Standort-Seiten.
+## Was macht XPONext bei Google Ads?
+
+- **Suchbegriffe:** Recherche, mit welchen Begriffen Ihre Kunden suchen, und Ausschluss der Begriffe, die nur Geld kosten.
+- **Kampagnen und Anzeigen:** Aufbau nach Leistungen und Regionen, Anzeigentexte im Test gegeneinander.
+- **Messung:** Anfragen per Formular und Telefon werden gezählt, damit klar ist, was eine Anfrage kostet.
+- **Optimierung:** Gebote und Budgets werden laufend angepasst.
+- **Bericht:** jeden Monat Klicks, Kosten und Anfragen auf einer Seite, ohne Fachchinesisch.
+
+## Was kostet Google Ads?
+
+Es gibt zwei Posten: Ihr Werbebudget, das direkt an Google geht und das Sie selbst festlegen, und unsere Betreuung. Die laufende Betreuung hat eine Mindestlaufzeit von drei Monaten, weil eine Kampagne erst über diesen Zeitraum sauber eingestellt ist. Welches Budget für Ihre Region und Branche sinnvoll ist, schätzen wir im Erstgespräch ein.
+
+## Wie schnell wirkt Google Ads?
+
+Sofort nach dem Start. Anders als bei [SEO](/leistungen/seo.html) und [GEO](/leistungen/geo.html) müssen Sie nicht auf bessere Plätze warten. Dafür hört die Sichtbarkeit auf, sobald das Budget aufgebraucht ist. Viele Kunden kombinieren deshalb beides: Ads für schnelle Anfragen, SEO und GEO für dauerhafte Sichtbarkeit.
 
 **Quelle(n):** [netzpunkte.de, Google Ads Benchmarks 2024](https://www.netzpunkte.de/google-ads-benchmarks-2024/)
