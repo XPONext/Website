@@ -51,18 +51,60 @@
     });
   });
 
-  /* ── Zeitstrahl: Balken füllen sich beim Hineinscrollen ── */
+  /* ── Zeitstrahl: Balken wachsen mit dem Scrollen ─────────
+     Der Fortschritt hängt an der Scrollposition, geht aber nie zurück: Einmal ganz
+     aufgebaut, bleiben die Balken stehen, bis die Seite neu geladen oder erneut
+     aufgerufen wird. Beide Tabs teilen sich den Fortschritt. */
   var ruhig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (!ruhig && 'IntersectionObserver' in window) {
-    var beobachter = new IntersectionObserver(function (eintraege) {
-      eintraege.forEach(function (e) {
-        if (e.isIntersecting) { e.target.classList.add('is-visible'); beobachter.unobserve(e.target); }
+  if (!ruhig) {
+    var STAFFEL = 0.16;   // Versatz zwischen zwei Balken (Anteil des Scrollwegs)
+    var DAUER = 0.5;      // Anteil des Scrollwegs, über den ein einzelner Balken wächst
+    document.querySelectorAll('.timeline').forEach(function (t) { t.classList.add('is-scroll'); });
+    var gruppen = [].slice.call(document.querySelectorAll('.timeline')).reduce(function (liste, t) {
+      var box = t.closest('[data-tabs]') || t;
+      var g = liste.filter(function (x) { return x.box === box; })[0];
+      if (!g) { g = { box: box, teile: [], max: 0 }; liste.push(g); }
+      g.teile.push(t);
+      return liste;
+    }, []);
+    var setze = function (g) {
+      g.teile.forEach(function (t) {
+        var balken = t.querySelectorAll('.timeline__bar, .timeline__mark');
+        var gesamt = (balken.length - 1) * STAFFEL + DAUER;
+        balken.forEach(function (b, i) {
+          var p = Math.min(Math.max((g.max * gesamt - i * STAFFEL) / DAUER, 0), 1);
+          b.style.setProperty('--p', (1 - Math.pow(1 - p, 2)).toFixed(3));
+        });
       });
-    }, { threshold: 0, rootMargin: '0px 0px -20% 0px' });
-    document.querySelectorAll('.timeline').forEach(function (t) {
-      t.classList.add('is-armed');
-      beobachter.observe(t);
-    });
+    };
+    var offen = [];
+    var miss = function () {
+      var vh = window.innerHeight;
+      offen = offen.filter(function (g) {
+        var r = g.box.getBoundingClientRect();
+        if (!r.height) return true;
+        // Start: Oberkante bei 85 % der Fensterhöhe. Fertig: Unterkante bei 75 %.
+        var p = (vh * 0.85 - r.top) / (r.height + vh * 0.1);
+        if (p > g.max) { g.max = Math.min(p, 1); setze(g); }
+        return g.max < 1;
+      });
+      if (!offen.length) window.removeEventListener('scroll', anfrage);
+    };
+    var wartet = false;
+    var anfrage = function () {
+      if (wartet) return;
+      wartet = true;
+      requestAnimationFrame(function () { wartet = false; miss(); });
+    };
+    var start = function () {
+      gruppen.forEach(function (g) { g.max = 0; setze(g); });
+      offen = gruppen.slice();
+      window.addEventListener('scroll', anfrage, { passive: true });
+      miss();
+    };
+    start();
+    // Zurück aus einer anderen Seite (Browser-Cache): wieder von vorn
+    window.addEventListener('pageshow', function (e) { if (e.persisted) start(); });
   }
 
   /* ── Zeitwert-Rechner ─────────────────────────────────── */

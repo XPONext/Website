@@ -67,6 +67,15 @@ const CONFIG = {
   FIXED_FIRST: 2,              // so viele Wechsel laufen in der Reihenfolge aus data-shapes, danach zufällig
   LOGO_EVERY: 3,               // jeder dritte Wechsel führt zurück zum Logo (2 = nach jeder Form)
 
+  // Easter Egg: so viele Klicks in so kurzer Zeit lassen grüne Linien über den Bildschirm laufen
+  EGG_CLICKS: 5,
+  EGG_WINDOW: 2.0,             // Sekunden
+  EGG_LINES: 16,               // Anzahl der Linien
+  EGG_COLOR: '#1B6B45',
+  EGG_DRAW: 1.4,               // Sekunden, bis eine Linie ganz gezeichnet ist
+  EGG_STAGGER: 0.05,           // Versatz zwischen den Linien
+  EGG_FADE: 0.9,               // Ausblenden am Ende
+
   // Hover: Zersplittern unter dem Cursor. Jedes Dreieck wird entlang seiner eigenen
   // Flächennormalen verschoben, dadurch reißen die Splitter an den Kanten auseinander.
   HOVER_AMP: 0.09,             // wie weit die Splitter herausspringen
@@ -93,6 +102,7 @@ const CONFIG = {
 };
 
 const SHAPE_DIR = '/assets/hero-shapes/';
+const SVG_NS = 'http://www.w3.org/2000/svg';
 
 const EXTRUDE = { depth: 8, bevelEnabled: true, bevelThickness: 2, bevelSize: 1.4, bevelSegments: 2, curveSegments: 16 };
 // Einlagen (weiße Pfade): flacher, schmalere Fase, damit dünne Striche dünn bleiben
@@ -467,7 +477,18 @@ async function start(root) {
   }, { passive: true });
 
   // Klick und Tap (click kommt bei beiden)
+  let eggClicks = [];
   canvas.addEventListener('click', (e) => {
+    // Easter Egg: EGG_CLICKS Klicks aufs Icon-Feld innerhalb von EGG_WINDOW Sekunden.
+    // Gezählt wird jeder Klick aufs Feld, nicht nur Treffer: Während des Formwechsels
+    // ist die Form kurz winzig und würde sonst nicht getroffen.
+    const t = performance.now();
+    eggClicks = eggClicks.filter((c) => t - c < CONFIG.EGG_WINDOW * 1000).concat(t);
+    if (eggClicks.length >= CONFIG.EGG_CLICKS) {
+      eggClicks = [];
+      const r = canvas.getBoundingClientRect();
+      greenLines(r.left + r.width / 2, r.top + r.height / 2);
+    }
     toNdc(e);
     if (!hitTest()) return;
     if (state === 'IDLE') startGesture('erschrecken');
@@ -600,4 +621,94 @@ async function start(root) {
     pause();
     root.classList.remove('is-3d');
   });
+}
+
+/* ── Easter Egg: grüne Linien ─────────────────────────────────────────────
+ * Feine, leicht geschwungene Linien laufen vom Logo aus über den Bildschirm,
+ * jede mit einem Verlauf, der zum Ende hin ausläuft. Danach blendet alles aus.
+ * Ein SVG über der Seite, ohne Klicks abzufangen, wird danach wieder entfernt. */
+let eggRunning = false;
+
+function greenLines(x0, y0) {
+  if (eggRunning || !document.body.animate) return;
+  eggRunning = true;
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  // Zielpunkte entlang des Bildschirmrands verteilen (oben → rechts → unten → links),
+  // damit jede Linie über die Seite läuft, egal wo das Logo sitzt
+  const perimeter = 2 * (w + h);
+  const edgePoint = (u) => {
+    let d = u * perimeter;
+    if (d < w) return [d, 0];
+    d -= w;
+    if (d < h) return [w, d];
+    d -= h;
+    if (d < w) return [w - d, h];
+    return [0, h - (d - w)];
+  };
+  const svg = document.createElementNS(SVG_NS, 'svg');
+  svg.setAttribute('aria-hidden', 'true');
+  svg.setAttribute('viewBox', `0 0 ${w} ${h}`);
+  svg.style.cssText = 'position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:90;overflow:visible';
+  const defs = document.createElementNS(SVG_NS, 'defs');
+  svg.appendChild(defs);
+
+  const n = CONFIG.EGG_LINES;
+  let longest = 0;
+  for (let i = 0; i < n; i++) {
+    // Ziel am Rand, leicht gestreut, und etwas über den Rand hinaus verlängert
+    const [tx, ty] = edgePoint((i + rand(0.15, 0.85)) / n);
+    const angle = Math.atan2(ty - y0, tx - x0);
+    const len = Math.hypot(tx - x0, ty - y0) * rand(0.9, 1.15);
+    const ex = x0 + Math.cos(angle) * len;
+    const ey = y0 + Math.sin(angle) * len;
+    // Zwei Kontrollpunkte seitlich versetzt: sanfte S- oder Bogenform
+    const bend = len * rand(0.12, 0.28) * (Math.random() < 0.5 ? -1 : 1);
+    const nx = -Math.sin(angle);
+    const ny = Math.cos(angle);
+    const c1x = x0 + Math.cos(angle) * len * 0.33 + nx * bend;
+    const c1y = y0 + Math.sin(angle) * len * 0.33 + ny * bend;
+    const c2x = x0 + Math.cos(angle) * len * 0.66 - nx * bend * rand(0.2, 1);
+    const c2y = y0 + Math.sin(angle) * len * 0.66 - ny * bend * rand(0.2, 1);
+
+    const grad = document.createElementNS(SVG_NS, 'linearGradient');
+    grad.id = 'xpo-egg-' + i;
+    grad.setAttribute('gradientUnits', 'userSpaceOnUse');
+    grad.setAttribute('x1', x0); grad.setAttribute('y1', y0);
+    grad.setAttribute('x2', ex); grad.setAttribute('y2', ey);
+    const strength = rand(0.35, 0.7);
+    grad.innerHTML = `<stop offset="0" stop-color="${CONFIG.EGG_COLOR}" stop-opacity="${strength}"/>`
+      + `<stop offset="0.6" stop-color="${CONFIG.EGG_COLOR}" stop-opacity="${strength * 0.45}"/>`
+      + `<stop offset="1" stop-color="${CONFIG.EGG_COLOR}" stop-opacity="0"/>`;
+    defs.appendChild(grad);
+
+    const path = document.createElementNS(SVG_NS, 'path');
+    path.setAttribute('d', `M${x0},${y0} C${c1x},${c1y} ${c2x},${c2y} ${ex},${ey}`);
+    path.setAttribute('fill', 'none');
+    path.setAttribute('stroke', `url(#xpo-egg-${i})`);
+    path.setAttribute('stroke-width', rand(0.8, 2.2).toFixed(2));
+    path.setAttribute('stroke-linecap', 'round');
+    svg.appendChild(path);
+
+    path.dataset.delay = String(i * CONFIG.EGG_STAGGER + rand(0, 0.12));
+  }
+  document.body.appendChild(svg);
+
+  for (const path of svg.querySelectorAll('path')) {
+    const L = path.getTotalLength();
+    const delay = Number(path.dataset.delay) * 1000;
+    const dur = CONFIG.EGG_DRAW * 1000 * rand(0.85, 1.15);
+    longest = Math.max(longest, delay + dur);
+    path.style.strokeDasharray = `${L}`;
+    path.style.strokeDashoffset = `${L}`;
+    path.animate(
+      [{ strokeDashoffset: L }, { strokeDashoffset: 0 }],
+      { duration: dur, delay, easing: 'cubic-bezier(0.22, 0.8, 0.25, 1)', fill: 'forwards' }
+    );
+  }
+  const fade = svg.animate(
+    [{ opacity: 1 }, { opacity: 0 }],
+    { duration: CONFIG.EGG_FADE * 1000, delay: longest - 200, easing: 'ease-out', fill: 'forwards' }
+  );
+  fade.onfinish = () => { svg.remove(); eggRunning = false; };
 }
