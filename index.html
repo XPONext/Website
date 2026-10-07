@@ -182,6 +182,11 @@
     <section class="hero">
       <div class="container hero__grid">
         <div>
+          <!-- 3D-Logo: Formen und Farben hier, Code in _content/hero-logo-3d/ -->
+          <div class="hero-logo3d" data-hero-logo3d data-shapes="logo, lupe, sprechblase, blitz" data-colors="#1B6B45 #0F3A26" data-light-colors="#1B6B45 #DCEDE3" aria-hidden="true">
+            <img class="hero-logo3d__static" src="/favicon.svg" alt="" width="120" height="120">
+            <canvas class="hero-logo3d__canvas"></canvas>
+          </div>
           <p class="eyebrow">Websites, Sichtbarkeit und KI-Automatisierung aus Bonn</p>
           <h1>Mehr Aufträge.<br><em>Weniger Zeitfresser.</em></h1>
           <p class="lead">Wir sorgen dafür, dass Kunden Sie bei Google und in ChatGPT finden. Und wir nehmen Ihrem Team mit KI die Arbeit ab, die keiner gern macht: Protokolle, Mails, Angebote.</p>
@@ -551,5 +556,13 @@
 
   <script src="/js/cookie-banner.js"></script>
   <!-- /@layout:footer -->
+  <script>
+    /* 3D-Logo im Hero: erst nach dem Laden der Seite und nur ohne reduzierte Bewegung */
+    (function () {
+      if (!document.querySelector('[data-hero-logo3d]') || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      function go() { var s = document.createElement('script'); s.type = 'module'; s.src = '/js/hero-logo-3d.js'; document.body.appendChild(s); }
+      if (document.readyState === 'complete') go(); else addEventListener('load', go);
+    })();
+  </script>
 </body>
 </html>

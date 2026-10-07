@@ -14,3 +14,6 @@ cloudflare-worker/.wrangler/
 _doku/*/screenshots/
 # Prüfberichte enthalten interne Befunde (Repo ist öffentlich), liegen nur lokal und im Planungsdokument
 _doku/relaunch-2026-10/pruefbericht*.md
+
+# Build-Werkzeug fürs 3D-Logo im Hero, jederzeit neu installierbar (npm install)
+_content/hero-logo-3d/node_modules/

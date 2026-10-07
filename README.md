@@ -33,6 +33,9 @@ Kundennamen, Logos und Zahlen nur mit schriftlicher Freigabe des Kunden. Das Rep
 Content-Pakete und Vorlagen im Generator ebenfalls in Sie-Form, auch Cookie-Banner,
 Formular-Meldungen und die Ergebnis-Texte in GEO-Check und Website-Check.
 
+**3D-Logo im Hero:** Formen in `assets/hero-shapes/`, Reihenfolge und Farben am `<div class="hero-logo3d">` in
+`index.html`. Code und Anleitung für neue Formen: `_content/hero-logo-3d/README.md`.
+
 **Kontaktformular:** Alle Formulare mit `class="contact-form"` senden über `js/site.js` an das
 Google-Apps-Script. `data-quelle` und der URL-Parameter `?quelle=` landen vorn in der Nachricht,
 so sieht man, von welcher Seite oder Kampagne eine Anfrage kommt.

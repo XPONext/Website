@@ -168,6 +168,12 @@ strong { color: var(--ink); font-weight: 650; }
   .hero h1 em { white-space: nowrap; }
 }
 .hero h1 { margin-bottom: 1.4rem; }
+/* 3D-Logo (js/hero-logo-3d.js). Statisches Logo, bis das 3D-Bild steht */
+.hero-logo3d { position: relative; width: clamp(76px, 8vw, 104px); aspect-ratio: 1; margin: 0 0 1.1rem -6px; }
+.hero-logo3d__static { position: absolute; inset: 13%; width: 74%; height: 74%; transition: opacity 0.3s; }
+.hero-logo3d__canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 0.3s; }
+.hero-logo3d.is-3d .hero-logo3d__static { opacity: 0; }
+.hero-logo3d.is-3d .hero-logo3d__canvas { opacity: 1; }
 .hero .lead { margin-bottom: 2rem; }
 .trust-row { list-style: none; display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; margin-top: 1.8rem; font-size: 0.92rem; color: var(--muted); }
 .trust-row li { display: inline-flex; align-items: center; gap: 0.45rem; }
