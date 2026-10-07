@@ -6,6 +6,23 @@ Stand: 07.10.2026. Ein Ticket je Datei. Die gelben Platzhalter-Kästen auf der W
 > Das Repo ist öffentlich. In diese Tickets keine Kundennamen, Preise, Zugangsdaten oder internen
 > Absprachen schreiben. `_TODO/` wird von GitHub Pages nicht ausgeliefert, ist auf GitHub aber lesbar.
 
+## Live-Stand (Branch `website-live`)
+
+Live ist die Website ohne Platzhalter. So ist das gelöst, damit Inhalte später nur eingesetzt werden müssen:
+
+- `css/site.css` (am Ende): `.ph { display: none }` blendet alle gelben Kästen aus.
+- Abschnitte, die nur aus Platzhaltern bestehen, tragen das Attribut `hidden`, z. B. die Fallstudien auf
+  der Startseite, die Kundenlogos, „Warum es XPONext gibt“ auf Über uns, Fallstudien und Kundenstimmen
+  auf der Projekte-Seite, die Teamfoto-Spalte und die Karte „Termin buchen“ auf der Startseite.
+- Projekte-Seite: `noindex`, nicht im Menü und nicht in der Fußzeile (`PROJEKTE_ZEIGEN = False` in
+  `_content/layout.py`), steht deshalb auch nicht in der Sitemap.
+- Branchenseiten: Beleg- oder Angebotsspalte ohne Text in der YAML wird automatisch ausgeblendet.
+- Kontaktseite: Überschrift „So erreichen Sie uns“ statt „Termin wählen“, bis der Kalender steht.
+
+**Beim Erledigen eines Tickets daher immer auch:** `hidden` am betroffenen Abschnitt entfernen,
+bei der Projekte-Seite `PROJEKTE_ZEIGEN = True` und `index, follow` setzen. Alle Stellen findet
+`grep -rn " hidden" --include=*.html .` bzw. `grep -rn "Live-Stand" .`.
+
 ## Arbeitsweise
 
 1. Ticket öffnen, Status oben auf `in Arbeit` setzen.

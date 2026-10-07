@@ -58,6 +58,11 @@ def _cur(active, key):
     return ' aria-current="page"' if active == key else ""
 
 
+# Live-Stand ohne Fallstudien: Projekte-Seite nicht verlinken. Auf True setzen, sobald
+# Fallstudien freigegeben sind (siehe _TODO/07-projekte-seite.md), dann build_all.py laufen lassen.
+PROJEKTE_ZEIGEN = False
+
+
 def header(active=""):
     """Kopfzeile. active: leistungen | projekte | ueber-uns | kontakt | '' """
     return f"""<a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
@@ -87,7 +92,7 @@ def header(active=""):
               <div class="sub__all"><a href="/leistungen.html">Alle Leistungen im Überblick</a></div>
             </div>
           </li>
-          <li><a href="/projekte.html"{_cur(active, "projekte")}>Projekte</a></li>
+          {f'<li><a href="/projekte.html"{_cur(active, "projekte")}>Projekte</a></li>' if PROJEKTE_ZEIGEN else ''}
           <li><a href="/ueber-uns.html"{_cur(active, "ueber-uns")}>Über uns</a></li>
           <li><a href="/kontakt.html"{_cur(active, "kontakt")}>Kontakt</a></li>
         </ul>
@@ -167,7 +172,7 @@ def footer():
         <div class="footer-col">
           <h2>XPONext</h2>
           <ul>
-            <li><a href="/projekte.html">Projekte</a></li>
+            {'<li><a href="/projekte.html">Projekte</a></li>' if PROJEKTE_ZEIGEN else ''}
             <li><a href="/ueber-uns.html">Über uns</a></li>
             <li><a href="/kontakt.html">Kontakt</a></li>
             <li><a href="/fuer/architekturbueros/">Für Architekturbüros</a></li>

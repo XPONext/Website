@@ -132,14 +132,19 @@ def build(d):
     angebot = d.get("angebot", {})
     angebot_html = f'<p>{inline(angebot["text"])}</p>' if angebot.get("text") else ""
     angebot_ph = ph(angebot["platzhalter"], f"Angebot {slug}") if angebot.get("platzhalter") else ""
-    parts.append(f"""<section class="section">
+    # Live-Stand: Spalten, die nur einen Platzhalter hätten, ausblenden (hidden), die Section,
+    # wenn beide leer sind. Mit Text in der YAML erscheinen sie automatisch.
+    beleg_attr = "" if beleg_html else " hidden"
+    angebot_attr = "" if angebot_html else " hidden"
+    section_attr = " hidden" if not (beleg_html or angebot_html) else ""
+    parts.append(f"""<section class="section"{section_attr}>
       <div class="container split split--top">
-        <div>
+        <div{beleg_attr}>
           {section_head("Beleg", beleg.get("titel", "Was wir schon gemacht haben"))}
           {f'<p>{beleg_html}</p>' if beleg_html else ''}
           {beleg_ph}
         </div>
-        <div>
+        <div{angebot_attr}>
           {section_head("Angebot", angebot.get("titel", "So starten wir"))}
           {angebot_html}
           {angebot_ph}

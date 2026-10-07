@@ -180,9 +180,13 @@ strong { color: var(--ink); font-weight: 650; }
 .trust-row svg { width: 18px; height: 18px; color: var(--green); flex-shrink: 0; }
 .trust-row img { width: 22px; height: 22px; }
 .badge-icon { display: inline-block; width: 22px; height: 22px; flex-shrink: 0; background: url('../assets/google-ads-badge.webp') center / contain no-repeat; }
-.hero__media { position: relative; border-radius: var(--radius-lg); overflow: hidden; background: var(--dark); aspect-ratio: 4 / 3.4; }
-.hero__media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; }
-.hero__caption { position: absolute; left: 1rem; right: 1rem; bottom: 1rem; display: flex; justify-content: space-between; align-items: center; gap: 1rem; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 0.85rem 1rem; font-size: 0.9rem; color: var(--text); }
+/* Freisteller (transparentes WebP) auf Weiß: heller Schimmer hinter den Personen, damit die weißen
+   Hemden nicht im Hintergrund verschwinden; unten weich ausgeblendet; schwebt ganz leicht */
+.hero__media { position: relative; width: 88%; justify-self: center; padding-top: 1rem; background: radial-gradient(ellipse 58% 52% at 50% 50%, var(--green-50) 0%, rgba(239, 246, 242, 0.55) 48%, rgba(255, 255, 255, 0) 74%); }
+.hero__media img { width: 100%; height: auto; -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 98%); mask-image: linear-gradient(to bottom, #000 70%, transparent 98%); animation: hero-schweben 9s ease-in-out infinite; transform-origin: 50% 100%; }
+@keyframes hero-schweben { 0%, 100% { transform: translateY(0) scale(1); } 50% { transform: translateY(-8px) scale(1.012); } }
+@media (prefers-reduced-motion: reduce) { .hero__media img { animation: none; } }
+.hero__caption { position: relative; margin-top: -2.2rem; border: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; gap: 1rem; background: rgba(255,255,255,0.95); border-radius: 12px; padding: 0.85rem 1rem; font-size: 0.9rem; color: var(--text); }
 .hero__caption strong { display: block; font-size: 0.95rem; }
 .hero__caption a { color: var(--green); font-weight: 650; white-space: nowrap; }
 @media (max-width: 480px) { .hero__caption { flex-direction: column; align-items: flex-start; gap: 0.3rem; } }
@@ -295,8 +299,10 @@ a.chip:hover { border-color: var(--green); color: var(--green); }
 }
 
 /* ── Team ───────────────────────────────────────────────── */
-.team-photo { border-radius: var(--radius-lg); overflow: hidden; background: var(--dark); aspect-ratio: 4 / 3; }
-.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
+/* wie .hero__media: Freisteller auf hellem Grund, unten ausgeblendet */
+.team-photo { position: relative; width: 92%; justify-self: center; background: radial-gradient(ellipse 58% 52% at 50% 50%, var(--green-50) 0%, rgba(239, 246, 242, 0.55) 48%, rgba(255, 255, 255, 0) 74%); }
+.team-photo img { width: 100%; height: auto; -webkit-mask-image: linear-gradient(to bottom, #000 70%, transparent 98%); mask-image: linear-gradient(to bottom, #000 70%, transparent 98%); animation: hero-schweben 9s ease-in-out infinite; transform-origin: 50% 100%; }
+@media (prefers-reduced-motion: reduce) { .team-photo img { animation: none; } }
 .people { display: grid; gap: 1rem; margin-top: 1.6rem; }
 @media (min-width: 560px) { .people { grid-template-columns: 1fr 1fr; } }
 .person { display: flex; gap: 0.9rem; align-items: center; }
@@ -504,3 +510,11 @@ a.chip:hover { border-color: var(--green); color: var(--green); }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; animation: none !important; }
 }
+
+/* ── Live-Stand (Branch website-live) ───────────────────────────
+   Gelbe Platzhalter sind ausgeblendet, Abschnitte ohne Inhalt tragen das Attribut hidden.
+   Beim Einsetzen echter Inhalte: Platzhalter ersetzen und hidden am Abschnitt entfernen.
+   Ganze Liste: python3 _content/build_all.py */
+.ph { display: none !important; }
+/* Zweispaltiger Abschnitt mit einer ausgeblendeten Spalte: übrige Spalte allein, gut lesbar breit */
+.split:has(> [hidden]) { grid-template-columns: 1fr; max-width: 52rem; }
