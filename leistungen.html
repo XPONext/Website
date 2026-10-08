@@ -19,15 +19,37 @@
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "CollectionPage",
+        "@id": "https://www.xponext.de/leistungen.html#seite",
+        "url": "https://www.xponext.de/leistungen.html",
+        "name": "Leistungen von XPONext",
+        "inLanguage": "de-DE",
+        "isPartOf": { "@id": "https://www.xponext.de/#website" },
+        "about": { "@id": "https://www.xponext.de/#organisation" },
+        "publisher": { "@id": "https://www.xponext.de/#organisation" },
+        "mainEntity": { "@id": "https://www.xponext.de/leistungen.html#liste" }
+      },
+      {
         "@type": "ItemList",
+        "@id": "https://www.xponext.de/leistungen.html#liste",
         "name": "Leistungen von XPONext",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "url": "https://www.xponext.de/leistungen/website-erstellung.html", "name": "Website-Erstellung" },
-          { "@type": "ListItem", "position": 2, "url": "https://www.xponext.de/leistungen/seo.html", "name": "SEO" },
-          { "@type": "ListItem", "position": 3, "url": "https://www.xponext.de/leistungen/geo.html", "name": "GEO" },
-          { "@type": "ListItem", "position": 4, "url": "https://www.xponext.de/leistungen/google-ads.html", "name": "Google Ads" },
-          { "@type": "ListItem", "position": 5, "url": "https://www.xponext.de/leistungen/ki-automatisierung.html", "name": "KI-Automatisierung" }
+          { "@type": "ListItem", "position": 1, "item": { "@type": "Service", "name": "Website-Erstellung", "serviceType": "Website-Erstellung", "url": "https://www.xponext.de/leistungen/website-erstellung.html", "provider": { "@id": "https://www.xponext.de/#organisation" }, "areaServed": { "@type": "Country", "name": "Deutschland" } } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "Service", "name": "Suchmaschinenoptimierung (SEO)", "serviceType": "SEO", "url": "https://www.xponext.de/leistungen/seo.html", "provider": { "@id": "https://www.xponext.de/#organisation" }, "areaServed": { "@type": "Country", "name": "Deutschland" } } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "Service", "name": "Generative Engine Optimization (GEO)", "serviceType": "GEO", "url": "https://www.xponext.de/leistungen/geo.html", "provider": { "@id": "https://www.xponext.de/#organisation" }, "areaServed": { "@type": "Country", "name": "Deutschland" } } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "Service", "name": "Google Ads", "serviceType": "Google Ads", "url": "https://www.xponext.de/leistungen/google-ads.html", "provider": { "@id": "https://www.xponext.de/#organisation" }, "areaServed": { "@type": "Country", "name": "Deutschland" } } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "Service", "name": "KI-Automatisierung für Büros", "serviceType": "KI-Automatisierung", "url": "https://www.xponext.de/leistungen/ki-automatisierung.html", "provider": { "@id": "https://www.xponext.de/#organisation" }, "areaServed": { "@type": "Country", "name": "Deutschland" } } }
         ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://www.xponext.de/#organisation",
+        "name": "XPO Next GbR",
+        "alternateName": "XPONext",
+        "url": "https://www.xponext.de/",
+        "telephone": "+491636857434",
+        "email": "info@xponext.de",
+        "address": { "@type": "PostalAddress", "streetAddress": "Adrianstraße 88", "postalCode": "53227", "addressLocality": "Bonn", "addressCountry": "DE" }
       },
       {
         "@type": "BreadcrumbList",
