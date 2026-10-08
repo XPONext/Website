@@ -390,7 +390,7 @@
             <div id="geo-gate" class="gate-block">
               <h3>Vollständigen Bericht freischalten</h3>
               <p>Tragen Sie Ihre E-Mail-Adresse ein und Sie sehen sofort alle geprüften Punkte inkl. konkreter Verbesserungsvorschläge.</p>
-              <form id="geo-lead-form">
+              <form id="geo-lead-form" novalidate>
                 <input type="text" id="geo-lead-honeypot" name="website" autocomplete="off" tabindex="-1" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0;">
                 <div class="gate-form-row">
                   <input type="email" id="geo-lead-email" aria-label="Ihre E-Mail-Adresse für den vollständigen Befund" class="ps-input" placeholder="name@ihr-buero.de" required>
@@ -479,6 +479,10 @@
     var PROXY = WORKER_BASE + '/?url=';
     var LEAD_ENDPOINT = WORKER_BASE + '/lead';
 
+    /* Interner Testzugang: Eingabe ohne @ wird mit diesem Hash verglichen und schaltet den Bericht
+       ohne Lead frei. Den Wert schreibt build_all.py aus GEO_CHECK_PASSWORT in der lokalen .env. */
+    var ZUGANG_HASH = ''; // @zugang-hash
+
     function proxied(url) { return PROXY + encodeURIComponent(url); }
 
     var currentDomain = null;
@@ -510,6 +514,13 @@
       var honeypot = document.getElementById('geo-lead-honeypot').value;
       var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+      if (email.length > 0 && email.indexOf('@') === -1) {
+        pruefeZugang(email).then(function(ok) {
+          if (ok) document.getElementById('geo-locked-wrap').classList.add('unlocked');
+          else errEl.innerHTML = '<div class="ps-error-box">Bitte eine gültige E-Mail-Adresse eingeben.</div>';
+        });
+        return;
+      }
       if (!emailRegex.test(email)) {
         errEl.innerHTML = '<div class="ps-error-box">Bitte eine gültige E-Mail-Adresse eingeben.</div>';
         return;
@@ -545,14 +556,27 @@
         if (err && err.message === 'invalid_email') msg = 'Diese E-Mail-Adresse scheint es nicht zu geben — bitte prüfen.';
         errEl.innerHTML = '<div class="ps-error-box">' + msg + '</div>';
       }).finally(function() {
-        submitBtn.disabled = !document.getElementById('geo-lead-consent').checked;
+        updateLeadButton();
         submitBtn.textContent = originalLabel;
       });
     });
 
-    document.getElementById('geo-lead-consent').addEventListener('change', function() {
-      document.querySelector('#geo-lead-form button[type="submit"]').disabled = !this.checked;
-    });
+    function pruefeZugang(eingabe) {
+      if (!ZUGANG_HASH || !window.crypto || !crypto.subtle) return Promise.resolve(false);
+      return crypto.subtle.digest('SHA-256', new TextEncoder().encode('xponext-geo:' + eingabe)).then(function(buf) {
+        var hex = Array.prototype.map.call(new Uint8Array(buf), function(b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+        return hex === ZUGANG_HASH;
+      });
+    }
+
+    // Button aktiv bei Checkbox oder bei einer Eingabe ohne @ (Testzugang, keine Einwilligung nötig)
+    function updateLeadButton() {
+      var value = document.getElementById('geo-lead-email').value.trim();
+      document.querySelector('#geo-lead-form button[type="submit"]').disabled =
+        !(document.getElementById('geo-lead-consent').checked || (value.length > 0 && value.indexOf('@') === -1));
+    }
+    document.getElementById('geo-lead-consent').addEventListener('change', updateLeadButton);
+    document.getElementById('geo-lead-email').addEventListener('input', updateLeadButton);
 
     function showError(msg) {
       hide('geo-loading');
