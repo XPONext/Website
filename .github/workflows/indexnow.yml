@@ -1,0 +1,32 @@
+name: IndexNow
+
+# Meldet nach jedem Push nach main die geänderten Seiten an Bing (IndexNow).
+# Manuell mit "Run workflow" werden alle Seiten aus sitemap.xml gemeldet.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # GitHub Pages braucht nach dem Push etwa eine Minute, bis die neue Fassung online ist
+      - name: Auf GitHub Pages warten
+        run: sleep 120
+
+      - name: Geänderte Seiten melden
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || ! git cat-file -e "$BEFORE" 2>/dev/null; then
+            python3 _content/indexnow.py --alle
+          else
+            git diff --name-only --diff-filter=AM "$BEFORE" "$GITHUB_SHA" > geaendert.txt
+            cat geaendert.txt
+            python3 _content/indexnow.py $(cat geaendert.txt) _leer_
+          fi
