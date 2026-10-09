@@ -17,3 +17,6 @@ _doku/relaunch-2026-10/pruefbericht*.md
 
 # Build-Werkzeug fürs 3D-Logo im Hero, jederzeit neu installierbar (npm install)
 _content/hero-logo-3d/node_modules/
+
+# Lokale Einstellungen (Passwort für den GEO-Check-Testzugang), nie committen
+.env

@@ -133,6 +133,23 @@ bei Rückfragen zur Anfrage Kontakt aufnehmen zu können (siehe `datenschutz.htm
 Der Sender `geo-check@xponext.de` in `sendNotification()` (in `geo-proxy.js`) muss zur in Resend
 verifizierten Domain passen — sonst schlägt der Mail-Versand fehl (Lead wird trotzdem gespeichert).
 
+### GEO-Check Testzugang
+
+Zum Testen lässt sich der vollständige Bericht ohne E-Mail freischalten: Statt der E-Mail-Adresse
+das Passwort ins Feld eintragen (ohne @, die Checkbox ist dann nicht nötig). Die Prüfung läuft im
+Browser, es geht nichts an den Worker, es entsteht kein Lead. Ein falsches Passwort sieht aus wie
+eine ungültige E-Mail-Adresse.
+
+1. `.env.example` nach `.env` kopieren (liegt in `.gitignore`, bleibt lokal) und
+   `GEO_CHECK_PASSWORT=` ausfüllen.
+2. `python3 _content/build_all.py` laufen lassen. Das schreibt den SHA-256-Hash des Passworts in
+   `geo-check.html` (`ZUGANG_HASH`), nie das Passwort selbst, das Repo ist öffentlich.
+3. Committen und pushen.
+
+Passwort ändern: `.env` anpassen, Schritt 2 und 3. Leerer Wert schaltet den Zugang aus. Ohne `.env`
+(z. B. auf einem anderen Rechner) lässt der Build den vorhandenen Hash unverändert.
+Kein echter Schutz: der Bericht steht ohnehin im Seitenquelltext, das Overlay ist nur ein Hinweis.
+
 ## Musterentwürfe (`musterentwuerfe/`)
 
 Vollständige Muster-Websites für Architektur- und Innenarchitekturbüros, gebaut mit dem

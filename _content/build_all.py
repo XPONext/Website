@@ -5,13 +5,14 @@ Baut die ganze Website in einem Lauf:
   2. Branchenseiten unter /fuer/ aus _content/landingpages/         (build_landingpages.py)
   3. Kopf, Kopfzeile, Fußzeile und FAQ-Schema in die handgebauten Seiten (sync_layout.py)
   4. sitemap.xml aus allen Seiten mit robots "index"
-  5. Liste der offenen Platzhalter (data-ph). Vor dem Livegang muss sie leer sein,
+  5. Hash für den GEO-Check-Testzugang aus GEO_CHECK_PASSWORT in der lokalen .env
+  6. Liste der offenen Platzhalter (data-ph). Vor dem Livegang muss sie leer sein,
      oder die Platzhalter-Blöcke werden bewusst entfernt.
 
 Aufruf: python3 _content/build_all.py            (baut alles, listet Platzhalter)
         python3 _content/build_all.py --streng   (Exit 1, solange Platzhalter da sind)
 """
-import datetime, glob, os, re, subprocess, sys
+import datetime, glob, hashlib, os, re, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -57,6 +58,29 @@ def build_sitemap():
     print(f"sitemap.xml: {len(seen)} Seiten")
 
 
+def geo_check_zugang():
+    """Schreibt den SHA-256-Hash des Passworts aus .env in geo-check.html (nie das Passwort selbst,
+    das Repo ist öffentlich). Ohne .env bleibt der vorhandene Hash stehen."""
+    env = os.path.join(ROOT, ".env")
+    if not os.path.exists(env):
+        return
+    pw = None
+    for line in open(env, encoding="utf-8"):
+        key, _, value = line.strip().partition("=")
+        if key.strip() == "GEO_CHECK_PASSWORT":
+            pw = value.strip().strip('"').strip("'")
+    if pw is None:
+        return
+    digest = hashlib.sha256(("xponext-geo:" + pw).encode()).hexdigest() if pw else ""
+    path = os.path.join(ROOT, "geo-check.html")
+    html = open(path, encoding="utf-8").read()
+    neu = re.sub(r"var ZUGANG_HASH = '[0-9a-f]*'; // @zugang-hash",
+                 f"var ZUGANG_HASH = '{digest}'; // @zugang-hash", html)
+    if neu != html:
+        open(path, "w", encoding="utf-8").write(neu)
+        print("geo-check.html: Testzugang " + ("aktualisiert" if pw else "ausgeschaltet"))
+
+
 def list_placeholders():
     found = []
     for rel, path in sorted(all_pages()):
@@ -80,6 +104,7 @@ if __name__ == "__main__":
     run("build_landingpages.py")
     run("sync_layout.py")
     build_sitemap()
+    geo_check_zugang()
     open_ph = list_placeholders()
     if "--streng" in sys.argv and open_ph:
         sys.exit(1)
